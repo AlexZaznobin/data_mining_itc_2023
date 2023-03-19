@@ -1,0 +1,8 @@
+{
+  "browsers": ["edge", "chrome"],
+  "website": "https://www.aviasales.com/?params=",
+  "qrequest_batch_size": 10,
+  "output_copy": "stdout.log",
+  "airports": "airports.csv"
+
+}
