@@ -1,6 +1,6 @@
 {
   "browsers": ["edge", "chrome"],
-  "website": "https://www.aviasales.com/?params=",
+  "link_constructor": "https://www.aviasales.com/search/",
   "qrequest_batch_size": 10,
   "output_copy": "stdout.log",
   "airports": "airports.csv"
