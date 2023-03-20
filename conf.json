@@ -3,6 +3,16 @@
   "link_constructor": "https://www.aviasales.com/search/",
   "qrequest_batch_size": 10,
   "output_copy": "stdout.log",
-  "airports": "airports.csv"
-
+  "airports": "airports.csv",
+  "test_data": {
+        "end_point" : {
+          "country_id":"CY"
+        },
+        "start_point" : {
+          "country_id":"IL"
+        },
+        "start_aero_code" :"TLV",
+        "start_date": "2022-04-03",
+        "days_number" : 3
+  }
 }

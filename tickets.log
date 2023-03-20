@@ -1,0 +1,33 @@
+03/20/2023 19:21:16  function_mane: main INFO: Config file conf.json opened successfully
+03/20/2023 19:21:45  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 4, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'stdout.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}}, ['TBS'])
+03/20/2023 19:21:45  function_mane: get_url_list INFO: finish get_url_list of 30 items
+03/20/2023 19:22:02  function_mane: get_ticket_price INFO: TLV,0104, TBS, 1,$172
+03/20/2023 19:22:15  function_mane: get_ticket_price INFO: TLV,0204, TBS, 1,$115
+03/20/2023 19:22:27  function_mane: get_ticket_price INFO: TLV,0304, TBS, 1,$150
+03/20/2023 19:22:38  function_mane: get_ticket_price INFO: TLV,0404, TBS, 1,$174
+03/20/2023 19:22:49  function_mane: get_ticket_price INFO: TLV,0504, TBS, 1,$300
+03/20/2023 19:23:01  function_mane: get_ticket_price INFO: TLV,0604, TBS, 1,$176
+03/20/2023 19:23:11  function_mane: get_ticket_price INFO: TLV,0704, TBS, 1,$153
+03/20/2023 19:23:23  function_mane: get_ticket_price INFO: TLV,0804, TBS, 1,$115
+03/20/2023 19:23:35  function_mane: get_ticket_price INFO: TLV,0904, TBS, 1,$115
+03/20/2023 19:23:46  function_mane: get_ticket_price INFO: TLV,1004, TBS, 1,$112
+03/20/2023 19:23:58  function_mane: get_ticket_price INFO: TLV,1104, TBS, 1,$135
+03/20/2023 19:24:09  function_mane: get_ticket_price INFO: TLV,1204, TBS, 1,$118
+03/20/2023 19:24:21  function_mane: get_ticket_price INFO: TLV,1304, TBS, 1,$106
+03/20/2023 19:24:32  function_mane: get_ticket_price INFO: TLV,1404, TBS, 1,$115
+03/20/2023 19:24:43  function_mane: get_ticket_price INFO: TLV,1504, TBS, 1,$115
+03/20/2023 19:24:54  function_mane: get_ticket_price INFO: TLV,1604, TBS, 1,None
+03/20/2023 19:25:06  function_mane: get_ticket_price INFO: TLV,1704, TBS, 1,$115
+03/20/2023 19:25:17  function_mane: get_ticket_price INFO: TLV,1804, TBS, 1,$115
+03/20/2023 19:25:28  function_mane: get_ticket_price INFO: TLV,1904, TBS, 1,$124
+03/20/2023 19:25:38  function_mane: get_ticket_price INFO: TLV,2004, TBS, 1,$141
+03/20/2023 19:25:50  function_mane: get_ticket_price INFO: TLV,2104, TBS, 1,$115
+03/20/2023 19:26:01  function_mane: get_ticket_price INFO: TLV,2204, TBS, 1,$200
+03/20/2023 19:26:13  function_mane: get_ticket_price INFO: TLV,2304, TBS, 1,$113
+03/20/2023 19:26:24  function_mane: get_ticket_price INFO: TLV,2404, TBS, 1,$133
+03/20/2023 19:26:37  function_mane: get_ticket_price INFO: TLV,2504, TBS, 1,$133
+03/20/2023 19:26:48  function_mane: get_ticket_price INFO: TLV,2604, TBS, 1,$113
+03/20/2023 19:27:00  function_mane: get_ticket_price INFO: TLV,2704, TBS, 1,$127
+03/20/2023 19:27:11  function_mane: get_ticket_price INFO: TLV,2804, TBS, 1,$137
+03/20/2023 19:27:21  function_mane: get_ticket_price INFO: TLV,2904, TBS, 1,$200
+03/20/2023 19:27:33  function_mane: get_ticket_price INFO: TLV,3004, TBS, 1,$113
