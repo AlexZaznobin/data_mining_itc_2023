@@ -10,7 +10,7 @@ import logging
 import pandas as pd
 import re
 import os
-
+import threading
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import requests
@@ -189,15 +189,20 @@ def page_processing_slnm (url) :
     chrome_options.add_argument('--headless')
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.get(url)
+    time.sleep(15)
 
     # click_checkbox(driver, logging) plan to realise capcha handling later
     try :
-        time.sleep(3)
         price = driver.find_elements(By.CSS_SELECTOR, '[data-test-id="price"]')[0].text
-        time.sleep(random.random())
+        time.sleep(random.random()*3)
     except :
         price = None
-    return price
+
+
+    parameters = re.search('.*request', url).group(0)[-18 :-7]
+    print(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{price}")
+    logging.info(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{price}")
+    return
 
 
 def get_ticket_price (list_of_urls, config) :
@@ -208,16 +213,21 @@ def get_ticket_price (list_of_urls, config) :
     Use selenium
     Returns:
     """
-
+    threads=[]
     for index, url in enumerate(list_of_urls) :
-        price = page_processing_slnm(url)
-        time.sleep(15)
-        # price = page_processing_bs4(url,config)
-        parameters = re.search('.*request', url).group(0)[-18 :-7]
+        t = threading.Thread(target=page_processing_slnm, args=(url,))
+        threads.append(t)
 
-        if price != None :
-            print(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{price}")
-        logging.info(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{price}")
+    # start the threads
+    for t in threads :
+        t.start()
+
+    # wait for the threads to finish
+    for t in threads :
+        t.join()
+
+
+
 
 
 def get_url_list (start_code, start_date, days_number, config, end_list, pass_num="1") :
@@ -286,7 +296,11 @@ def main () :
         pass
 
     url_list = get_url_list(start_aero_code, start_date, days_number, config, end_point)
+    start= datetime.datetime.now()
     get_ticket_price(url_list,config)
+    end = datetime.datetime.now()
+    print(f"get_ticket_price takes: {end-start} sec ")
+
 
 
 if __name__ == "__main__" :
