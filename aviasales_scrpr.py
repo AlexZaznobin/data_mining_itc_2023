@@ -186,6 +186,7 @@ def page_processing_slnm (url) :
     service = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
     chrome_options.add_argument("--incognito")
+    chrome_options.add_argument('--headless')
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.get(url)
 
@@ -199,7 +200,7 @@ def page_processing_slnm (url) :
     return price
 
 
-def get_ticket_price (list_of_urls) :
+def get_ticket_price (list_of_urls, config) :
     """
     print prices to log and output
     Args:
@@ -210,6 +211,7 @@ def get_ticket_price (list_of_urls) :
 
     for index, url in enumerate(list_of_urls) :
         price = page_processing_slnm(url)
+        time.sleep(15)
         # price = page_processing_bs4(url,config)
         parameters = re.search('.*request', url).group(0)[-18 :-7]
 
@@ -284,7 +286,7 @@ def main () :
         pass
 
     url_list = get_url_list(start_aero_code, start_date, days_number, config, end_point)
-    get_ticket_price(url_list)
+    get_ticket_price(url_list,config)
 
 
 if __name__ == "__main__" :
