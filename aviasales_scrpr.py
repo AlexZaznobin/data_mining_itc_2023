@@ -27,7 +27,7 @@ class Ticket:
         self.start_point = start_point
         self.end_point = end_point
         self.price=price
-        self.Air_company=Air_company
+        self.air_company=air_company
 
     def __str__(self):
         print(",".join(str(self.start_point),
@@ -196,23 +196,23 @@ def page_processing_bs4 (url, config) :
 def extract_price(driver):
     try :
         # Wait up to 20 seconds for the element to be present on the page
-        wait = WebDriverWait(driver, 20)
+        wait = WebDriverWait(driver, 15)
         prices = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="price"]')))
 
         for price in prices:
             if (price.text[0]=="$")and(price.size['width']>PRICE_BLOK_MIN_WIDTH):
                 return_price=price.text
                 break
-        texts = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
-        for i, text in enumerate(texts) :
-            if text.text=="Cheapest":
-                ticket=Ticket(price=texts[i-4].text,air_company=texts[i-1].text)
-                print(ticket.air_company)
+        text_elements = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
+        for i, text_element in enumerate(text_elements) :
+            if(text_element.text==return_price):
+                air_company=text_elements[i+3].text
 
     except :
         return_price = None
+        air_company= None
 
-    return  return_price
+    return  return_price,air_company
 
 def page_processing_slnm (url,config) :
     """
@@ -226,15 +226,17 @@ def page_processing_slnm (url,config) :
     service = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
     chrome_options.add_argument(config['chome_args'][0])
-    chrome_options.add_argument(config['chome_args'][1])
+    # chrome_options.add_argument(config['chome_args'][1])
+
+
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.get(url)
 
-    return_price = extract_price(driver)
+    return_price,air_company = extract_price(driver)
 
     if return_price==None:
         g_capcha_solver(driver, logging)
-        return_price = extract_price(driver)
+        return_price, aircompany = extract_price(driver)
 
     parameters = re.search('.*request', url).group(0)[-18 :-7]
     print(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{return_price}")
@@ -252,14 +254,10 @@ def get_ticket_price (list_of_urls, config) :
     """
     threads=[]
     for index, url in enumerate(list_of_urls) :
-        # page_processing_slnm(url,config)
-    ##################################################################
         t = threading.Thread(target=page_processing_slnm, args=(url,config))
         threads.append(t)
-    # start the threads
     for t in threads :
         t.start()
-    # wait for the threads to finish
     for t in threads :
         t.join()
 
@@ -322,7 +320,6 @@ def main () :
 
     start = datetime.datetime.now()
 
-    # # input_data_block
     start_aero_code = get_airport(airport_df, "start")
     start_date, days_number = get_date_range()
     end_point = [get_airport(airport_df, "end")]
@@ -335,12 +332,6 @@ def main () :
     start= datetime.datetime.now()
     logging.info(f" send batch of urls size {len(url_list[:BATCH_SIZE])} ")
     logging.info(f"Config file {CONFIG_NAME} opened successfully")
-
-    # w/o threading
-    # get_ticket_price(url_list,config)
-
-    # threading
-
     batch_number= int(len(url_list) / BATCH_SIZE)
     if batch_number<1:
         batch_number=1
