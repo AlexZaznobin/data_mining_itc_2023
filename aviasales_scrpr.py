@@ -1,8 +1,11 @@
 import random
+import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 import datetime
 import json
@@ -13,9 +16,26 @@ import os
 import threading
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
-import requests
+from capcha_speech_recognition import g_capcha_solver
 
 CONFIG_NAME = 'conf.json'
+BATCH_SIZE=10
+PRICE_BLOK_MIN_WIDTH=45
+
+class Ticket:
+    def __init__(self,start_point=None, end_point=None, price=None, air_company=None):
+        self.start_point = start_point
+        self.end_point = end_point
+        self.price=price
+        self.Air_company=Air_company
+
+    def __str__(self):
+        print(",".join(str(self.start_point),
+                       str(self.end_point),
+                       str(self.price),
+                       str(self.Air_company)
+                       )
+              )
 
 
 def get_config (conf_name) :
@@ -111,8 +131,8 @@ def get_airport (airport_df, start_or_end) :
             else :
                 print("too many options, choose one airport")
                 for i in range(filtered_df.shape[0]) :
-                    print(filtered_df.iloc[i][['time_zone_id']][0],
-                          filtered_df.iloc[i][['name']][0])
+                    print('time zone:', filtered_df.iloc[i][['time_zone_id']][0],
+                          ', airport', filtered_df.iloc[i][['name']][0])
         else :
             print("String not found. Please enter airport name")
         start_end_point = input("input city one more time (or "'stop'"):")
@@ -173,8 +193,28 @@ def page_processing_bs4 (url, config) :
     else :
         return prices[0].text
 
+def extract_price(driver):
+    try :
+        # Wait up to 20 seconds for the element to be present on the page
+        wait = WebDriverWait(driver, 20)
+        prices = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="price"]')))
 
-def page_processing_slnm (url) :
+        for price in prices:
+            if (price.text[0]=="$")and(price.size['width']>PRICE_BLOK_MIN_WIDTH):
+                return_price=price.text
+                break
+        texts = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
+        for i, text in enumerate(texts) :
+            if text.text=="Cheapest":
+                ticket=Ticket(price=texts[i-4].text,air_company=texts[i-1].text)
+                print(ticket.air_company)
+
+    except :
+        return_price = None
+
+    return  return_price
+
+def page_processing_slnm (url,config) :
     """
     get price from page
     Args:
@@ -185,24 +225,21 @@ def page_processing_slnm (url) :
     """
     service = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
-    chrome_options.add_argument("--incognito")
-    chrome_options.add_argument('--headless')
+    chrome_options.add_argument(config['chome_args'][0])
+    chrome_options.add_argument(config['chome_args'][1])
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.get(url)
-    time.sleep(15)
 
-    # click_checkbox(driver, logging) plan to realise capcha handling later
-    try :
-        price = driver.find_elements(By.CSS_SELECTOR, '[data-test-id="price"]')[0].text
-        time.sleep(random.random()*3)
-    except :
-        price = None
+    return_price = extract_price(driver)
 
+    if return_price==None:
+        g_capcha_solver(driver, logging)
+        return_price = extract_price(driver)
 
     parameters = re.search('.*request', url).group(0)[-18 :-7]
-    print(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{price}")
-    logging.info(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{price}")
-    return
+    print(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{return_price}")
+    logging.info(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{return_price}")
+    return return_price
 
 
 def get_ticket_price (list_of_urls, config) :
@@ -215,13 +252,13 @@ def get_ticket_price (list_of_urls, config) :
     """
     threads=[]
     for index, url in enumerate(list_of_urls) :
-        t = threading.Thread(target=page_processing_slnm, args=(url,))
+        # page_processing_slnm(url,config)
+    ##################################################################
+        t = threading.Thread(target=page_processing_slnm, args=(url,config))
         threads.append(t)
-
     # start the threads
     for t in threads :
         t.start()
-
     # wait for the threads to finish
     for t in threads :
         t.join()
@@ -268,7 +305,7 @@ def main () :
     logging.basicConfig(format='%(asctime)s  function_mane: %(funcName)s %(levelname)s: %(message)s',
                         datefmt='%m/%d/%Y %H:%M:%S',
                         filename='tickets.log',
-                        filemode='w',
+                        filemode='a',
                         level=logging.INFO)
 
     try :
@@ -294,14 +331,27 @@ def main () :
             end_point = airport_df['code'].values
     except :
         pass
-
     url_list = get_url_list(start_aero_code, start_date, days_number, config, end_point)
     start= datetime.datetime.now()
-    get_ticket_price(url_list,config)
+    logging.info(f" send batch of urls size {len(url_list[:BATCH_SIZE])} ")
+    logging.info(f"Config file {CONFIG_NAME} opened successfully")
+
+    # w/o threading
+    # get_ticket_price(url_list,config)
+
+    # threading
+
+    batch_number= int(len(url_list) / BATCH_SIZE)
+    if batch_number<1:
+        batch_number=1
+
+    for i in range(batch_number):
+        get_ticket_price(url_list[:BATCH_SIZE],config)
+        url_list=url_list[BATCH_SIZE:]
+        if len(url_list)>0 and  len(url_list)<BATCH_SIZE:
+            get_ticket_price(url_list, config)
     end = datetime.datetime.now()
     print(f"get_ticket_price takes: {end-start} sec ")
-
-
 
 if __name__ == "__main__" :
     main()

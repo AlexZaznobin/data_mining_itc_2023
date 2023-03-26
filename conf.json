@@ -14,5 +14,7 @@
         "start_aero_code" :"TLV",
         "start_date": "2022-04-03",
         "days_number" : 3
-  }
+  },
+  "chome_args" : ["--incognito", "--headless"]
+
 }
