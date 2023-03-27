@@ -19,7 +19,7 @@ from fake_useragent import UserAgent
 from capcha_speech_recognition import g_capcha_solver
 
 CONFIG_NAME = 'conf.json'
-BATCH_SIZE=10
+BATCH_SIZE=5
 PRICE_BLOK_MIN_WIDTH=45
 
 class Ticket:
@@ -194,7 +194,9 @@ def page_processing_bs4 (url, config) :
         return prices[0].text
 
 def extract_price(driver):
+    air_company = None
     try :
+        time.sleep(random.random())
         # Wait up to 20 seconds for the element to be present on the page
         wait = WebDriverWait(driver, 15)
         prices = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="price"]')))
@@ -207,10 +209,9 @@ def extract_price(driver):
         for i, text_element in enumerate(text_elements) :
             if(text_element.text==return_price):
                 air_company=text_elements[i+3].text
-
+                break
     except :
         return_price = None
-        air_company= None
 
     return  return_price,air_company
 
@@ -226,7 +227,7 @@ def page_processing_slnm (url,config) :
     service = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
     chrome_options.add_argument(config['chome_args'][0])
-    # chrome_options.add_argument(config['chome_args'][1])
+    chrome_options.add_argument(config['chome_args'][1])
 
 
     driver = webdriver.Chrome(service=service, options=chrome_options)
@@ -236,11 +237,13 @@ def page_processing_slnm (url,config) :
 
     if return_price==None:
         g_capcha_solver(driver, logging)
-        return_price, aircompany = extract_price(driver)
+        return_price, air_company = extract_price(driver)
 
     parameters = re.search('.*request', url).group(0)[-18 :-7]
-    print(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{return_price}")
-    logging.info(f"{parameters[:3]},{parameters[3 :-4]}, {parameters[-4 :-1]}, {parameters[-1 :]},{return_price}")
+    with open(config['output_copy'], 'a') as result_file:
+        result_file.write(f"{parameters[:3]},{parameters[3 :-4]},{parameters[-4 :-1]},{parameters[-1:]},{return_price},{air_company}\n")
+    print(f"{parameters[:3]},{parameters[3 :-4]},{parameters[-4 :-1]},{parameters[-1 :]},{return_price},{air_company}")
+    logging.info(f"{parameters[:3]},{parameters[3 :-4]},{parameters[-4 :-1]},{parameters[-1 :]},{return_price},{air_company}")
     return return_price
 
 
@@ -342,7 +345,7 @@ def main () :
         if len(url_list)>0 and  len(url_list)<BATCH_SIZE:
             get_ticket_price(url_list, config)
     end = datetime.datetime.now()
-    print(f"get_ticket_price takes: {end-start} sec ")
+    logging.info(f"this takes: {end-start} sec ")
 
 if __name__ == "__main__" :
     main()
