@@ -2,7 +2,7 @@
   "browsers": ["edge", "chrome"],
   "link_constructor": "https://www.aviasales.com/search/",
   "qrequest_batch_size": 10,
-  "output_copy": "stdout.log",
+  "output_copy": "tickets.log",
   "airports": "airports.csv",
   "test_data": {
         "end_point" : {
@@ -15,6 +15,7 @@
         "start_date": "2022-04-03",
         "days_number" : 3
   },
-  "chome_args" : ["--incognito", "--headless"]
+  "chome_args" : ["--incognito"],
+  "chome_args_1" : "--headless"
 
 }
