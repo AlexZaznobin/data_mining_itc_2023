@@ -1,6 +1,8 @@
 # Aviasales Web Scraping Project
 ## Alexander Zaznobin
-I used python’s Selenium library to scrape the Aviasales website (see requirements.txt for versions). 
+This Python script is designed to scrape ticket prices from a website using a combination of libraries such as requests, BeautifulSoup, selenium, and others. It processes the data and outputs the prices and airline company information for specific routes and dates. 
+
+
 **Aviasales**:[https://www.aviasales.com/]
 ### What is inside directory: 
 * aviasales_scrpr.py -  executable file 
