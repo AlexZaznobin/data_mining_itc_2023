@@ -19,9 +19,6 @@ This Python script is designed to scrape ticket prices from a website using a co
 if Destination Airport is set to 'any', data is collected for all destinations.
 
 #### Data collected:
-- Airport to start traveling 
-- Date of the ticket
-- Destination Airport 
-- Ticket price 
+![aviasales scraper](https://user-images.githubusercontent.com/127748062/229361563-90ac371a-07fe-4161-9f31-4864221a1f79.png)
 
 #### The code creates tickets.log as output. 
