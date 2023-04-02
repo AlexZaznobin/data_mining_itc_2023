@@ -9,7 +9,7 @@ def get_date_range () :
         days_number: - number of days in suitable range
     """
     incorrect_date = True
-    start_point = input("insert date range DDMMDDMM (for April 2023 - 01043004):")
+    start_point = input("insert date range DDMMDDMM (for April 2023 - 01053005):")
     while incorrect_date :
         try :
             start_date = int(start_point[:2])

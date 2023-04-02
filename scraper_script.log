@@ -14493,3 +14493,531 @@
 04/02/2023 00:17:16  function_mane: g_capcha_solver INFO: check if chapcha on place
 04/02/2023 00:17:19  function_mane: g_capcha_solver INFO: Capcha found
 04/02/2023 00:17:39  function_mane: swith_to_audio INFO: Capcha switch to audio version
+04/02/2023 13:51:42  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 13:51:57  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['SVO'])
+04/02/2023 13:51:57  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 13:51:57  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 13:51:57  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 13:52:14  function_mane: page_processing_slnm INFO: None,TLV,Tel Aviv-Yafo,0105,None,SVO,Moscow,$860,$924
+04/02/2023 13:52:27  function_mane: page_processing_slnm INFO: None,TLV,Tel Aviv-Yafo,0205,None,SVO,Moscow,$544,Only 7 tickets remaining for this price
+04/02/2023 13:52:51  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 13:52:52  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 13:52:55  function_mane: page_processing_slnm INFO: None,TLV,Tel Aviv-Yafo,0305,None,SVO,Moscow,$863,$2,367
+04/02/2023 13:55:12  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 14:12:26  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 14:12:36  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 14:12:36  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 14:12:36  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 14:12:36  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 14:14:40  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 14:14:48  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 14:14:48  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 14:14:48  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 14:14:48  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 14:21:45  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 14:21:58  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 14:21:58  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 14:21:58  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 14:21:58  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 14:24:43  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 14:24:44  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 14:27:24  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 14:27:25  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 14:28:19  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 14:35:51  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 14:36:01  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 14:36:01  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 14:36:01  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 14:36:01  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 15:26:30  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 15:26:39  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 15:26:39  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 15:26:39  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 15:26:39  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 15:28:54  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 15:29:01  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 15:29:01  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 15:29:01  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 15:29:01  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 15:31:34  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 15:31:50  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 15:31:57  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 15:31:57  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 15:31:57  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 15:31:57  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 15:32:37  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0105,TBS,Tbilisi,$113,El Al Israel Airlines,9:00 am,12:35 pm,Duration: 2h 35m,None
+
+04/02/2023 15:32:49  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 15:32:51  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 15:32:58  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0205,TBS,Tbilisi,$113,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,None
+
+04/02/2023 15:33:11  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0305,TBS,Tbilisi,$134,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,None
+
+04/02/2023 15:33:23  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0405,TBS,Tbilisi,$149,Israir Airlines,7:40 pm,11:20 pm,Duration: 2h 40m,None
+
+04/02/2023 15:33:33  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0505,TBS,Tbilisi,$99,Pegasus Airlines,4:15 pm,3:20 am,Duration: 10h 05m,None
+
+04/02/2023 15:33:43  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0605,TBS,Tbilisi,$149,Pegasus Airlines,6:55 am,5:00 pm,Duration: 9h 05m,None
+
+04/02/2023 15:34:00  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0705,TBS,Tbilisi,$129,Arkia,6:25 pm,10:00 pm,Duration: 2h 35m,None
+
+04/02/2023 15:34:19  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0805,TBS,Tbilisi,$119,El Al Israel Airlines,8:50 am,12:25 pm,Duration: 2h 35m,None
+
+04/02/2023 15:35:39  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0905,TBS,Tbilisi,$113,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,None
+
+04/02/2023 15:44:15  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1005,TBS,Tbilisi,$99,Pegasus Airlines,4:15 pm,3:20 am,Duration: 10h 05m,None
+
+04/02/2023 15:44:50  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1105,TBS,Tbilisi,$149,Israir Airlines,7:40 pm,11:20 pm,Duration: 2h 40m,None
+
+04/02/2023 15:45:09  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1205,TBS,Tbilisi,$152,El Al Israel Airlines,6:00 am,9:35 am,Duration: 2h 35m,None
+
+04/02/2023 15:48:32  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 15:48:33  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 15:48:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1305,TBS,Tbilisi,$159,Pegasus Airlines,6:55 am,5:00 pm,Duration: 9h 05m,None
+
+04/02/2023 15:48:52  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1405,TBS,Tbilisi,$139,El Al Israel Airlines,5:30 pm,9:05 pm,Duration: 2h 35m,None
+
+04/02/2023 15:49:06  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1505,TBS,Tbilisi,$119,El Al Israel Airlines,9:00 am,12:35 pm,Duration: 2h 35m,None
+
+04/02/2023 15:49:18  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1605,TBS,Tbilisi,$143,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,None
+
+04/02/2023 15:49:29  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1705,TBS,Tbilisi,$143,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,None
+
+04/02/2023 15:49:44  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 15:49:45  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 15:50:01  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1805,TBS,Tbilisi,$149,Israir Airlines,7:40 pm,11:20 pm,Duration: 2h 40m,None
+
+04/02/2023 15:51:32  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 15:51:33  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 16:00:17  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1905,TBS,Tbilisi,$162,AnadoluJet,3:25 pm,1:55 am,Duration: 9h 30m,None
+
+04/02/2023 16:00:44  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:00:52  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 16:00:52  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 16:00:52  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:00:52  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:01:21  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0105,TBS,Tbilisi,$115,El Al Israel Airlines,9:00 am,12:35 pm,Duration: 2h 35m,None
+
+04/02/2023 16:02:51  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:03:01  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 1), 30, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 16:03:01  function_mane: get_url_list INFO: finish get_url_list of 30 items
+04/02/2023 16:03:01  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:03:01  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:03:55  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0105,TBS,Tbilisi,$113,El Al Israel Airlines,9:00 am,12:35 pm,Duration: 2h 35m,None
+
+04/02/2023 16:04:29  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 16:04:30  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 16:04:44  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0205,TBS,Tbilisi,$113,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,None
+
+04/02/2023 16:05:03  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0305,TBS,Tbilisi,$134,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,None
+
+04/02/2023 16:05:32  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0405,TBS,Tbilisi,$149,Israir Airlines,7:40 pm,11:20 pm,Duration: 2h 40m,None
+
+04/02/2023 16:06:03  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0505,TBS,Tbilisi,$99,Pegasus Airlines,4:15 pm,3:20 am,Duration: 10h 05m,None
+
+04/02/2023 16:31:02  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:31:25  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 16:31:25  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 16:31:25  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:31:25  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:32:52  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0505,TBS,Tbilisi,$101,Pegasus Airlines,4:15 pm,3:20 am,Duration: 10h 05m,0
+
+04/02/2023 16:33:52  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:33:59  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 16:33:59  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 16:33:59  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:33:59  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:37:16  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:37:21  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 16:37:21  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 16:37:21  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:37:21  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:41:14  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:41:30  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 16:41:30  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 16:41:30  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:41:30  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:47:47  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:47:56  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless'}, ['TBS'])
+04/02/2023 16:47:56  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 16:47:56  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:47:56  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:55:21  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 16:55:29  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['TBS'])
+04/02/2023 16:55:29  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 16:55:29  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 16:55:29  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 16:55:42  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0505,TBS,Tbilisi,$101,Pegasus Airlines,4:15 pm,3:20 am,Duration: 10h 05m,1
+
+04/02/2023 16:55:54  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0605,TBS,Tbilisi,$151,Pegasus Airlines,6:55 am,5:00 pm,Duration: 9h 05m,1
+
+04/02/2023 16:56:07  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0705,TBS,Tbilisi,$131,Arkia,6:25 pm,10:00 pm,Duration: 2h 35m,0
+
+04/02/2023 16:56:17  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0805,TBS,Tbilisi,$119,El Al Israel Airlines,8:50 am,12:25 pm,Duration: 2h 35m,0
+
+04/02/2023 16:56:32  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,0905,TBS,Tbilisi,$115,El Al Israel Airlines,9:00 pm,12:35 am,Duration: 2h 35m,0
+
+04/02/2023 16:56:43  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1005,TBS,Tbilisi,$99,Pegasus Airlines,4:15 pm,3:20 am,Duration: 10h 05m,1
+
+04/02/2023 16:56:55  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1105,TBS,Tbilisi,$149,Israir Airlines,7:40 pm,11:20 pm,Duration: 2h 40m,0
+
+04/02/2023 16:57:08  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1205,TBS,Tbilisi,$157,El Al Israel Airlines,6:00 am,9:35 am,Duration: 2h 35m,0
+
+04/02/2023 16:57:21  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1305,TBS,Tbilisi,$163,Pegasus Airlines,6:55 am,5:00 pm,Duration: 9h 05m,1
+
+04/02/2023 16:57:38  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1405,TBS,Tbilisi,$126,Arkia,6:25 pm,10:00 pm,Duration: 2h 35m,0
+
+04/02/2023 16:57:51  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,1505,TBS,Tbilisi,$113,El Al Israel Airlines,9:00 am,12:35 pm,Duration: 2h 35m,0
+
+04/02/2023 18:54:38  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 18:55:10  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 18:55:23  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 18:55:35  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['TBS'])
+04/02/2023 18:55:35  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 18:55:35  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 18:55:35  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 18:55:46  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 18:55:47  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 18:55:48  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$99,Pegasus Airlines,None,None,None
+
+04/02/2023 18:55:57  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 18:55:58  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 18:56:00  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$151,Pegasus Airlines,None,None,None
+
+04/02/2023 18:56:10  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 18:56:11  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 18:56:13  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$129,Arkia,None,None,None
+
+04/02/2023 18:56:25  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 18:56:26  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 18:56:26  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$113,El Al Israel Airlines,None,None,None
+
+04/02/2023 19:01:36  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:01:37  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:02:39  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:02:50  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['TBS'])
+04/02/2023 19:02:50  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 19:02:50  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 19:02:50  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:04:12  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:04:18  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['TBS'])
+04/02/2023 19:04:18  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 19:04:18  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 19:04:18  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:04:48  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:04:49  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:06:07  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:06:16  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['TBS'])
+04/02/2023 19:06:16  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 19:06:16  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 19:06:16  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:09:36  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:09:46  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['TBS'])
+04/02/2023 19:09:46  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 19:09:46  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 19:09:46  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:11:39  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$99,Pegasus Airlines,2023-05-05 16:15:00,Duration: 10h 05m,1
+
+04/02/2023 19:19:27  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$151,Pegasus Airlines,2023-05-06 06:55:00,Duration: 9h 05m,1
+
+04/02/2023 19:19:41  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$129,Arkia,2023-05-07 18:25:00,Duration: 2h 35m,0
+
+04/02/2023 19:19:51  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:19:52  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:19:55  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$113,El Al Israel Airlines,2023-05-08 08:50:00,Duration: 2h 35m,0
+
+04/02/2023 19:20:06  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$123,El Al Israel Airlines,2023-05-09 21:00:00,Duration: 2h 35m,0
+
+04/02/2023 19:20:17  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$101,Pegasus Airlines,2023-05-10 16:15:00,Duration: 10h 05m,1
+
+04/02/2023 19:20:28  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$149,Israir Airlines,2023-05-11 19:40:00,Duration: 2h 40m,0
+
+04/02/2023 19:20:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$157,El Al Israel Airlines,2023-05-12 06:00:00,Duration: 2h 35m,0
+
+04/02/2023 19:20:51  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$163,Pegasus Airlines,2023-05-13 06:55:00,Duration: 9h 05m,1
+
+04/02/2023 19:21:00  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:21:01  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:21:04  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$126,Arkia,2023-05-14 18:25:00,Duration: 2h 35m,0
+
+04/02/2023 19:21:15  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$119,El Al Israel Airlines,2023-05-15 09:00:00,Duration: 2h 35m,0
+
+04/02/2023 19:21:26  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$143,El Al Israel Airlines,2023-05-16 21:00:00,Duration: 2h 35m,0
+
+04/02/2023 19:21:37  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$139,El Al Israel Airlines,2023-05-17 21:00:00,Duration: 2h 35m,0
+
+04/02/2023 19:21:46  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:21:47  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:21:51  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$146,Arkia,2023-05-18 18:25:00,Duration: 2h 35m,0
+
+04/02/2023 19:22:03  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$166,AnadoluJet,2023-05-19 15:25:00,Duration: 9h 30m,1
+
+04/02/2023 19:22:15  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$175,Pegasus Airlines,2023-05-20 11:15:00,Duration: 15h 05m,1
+
+04/02/2023 19:22:26  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$131,Arkia,2023-05-21 18:25:00,Duration: 2h 35m,0
+
+04/02/2023 19:22:37  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$149,Israir Airlines,2023-05-22 19:30:00,Duration: 2h 40m,0
+
+04/02/2023 19:22:48  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$153,El Al Israel Airlines,2023-05-23 21:00:00,Duration: 2h 35m,0
+
+04/02/2023 19:23:00  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$173,El Al Israel Airlines,2023-05-24 21:00:00,Duration: 2h 35m,0
+
+04/02/2023 19:23:12  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$163,Pegasus Airlines,2023-05-25 16:15:00,Duration: 10h 05m,1
+
+04/02/2023 19:23:24  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$151,Pegasus Airlines,2023-05-26 16:15:00,Duration: 10h 05m,1
+
+04/02/2023 19:23:34  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$200,Pegasus Airlines,2023-05-27 11:15:00,Duration: 15h 05m,1
+
+04/02/2023 19:23:42  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:23:43  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:23:46  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$152,El Al Israel Airlines,2023-05-28 20:40:00,Duration: 2h 35m,0
+
+04/02/2023 19:23:56  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$201,Pegasus Airlines,2023-05-29 11:15:00,Duration: 15h 05m,1
+
+04/02/2023 19:24:06  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$149,Israir Airlines,2023-05-30 19:20:00,Duration: 2h 40m,0
+
+04/02/2023 19:24:17  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,$149,Israir Airlines,2023-05-31 20:00:00,Duration: 2h 40m,0
+
+04/02/2023 19:24:18  function_mane: main INFO: this takes: 0:14:31.201991 sec 
+04/02/2023 19:37:23  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:38:47  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 4, 5), 6, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['AHN'])
+04/02/2023 19:38:47  function_mane: get_url_list INFO: finish get_url_list of 6 items
+04/02/2023 19:38:47  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 19:38:47  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:39:10  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:39:11  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:39:26  function_mane: page_processing_slnm INFO: TLV,None,AHN,None,None,None,None,None,None
+
+04/02/2023 19:39:48  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:39:48  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:39:59  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:40:38  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 4, 5), 6, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': '--headless', 'batch_size': 1}, ['CDG'])
+04/02/2023 19:40:38  function_mane: get_url_list INFO: finish get_url_list of 6 items
+04/02/2023 19:40:38  function_mane: main INFO:  send batch of urls size 1 
+04/02/2023 19:40:38  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:40:50  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$167,EasyJet,2023-04-05 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:41:05  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$161,EasyJet,2023-04-06 19:05:00,Duration: 5h 05m,0
+
+04/02/2023 19:41:18  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$140,EasyJet,2023-04-07 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:41:35  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$103,EasyJet,2023-04-08 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:41:51  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$137,EasyJet,2023-04-09 19:25:00,Duration: 5h 05m,0
+
+04/02/2023 19:42:04  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$147,Pegasus Airlines,2023-04-10 16:15:00,Duration: 1d 1h 05m,1
+
+04/02/2023 19:42:04  function_mane: main INFO: this takes: 0:01:26.402643 sec 
+04/02/2023 19:43:36  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:43:57  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.log', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito', '--headless'], 'batch_size': 4}, ['CDG'])
+04/02/2023 19:43:57  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 19:43:57  function_mane: main INFO:  send batch of urls size 4 
+04/02/2023 19:43:57  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:44:12  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:44:13  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:44:15  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$170,EasyJet,2023-05-05 14:30:00,Duration: 8h 55m,1
+
+04/02/2023 19:44:15  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$210,LOT Polish Airlines,2023-05-07 11:55:00,Duration: 8h,0
+
+04/02/2023 19:44:15  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$131,None,None,None,None
+
+04/02/2023 19:44:16  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$210,LOT Polish Airlines,2023-05-06 11:55:00,Duration: 8h,1
+
+04/02/2023 19:44:33  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:44:34  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:44:34  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$212,LOT Polish Airlines,2023-05-06 11:55:00,Duration: 8h,1
+
+04/02/2023 19:44:34  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$131,None,None,None,None
+
+04/02/2023 19:44:34  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$212,LOT Polish Airlines,2023-05-07 11:55:00,Duration: 8h,1
+
+04/02/2023 19:44:36  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$224,EasyJet,2023-05-09 13:25:00,Duration: 8h 25m,1
+
+04/02/2023 19:44:54  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:44:54  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:44:55  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:44:55  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:44:56  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$131,None,None,None,None
+
+04/02/2023 19:44:56  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$174,None,None,None,None
+
+04/02/2023 19:44:58  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$208,EasyJet,2023-05-10 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:45:17  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:45:18  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:45:18  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$208,EasyJet,2023-05-10 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:45:18  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$161,EasyJet,2023-05-11 19:05:00,Duration: 5h 05m,0
+
+04/02/2023 19:45:18  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$131,None,None,None,None
+
+04/02/2023 19:45:38  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$208,EasyJet,2023-05-10 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:45:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$224,EasyJet,2023-05-09 13:25:00,Duration: 8h 25m,1
+
+04/02/2023 19:45:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$161,EasyJet,2023-05-11 19:05:00,Duration: 5h 05m,0
+
+04/02/2023 19:45:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$159,EasyJet,2023-05-12 18:55:00,Duration: 5h 05m,0
+
+04/02/2023 19:45:56  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:45:58  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:45:59  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$96,None,None,None,None
+
+04/02/2023 19:46:00  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$159,EasyJet,2023-05-12 18:55:00,Duration: 5h 05m,0
+
+04/02/2023 19:46:02  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$161,EasyJet,2023-05-11 19:05:00,Duration: 5h 05m,0
+
+04/02/2023 19:46:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$208,EasyJet,2023-05-10 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:46:55  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:46:56  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:46:56  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:46:57  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:46:57  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$127,None,None,None,None
+
+04/02/2023 19:46:58  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$129,None,None,None,None
+
+04/02/2023 19:47:00  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$161,EasyJet,2023-05-11 19:05:00,Duration: 5h 05m,0
+
+04/02/2023 19:47:00  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$159,EasyJet,2023-05-12 18:55:00,Duration: 5h 05m,0
+
+04/02/2023 19:47:16  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:47:17  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:47:17  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:47:17  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$129,None,None,None,None
+
+04/02/2023 19:47:18  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:47:19  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$96,None,None,None,None
+
+04/02/2023 19:47:19  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$212,EasyJet,2023-05-15 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:47:20  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$159,EasyJet,2023-05-12 18:55:00,Duration: 5h 05m,0
+
+04/02/2023 19:47:36  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$128,EasyJet,2023-05-16 13:25:00,Duration: 8h 25m,1
+
+04/02/2023 19:47:39  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$110,EasyJet,2023-05-13 21:20:00,Duration: 11h 40m,1
+
+04/02/2023 19:47:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$592,El Al Israel Airlines,2023-05-14 09:00:00,Duration: 4h 50m,0
+
+04/02/2023 19:47:40  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$212,EasyJet,2023-05-15 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:47:55  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:47:56  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:47:58  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$129,None,None,None,None
+
+04/02/2023 19:47:59  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$212,EasyJet,2023-05-15 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:48:02  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$106,EasyJet,2023-05-16 13:25:00,Duration: 8h 25m,1
+
+04/02/2023 19:48:03  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$162,Arkia,2023-05-17 17:15:00,Duration: 4h 55m,0
+
+04/02/2023 19:48:21  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$212,EasyJet,2023-05-15 19:15:00,Duration: 5h 05m,0
+
+04/02/2023 19:48:22  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$188,Arkia,2023-05-18 18:40:00,Duration: 4h 55m,0
+
+04/02/2023 19:48:23  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$162,Arkia,2023-05-17 17:15:00,Duration: 4h 55m,0
+
+04/02/2023 19:48:24  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$106,EasyJet,2023-05-16 13:25:00,Duration: 8h 25m,1
+
+04/02/2023 19:48:41  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$128,EasyJet,2023-05-16 13:25:00,Duration: 8h 25m,1
+
+04/02/2023 19:48:44  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$188,Arkia,2023-05-18 18:40:00,Duration: 4h 55m,0
+
+04/02/2023 19:48:45  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$162,Arkia,2023-05-17 17:15:00,Duration: 4h 55m,0
+
+04/02/2023 19:48:45  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$130,EasyJet,2023-05-19 16:50:00,Duration: 5h 10m,0
+
+04/02/2023 19:49:00  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:49:01  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:49:02  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$181,None,None,None,None
+
+04/02/2023 19:49:02  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$188,Arkia,2023-05-18 18:40:00,Duration: 4h 55m,0
+
+04/02/2023 19:49:05  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$130,EasyJet,2023-05-19 16:50:00,Duration: 5h 10m,0
+
+04/02/2023 19:49:05  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$162,Arkia,2023-05-17 17:15:00,Duration: 4h 55m,0
+
+04/02/2023 19:49:19  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:49:20  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:49:21  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$195,None,None,None,None
+
+04/02/2023 19:49:24  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$188,Arkia,2023-05-18 18:40:00,Duration: 4h 55m,0
+
+04/02/2023 19:49:24  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$400,EasyJet,2023-05-21 19:25:00,Duration: 5h 05m,0
+
+04/02/2023 19:49:25  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$130,EasyJet,2023-05-19 16:50:00,Duration: 5h 10m,0
+
+04/02/2023 19:49:40  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:49:41  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:49:43  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$156,None,None,None,None
+
+04/02/2023 19:49:44  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$130,EasyJet,2023-05-19 16:50:00,Duration: 5h 10m,0
+
+04/02/2023 19:49:44  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$400,EasyJet,2023-05-21 19:25:00,Duration: 5h 05m,0
+
+04/02/2023 19:49:45  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$202,Aegean Airlines,2023-05-22 13:50:00,Duration: 7h 35m,1
+
+04/02/2023 19:50:01  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:50:02  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:50:03  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$202,Aegean Airlines,2023-05-22 13:50:00,Duration: 7h 35m,1
+
+04/02/2023 19:50:03  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,$156,None,None,None,None
+
+04/02/2023 19:50:05  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$400,EasyJet,2023-05-21 19:25:00,Duration: 5h 05m,0
+
+04/02/2023 19:50:05  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$281,EasyJet,2023-05-23 19:00:00,Duration: 5h 05m,0
+
+04/02/2023 19:50:24  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$281,EasyJet,2023-05-23 19:00:00,Duration: 5h 05m,0
+
+04/02/2023 19:50:27  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$202,Aegean Airlines,2023-05-22 13:50:00,Duration: 7h 35m,1
+
+04/02/2023 19:50:28  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$400,EasyJet,2023-05-21 19:25:00,Duration: 5h 05m,0
+
+04/02/2023 19:50:28  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$293,Arkia,2023-05-24 17:15:00,Duration: 4h 55m,0
+
+04/02/2023 19:50:49  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,$202,Pegasus Airlines,2023-05-22 20:40:00,Duration: 17h 35m,0
+
+04/02/2023 19:50:54  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:50:54  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:50:54  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:50:54  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:50:54  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:50:54  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:50:55  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:50:56  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:50:56  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:52:35  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,None,None
+
+04/02/2023 19:52:51  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,None,None
+
+04/02/2023 19:52:52  function_mane: page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,None,None
+
+04/02/2023 19:53:17  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:53:17  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:53:18  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:53:18  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:53:19  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:53:19  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:53:20  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:53:20  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:53:20  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:53:21  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:53:22  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:53:23  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:54:38  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/02/2023 19:55:02  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 5), 27, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'output_copy': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito', '--headless'], 'batch_size': 2}, ['CDG'])
+04/02/2023 19:55:02  function_mane: get_url_list INFO: finish get_url_list of 27 items
+04/02/2023 19:55:25  function_mane: main INFO:  send batch of urls size 2 
+04/02/2023 19:55:26  function_mane: main INFO:  Config file conf.json opened successfully
+04/02/2023 19:56:01  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:56:01  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/02/2023 19:56:01  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:56:01  function_mane: g_capcha_solver INFO: Capcha found
+04/02/2023 19:56:01  function_mane: switch_to_audio INFO: Capcha switch to audio version
+04/02/2023 19:56:03  function_mane: urlopen WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1180afad0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/586584f6a972fe25365e6c32c6f95912/element/c9cdac9a-0f0d-4054-822e-e72d1eba809c/click
+04/02/2023 19:56:03  function_mane: urlopen WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x117e55210>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/586584f6a972fe25365e6c32c6f95912/element/c9cdac9a-0f0d-4054-822e-e72d1eba809c/click
+04/02/2023 19:56:03  function_mane: urlopen WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x117e54550>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/586584f6a972fe25365e6c32c6f95912/element/c9cdac9a-0f0d-4054-822e-e72d1eba809c/click
+04/02/2023 19:56:03  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/02/2023 19:56:03  function_mane: urlopen WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x117e4ab10>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/586584f6a972fe25365e6c32c6f95912/url
+04/02/2023 19:56:03  function_mane: urlopen WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x117e48950>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/586584f6a972fe25365e6c32c6f95912/url
+04/02/2023 19:56:03  function_mane: urlopen WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x117e490d0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/586584f6a972fe25365e6c32c6f95912/url

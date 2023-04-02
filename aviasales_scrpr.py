@@ -22,19 +22,17 @@ from interface import get_airport
 
 CONFIG_NAME = 'conf.json'
 BATCH_SIZE=1
-PRICE_BLOK_MIN_WIDTH=45
+PARENTING_LIMIT=20
 
 class Airport:
-    def __init__ (self, code=None, city= None, id=None):
+    def __init__ (self, code=None, city= None):
         self.code=code
         self.fill_name=None
         self.city=city
-        self.id=id
 
     def __str__ (self) :
         try :
-            return ",".join((str(self.id),
-                             str(self.code),
+            return ",".join((str(self.code),
                              str(self.city)
                              ))
         except  :
@@ -42,20 +40,34 @@ class Airport:
 
 
 class Ticket:
-    def __init__(self,start_airport=None, date=None, dest_airport=None, price=None, air_company=None):
+    def __init__(self,
+                 start_airport=None,
+                 date=None,
+                 dest_airport=None,
+                 price=None,
+                 air_company=None,
+                 start_time=None,
+                 duration=None,
+                 layover_info=None):
         self.start_airport = start_airport
         self.date=date
+        self.start_time=start_time
         self.dest_airport = dest_airport
         self.price=price
         self.air_company=air_company
+        self.duration=duration
+        self.layover_info=layover_info
 
     def __str__ (self) :
         try :
             return ",".join((str(self.start_airport),
-                       str(self.date),
+                       # str(self.date),
                        str(self.dest_airport),
                        str(self.price),
-                       str(self.air_company)
+                       str(self.air_company),
+                       str(self.start_time),
+                       str(self.duration),
+                       str(self.layover_info)
                        ))
         except  :
             return "N/A"
@@ -113,10 +125,8 @@ def page_processing_bs4 (url, config) :
     else :
         return prices[0].text
 
-def extract_data_page(driver, current_ticket):
-    air_company = None
-    start_city= None
-    end_city = None
+def extract_data_page(driver, current_ticket, config):
+
     currency , currency_position=currency_check(driver)
     try :
         time.sleep(random.random())
@@ -124,19 +134,71 @@ def extract_data_page(driver, current_ticket):
         wait = WebDriverWait(driver, 15)
         prices = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="price"]')))
         for price in prices:
-            print(price.text)
-            if (price.text[currency_position]==currency)and(price.size['width']>PRICE_BLOK_MIN_WIDTH):
+             ticket_web_element=get_full_ticket_we(price, config)
+             if ticket_web_element!=None:
                 return_price=price.text
                 current_ticket.price=return_price
-                extract_aicompany(driver,current_ticket)
-                extract_city(driver, current_ticket)
+                extract_aicompany(ticket_web_element,current_ticket)
+                extract_city(ticket_web_element, current_ticket)
+                extract_time(ticket_web_element, current_ticket)
+                extract_layover(ticket_web_element, current_ticket, config)
                 break
     except :
         return_price = None
 
     return  return_price
 
+def extract_time(ticket_web_element,current_ticket):
+    ticket_info=ticket_web_element.text.split('\n')
+    start=0
+    for item in ticket_info:
+        if (item.find(":", start)!=-1)&(item.find("Duration:", start)==-1):
+            time_info_list=item.split(":")
+            minutes =time_info_list[1][:2]
+            ampm = time_info_list[1][-2:]
+            minutes=int(minutes)
+            if ampm=="pm":
+                hours=int(time_info_list[0])+12
+            else:
+                hours=int(time_info_list[0])
+            month=int(current_ticket.date[2:])
+            day=int(current_ticket.date[:2])
+            current_ticket.start_time = datetime.datetime(
+                2023,
+                month,
+                day,
+                hours,
+                minutes,
+                0)
 
+        if (item.find("Duration:", start)!=-1):
+            current_ticket.duration=item
+            break
+
+def extract_layover(ticket_web_element,current_ticket,config):
+    stop_elements = ticket_web_element.find_elements(By.XPATH,"//div[contains(@class, 'segment-route__stop')]")
+    layover_count=0
+    if len(stop_elements)>0:
+        for stop_element in stop_elements:
+            ticket_containing_stop_element = get_full_ticket_we(stop_element, config)
+            if ticket_containing_stop_element==ticket_web_element:
+                layover_count=+1
+            if (layover_count>0)&(ticket_containing_stop_element==None):
+                break
+    current_ticket.layover_info=layover_count
+
+def get_full_ticket_we(webelement ,config):
+    child_element=webelement
+    ticket_element=None
+    for i in range(config['depth_of_parenting_ticket_widget']):
+        try:
+            parent_element = child_element.find_element(By.XPATH,"parent::div")
+            child_element=parent_element
+            if parent_element.get_attribute("class")=="ticket-desktop":
+                ticket_element=parent_element
+        except:
+            break
+    return ticket_element
 def currency_check(driver):
     current_url = driver.current_url
     if "https://www.aviasales.ru/" in current_url:
@@ -147,7 +209,6 @@ def extract_aicompany(driver,current_ticket):
     wait = WebDriverWait(driver, 1)
     text_elements = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
     for i, text_element in enumerate(text_elements) :
-        print(text_element.text)
         if (text_element.text == current_ticket.price) :
             current_ticket.air_company = text_elements[i + 3].text
             return True
@@ -179,14 +240,14 @@ def page_processing_slnm (url,config) :
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.get(url)
 
-    if extract_data_page(driver,page_ticket)==None:
+    if extract_data_page(driver,page_ticket,config)==None:
         g_capcha_solver(driver, logging)
-        extract_data_page(driver,page_ticket)
+        extract_data_page(driver,page_ticket,config)
 
     with open(config['output_copy'], 'a') as result_file:
-        result_file.write(str(page_ticket))
+        result_file.write(str(page_ticket)+'\n')
     print(str(page_ticket))
-    logging.info(str(page_ticket))
+    logging.info(str(page_ticket)+'\n')
     return page_ticket
 
 
@@ -279,16 +340,16 @@ def main () :
         pass
     url_list = get_url_list(start_aero_code, start_date, days_number, config, end_point)
     start= datetime.datetime.now()
-    logging.info(f" send batch of urls size {len(url_list[:BATCH_SIZE])} ")
+    logging.info(f" send batch of urls size {len(url_list[:config['batch_size']])} ")
     logging.info(f" Config file {CONFIG_NAME} opened successfully")
     batch_number= int(len(url_list) / BATCH_SIZE)
     if batch_number<1:
         batch_number=1
 
     for i in range(batch_number):
-        m_thread_batch_scraping(url_list[:BATCH_SIZE], config)
-        url_list=url_list[BATCH_SIZE:]
-        if len(url_list)>0 and  len(url_list)<BATCH_SIZE:
+        m_thread_batch_scraping(url_list[:config['batch_size']], config)
+        url_list=url_list[config['batch_size']:]
+        if len(url_list)>0 and  len(url_list)<config['batch_size']:
             m_thread_batch_scraping(url_list, config)
     end = datetime.datetime.now()
     logging.info(f"this takes: {end-start} sec ")
