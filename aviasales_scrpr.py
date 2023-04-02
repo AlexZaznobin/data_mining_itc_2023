@@ -342,7 +342,7 @@ def main () :
     start= datetime.datetime.now()
     logging.info(f" send batch of urls size {len(url_list[:config['batch_size']])} ")
     logging.info(f" Config file {CONFIG_NAME} opened successfully")
-    batch_number= int(len(url_list) / BATCH_SIZE)
+    batch_number= int(len(url_list) / config['batch_size'])
     if batch_number<1:
         batch_number=1
 

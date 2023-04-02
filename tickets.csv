@@ -551,3 +551,30 @@ TLV,Tel Aviv-Yafo,CDG,Paris,$202,Pegasus Airlines,2023-05-22 20:40:00,Duration: 
 TLV,None,CDG,None,None,None,None,None,None
 TLV,None,CDG,None,None,None,None,None,None
 TLV,None,CDG,None,None,None,None,None,None
+TLV,Tel Aviv-Yafo,CDG,Paris,$192,EasyJet,2023-05-05 18:55:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$284,EasyJet,2023-05-06 19:15:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$210,LOT Polish Airlines,2023-05-07 11:55:00,Duration: 8h,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$209,Aegean Airlines,2023-05-08 19:40:00,Duration: 1d 1h 45m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$194,Aegean Airlines,2023-05-09 22:05:00,Duration: 18h 40m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$141,Air Malta,2023-05-10 05:50:00,Duration: 1d 4h 30m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$161,EasyJet,2023-05-11 19:05:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$159,EasyJet,2023-05-12 18:55:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$142,Air Malta,2023-05-13 04:45:00,Duration: 1d 5h 35m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$203,Pegasus Airlines,2023-05-14 20:40:00,Duration: 17h 35m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$139,Air Malta,2023-05-15 05:40:00,Duration: 1d 4h 40m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$177,EasyJet,2023-05-16 19:00:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$175,Arkia,2023-05-17 17:15:00,Duration: 4h 55m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$203,EasyJet,2023-05-18 19:05:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$130,EasyJet,2023-05-19 16:50:00,Duration: 5h 10m,0
+TLV,None,CDG,None,$195,None,None,None,None
+TLV,Tel Aviv-Yafo,CDG,Paris,$203,Pegasus Airlines,2023-05-21 20:40:00,Duration: 17h 35m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$206,Aegean Airlines,2023-05-22 13:50:00,Duration: 7h 35m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$206,Aegean Airlines,2023-05-23 13:50:00,Duration: 7h 35m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$258,Only 1 ticket remaining for this price,2023-05-24 05:35:00,Duration: 14h 50m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$281,Only 3 tickets remaining for this price,2023-05-25 05:35:00,Duration: 14h 50m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$224,EasyJet,2023-05-26 18:55:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$179,EasyJet,2023-05-27 19:15:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$219,EasyJet,2023-05-28 19:25:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$277,EasyJet,2023-05-29 19:15:00,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,CDG,Paris,$157,Pegasus Airlines,2023-05-30 20:40:00,Duration: 17h 35m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,$158,Air Malta,2023-05-31 05:50:00,Duration: 1d 4h 30m,1
