@@ -2,7 +2,7 @@
   "browsers": ["edge", "chrome"],
   "link_constructor": "https://www.aviasales.com/search/",
   "qrequest_batch_size": 10,
-  "output_copy": "tickets.csv",
+  "result_file": "tickets.csv",
   "airports": "airports.csv",
   "depth_of_parenting_ticket_widget": 15,
   "test_data": {
@@ -17,6 +17,7 @@
         "days_number" : 3
   },
   "chome_args" : ["--incognito"],
-  "chome_args":  "--headless",
+  "chome_args_1" : [1,"--headless"],
+  "db_name": "avia_scraper",
   "batch_size": 1
 }
