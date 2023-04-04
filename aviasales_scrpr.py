@@ -1,6 +1,4 @@
 import random
-import pymysql
-import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -15,21 +13,12 @@ import pandas as pd
 import re
 import os
 import threading
-from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
 from capcha_speech_recognition import g_capcha_solver
-from interface import get_date_range
-from interface import get_airport
-from mysql_scraper import set_up_db
-from mysql_scraper import fill_airport_table
-from mysql_scraper import fill_city_table
-from mysql_scraper import fill_aircompany_table
-from mysql_scraper import make_references
-from mysql_scraper import fill_ticket_table
+from interface import get_scraping_parameters_list
+from mysql_scraper import save_results_in_database
+from interface import set_up_parser
 
 CONFIG_NAME = 'conf.json'
-BATCH_SIZE = 1
-PARENTING_LIMIT = 20
 
 
 class Airport :
@@ -118,7 +107,7 @@ def extract_data_page (driver, current_ticket, config) :
         for price in prices :
             ticket_web_element = get_full_ticket_we(price, config)
             if ticket_web_element != None :
-                return_price = price.text
+                return_price = int(price.text.replace(",", "").replace("$", "").replace(" ", ""))
                 current_ticket.price = return_price
                 extract_aicompany(ticket_web_element, current_ticket)
                 extract_city(ticket_web_element, current_ticket)
@@ -198,7 +187,7 @@ def extract_aicompany (driver, current_ticket) :
     wait = WebDriverWait(driver, 1)
     text_elements = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
     for i, text_element in enumerate(text_elements) :
-        if (text_element.text == current_ticket.price) :
+        if (int(text_element.text.replace(",", "").replace("$", "").replace(" ", "")) == current_ticket.price) :
             current_ticket.air_company = text_elements[i + 3].text
             return True
 
@@ -261,7 +250,7 @@ def m_thread_batch_scraping (list_of_urls, config) :
         t.join()
 
 
-def get_url_list (start_code, start_date, days_number, config, end_list, pass_num="1") :
+def get_url_list (start_code, start_date, days_number, end_list, config, pass_num="1") :
     """
     make a list of urls for request
     Args:
@@ -275,7 +264,7 @@ def get_url_list (start_code, start_date, days_number, config, end_list, pass_nu
     Returns:
         list_of_url to search
     """
-    logging.info(f"start get_url_list with: {start_code, start_date, days_number, config, end_list}")
+    logging.info(f"start get_url_list with: {start_code, start_date, days_number, end_list, config,}")
     list_of_url = []
     end_of_url = "request_source=search_form"
     if days_number == 0 :
@@ -296,7 +285,7 @@ def get_url_list (start_code, start_date, days_number, config, end_list, pass_nu
 
 
 def load_scraper_config () :
-    logging.basicConfig(format='%(asctime)s  function_mane: %(funcName)s %(levelname)s: %(message)s',
+    logging.basicConfig(format='%(asctime)s %(funcName)s %(levelname)s: %(message)s',
                         datefmt='%m/%d/%Y %H:%M:%S',
                         filename='scraper_script.log',
                         filemode='a',
@@ -313,51 +302,52 @@ def load_scraper_config () :
         return
 
 
-def main () :
-    config = load_scraper_config()
-    with open(config['result_file'], 'w') as result_file :
-        result_file.write("start_airport_code,"
-                          "start_city_name,"
-                          "end_airport_code,"
-                          "end_city_name,"
-                          "price,aircompany_name,"
-                          "flight_date_time,"
-                          "scraping_timestamp,"
-                          "duration_time,"
-                          "layovers\n")
-    airport_df = get_airport_codes(config["airports"])
-    cursor = set_up_db(config["db_name"], logging)
-    pd.set_option('display.max_columns', None)
-    start = datetime.datetime.now()
-    start_aero_code = get_airport(airport_df, "start")
-    start_date, days_number = get_date_range()
-    end_point = [get_airport(airport_df, "end")]
-    try :
-        if end_point == ["any"] :
-            end_point = airport_df['code'].values
-    except :
-        pass
-    url_list = get_url_list(start_aero_code, start_date, days_number, config, end_point)
-    start = datetime.datetime.now()
+def intiniate_result_file (config) :
+    with open(config['result_file'], "r") as result_file :
+        lines = result_file.readlines()
+        num_lines = len(lines)
+    if num_lines == 0 :
+        with open(config['result_file'], 'w') as result_file :
+            result_file.write("start_airport_code,"
+                              "start_city_name,"
+                              "end_airport_code,"
+                              "end_city_name,"
+                              "price,aircompany_name,"
+                              "flight_date_time,"
+                              "scraping_timestamp,"
+                              "duration_time,"
+                              "layovers\n")
+
+
+def scrape_per_batch (url_list, config, logging) :
     logging.info(f" send batch of urls size {len(url_list[:config['batch_size']])} ")
-    logging.info(f" Config file {CONFIG_NAME} opened successfully")
     batch_number = int(len(url_list) / config['batch_size'])
     if batch_number < 1 :
         batch_number = 1
-
     for i in range(batch_number) :
         m_thread_batch_scraping(url_list[:config['batch_size']], config)
         url_list = url_list[config['batch_size'] :]
         if len(url_list) > 0 and len(url_list) < config['batch_size'] :
             m_thread_batch_scraping(url_list, config)
+
+
+def main () :
+    pd.set_option('display.max_columns', None)
+    config = load_scraper_config()
+    scr_pam_list, need_database = set_up_parser()
+    intiniate_result_file(config)
+    start = datetime.datetime.now()
+    url_list = get_url_list(start_code=scr_pam_list[0],
+                            start_date=scr_pam_list[1],
+                            days_number=scr_pam_list[2],
+                            end_list=scr_pam_list[3],
+                            config=config)
+    scrape_per_batch(url_list, config, logging)
+    if need_database :
+        save_results_in_database(config, logging)
     end = datetime.datetime.now()
     logging.info(f"this takes: {end - start} sec ")
 
-    city_df=fill_city_table(logging, config)
-    airport_df=fill_airport_table(logging, config)
-    aircompany_df=fill_aircompany_table(logging, config)
-    ticket_df=fill_ticket_table(logging, config,airport_df,aircompany_df )
-    make_references(logging,config)
 
 if __name__ == "__main__" :
     main()
