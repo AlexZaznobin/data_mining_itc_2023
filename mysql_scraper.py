@@ -64,6 +64,8 @@ def fill_airport_table (logging, config) :
     airport_selected = airport_df.rename(columns=column_mapping).loc[:, ('code', 'fullname')]
     airport_selected = pd.merge(airport_selected, all_cities, left_on='code', right_on='airport_code')
     airport_selected = airport_selected.loc[:, ['code', 'fullname', 'city_id']]
+
+    airport_selected.index.name = 'id'
     engine = get_engine(config)
 
     try :
@@ -75,11 +77,6 @@ def fill_airport_table (logging, config) :
         logging.warning(f" airport table in DB was NOT created successfully")
     return airport_selected
 
-
-def make_references (logging) :
-    query = "ALTER TABLE airport ADD CONSTRAINT fk_city_id FOREIGN KEY (city_id) REFERENCES city(id)"
-    cursor = get_mysql_cursor()
-    coursor_execution(cursor, query, logging)
 
 
 def fill_aircompany_table (logging, config) :
@@ -120,7 +117,7 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
     aircompany_df = aircompany_df.reset_index()
     tickets_df = pd.merge(tickets_df, airport_df, left_on='start_airport_code', right_on='code')
     tickets_df = tickets_df.loc[:,
-                 ['index',
+                 ['id',
                   'price',
                   'flight_date_time',
                   'end_airport_code',
@@ -137,17 +134,15 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
                           'duration_time',
                           'layovers']
     tickets_df = pd.merge(tickets_df, airport_df, left_on='end_airport_code', right_on='code')
-    print(tickets_df.head())
     tickets_df = tickets_df.loc[:,
                  ['start_airport_id',
-                  'index',
+                  'id',
                   'price',
                   'flight_date_time',
                   'aircompany_name',
                   'scraping_timestamp',
                   'duration_time',
                   'layovers']]
-    print(tickets_df.head())
     tickets_df.columns = ['start_airport_id',
                           'end_airport_id',
                           'price',
@@ -157,11 +152,7 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
                           'duration_time',
                           'layovers']
 
-    print(tickets_df.head())
-    print(aircompany_df.head())
     tickets_df = pd.merge(tickets_df, aircompany_df, left_on='aircompany_name', right_on='name')
-
-    print(tickets_df.head())
     tickets_df = tickets_df.loc[:,
                  ['start_airport_id',
                   'end_airport_id',
@@ -171,8 +162,6 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
                   'scraping_timestamp',
                   'duration_time',
                   'layovers']]
-
-    print(tickets_df.head())
     tickets_df.columns =['start_airport_id',
                          'end_airport_id',
                          'aircompany_id',
@@ -181,10 +170,7 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
                          'scraping_timestamp',
                          'duration_time',
                          'layovers']
-
-    print(tickets_df.head())
     tickets_df.index.name = 'id'
-    print(tickets_df.head())
     engine = get_engine(config)
 
     try :
@@ -195,3 +181,38 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
         logging.warning(f" airport table in DB was NOT created successfully")
 
     return tickets_df
+
+def make_references(logging,config):
+    make_references_airport_city(logging, config)
+    make_references_ticket(logging, config)
+def make_references_airport_city (logging, config) :
+    cursor = get_mysql_cursor()
+    query = F"USE {config['db_name']};"
+    cursor.execute(query)
+    query = "ALTER TABLE airport ADD CONSTRAINT fk_city_id FOREIGN KEY (city_id) REFERENCES city(id);"
+    try:
+        cursor.execute(query)
+    except:
+        drop_query= "ALTER TABLE airport DROP FOREIGN KEY fk_city_id;"
+        cursor.execute(drop_query)
+        cursor.execute(query)
+
+def make_references_ticket (logging, config) :
+    cursor = get_mysql_cursor()
+    query = F"USE {config['db_name']};"
+    cursor.execute(query)
+    try :
+        drop_query_start = "ALTER TABLE airport DROP FOREIGN KEY fk_start_airport_id;"
+        drop_query_end= "ALTER TABLE airport DROP FOREIGN KEY fk_end_airport_id;"
+        drop_query_aircompany= "ALTER TABLE airport DROP FOREIGN KEY fk_aircompany_id;"
+        cursor.execute(drop_query_start)
+        cursor.execute(drop_query_end)
+        cursor.execute(drop_query_aircompany)
+    except :
+        pass
+    query = "ALTER TABLE ticket ADD CONSTRAINT fk_start_airport_id FOREIGN KEY (start_airport_id) REFERENCES airport(id);"
+    cursor.execute(query)
+    query = "ALTER TABLE ticket ADD CONSTRAINT fk_end_airport_id FOREIGN KEY (end_airport_id) REFERENCES airport(id);"
+    cursor.execute(query)
+    query = "ALTER TABLE ticket ADD CONSTRAINT fk_aircompany_id FOREIGN KEY (aircompany_id) REFERENCES aircompany(id);"
+    cursor.execute(query)

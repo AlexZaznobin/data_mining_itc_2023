@@ -19809,3 +19809,130 @@
 04/04/2023 00:38:09  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
 04/04/2023 00:38:11  function_mane: coursor_execution INFO: does not work:
  ALTER TABLE airport ADD CONSTRAINT fk_city_id FOREIGN KEY (city_id) REFERENCES city(id) 
+04/04/2023 00:47:35  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 00:47:35  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 00:48:07  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['EVN'])
+04/04/2023 00:48:07  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 00:48:07  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 00:48:07  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 00:48:19  function_mane: page_processing_slnm INFO: SVO,Moscow,EVN,Yerevan,$172,FlyArna,2023-05-06 20:30:00,2023-04-04 00:48:07.110060,Duration: 4h,0
+
+04/04/2023 00:48:19  function_mane: main INFO: this takes: 0:00:12.672179 sec 
+04/04/2023 00:48:20  function_mane: fill_city_table INFO:  city table in DB was created successfully
+04/04/2023 00:48:20  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 00:48:20  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 00:49:10  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
+04/04/2023 00:52:54  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 00:52:54  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 00:53:03  function_mane: get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['EVN'])
+04/04/2023 00:53:03  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 00:53:03  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 00:53:03  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 00:53:26  function_mane: page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,$218,Pegasus Airlines,2023-05-06 16:15:00,2023-04-04 00:53:03.128495,Duration: 9h 20m,1
+
+04/04/2023 00:53:26  function_mane: main INFO: this takes: 0:00:23.277761 sec 
+04/04/2023 00:53:26  function_mane: fill_city_table INFO:  city table in DB was created successfully
+04/04/2023 00:53:26  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 00:53:26  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 00:53:27  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
+04/04/2023 00:57:00  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 00:57:00  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 00:57:32  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['EVN'])
+04/04/2023 00:57:32  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 00:57:32  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 00:57:32  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 00:57:43  function_mane: page_processing_slnm INFO: SVO,Moscow,EVN,Yerevan,$161,FlyArna,2023-05-06 20:30:00,2023-04-04 00:57:32.385697,Duration: 4h,0
+
+04/04/2023 00:57:43  function_mane: main INFO: this takes: 0:00:11.272170 sec 
+04/04/2023 00:57:43  function_mane: fill_city_table WARNING:  city table in DB was NOT created successfully
+04/04/2023 00:57:43  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 00:57:44  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 00:57:44  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
+04/04/2023 00:58:57  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 00:58:58  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 00:59:10  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['EVN'])
+04/04/2023 00:59:10  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 00:59:10  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 00:59:10  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 00:59:21  function_mane: page_processing_slnm INFO: SVO,Moscow,EVN,Yerevan,$161,FlyArna,2023-05-06 20:30:00,2023-04-04 00:59:10.026981,Duration: 4h,0
+
+04/04/2023 00:59:21  function_mane: main INFO: this takes: 0:00:11.363070 sec 
+04/04/2023 00:59:21  function_mane: fill_city_table WARNING:  city table in DB was NOT created successfully
+04/04/2023 00:59:21  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 00:59:21  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 00:59:21  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
+04/04/2023 01:00:27  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 01:00:27  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 01:00:55  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['TLV'])
+04/04/2023 01:00:55  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 01:00:55  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 01:00:55  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 01:01:05  function_mane: page_processing_slnm INFO: SVO,Moscow,TLV,Tel Aviv-Yafo,$638,Only 7 tickets remaining for this price,2023-05-06 20:35:00,2023-04-04 01:00:55.049048,Duration: 7h 45m,1
+
+04/04/2023 01:01:06  function_mane: main INFO: this takes: 0:00:11.008736 sec 
+04/04/2023 01:01:06  function_mane: fill_city_table WARNING:  city table in DB was NOT created successfully
+04/04/2023 01:01:06  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 01:01:06  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 01:02:35  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 01:02:35  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 01:02:42  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['SVO'])
+04/04/2023 01:02:42  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 01:02:42  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 01:02:42  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 01:03:07  function_mane: g_capcha_solver INFO: check if chapcha on place
+04/04/2023 01:03:08  function_mane: g_capcha_solver INFO:  no capcha frame found
+04/04/2023 01:03:19  function_mane: page_processing_slnm INFO: SVO,None,SVO,None,None,None,None,2023-04-04 01:02:42.674161,None,None
+
+04/04/2023 01:03:19  function_mane: main INFO: this takes: 0:00:36.884039 sec 
+04/04/2023 01:03:19  function_mane: fill_city_table INFO:  city table in DB was created successfully
+04/04/2023 01:03:19  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 01:03:19  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 01:03:20  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
+04/04/2023 01:03:33  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 01:03:33  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 01:04:30  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['TLV'])
+04/04/2023 01:04:30  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 01:04:30  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 01:04:30  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 01:04:40  function_mane: page_processing_slnm INFO: SVO,Moscow,TLV,Tel Aviv-Yafo,$638,Only 7 tickets remaining for this price,2023-05-06 20:35:00,2023-04-04 01:04:30.834407,Duration: 7h 45m,1
+
+04/04/2023 01:04:40  function_mane: main INFO: this takes: 0:00:10.017212 sec 
+04/04/2023 01:04:41  function_mane: fill_city_table INFO:  city table in DB was created successfully
+04/04/2023 01:04:41  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 01:04:41  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 01:04:41  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
+04/04/2023 01:05:21  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 01:05:21  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 01:05:30  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['TLV'])
+04/04/2023 01:05:30  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 01:05:30  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 01:05:30  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 01:05:42  function_mane: page_processing_slnm INFO: SVO,Moscow,TLV,Tel Aviv-Yafo,$630,Air Serbia,2023-05-06 20:35:00,2023-04-04 01:05:30.899760,Duration: 7h 45m,1
+
+04/04/2023 01:05:43  function_mane: main INFO: this takes: 0:00:12.139256 sec 
+04/04/2023 01:05:43  function_mane: fill_city_table WARNING:  city table in DB was NOT created successfully
+04/04/2023 01:05:43  function_mane: fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/04/2023 01:05:43  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 01:05:43  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully
+04/04/2023 08:03:31  function_mane: load_scraper_config INFO: Config file conf.json opened successfully
+04/04/2023 08:03:31  function_mane: coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/04/2023 08:03:40  function_mane: get_url_list INFO: start get_url_list with: ('SVO', datetime.date(2022, 5, 6), 1, {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'qrequest_batch_size': 10, 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'test_data': {'end_point': {'country_id': 'CY'}, 'start_point': {'country_id': 'IL'}, 'start_aero_code': 'TLV', 'start_date': '2022-04-03', 'days_number': 3}, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1}, ['EVN'])
+04/04/2023 08:03:40  function_mane: get_url_list INFO: finish get_url_list of 1 items
+04/04/2023 08:03:40  function_mane: main INFO:  send batch of urls size 1 
+04/04/2023 08:03:40  function_mane: main INFO:  Config file conf.json opened successfully
+04/04/2023 08:03:53  function_mane: page_processing_slnm INFO: SVO,Moscow,EVN,Yerevan,$161,FlyArna,2023-05-06 20:30:00,2023-04-04 08:03:40.659276,Duration: 4h,0
+
+04/04/2023 08:03:54  function_mane: main INFO: this takes: 0:00:13.389324 sec 
+04/04/2023 08:03:54  function_mane: fill_city_table WARNING:  city table in DB was NOT created successfully
+04/04/2023 08:03:54  function_mane: fill_airport_table INFO:  airport table in DB was created successfully
+04/04/2023 08:03:54  function_mane: fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/04/2023 08:03:54  function_mane: fill_ticket_table INFO:  airport table in DB was created successfully

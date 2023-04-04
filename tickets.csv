@@ -1,2 +1,2 @@
 start_airport_code,start_city_name,end_airport_code,end_city_name,price,aircompany_name,flight_date_time,scraping_timestamp,duration_time,layovers
-SVO,Moscow,EVN,Yerevan,$161,FlyArna,2023-05-06 20:30:00,2023-04-04 00:37:25.146881,Duration: 4h,0
+SVO,Moscow,EVN,Yerevan,$161,FlyArna,2023-05-06 20:30:00,2023-04-04 08:03:40.659276,Duration: 4h,0

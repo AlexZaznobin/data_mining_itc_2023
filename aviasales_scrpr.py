@@ -357,7 +357,7 @@ def main () :
     airport_df=fill_airport_table(logging, config)
     aircompany_df=fill_aircompany_table(logging, config)
     ticket_df=fill_ticket_table(logging, config,airport_df,aircompany_df )
-    make_references(logging)
+    make_references(logging,config)
 
 if __name__ == "__main__" :
     main()
