@@ -7,5 +7,6 @@
   "chome_args" : ["--incognito","--headless"],
   "chome_args_1" : [1],
   "db_name": "avia_scraper",
-  "batch_size": 1
+  "batch_size": 1,
+  "use_proxy": 0
 }

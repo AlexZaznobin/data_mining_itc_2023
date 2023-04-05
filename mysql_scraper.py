@@ -367,14 +367,13 @@ def drop_tables (config) :
     query = F"USE {config['db_name']};"
     cursor.execute(query)
     try :
-        drop_airport = "DROP TABLES airport"
         drop_city = "DROP TABLES city"
+        drop_airport = "DROP TABLES airport"
         drop_aircompany = "DROP TABLES aircompany"
-        drop_airport = "DROP TABLES ticket"
-        drop_airport = "DROP TABLES ticket"
+        drop_ticket = "DROP TABLES ticket"
         cursor.execute(drop_airport)
         cursor.execute(drop_city)
         cursor.execute(drop_aircompany)
-        cursor.execute(drop_airport)
+        cursor.execute(drop_ticket)
     except :
         pass

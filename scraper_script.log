@@ -1,0 +1,2363 @@
+04/05/2023 18:15:04 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 18:15:04 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 17, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 5})
+04/05/2023 18:15:04 get_url_list INFO: finish get_url_list of 425 items
+04/05/2023 18:15:04 scrape_per_batch INFO:  send batch of urls size 5 
+04/05/2023 18:15:19 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:15:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:15:21 page_processing_slnm INFO: TLV,None,SVO,None,865,None,None,2023-04-05 18:15:04.181030,None,None
+
+04/05/2023 18:15:23 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,168,Only 2 tickets remaining for this price,2023-09-01 17:30:00,2023-04-05 18:15:04.181440,Duration: 2h 40m,0
+
+04/05/2023 18:15:24 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,150,El Al Israel Airlines,2023-09-01 06:00:00,2023-04-05 18:15:04.181287,Duration: 2h 35m,0
+
+04/05/2023 18:15:32 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:15:32 g_capcha_solver INFO: Capcha found
+04/05/2023 18:15:33 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:15:33 g_capcha_solver INFO: Capcha found
+04/05/2023 18:15:33 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:15:35 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:15:36 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:15:38 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:15:52 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 18:15:04.181882,None,None
+
+04/05/2023 18:15:54 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 18:15:04.182083,None,None
+
+04/05/2023 18:16:16 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:16:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:16:22 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,198,Israir Airlines,2023-09-01 05:50:00,2023-04-05 18:15:54.779475,Duration: 3h 10m,0
+
+04/05/2023 18:16:22 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,322,Wizz Air,2023-09-01 13:15:00,2023-04-05 18:15:54.779710,Duration: 18h 35m,1
+
+04/05/2023 18:16:22 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,PEK,Beijing,806,Turkish Airlines,2023-09-01 22:00:00,2023-04-05 18:15:54.780192,Duration: 12h 35m,1
+
+04/05/2023 18:16:24 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SIN,Singapore,548,IndiGo,2023-09-01 10:40:00,2023-04-05 18:15:54.783675,Duration: 1d 4h 20m,1
+
+04/05/2023 18:16:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:16:48 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:16:49 page_processing_slnm INFO: TLV,None,HND,None,694,None,None,2023-04-05 18:16:24.794829,None,None
+
+04/05/2023 18:16:49 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DOH,Doha,256,Pegasus Airlines,2023-09-01 20:40:00,2023-04-05 18:16:24.795501,Duration: 1d 4h 05m,1
+
+04/05/2023 18:16:49 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,203,EasyJet,2023-09-01 18:55:00,2023-04-05 18:16:24.800184,Duration: 5h 05m,0
+
+04/05/2023 18:16:51 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:16:51 g_capcha_solver INFO: Capcha found
+04/05/2023 18:16:51 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,NRT,Tokyo,468,LOT Polish Airlines,2023-09-01 11:55:00,2023-04-05 18:16:24.801474,Duration: 24h 35m,1
+
+04/05/2023 18:16:54 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:16:57 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:17:13 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 18:16:24.794994,None,None
+
+04/05/2023 18:17:32 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:17:33 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Dubai,221,Sun Express,2023-09-01 11:05:00,2023-04-05 18:17:13.750724,Duration: 16h 50m,1
+
+04/05/2023 18:17:33 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,106,Pegasus Airlines,2023-09-01 11:15:00,2023-04-05 18:17:13.750578,Duration: 2h 05m,0
+
+04/05/2023 18:17:34 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:17:34 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MAD,Madrid,109,Iberia,2023-09-01 18:25:00,2023-04-05 18:17:13.750927,Duration: 5h 25m,0
+
+04/05/2023 18:17:35 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LHR,London,235,Virgin Atlantic,2023-09-01 17:25:00,2023-04-05 18:17:13.750484,Duration: 5h 40m,0
+
+04/05/2023 18:17:37 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MUC,Munich,221,Cheapest,2023-09-01 14:10:00,2023-04-05 18:17:13.751015,Duration: 7h 50m,1
+
+04/05/2023 18:18:03 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CPH,Copenhagen,156,EasyJet,2023-09-01 14:10:00,2023-04-05 18:17:37.623965,Duration: 7h 40m,1
+
+04/05/2023 18:18:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:18:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:18:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:18:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:18:06 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:18:06 g_capcha_solver INFO: Capcha found
+04/05/2023 18:18:06 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:18:06 g_capcha_solver INFO: Capcha found
+04/05/2023 18:18:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:18:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:18:08 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:18:08 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:18:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:18:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:18:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:18:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:18:25 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 18:17:37.613882,None,None
+
+04/05/2023 18:18:26 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 18:17:37.614427,None,None
+
+04/05/2023 18:18:27 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 18:17:37.614126,None,None
+
+04/05/2023 18:18:27 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 18:17:37.614941,None,None
+
+04/05/2023 18:18:43 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:18:44 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:18:45 page_processing_slnm INFO: TLV,None,SVO,None,869,None,None,2023-04-05 18:18:27.910704,None,None
+
+04/05/2023 18:18:49 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,201,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:18:27.910906,Duration: 10h 05m,0
+
+04/05/2023 18:18:50 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,269,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:18:27.913730,Duration: 10h,1
+
+04/05/2023 18:18:50 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,117,Wizz Air,2023-09-02 22:25:00,2023-04-05 18:18:27.919137,Duration: 12h 35m,1
+
+04/05/2023 18:18:51 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,178,Aegean Airlines,2023-09-02 13:50:00,2023-04-05 18:18:27.911469,Duration: 12h 30m,1
+
+04/05/2023 18:19:08 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:19:09 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:19:11 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SIN,Singapore,495,IndiGo,2023-09-02 14:20:00,2023-04-05 18:18:51.154113,Duration: 24h 40m,1
+
+04/05/2023 18:19:11 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,237,AnadoluJet,2023-09-02 05:35:00,2023-04-05 18:18:51.150508,Duration: 21h 20m,1
+
+04/05/2023 18:19:13 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,496,Icelandair,2023-09-02 11:10:00,2023-04-05 18:18:51.151005,Duration: 1d 7h 40m,1
+
+04/05/2023 18:19:18 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:19:18 g_capcha_solver INFO: Capcha found
+04/05/2023 18:19:21 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:19:23 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:19:23 g_capcha_solver INFO: Capcha found
+04/05/2023 18:19:24 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:19:24 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:19:27 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:19:40 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 18:18:51.150784,None,None
+
+04/05/2023 18:19:44 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 18:18:51.150642,None,None
+
+04/05/2023 18:20:02 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:20:03 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:20:04 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:20:04 page_processing_slnm INFO: TLV,None,HND,None,699,None,None,2023-04-05 18:19:44.080266,None,None
+
+04/05/2023 18:20:05 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:20:06 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,248,EasyJet,2023-09-02 19:15:00,2023-04-05 18:19:44.081075,Duration: 5h 05m,0
+
+04/05/2023 18:20:06 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:19:44.080701,Duration: 8h 30m,1
+
+04/05/2023 18:20:10 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ICN,Seoul,535,LOT Polish Airlines,2023-09-02 20:00:00,2023-04-05 18:19:44.080480,Duration: 2d 7h 30m,1
+
+04/05/2023 18:20:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:20:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:20:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:20:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:20:33 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 18:19:44.081250,None,None
+
+04/05/2023 18:20:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:20:54 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Sharjah,234,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:20:33.456943,Duration: 10h 40m,1
+
+04/05/2023 18:20:55 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,107,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:20:33.456575,Duration: 2h 05m,0
+
+04/05/2023 18:20:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:20:56 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MUC,Memmingen,115,Ryanair,None,2023-04-05 18:20:33.457589,None,None
+
+04/05/2023 18:20:57 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LHR,London,235,British Airways,2023-09-02 07:10:00,2023-04-05 18:20:33.456332,Duration: 5h 20m,0
+
+04/05/2023 18:20:58 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MAD,Madrid,93,Ryanair,2023-09-02 16:15:00,2023-04-05 18:20:33.457121,Duration: 8h 55m,1
+
+04/05/2023 18:21:21 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ATL,Atlanta,771,Royal Jordanian,2023-09-02 12:40:00,2023-04-05 18:20:58.236832,Duration: 1d 3h 58m,1
+
+04/05/2023 18:21:23 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,AMS,Amsterdam,107,Cheapest,2023-09-02 21:55:00,2023-04-05 18:20:58.237034,Duration: 11h 10m,1
+
+04/05/2023 18:21:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:21:26 g_capcha_solver INFO: Capcha found
+04/05/2023 18:21:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:21:27 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:21:27 g_capcha_solver INFO: Capcha found
+04/05/2023 18:21:27 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:21:27 g_capcha_solver INFO: Capcha found
+04/05/2023 18:21:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:21:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:21:31 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:21:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:21:34 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:21:46 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 18:20:58.237520,None,None
+
+04/05/2023 18:21:48 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 18:20:58.237172,None,None
+
+04/05/2023 18:21:49 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 18:20:58.241621,None,None
+
+04/05/2023 18:22:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:22:07 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:22:11 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SVO,Moscow,543,Air Serbia,2023-09-03 06:00:00,2023-04-05 18:21:50.041326,Duration: 18h 40m,1
+
+04/05/2023 18:22:15 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,164,Wizz Air,2023-09-03 22:50:00,2023-04-05 18:21:50.048462,Duration: 12h 05m,1
+
+04/05/2023 18:22:16 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,146,Arkia,2023-09-03 18:25:00,2023-04-05 18:21:50.041527,Duration: 2h 35m,0
+
+04/05/2023 18:22:18 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-03 20:40:00,2023-04-05 18:21:50.042157,Duration: 1d 5h 35m,1
+
+04/05/2023 18:22:18 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,161,Cheapest,2023-09-03 22:50:00,2023-04-05 18:21:50.041730,Duration: 12h 35m,1
+
+04/05/2023 18:22:43 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,367,Uzbekistan Airways,2023-09-03 10:10:00,2023-04-05 18:22:18.309244,Duration: 4h 50m,0
+
+04/05/2023 18:22:44 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,548,Royal Jordanian,2023-09-03 08:25:00,2023-04-05 18:22:18.309680,Duration: 15h 40m,1
+
+04/05/2023 18:22:45 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,PEK,Beijing,1068,Hainan Airlines,2023-09-03 15:40:00,2023-04-05 18:22:18.309382,Duration: 9h 10m,0
+
+04/05/2023 18:22:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:22:49 g_capcha_solver INFO: Capcha found
+04/05/2023 18:22:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:22:49 g_capcha_solver INFO: Capcha found
+04/05/2023 18:22:50 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:22:50 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:22:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:22:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:23:09 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 18:22:18.318558,None,None
+
+04/05/2023 18:23:09 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 18:22:18.309071,None,None
+
+04/05/2023 18:23:40 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,NRT,Tokyo,618,LOT Polish Airlines,2023-09-03 11:55:00,2023-04-05 18:23:09.746352,Duration: 24h 35m,1
+
+04/05/2023 18:23:41 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,151,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:23:09.746244,Duration: 24h 35m,1
+
+04/05/2023 18:23:41 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DOH,Doha,247,Pegasus Airlines,2023-09-03 16:15:00,2023-04-05 18:23:09.746020,Duration: 8h 30m,1
+
+04/05/2023 18:23:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,HND,Tokyo,730,Cathay Pacific,2023-09-03 14:35:00,2023-04-05 18:23:09.745669,Duration: 17h 20m,1
+
+04/05/2023 18:23:43 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ICN,Seoul,915,Turkish Airlines,2023-09-03 22:00:00,2023-04-05 18:23:09.745843,Duration: 13h 40m,1
+
+04/05/2023 18:24:10 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,90,AnadoluJet,2023-09-03 22:00:00,2023-04-05 18:23:43.346042,Duration: 10h 20m,1
+
+04/05/2023 18:24:11 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MUC,Munich,154,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:23:43.346630,Duration: 9h,1
+
+04/05/2023 18:24:11 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LHR,London,256,Virgin Atlantic,2023-09-03 17:25:00,2023-04-05 18:23:43.345868,Duration: 5h 40m,0
+
+04/05/2023 18:24:13 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:24:13 g_capcha_solver INFO: Capcha found
+04/05/2023 18:24:14 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:24:14 g_capcha_solver INFO: Capcha found
+04/05/2023 18:24:15 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:24:17 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:24:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:24:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:24:34 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 18:23:43.346211,None,None
+
+04/05/2023 18:24:36 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 18:23:43.346505,None,None
+
+04/05/2023 18:24:59 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,FCO,Rome,94,Wizz Air,2023-09-03 22:50:00,2023-04-05 18:24:36.408499,Duration: 3h 55m,0
+
+04/05/2023 18:24:59 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LGW,London,138,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:24:36.408710,Duration: 21h 35m,1
+
+04/05/2023 18:25:00 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,AMS,Amsterdam,160,Air Serbia,2023-09-03 06:00:00,2023-04-05 18:24:36.408364,Duration: 1d 4h 10m,1
+
+04/05/2023 18:25:00 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CPH,Copenhagen,129,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:24:36.408913,Duration: 20h 05m,1
+
+04/05/2023 18:25:06 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:25:06 g_capcha_solver INFO: Capcha found
+04/05/2023 18:25:09 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:25:12 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:25:27 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 18:24:36.408184,None,None
+
+04/05/2023 18:25:44 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:25:45 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:25:50 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SVO,Moscow,484,Air Serbia,2023-09-04 07:20:00,2023-04-05 18:25:27.632583,Duration: 20h 20m,1
+
+04/05/2023 18:25:50 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,136,Arkia,2023-09-04 05:55:00,2023-04-05 18:25:27.633630,Duration: 3h 15m,0
+
+04/05/2023 18:25:52 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,228,Aegean Airlines,2023-09-04 13:50:00,2023-04-05 18:25:27.633202,Duration: 12h 30m,1
+
+04/05/2023 18:25:56 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:25:56 g_capcha_solver INFO: Capcha found
+04/05/2023 18:25:57 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:25:57 g_capcha_solver INFO: Capcha found
+04/05/2023 18:25:58 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:25:58 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:26:01 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:26:01 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:26:16 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 18:25:27.633410,None,None
+
+04/05/2023 18:26:18 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 18:25:27.632857,None,None
+
+04/05/2023 18:26:40 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,PEK,Beijing,1079,Lufthansa,2023-09-04 08:00:00,2023-04-05 18:26:18.197857,Duration: 19h 30m,1
+
+04/05/2023 18:26:41 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,496,Icelandair,2023-09-04 11:10:00,2023-04-05 18:26:18.198039,Duration: 15h,1
+
+04/05/2023 18:26:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,198,Israir Airlines,2023-09-04 09:00:00,2023-04-05 18:26:18.197584,Duration: 3h 10m,0
+
+04/05/2023 18:26:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,178,Wizz Air,2023-09-04 11:40:00,2023-04-05 18:26:18.197736,Duration: 8h,1
+
+04/05/2023 18:26:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SIN,Singapore,489,IndiGo,2023-09-04 10:40:00,2023-04-05 18:26:18.198371,Duration: 1d 4h 20m,1
+
+04/05/2023 18:27:08 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,NRT,Tokyo,468,LOT Polish Airlines,2023-09-04 11:55:00,2023-04-05 18:26:42.868350,Duration: 24h 35m,1
+
+04/05/2023 18:27:08 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,159,Arkia,2023-09-04 15:00:00,2023-04-05 18:26:42.867961,Duration: 4h 55m,0
+
+04/05/2023 18:27:09 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ICN,Seoul,539,LOT Polish Airlines,2023-09-04 05:05:00,2023-04-05 18:26:42.867707,Duration: 22h 25m,1
+
+04/05/2023 18:27:09 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,HND,Tokyo,806,Cheapest with a convenient layover,2023-09-04 22:35:00,2023-04-05 18:26:42.867606,Duration: 16h 35m,1
+
+04/05/2023 18:27:10 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-04 11:15:00,2023-04-05 18:26:42.867834,Duration: 15h 40m,1
+
+04/05/2023 18:27:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:27:27 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:27:29 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MUC,Memmingen,124,Ryanair,None,2023-04-05 18:27:10.114120,None,None
+
+04/05/2023 18:27:34 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,105,El Al Israel Airlines,2023-09-04 07:00:00,2023-04-05 18:27:10.107464,Duration: 2h 20m,0
+
+04/05/2023 18:27:34 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MAD,Madrid,109,Iberia,2023-09-04 18:25:00,2023-04-05 18:27:10.113377,Duration: 5h 25m,0
+
+04/05/2023 18:27:35 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:27:35 g_capcha_solver INFO: Capcha found
+04/05/2023 18:27:37 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:27:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:27:37 g_capcha_solver INFO: Capcha found
+04/05/2023 18:27:38 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:27:40 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:27:41 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:27:56 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 18:27:10.107309,None,None
+
+04/05/2023 18:27:57 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 18:27:10.111714,None,None
+
+04/05/2023 18:28:25 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,FCO,Rome,53,Wizz Air,2023-09-04 22:10:00,2023-04-05 18:27:57.633081,Duration: 3h 55m,0
+
+04/05/2023 18:28:25 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LGW,London,167,Wizz Air,2023-09-04 21:55:00,2023-04-05 18:27:57.633239,Duration: 5h 35m,0
+
+04/05/2023 18:28:26 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CPH,Copenhagen,105,Cheapest,2023-09-04 22:10:00,2023-04-05 18:27:57.633502,Duration: 11h 45m,1
+
+04/05/2023 18:28:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:28:26 g_capcha_solver INFO: Capcha found
+04/05/2023 18:28:28 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ATL,Atlanta,1325,United Airlines,2023-09-04 23:25:00,2023-04-05 18:27:57.632615,Duration: 15h 54m,1
+
+04/05/2023 18:28:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:28:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:28:48 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 18:27:57.632884,None,None
+
+04/05/2023 18:29:08 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,126,Arkia,2023-09-05 15:35:00,2023-04-05 18:28:48.557285,Duration: 2h 35m,0
+
+04/05/2023 18:29:08 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,123,Aegean Airlines,2023-09-05 10:00:00,2023-04-05 18:28:48.560407,Duration: 10h 10m,1
+
+04/05/2023 18:29:12 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SVO,Moscow,434,Air Serbia,2023-09-05 19:00:00,2023-04-05 18:28:48.557058,Duration: 15h 10m,1
+
+04/05/2023 18:29:13 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-05 20:40:00,2023-04-05 18:28:48.557891,Duration: 1d 5h 35m,1
+
+04/05/2023 18:29:23 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:29:23 g_capcha_solver INFO: Capcha found
+04/05/2023 18:29:26 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:29:29 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:29:45 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 18:28:48.557554,None,None
+
+04/05/2023 18:30:17 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,222,Cheapest,2023-09-05 21:00:00,2023-04-05 18:29:45.892295,Duration: 11h 35m,1
+
+04/05/2023 18:30:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:30:17 g_capcha_solver INFO: Capcha found
+04/05/2023 18:30:18 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,PEK,Beijing,675,EgyptAir,2023-09-05 19:50:00,2023-04-05 18:29:45.892692,Duration: 14h 30m,1
+
+04/05/2023 18:30:18 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,870,El Al Israel Airlines,2023-09-05 10:30:00,2023-04-05 18:29:45.897552,Duration: 11h 50m,0
+
+04/05/2023 18:30:18 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SIN,Singapore,489,IndiGo,2023-09-05 14:20:00,2023-04-05 18:29:45.902529,Duration: 24h 40m,1
+
+04/05/2023 18:30:18 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:30:21 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:30:37 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 18:29:45.892502,None,None
+
+04/05/2023 18:31:00 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,NRT,Tokyo,654,Singapore Airlines,2023-09-05 06:40:00,2023-04-05 18:30:37.642151,Duration: 1d 4h 50m,1
+
+04/05/2023 18:31:01 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,HND,Tokyo,1213,Turkish Airlines,2023-09-05 22:00:00,2023-04-05 18:30:37.640966,Duration: 15h 25m,1
+
+04/05/2023 18:31:01 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,158,Arkia,2023-09-05 15:00:00,2023-04-05 18:30:37.641935,Duration: 4h 55m,0
+
+04/05/2023 18:31:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:31:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:31:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:31:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:31:26 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 18:30:37.641665,None,None
+
+04/05/2023 18:31:48 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Dubai,115,Arkia,2023-09-05 05:35:00,2023-04-05 18:31:26.115510,Duration: 3h 25m,0
+
+04/05/2023 18:31:48 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,90,Pegasus Airlines,2023-09-05 11:15:00,2023-04-05 18:31:26.115359,Duration: 2h 05m,0
+
+04/05/2023 18:31:49 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MUC,Munich,158,LOT Polish Airlines,2023-09-05 20:30:00,2023-04-05 18:31:26.115973,Duration: 11h 50m,1
+
+04/05/2023 18:31:49 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MAD,Madrid,87,Cheapest,2023-09-05 21:55:00,2023-04-05 18:31:26.115692,Duration: 12h 55m,1
+
+04/05/2023 18:31:50 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LHR,London,231,El Al Israel Airlines,2023-09-05 17:20:00,2023-04-05 18:31:26.115204,Duration: 5h 25m,0
+
+04/05/2023 18:32:11 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:32:12 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:32:13 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LGW,London,118,Wizz Air,2023-09-05 21:55:00,2023-04-05 18:31:50.506866,Duration: 12h 15m,1
+
+04/05/2023 18:32:14 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,AMS,Amsterdam,101,EasyJet,2023-09-05 14:15:00,2023-04-05 18:31:50.506347,Duration: 5h,0
+
+04/05/2023 18:32:15 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CPH,Copenhagen,88,Cheapest,2023-09-05 21:55:00,2023-04-05 18:31:50.512713,Duration: 12h 10m,1
+
+04/05/2023 18:32:15 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,FCO,Rome,75,Wizz Air,2023-09-05 22:25:00,2023-04-05 18:31:50.506614,Duration: 3h 55m,0
+
+04/05/2023 18:32:18 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ATL,Atlanta,722,Cheapest,2023-09-05 08:25:00,2023-04-05 18:31:50.506195,Duration: 19h 52m,1
+
+04/05/2023 18:32:34 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:32:35 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:32:35 page_processing_slnm INFO: TLV,None,SVO,None,861,None,None,2023-04-05 18:32:18.229725,None,None
+
+04/05/2023 18:32:38 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,244,Aegean Airlines,2023-09-06 05:10:00,2023-04-05 18:32:18.230093,Duration: 21h 10m,0
+
+04/05/2023 18:32:39 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,132,El Al Israel Airlines,2023-09-06 21:00:00,2023-04-05 18:32:18.229893,Duration: 2h 35m,0
+
+04/05/2023 18:32:40 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,145,Aegean Airlines,2023-09-06 05:10:00,2023-04-05 18:32:18.230714,Duration: 15h,1
+
+04/05/2023 18:32:40 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,269,Pegasus Airlines,2023-09-06 16:15:00,2023-04-05 18:32:18.230529,Duration: 10h,1
+
+04/05/2023 18:33:04 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,154,Wizz Air,2023-09-06 10:00:00,2023-04-05 18:32:40.959890,Duration: 9h 40m,1
+
+04/05/2023 18:33:04 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,PEK,Beijing,1068,Hainan Airlines,2023-09-06 14:40:00,2023-04-05 18:32:40.959999,Duration: 9h 20m,0
+
+04/05/2023 18:33:05 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,233,Azerbaijan Airlines,2023-09-06 14:10:00,2023-04-05 18:32:40.959753,Duration: 3h 05m,0
+
+04/05/2023 18:33:05 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,547,Royal Jordanian,2023-09-06 08:25:00,2023-04-05 18:32:40.960418,Duration: 15h 40m,1
+
+04/05/2023 18:33:09 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:33:09 g_capcha_solver INFO: Capcha found
+04/05/2023 18:33:10 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:33:13 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:33:29 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 18:32:40.960583,None,None
+
+04/05/2023 18:33:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:33:50 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:33:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:33:51 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:33:52 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-06 16:15:00,2023-04-05 18:33:29.141177,Duration: 8h 30m,1
+
+04/05/2023 18:33:52 page_processing_slnm INFO: TLV,None,HND,None,563,None,None,2023-04-05 18:33:29.140876,None,None
+
+04/05/2023 18:33:52 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,152,EasyJet,2023-09-06 19:15:00,2023-04-05 18:33:29.141299,Duration: 5h 05m,0
+
+04/05/2023 18:33:53 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,NRT,Tokyo,468,LOT Polish Airlines,2023-09-06 11:55:00,2023-04-05 18:33:29.141418,Duration: 24h 35m,1
+
+04/05/2023 18:33:55 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ICN,Seoul,535,LOT Polish Airlines,2023-09-06 19:50:00,2023-04-05 18:33:29.140988,Duration: 1d 7h 40m,1
+
+04/05/2023 18:34:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:34:13 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:34:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:34:16 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LHR,London,209,Air Malta,2023-09-06 05:50:00,2023-04-05 18:33:55.598490,Duration: 1d 5h 55m,1
+
+04/05/2023 18:34:16 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:34:17 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Dubai,159,Israir Airlines,2023-09-06 09:00:00,2023-04-05 18:33:55.598782,Duration: 3h 35m,0
+
+04/05/2023 18:34:18 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,90,AnadoluJet,2023-09-06 01:00:00,2023-04-05 18:33:55.598687,Duration: 6h 30m,1
+
+04/05/2023 18:34:19 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MUC,Munich,162,Air Malta,2023-09-06 05:50:00,2023-04-05 18:33:55.599009,Duration: 6h 20m,1
+
+04/05/2023 18:34:19 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MAD,Madrid,77,Cheapest,2023-09-06 22:55:00,2023-04-05 18:33:55.598912,Duration: 10h 35m,1
+
+04/05/2023 18:34:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:34:40 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:34:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LGW,London,136,Wizz Air,2023-09-06 21:55:00,2023-04-05 18:34:19.645588,Duration: 5h 35m,0
+
+04/05/2023 18:34:44 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,AMS,Amsterdam,99,EasyJet,2023-09-06 22:55:00,2023-04-05 18:34:19.636693,Duration: 10h 10m,1
+
+04/05/2023 18:34:45 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ATL,Atlanta,649,Only 7 tickets remaining for this price,2023-09-06 05:05:00,2023-04-05 18:34:19.636376,Duration: 1d 13h,1
+
+04/05/2023 18:34:45 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,FCO,Rome,139,Wizz Air,2023-09-06 22:10:00,2023-04-05 18:34:19.636894,Duration: 3h 55m,0
+
+04/05/2023 18:34:47 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:34:47 g_capcha_solver INFO: Capcha found
+04/05/2023 18:34:48 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:34:51 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:35:06 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 18:34:19.646407,None,None
+
+04/05/2023 18:35:30 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,305,Cheapest with a convenient layover,2023-09-07 15:40:00,2023-04-05 18:35:06.999659,Duration: 6h 50m,1
+
+04/05/2023 18:35:30 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TBS,Tbilisi,126,Arkia,2023-09-07 18:25:00,2023-04-05 18:35:06.999512,Duration: 2h 35m,0
+
+04/05/2023 18:35:30 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,251,Pegasus Airlines,2023-09-07 15:50:00,2023-04-05 18:35:06.999974,Duration: 8h 25m,1
+
+04/05/2023 18:35:31 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,147,Air Serbia,2023-09-07 19:00:00,2023-04-05 18:35:07.000173,Duration: 3h,0
+
+04/05/2023 18:35:35 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:35:35 g_capcha_solver INFO: Capcha found
+04/05/2023 18:35:38 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:35:41 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:35:56 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 18:35:06.999364,None,None
+
+04/05/2023 18:36:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:36:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:36:20 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SIN,Singapore,521,IndiGo,2023-09-07 14:20:00,2023-04-05 18:35:56.755185,Duration: 24h 40m,1
+
+04/05/2023 18:36:21 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,484,TAP Portugal,2023-09-07 05:05:00,2023-04-05 18:35:56.748804,Duration: 22h,1
+
+04/05/2023 18:36:21 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,365,Azerbaijan Airlines,2023-09-07 23:45:00,2023-04-05 18:35:56.748356,Duration: 21h 05m,1
+
+04/05/2023 18:36:21 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,233,Azerbaijan Airlines,2023-09-07 23:45:00,2023-04-05 18:35:56.748208,Duration: 3h 05m,0
+
+04/05/2023 18:36:22 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,PEK,Beijing,806,Turkish Airlines,2023-09-07 22:00:00,2023-04-05 18:35:56.748482,Duration: 12h 35m,1
+
+04/05/2023 18:36:46 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,NRT,Tokyo,730,Cathay Pacific,2023-09-07 14:35:00,2023-04-05 18:36:22.406347,Duration: 17h 05m,1
+
+04/05/2023 18:36:46 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,158,Arkia,2023-09-07 18:45:00,2023-04-05 18:36:22.404192,Duration: 5h,0
+
+04/05/2023 18:36:47 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-07 16:15:00,2023-04-05 18:36:22.403766,Duration: 8h 30m,1
+
+04/05/2023 18:36:51 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:36:51 g_capcha_solver INFO: Capcha found
+04/05/2023 18:36:51 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:36:51 g_capcha_solver INFO: Capcha found
+04/05/2023 18:36:51 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:36:52 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:36:54 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:36:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:37:10 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 18:36:22.403616,None,None
+
+04/05/2023 18:37:10 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 18:36:22.403439,None,None
+
+04/05/2023 18:37:32 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MAD,Madrid,110,Iberia,2023-09-07 19:30:00,2023-04-05 18:37:10.909648,Duration: 5h 25m,0
+
+04/05/2023 18:37:33 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LHR,London,216,Air Serbia,2023-09-07 19:00:00,2023-04-05 18:37:10.909261,Duration: 19h 30m,1
+
+04/05/2023 18:37:34 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Dubai,188,El Al Israel Airlines,2023-09-07 13:40:00,2023-04-05 18:37:10.909433,Duration: 3h 15m,0
+
+04/05/2023 18:37:34 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MUC,Munich,209,El Al Israel Airlines,2023-09-07 15:45:00,2023-04-05 18:37:10.909733,Duration: 4h 05m,0
+
+04/05/2023 18:37:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:37:39 g_capcha_solver INFO: Capcha found
+04/05/2023 18:37:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:37:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:37:59 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 18:37:10.909356,None,None
+
+04/05/2023 18:38:19 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:38:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:38:23 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,FCO,Rome,119,Air Serbia,2023-09-07 19:00:00,2023-04-05 18:37:59.281479,Duration: 1d 1h 40m,1
+
+04/05/2023 18:38:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:38:26 g_capcha_solver INFO: Capcha found
+04/05/2023 18:38:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:38:28 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ATL,Atlanta,649,Only 2 tickets remaining for this price,2023-09-07 05:05:00,2023-04-05 18:37:59.281147,Duration: 1d 13h,1
+
+04/05/2023 18:38:28 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:38:28 g_capcha_solver INFO: Capcha found
+04/05/2023 18:38:30 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:38:30 g_capcha_solver INFO: Capcha found
+04/05/2023 18:38:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:38:30 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:38:33 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:38:33 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:38:36 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:38:47 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 18:37:59.282014,None,None
+
+04/05/2023 18:38:50 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 18:37:59.281742,None,None
+
+04/05/2023 18:38:52 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 18:37:59.281268,None,None
+
+04/05/2023 18:39:10 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SVO,Moscow,890,Royal Jordanian,2023-09-08 08:25:00,2023-04-05 18:38:52.332603,Duration: 12h 15m,1
+
+04/05/2023 18:39:11 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:39:12 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:39:14 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,137,Arkia,2023-09-08 05:55:00,2023-04-05 18:38:52.333480,Duration: 3h 15m,0
+
+04/05/2023 18:39:15 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,367,Cheapest,2023-09-08 11:15:00,2023-04-05 18:38:52.333226,Duration: 1d 17h 50m,1
+
+04/05/2023 18:39:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:39:20 g_capcha_solver INFO: Capcha found
+04/05/2023 18:39:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:39:21 g_capcha_solver INFO: Capcha found
+04/05/2023 18:39:21 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:39:22 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:39:24 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:39:25 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:39:40 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 18:38:52.332702,None,None
+
+04/05/2023 18:39:41 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 18:38:52.332911,None,None
+
+04/05/2023 18:40:04 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,493,Turkish Airlines,2023-09-08 17:00:00,2023-04-05 18:39:41.724923,Duration: 12h 20m,1
+
+04/05/2023 18:40:04 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SIN,Singapore,495,IndiGo,2023-09-08 14:20:00,2023-04-05 18:39:41.725293,Duration: 24h 40m,0
+
+04/05/2023 18:40:06 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,198,Israir Airlines,2023-09-08 05:50:00,2023-04-05 18:39:41.724810,Duration: 3h 10m,0
+
+04/05/2023 18:40:09 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:40:09 g_capcha_solver INFO: Capcha found
+04/05/2023 18:40:10 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:40:10 g_capcha_solver INFO: Capcha found
+04/05/2023 18:40:10 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:40:12 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:40:13 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:40:15 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:40:29 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 18:39:41.725197,None,None
+
+04/05/2023 18:40:31 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 18:39:41.725028,None,None
+
+04/05/2023 18:40:47 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:40:48 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:40:49 page_processing_slnm INFO: TLV,None,HND,None,704,None,None,2023-04-05 18:40:31.849958,None,None
+
+04/05/2023 18:40:52 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:40:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:40:55 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,NRT,Tokyo,472,LOT Polish Airlines,2023-09-08 11:55:00,2023-04-05 18:40:31.852958,Duration: 24h 35m,1
+
+04/05/2023 18:40:58 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ICN,Seoul,526,Ethiopian Airlines,2023-09-08 10:00:00,2023-04-05 18:40:31.850102,Duration: 24h 15m,1
+
+04/05/2023 18:40:58 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:40:58 g_capcha_solver INFO: Capcha found
+04/05/2023 18:41:00 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:41:00 g_capcha_solver INFO: Capcha found
+04/05/2023 18:41:01 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:41:01 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:41:04 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:41:04 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:41:20 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 18:40:31.850551,None,None
+
+04/05/2023 18:41:20 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 18:40:31.850306,None,None
+
+04/05/2023 18:41:39 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,91,Pegasus Airlines,2023-09-08 05:10:00,2023-04-05 18:41:20.887984,Duration: 2h 05m,0
+
+04/05/2023 18:41:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Dubai,211,Royal Jordanian,2023-09-08 17:50:00,2023-04-05 18:41:20.888342,Duration: 8h 45m,1
+
+04/05/2023 18:41:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:41:48 g_capcha_solver INFO: Capcha found
+04/05/2023 18:41:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:41:49 g_capcha_solver INFO: Capcha found
+04/05/2023 18:41:50 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:41:50 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:41:50 g_capcha_solver INFO: Capcha found
+04/05/2023 18:41:51 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:41:52 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:41:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:41:54 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:41:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:42:08 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 18:41:20.887817,None,None
+
+04/05/2023 18:42:11 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 18:41:20.891906,None,None
+
+04/05/2023 18:42:11 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 18:41:20.888654,None,None
+
+04/05/2023 18:42:31 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:42:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:42:36 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CPH,Copenhagen,128,EasyJet,2023-09-08 14:30:00,2023-04-05 18:42:11.410955,Duration: 7h 40m,1
+
+04/05/2023 18:42:37 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,FCO,Rome,147,Cheapest,2023-09-08 14:30:00,2023-04-05 18:42:11.410389,Duration: 18h 40m,1
+
+04/05/2023 18:42:38 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,LGW,London,155,EasyJet,2023-09-08 14:30:00,2023-04-05 18:42:11.410703,Duration: 10h 35m,1
+
+04/05/2023 18:42:38 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,AMS,Amsterdam,138,EasyJet,2023-09-08 14:20:00,2023-04-05 18:42:11.410261,Duration: 5h,0
+
+04/05/2023 18:42:39 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ATL,Atlanta,722,Cheapest,2023-09-08 08:25:00,2023-04-05 18:42:11.410112,Duration: 19h 52m,1
+
+04/05/2023 18:42:55 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:42:56 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:42:57 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:42:57 page_processing_slnm INFO: TLV,None,SVO,None,870,None,None,2023-04-05 18:42:39.744624,None,None
+
+04/05/2023 18:42:58 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:42:59 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,149,Aegean Airlines,2023-09-09 10:00:00,2023-04-05 18:42:39.752785,Duration: 23h 40m,1
+
+04/05/2023 18:42:59 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,159,Cheapest,None,2023-04-05 18:42:39.745289,None,None
+
+04/05/2023 18:43:01 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,269,Pegasus Airlines,2023-09-09 16:15:00,2023-04-05 18:42:39.745444,Duration: 10h,1
+
+04/05/2023 18:43:07 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:43:07 g_capcha_solver INFO: Capcha found
+04/05/2023 18:43:10 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:43:13 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:43:29 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 18:42:39.745122,None,None
+
+04/05/2023 18:43:52 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,PEK,Beijing,1157,Turkish Airlines,2023-09-09 20:35:00,2023-04-05 18:43:29.796844,Duration: 14h,1
+
+04/05/2023 18:43:53 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,331,Cheapest,2023-09-09 23:35:00,2023-04-05 18:43:29.796752,Duration: 2d 3h 35m,1
+
+04/05/2023 18:43:54 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,SIN,Singapore,495,IndiGo,2023-09-09 14:20:00,2023-04-05 18:43:29.797174,Duration: 24h 40m,1
+
+04/05/2023 18:43:54 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,422,Cheapest,2023-09-09 04:45:00,2023-04-05 18:43:29.796982,Duration: 24h 30m,1
+
+04/05/2023 18:43:58 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:43:58 g_capcha_solver INFO: Capcha found
+04/05/2023 18:44:00 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:44:03 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:44:18 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 18:43:29.796628,None,None
+
+04/05/2023 18:44:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:44:45 g_capcha_solver INFO: Capcha found
+04/05/2023 18:44:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:44:46 g_capcha_solver INFO: Capcha found
+04/05/2023 18:44:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:44:46 g_capcha_solver INFO: Capcha found
+04/05/2023 18:44:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:44:46 g_capcha_solver INFO: Capcha found
+04/05/2023 18:44:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:44:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:44:47 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:44:47 g_capcha_solver INFO: Capcha found
+04/05/2023 18:44:48 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:44:49 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:44:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:44:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:44:50 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:44:51 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:44:52 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:44:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:45:05 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 18:44:18.846211,None,None
+
+04/05/2023 18:45:05 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 18:44:18.846406,None,None
+
+04/05/2023 18:45:06 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 18:44:18.846327,None,None
+
+04/05/2023 18:45:07 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 18:44:18.846792,None,None
+
+04/05/2023 18:45:10 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 18:44:18.846638,None,None
+
+04/05/2023 18:45:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:45:37 g_capcha_solver INFO: Capcha found
+04/05/2023 18:45:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:45:37 g_capcha_solver INFO: Capcha found
+04/05/2023 18:45:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:45:37 g_capcha_solver INFO: Capcha found
+04/05/2023 18:45:38 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:45:38 g_capcha_solver INFO: Capcha found
+04/05/2023 18:45:38 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:45:38 g_capcha_solver INFO: Capcha found
+04/05/2023 18:45:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:45:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:45:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:45:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:45:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:45:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:45:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:45:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:45:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:45:44 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:45:57 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 18:45:10.295895,None,None
+
+04/05/2023 18:45:57 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 18:45:10.302764,None,None
+
+04/05/2023 18:45:59 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 18:45:10.303464,None,None
+
+04/05/2023 18:45:59 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 18:45:10.295743,None,None
+
+04/05/2023 18:46:00 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 18:45:10.298676,None,None
+
+04/05/2023 18:46:29 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:46:29 g_capcha_solver INFO: Capcha found
+04/05/2023 18:46:29 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:46:29 g_capcha_solver INFO: Capcha found
+04/05/2023 18:46:29 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:46:29 g_capcha_solver INFO: Capcha found
+04/05/2023 18:46:29 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:46:29 g_capcha_solver INFO: Capcha found
+04/05/2023 18:46:30 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:46:31 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:46:31 g_capcha_solver INFO: Capcha found
+04/05/2023 18:46:31 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:46:32 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:46:33 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:46:33 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:46:34 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:46:34 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:46:35 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:46:36 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:46:36 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:46:49 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 18:46:00.134202,None,None
+
+04/05/2023 18:46:50 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 18:46:00.133983,None,None
+
+04/05/2023 18:46:51 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 18:46:00.134410,None,None
+
+04/05/2023 18:46:52 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 18:46:00.133767,None,None
+
+04/05/2023 18:46:52 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 18:46:00.134616,None,None
+
+04/05/2023 18:47:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:47:20 g_capcha_solver INFO: Capcha found
+04/05/2023 18:47:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:47:20 g_capcha_solver INFO: Capcha found
+04/05/2023 18:47:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:47:21 g_capcha_solver INFO: Capcha found
+04/05/2023 18:47:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:47:21 g_capcha_solver INFO: Capcha found
+04/05/2023 18:47:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:47:21 g_capcha_solver INFO: Capcha found
+04/05/2023 18:47:22 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:47:23 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:47:23 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:47:23 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:47:24 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:47:25 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:47:26 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:47:26 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:47:26 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:47:27 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:47:40 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 18:46:52.234781,None,None
+
+04/05/2023 18:47:41 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 18:46:52.234352,None,None
+
+04/05/2023 18:47:42 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 18:46:52.234543,None,None
+
+04/05/2023 18:47:42 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 18:46:52.235132,None,None
+
+04/05/2023 18:47:43 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 18:46:52.235495,None,None
+
+04/05/2023 18:48:11 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:48:11 g_capcha_solver INFO: Capcha found
+04/05/2023 18:48:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:48:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:48:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:48:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:48:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:48:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:48:12 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:48:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:48:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:48:13 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:48:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:48:15 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:48:16 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:48:16 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:48:16 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:48:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:48:19 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:48:19 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:48:31 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 18:47:43.390620,None,None
+
+04/05/2023 18:48:32 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 18:47:43.389845,None,None
+
+04/05/2023 18:48:33 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 18:47:43.400282,None,None
+
+04/05/2023 18:48:35 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 18:47:43.401407,None,None
+
+04/05/2023 18:48:35 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 18:47:43.389668,None,None
+
+04/05/2023 18:49:04 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:04 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:04 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:04 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:06 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:06 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:09 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:49:09 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:49:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:49:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:49:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:49:25 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 18:48:35.616537,None,None
+
+04/05/2023 18:49:25 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 18:48:35.616287,None,None
+
+04/05/2023 18:49:26 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 18:48:35.616402,None,None
+
+04/05/2023 18:49:26 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 18:48:35.615937,None,None
+
+04/05/2023 18:49:26 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 18:48:35.616092,None,None
+
+04/05/2023 18:49:56 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:56 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:56 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:56 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:56 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:56 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:56 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:56 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:57 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:49:57 g_capcha_solver INFO: Capcha found
+04/05/2023 18:49:58 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:58 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:59 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:49:59 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:50:00 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:50:01 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:01 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:02 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:02 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:03 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:16 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 18:49:26.914245,None,None
+
+04/05/2023 18:50:17 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 18:49:26.913694,None,None
+
+04/05/2023 18:50:18 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 18:49:26.910398,None,None
+
+04/05/2023 18:50:18 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 18:49:26.914535,None,None
+
+04/05/2023 18:50:19 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 18:49:26.910669,None,None
+
+04/05/2023 18:50:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:50:48 g_capcha_solver INFO: Capcha found
+04/05/2023 18:50:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:50:48 g_capcha_solver INFO: Capcha found
+04/05/2023 18:50:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:50:48 g_capcha_solver INFO: Capcha found
+04/05/2023 18:50:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:50:48 g_capcha_solver INFO: Capcha found
+04/05/2023 18:50:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:50:49 g_capcha_solver INFO: Capcha found
+04/05/2023 18:50:49 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:50:49 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:50:49 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:50:49 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:50:50 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:50:52 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:52 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:52 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:50:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:51:08 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 18:50:20.033603,None,None
+
+04/05/2023 18:51:08 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 18:50:20.033899,None,None
+
+04/05/2023 18:51:08 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 18:50:20.033524,None,None
+
+04/05/2023 18:51:08 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 18:50:20.032879,None,None
+
+04/05/2023 18:51:10 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 18:50:20.033420,None,None
+
+04/05/2023 18:51:38 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:51:38 g_capcha_solver INFO: Capcha found
+04/05/2023 18:51:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:51:39 g_capcha_solver INFO: Capcha found
+04/05/2023 18:51:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:51:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:51:39 g_capcha_solver INFO: Capcha found
+04/05/2023 18:51:39 g_capcha_solver INFO: Capcha found
+04/05/2023 18:51:40 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:51:40 g_capcha_solver INFO: Capcha found
+04/05/2023 18:51:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:51:42 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:51:42 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:51:42 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:51:42 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:51:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:51:45 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:51:45 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:51:45 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:51:45 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:51:58 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 18:51:10.378146,None,None
+
+04/05/2023 18:52:00 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 18:51:10.378037,None,None
+
+04/05/2023 18:52:01 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 18:51:10.377856,None,None
+
+04/05/2023 18:52:01 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 18:51:10.377720,None,None
+
+04/05/2023 18:52:01 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 18:51:10.378294,None,None
+
+04/05/2023 18:52:28 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:52:28 g_capcha_solver INFO: Capcha found
+04/05/2023 18:52:29 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:52:29 g_capcha_solver INFO: Capcha found
+04/05/2023 18:52:30 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:52:30 g_capcha_solver INFO: Capcha found
+04/05/2023 18:52:31 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:52:31 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:52:31 g_capcha_solver INFO: Capcha found
+04/05/2023 18:52:31 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:52:31 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:52:32 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:52:33 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:52:33 g_capcha_solver INFO: Capcha found
+04/05/2023 18:52:34 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:52:34 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:52:34 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:52:35 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:52:35 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:52:38 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:52:50 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 18:52:01.583048,None,None
+
+04/05/2023 18:52:50 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 18:52:01.582832,None,None
+
+04/05/2023 18:52:50 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 18:52:01.591232,None,None
+
+04/05/2023 18:52:51 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 18:52:01.588901,None,None
+
+04/05/2023 18:52:54 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 18:52:01.585822,None,None
+
+04/05/2023 18:53:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:53:21 g_capcha_solver INFO: Capcha found
+04/05/2023 18:53:22 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:53:22 g_capcha_solver INFO: Capcha found
+04/05/2023 18:53:22 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:53:22 g_capcha_solver INFO: Capcha found
+04/05/2023 18:53:23 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:53:23 g_capcha_solver INFO: Capcha found
+04/05/2023 18:53:23 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:53:23 g_capcha_solver INFO: Capcha found
+04/05/2023 18:53:23 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:53:24 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:53:24 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:53:24 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:53:25 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:53:26 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:53:27 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:53:27 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:53:27 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:53:28 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:53:42 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 18:52:54.980039,None,None
+
+04/05/2023 18:53:42 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 18:52:54.979844,None,None
+
+04/05/2023 18:53:43 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 18:52:54.979671,None,None
+
+04/05/2023 18:53:43 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 18:52:54.980698,None,None
+
+04/05/2023 18:53:45 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 18:52:54.980432,None,None
+
+04/05/2023 18:54:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:54:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:54:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:54:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:54:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:54:12 g_capcha_solver INFO: Capcha found
+04/05/2023 18:54:13 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:54:13 g_capcha_solver INFO: Capcha found
+04/05/2023 18:54:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:54:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:54:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:54:15 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:54:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:54:15 g_capcha_solver INFO: Capcha found
+04/05/2023 18:54:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:54:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:54:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:54:18 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:54:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:54:21 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:54:32 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 18:53:45.297194,None,None
+
+04/05/2023 18:54:32 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 18:53:45.302646,None,None
+
+04/05/2023 18:54:33 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 18:53:45.303013,None,None
+
+04/05/2023 18:54:34 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 18:53:45.296851,None,None
+
+04/05/2023 18:54:36 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 18:53:45.302022,None,None
+
+04/05/2023 18:55:04 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:04 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:04 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:04 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:04 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:05 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:06 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:06 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:08 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:09 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:55:09 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:55:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:55:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:55:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:55:25 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 18:54:36.928622,None,None
+
+04/05/2023 18:55:25 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 18:54:36.920521,None,None
+
+04/05/2023 18:55:26 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 18:54:36.923753,None,None
+
+04/05/2023 18:55:26 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 18:54:36.919869,None,None
+
+04/05/2023 18:55:27 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 18:54:36.920737,None,None
+
+04/05/2023 18:55:54 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:54 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:54 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:54 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:55 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:55 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:55 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:55 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:55 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:55:55 g_capcha_solver INFO: Capcha found
+04/05/2023 18:55:55 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:56 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:57 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:58 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:58 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:55:58 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:55:59 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:00 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:01 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:01 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:13 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 18:55:27.125010,None,None
+
+04/05/2023 18:56:14 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 18:55:27.124815,None,None
+
+04/05/2023 18:56:15 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 18:55:27.125292,None,None
+
+04/05/2023 18:56:17 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 18:55:27.124584,None,None
+
+04/05/2023 18:56:18 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 18:55:27.124400,None,None
+
+04/05/2023 18:56:44 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:56:44 g_capcha_solver INFO: Capcha found
+04/05/2023 18:56:45 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:56:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:56:45 g_capcha_solver INFO: Capcha found
+04/05/2023 18:56:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:56:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:56:46 g_capcha_solver INFO: Capcha found
+04/05/2023 18:56:46 g_capcha_solver INFO: Capcha found
+04/05/2023 18:56:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:56:46 g_capcha_solver INFO: Capcha found
+04/05/2023 18:56:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:56:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:56:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:56:48 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:48 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:56:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:56:51 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:57:04 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 18:56:18.284165,None,None
+
+04/05/2023 18:57:05 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 18:56:18.275949,None,None
+
+04/05/2023 18:57:06 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 18:56:18.283593,None,None
+
+04/05/2023 18:57:06 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 18:56:18.275653,None,None
+
+04/05/2023 18:57:07 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 18:56:18.284615,None,None
+
+04/05/2023 18:57:36 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:57:36 g_capcha_solver INFO: Capcha found
+04/05/2023 18:57:36 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:57:36 g_capcha_solver INFO: Capcha found
+04/05/2023 18:57:36 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:57:36 g_capcha_solver INFO: Capcha found
+04/05/2023 18:57:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:57:37 g_capcha_solver INFO: Capcha found
+04/05/2023 18:57:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:57:37 g_capcha_solver INFO: Capcha found
+04/05/2023 18:57:37 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:57:38 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:57:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:57:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:57:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:57:40 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:57:41 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:57:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:57:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:57:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:57:57 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 18:57:08.001587,None,None
+
+04/05/2023 18:57:59 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 18:57:08.001478,None,None
+
+04/05/2023 18:57:59 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 18:57:08.001294,None,None
+
+04/05/2023 18:58:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:58:26 g_capcha_solver INFO: Capcha found
+04/05/2023 18:58:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:58:26 g_capcha_solver INFO: Capcha found
+04/05/2023 18:58:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:58:26 g_capcha_solver INFO: Capcha found
+04/05/2023 18:58:27 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:58:27 g_capcha_solver INFO: Capcha found
+04/05/2023 18:58:27 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:58:27 g_capcha_solver INFO: Capcha found
+04/05/2023 18:58:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:58:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:58:28 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:58:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:58:30 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:58:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:58:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:58:31 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:58:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:58:33 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:58:46 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 18:57:59.704864,None,None
+
+04/05/2023 18:58:46 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 18:57:59.698210,None,None
+
+04/05/2023 18:58:47 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 18:57:59.704026,None,None
+
+04/05/2023 18:58:48 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 18:57:59.697995,None,None
+
+04/05/2023 18:58:49 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 18:57:59.700601,None,None
+
+04/05/2023 18:59:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:59:15 g_capcha_solver INFO: Capcha found
+04/05/2023 18:59:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:59:15 g_capcha_solver INFO: Capcha found
+04/05/2023 18:59:16 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:59:16 g_capcha_solver INFO: Capcha found
+04/05/2023 18:59:16 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:59:16 g_capcha_solver INFO: Capcha found
+04/05/2023 18:59:16 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 18:59:16 g_capcha_solver INFO: Capcha found
+04/05/2023 18:59:16 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:59:17 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:59:18 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:59:19 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:59:19 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 18:59:19 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:59:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:59:21 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:59:22 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:59:22 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 18:59:36 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 18:58:49.456463,None,None
+
+04/05/2023 18:59:36 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 18:58:49.456084,None,None
+
+04/05/2023 18:59:37 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 18:58:49.456184,None,None
+
+04/05/2023 18:59:38 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 18:58:49.456299,None,None
+
+04/05/2023 18:59:39 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 18:58:49.455958,None,None
+
+04/05/2023 19:00:04 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:04 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:05 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:05 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:05 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:05 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:05 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:05 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:07 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:08 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:08 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:08 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:24 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 18:59:39.187774,None,None
+
+04/05/2023 19:00:26 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 18:59:39.187681,None,None
+
+04/05/2023 19:00:26 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 18:59:39.188191,None,None
+
+04/05/2023 19:00:26 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 18:59:39.187855,None,None
+
+04/05/2023 19:00:27 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 18:59:39.187923,None,None
+
+04/05/2023 19:00:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:54 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:00:54 g_capcha_solver INFO: Capcha found
+04/05/2023 19:00:54 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:55 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:55 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:56 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:56 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:00:58 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:58 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:58 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:59 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:00:59 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:01:14 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 19:00:27.314535,None,None
+
+04/05/2023 19:01:14 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 19:00:27.313915,None,None
+
+04/05/2023 19:01:14 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 19:00:27.315073,None,None
+
+04/05/2023 19:01:15 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 19:00:27.314156,None,None
+
+04/05/2023 19:01:16 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 19:00:27.314036,None,None
+
+04/05/2023 19:01:43 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:01:43 g_capcha_solver INFO: Capcha found
+04/05/2023 19:01:44 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:01:44 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:01:44 g_capcha_solver INFO: Capcha found
+04/05/2023 19:01:44 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:01:44 g_capcha_solver INFO: Capcha found
+04/05/2023 19:01:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:01:45 g_capcha_solver INFO: Capcha found
+04/05/2023 19:01:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:01:45 g_capcha_solver INFO: Capcha found
+04/05/2023 19:01:46 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:01:46 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:01:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:01:47 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:01:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:01:49 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:01:49 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:01:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:01:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:02:03 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 19:01:16.300066,None,None
+
+04/05/2023 19:02:05 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 19:01:16.300161,None,None
+
+04/05/2023 19:02:05 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 19:01:16.300550,None,None
+
+04/05/2023 19:02:06 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 19:01:16.300280,None,None
+
+04/05/2023 19:02:06 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 19:01:16.300766,None,None
+
+04/05/2023 19:02:33 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:02:33 g_capcha_solver INFO: Capcha found
+04/05/2023 19:02:34 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:02:34 g_capcha_solver INFO: Capcha found
+04/05/2023 19:02:34 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:02:34 g_capcha_solver INFO: Capcha found
+04/05/2023 19:02:34 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:02:34 g_capcha_solver INFO: Capcha found
+04/05/2023 19:02:34 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:02:34 g_capcha_solver INFO: Capcha found
+04/05/2023 19:02:35 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:02:36 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:02:36 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:02:37 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:02:37 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:02:38 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:02:39 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:02:39 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:02:40 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:02:40 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:02:54 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 19:02:06.382119,None,None
+
+04/05/2023 19:02:55 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 19:02:06.382521,None,None
+
+04/05/2023 19:02:55 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 19:02:06.382330,None,None
+
+04/05/2023 19:02:55 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 19:02:06.382775,None,None
+
+04/05/2023 19:02:56 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 19:02:06.381829,None,None
+
+04/05/2023 19:03:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:03:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:03:21 g_capcha_solver INFO: Capcha found
+04/05/2023 19:03:21 g_capcha_solver INFO: Capcha found
+04/05/2023 19:03:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:03:21 g_capcha_solver INFO: Capcha found
+04/05/2023 19:03:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:03:21 g_capcha_solver INFO: Capcha found
+04/05/2023 19:03:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:03:21 g_capcha_solver INFO: Capcha found
+04/05/2023 19:03:22 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:03:22 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:03:23 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:03:24 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:03:25 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:03:25 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:03:25 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:03:26 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:03:27 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:03:28 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:03:41 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 19:02:56.728342,None,None
+
+04/05/2023 19:03:41 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 19:02:56.721558,None,None
+
+04/05/2023 19:03:42 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 19:02:56.727853,None,None
+
+04/05/2023 19:03:43 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 19:02:56.720910,None,None
+
+04/05/2023 19:03:44 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 19:02:56.721114,None,None
+
+04/05/2023 19:04:10 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:10 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:10 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:10 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:10 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:10 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:10 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:10 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:11 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:04:11 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:04:11 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:04:11 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:11 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:12 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:04:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:04:14 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:04:14 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:04:14 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:04:15 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:04:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:04:30 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 19:03:44.518592,None,None
+
+04/05/2023 19:04:30 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 19:03:44.517330,None,None
+
+04/05/2023 19:04:30 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 19:03:44.509236,None,None
+
+04/05/2023 19:04:31 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 19:03:44.517799,None,None
+
+04/05/2023 19:04:32 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 19:03:44.508956,None,None
+
+04/05/2023 19:04:57 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:57 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:57 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:58 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:58 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:58 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:58 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:58 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:58 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:04:58 g_capcha_solver INFO: Capcha found
+04/05/2023 19:04:59 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:04:59 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:00 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:00 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:00 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:02 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:02 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:03 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:03 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:03 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:18 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 19:04:32.816724,None,None
+
+04/05/2023 19:05:18 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 19:04:32.817032,None,None
+
+04/05/2023 19:05:18 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 19:04:32.816252,None,None
+
+04/05/2023 19:05:19 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 19:04:32.817257,None,None
+
+04/05/2023 19:05:19 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 19:04:32.816497,None,None
+
+04/05/2023 19:05:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:05:45 g_capcha_solver INFO: Capcha found
+04/05/2023 19:05:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:05:45 g_capcha_solver INFO: Capcha found
+04/05/2023 19:05:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:05:45 g_capcha_solver INFO: Capcha found
+04/05/2023 19:05:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:05:45 g_capcha_solver INFO: Capcha found
+04/05/2023 19:05:45 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:05:45 g_capcha_solver INFO: Capcha found
+04/05/2023 19:05:46 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:46 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:47 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:48 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:05:49 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:49 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:50 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:05:51 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:06:05 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 19:05:19.717467,None,None
+
+04/05/2023 19:06:05 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 19:05:19.718331,None,None
+
+04/05/2023 19:06:06 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 19:05:19.718104,None,None
+
+04/05/2023 19:06:06 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 19:05:19.717818,None,None
+
+04/05/2023 19:06:07 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 19:05:19.717236,None,None
+
+04/05/2023 19:06:32 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:06:32 g_capcha_solver INFO: Capcha found
+04/05/2023 19:06:32 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:06:32 g_capcha_solver INFO: Capcha found
+04/05/2023 19:06:33 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:06:33 g_capcha_solver INFO: Capcha found
+04/05/2023 19:06:33 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:06:33 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:06:33 g_capcha_solver INFO: Capcha found
+04/05/2023 19:06:33 g_capcha_solver INFO: Capcha found
+04/05/2023 19:06:35 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:06:35 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:06:35 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:06:36 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:06:36 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:06:38 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:06:38 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:06:38 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:06:39 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:06:39 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:06:53 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 19:06:07.772274,None,None
+
+04/05/2023 19:06:54 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 19:06:07.773405,None,None
+
+04/05/2023 19:06:54 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 19:06:07.772457,None,None
+
+04/05/2023 19:06:54 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 19:06:07.772969,None,None
+
+04/05/2023 19:06:55 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 19:06:07.772646,None,None
+
+04/05/2023 19:07:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:07:20 g_capcha_solver INFO: Capcha found
+04/05/2023 19:07:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:07:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:07:20 g_capcha_solver INFO: Capcha found
+04/05/2023 19:07:20 g_capcha_solver INFO: Capcha found
+04/05/2023 19:07:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:07:20 g_capcha_solver INFO: Capcha found
+04/05/2023 19:07:20 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:07:21 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:07:21 g_capcha_solver INFO: Capcha found
+04/05/2023 19:07:21 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:07:22 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:07:22 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:07:23 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:07:24 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:07:24 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:07:25 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:07:25 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:07:26 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:07:40 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 19:06:55.073646,None,None
+
+04/05/2023 19:07:40 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 19:06:55.074789,None,None
+
+04/05/2023 19:07:41 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 19:06:55.074082,None,None
+
+04/05/2023 19:07:41 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 19:06:55.074575,None,None
+
+04/05/2023 19:07:41 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 19:06:55.073405,None,None
+
+04/05/2023 19:08:06 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:06 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:07 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:07 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:07 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:07 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:07 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:07 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:07 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:07 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:08 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:08 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:09 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:09 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:09 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:11 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:12 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:12 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:12 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:27 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 19:07:41.956498,None,None
+
+04/05/2023 19:08:27 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 19:07:41.963708,None,None
+
+04/05/2023 19:08:27 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 19:07:41.956931,None,None
+
+04/05/2023 19:08:28 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 19:07:41.967369,None,None
+
+04/05/2023 19:08:28 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 19:07:41.956252,None,None
+
+04/05/2023 19:08:52 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:52 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:53 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:08:53 g_capcha_solver INFO: Capcha found
+04/05/2023 19:08:53 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:54 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:54 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:55 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:55 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:08:57 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:57 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:57 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:58 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:08:58 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:09:12 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 19:08:28.414618,None,None
+
+04/05/2023 19:09:12 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 19:08:28.415054,None,None
+
+04/05/2023 19:09:13 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 19:08:28.411809,None,None
+
+04/05/2023 19:09:13 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 19:08:28.415323,None,None
+
+04/05/2023 19:09:14 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 19:08:28.412197,None,None
+
+04/05/2023 19:09:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:09:39 g_capcha_solver INFO: Capcha found
+04/05/2023 19:09:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:09:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:09:39 g_capcha_solver INFO: Capcha found
+04/05/2023 19:09:39 g_capcha_solver INFO: Capcha found
+04/05/2023 19:09:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:09:39 g_capcha_solver INFO: Capcha found
+04/05/2023 19:09:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:09:39 g_capcha_solver INFO: Capcha found
+04/05/2023 19:09:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:09:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:09:41 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:09:42 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:09:43 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:09:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:09:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:09:44 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:09:45 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:09:46 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:09:58 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 19:09:14.787477,None,None
+
+04/05/2023 19:09:59 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 19:09:14.790454,None,None
+
+04/05/2023 19:10:00 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 19:09:14.794595,None,None
+
+04/05/2023 19:10:01 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 19:09:14.796703,None,None
+
+04/05/2023 19:10:02 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 19:09:14.787823,None,None
+
+04/05/2023 19:10:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:10:26 g_capcha_solver INFO: Capcha found
+04/05/2023 19:10:27 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:10:27 g_capcha_solver INFO: Capcha found
+04/05/2023 19:10:27 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:10:27 g_capcha_solver INFO: Capcha found
+04/05/2023 19:10:28 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:10:28 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:10:28 g_capcha_solver INFO: Capcha found
+04/05/2023 19:10:28 g_capcha_solver INFO: Capcha found
+04/05/2023 19:10:28 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:10:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:10:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:10:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:10:30 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:10:31 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:10:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:10:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:10:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:10:33 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:10:47 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 19:10:02.432916,None,None
+
+04/05/2023 19:10:47 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 19:10:02.427166,None,None
+
+04/05/2023 19:10:48 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 19:10:02.432011,None,None
+
+04/05/2023 19:10:48 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 19:10:02.427622,None,None
+
+04/05/2023 19:10:48 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 19:10:02.426938,None,None
+
+04/05/2023 19:11:14 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:11:14 g_capcha_solver INFO: Capcha found
+04/05/2023 19:11:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:11:15 g_capcha_solver INFO: Capcha found
+04/05/2023 19:11:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:11:15 g_capcha_solver INFO: Capcha found
+04/05/2023 19:11:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:11:15 g_capcha_solver INFO: Capcha found
+04/05/2023 19:11:15 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:11:15 g_capcha_solver INFO: Capcha found
+04/05/2023 19:11:15 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:11:17 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:11:17 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:11:17 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:11:18 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:11:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:11:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:11:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:11:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:11:21 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:11:34 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 19:10:49.063721,None,None
+
+04/05/2023 19:11:35 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 19:10:49.060901,None,None
+
+04/05/2023 19:11:36 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 19:10:49.064028,None,None
+
+04/05/2023 19:11:36 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 19:10:49.065211,None,None
+
+04/05/2023 19:11:37 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 19:10:49.063298,None,None
+
+04/05/2023 19:12:02 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:02 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:03 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:03 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:03 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:03 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:03 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:03 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:03 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:03 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:03 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:04 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:05 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:05 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:06 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:06 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:06 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:08 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:08 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:09 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:22 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 19:11:37.653497,None,None
+
+04/05/2023 19:12:22 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 19:11:37.650417,None,None
+
+04/05/2023 19:12:24 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 19:11:37.650721,None,None
+
+04/05/2023 19:12:24 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 19:11:37.663241,None,None
+
+04/05/2023 19:12:25 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 19:11:37.650222,None,None
+
+04/05/2023 19:12:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:49 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:50 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:50 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:50 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:50 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:50 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:50 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:50 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:12:50 g_capcha_solver INFO: Capcha found
+04/05/2023 19:12:51 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:51 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:51 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:52 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:52 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:12:54 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:54 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:54 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:12:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:13:10 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 19:12:25.250085,None,None
+
+04/05/2023 19:13:10 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 19:12:25.249270,None,None
+
+04/05/2023 19:13:10 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 19:12:25.239357,None,None
+
+04/05/2023 19:13:11 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 19:12:25.239176,None,None
+
+04/05/2023 19:13:11 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 19:12:25.239659,None,None
+
+04/05/2023 19:13:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:13:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:13:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:13:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:13:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:13:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:13:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:13:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:13:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:13:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:13:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:13:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:13:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:13:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:13:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:13:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:13:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:13:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:13:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:13:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:13:57 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 19:13:11.857771,None,None
+
+04/05/2023 19:13:58 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 19:13:11.861654,None,None
+
+04/05/2023 19:13:58 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 19:13:11.851723,None,None
+
+04/05/2023 19:13:58 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 19:13:11.851895,None,None
+
+04/05/2023 19:13:59 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 19:13:11.852419,None,None
+
+04/05/2023 19:14:24 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:14:24 g_capcha_solver INFO: Capcha found
+04/05/2023 19:14:25 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:14:25 g_capcha_solver INFO: Capcha found
+04/05/2023 19:14:25 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:14:25 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:14:25 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:14:25 g_capcha_solver INFO: Capcha found
+04/05/2023 19:14:25 g_capcha_solver INFO: Capcha found
+04/05/2023 19:14:25 g_capcha_solver INFO: Capcha found
+04/05/2023 19:14:26 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:14:26 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:14:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:14:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:14:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:14:29 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:14:29 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:14:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:14:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:14:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:14:45 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 19:13:59.261148,None,None
+
+04/05/2023 19:14:45 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 19:13:59.260606,None,None
+
+04/05/2023 19:14:45 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 19:13:59.260387,None,None
+
+04/05/2023 19:14:46 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 19:13:59.260833,None,None
+
+04/05/2023 19:14:46 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 19:13:59.261589,None,None
+
+04/05/2023 19:15:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:15:12 g_capcha_solver INFO: Capcha found
+04/05/2023 19:15:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:15:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:15:12 g_capcha_solver INFO: Capcha found
+04/05/2023 19:15:12 g_capcha_solver INFO: Capcha found
+04/05/2023 19:15:13 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:15:13 g_capcha_solver INFO: Capcha found
+04/05/2023 19:15:13 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:15:13 g_capcha_solver INFO: Capcha found
+04/05/2023 19:15:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:15:15 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:15:15 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:15:15 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:15:16 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:15:17 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:15:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:15:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:15:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:15:19 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:15:32 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 19:14:46.923892,None,None
+
+04/05/2023 19:15:34 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 19:14:46.923428,None,None
+
+04/05/2023 19:15:34 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 19:14:46.924120,None,None
+
+04/05/2023 19:15:34 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 19:14:46.923651,None,None
+
+04/05/2023 19:15:35 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 19:14:46.923239,None,None
+
+04/05/2023 19:16:00 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:00 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:01 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:01 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:01 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:01 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:01 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:01 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:01 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:01 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:01 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:02 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:02 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:02 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:03 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:04 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:05 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:05 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:05 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:07 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:19 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 19:15:35.513189,None,None
+
+04/05/2023 19:16:20 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 19:15:35.516223,None,None
+
+04/05/2023 19:16:21 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 19:15:35.516735,None,None
+
+04/05/2023 19:16:21 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 19:15:35.512952,None,None
+
+04/05/2023 19:16:23 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 19:15:35.515474,None,None
+
+04/05/2023 19:16:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:48 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:48 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:49 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:49 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:49 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:49 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:49 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:16:49 g_capcha_solver INFO: Capcha found
+04/05/2023 19:16:50 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:51 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:52 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:52 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:16:52 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:53 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:54 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:16:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:17:08 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 19:16:23.180735,None,None
+
+04/05/2023 19:17:09 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 19:16:23.184373,None,None
+
+04/05/2023 19:17:10 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 19:16:23.180541,None,None
+
+04/05/2023 19:17:11 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 19:16:23.193405,None,None
+
+04/05/2023 19:17:11 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 19:16:23.181140,None,None
+
+04/05/2023 19:17:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:17:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:17:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:17:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:17:37 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:17:37 g_capcha_solver INFO: Capcha found
+04/05/2023 19:17:38 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:17:38 g_capcha_solver INFO: Capcha found
+04/05/2023 19:17:38 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:17:38 g_capcha_solver INFO: Capcha found
+04/05/2023 19:17:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:17:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:17:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:17:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:17:40 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:17:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:17:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:17:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:17:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:17:44 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:17:59 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 19:17:11.446918,None,None
+
+04/05/2023 19:17:59 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 19:17:11.445800,None,None
+
+04/05/2023 19:17:59 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 19:17:11.446312,None,None
+
+04/05/2023 19:17:59 page_processing_slnm INFO: TLV,None,CDG,None,None,None,None,2023-04-05 19:17:11.446412,None,None
+
+04/05/2023 19:18:00 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 19:17:11.446035,None,None
+
+04/05/2023 19:18:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:18:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:18:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:18:26 g_capcha_solver INFO: Capcha found
+04/05/2023 19:18:26 g_capcha_solver INFO: Capcha found
+04/05/2023 19:18:26 g_capcha_solver INFO: Capcha found
+04/05/2023 19:18:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:18:26 g_capcha_solver INFO: Capcha found
+04/05/2023 19:18:26 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:18:26 g_capcha_solver INFO: Capcha found
+04/05/2023 19:18:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:18:27 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:18:28 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:18:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:18:29 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:18:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:18:30 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:18:31 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:18:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:18:32 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:18:45 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 19:18:00.062026,None,None
+
+04/05/2023 19:18:46 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 19:18:00.061846,None,None
+
+04/05/2023 19:18:47 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 19:18:00.062185,None,None
+
+04/05/2023 19:18:48 page_processing_slnm INFO: TLV,None,MAD,None,None,None,None,2023-04-05 19:18:00.062638,None,None
+
+04/05/2023 19:18:49 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 19:18:00.062887,None,None
+
+04/05/2023 19:19:16 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:19:16 g_capcha_solver INFO: Capcha found
+04/05/2023 19:19:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:19:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:19:17 g_capcha_solver INFO: Capcha found
+04/05/2023 19:19:17 g_capcha_solver INFO: Capcha found
+04/05/2023 19:19:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:19:17 g_capcha_solver INFO: Capcha found
+04/05/2023 19:19:17 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:19:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:19:17 g_capcha_solver INFO: Capcha found
+04/05/2023 19:19:17 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:19:18 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:19:20 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:19:20 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:19:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:19:21 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:19:21 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:19:23 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:19:23 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:19:36 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 19:18:49.168534,None,None
+
+04/05/2023 19:19:36 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 19:18:49.169266,None,None
+
+04/05/2023 19:19:37 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 19:18:49.168765,None,None
+
+04/05/2023 19:19:39 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 19:18:49.168912,None,None
+
+04/05/2023 19:19:39 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 19:18:49.169524,None,None
+
+04/05/2023 19:23:43 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:24:16 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:24:24 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:24:24 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 6, 6), 1, ['TBS'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 5})
+04/05/2023 19:24:24 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 19:24:24 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 19:24:46 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:24:46 g_capcha_solver INFO: Capcha found
+04/05/2023 19:24:49 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:24:52 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:25:08 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 19:24:24.515647,None,None
+
+04/05/2023 19:37:15 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:37:15 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 17, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 5})
+04/05/2023 19:37:15 get_url_list INFO: finish get_url_list of 425 items
+04/05/2023 19:37:15 scrape_per_batch INFO:  send batch of urls size 5 
+04/05/2023 19:38:15 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:38:15 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 5})
+04/05/2023 19:38:15 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 19:38:15 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 19:38:36 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:38:36 g_capcha_solver INFO: Capcha found
+04/05/2023 19:38:39 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:38:42 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:39:56 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:39:56 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1})
+04/05/2023 19:39:56 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 19:39:56 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 19:40:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:40:17 g_capcha_solver INFO: Capcha found
+04/05/2023 19:40:18 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:40:29 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:40:45 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 19:39:56.705897,None,None
+
+04/05/2023 19:43:25 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:43:25 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1})
+04/05/2023 19:43:25 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 19:43:25 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 19:43:47 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:43:47 g_capcha_solver INFO: Capcha found
+04/05/2023 19:43:50 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:43:55 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:44:11 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 19:43:25.475703,None,None
+
+04/05/2023 19:44:12 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 19:44:12 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 19:44:12 fill_airport_table INFO:  airport table in DB was created successfully
+04/05/2023 19:44:12 fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/05/2023 19:44:12 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 19:58:11 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:58:11 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1})
+04/05/2023 19:58:11 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 19:58:11 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 19:58:33 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:58:33 g_capcha_solver INFO: Capcha found
+04/05/2023 19:58:35 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:58:40 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:58:40 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1})
+04/05/2023 19:58:40 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 19:58:40 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 19:58:47 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 19:58:47 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1})
+04/05/2023 19:58:47 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 19:58:47 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 19:59:08 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 19:59:08 g_capcha_solver INFO: Capcha found
+04/05/2023 19:59:09 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 19:59:14 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 19:59:30 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 19:58:47.407381,None,None
+
+04/05/2023 19:59:30 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 19:59:30 fill_city_table INFO:  city table in DB was created successfully
+04/05/2023 19:59:30 fill_airport_table INFO:  airport table in DB was created successfully
+04/05/2023 19:59:30 fill_aircompany_table INFO:  aircompany table in DB was created successfully
+04/05/2023 19:59:30 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 20:00:25 main INFO: this takes: 0:01:36.902980 sec 
+04/05/2023 20:07:56 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 20:07:56 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1})
+04/05/2023 20:07:56 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 20:07:56 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 20:19:19 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 20:19:19 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 20:19:19 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 20:19:19 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 20:21:44 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 20:21:44 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 20:21:44 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 20:21:44 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 20:22:50 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 20:22:50 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 20:22:50 fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/05/2023 20:22:50 fill_aircompany_table WARNING:  aircompany table in DB was NOT created successfully
+04/05/2023 20:22:50 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 20:23:05 main INFO: this takes: 0:01:20.607453 sec 
+04/05/2023 20:24:18 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 20:24:18 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 20:24:18 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 20:24:18 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 20:27:14 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,176,FlyOne,2023-07-07 17:30:00,2023-04-05 20:24:18.751685,Duration: 2h 40m,0
+
+04/05/2023 20:27:14 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 20:27:14 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 20:27:14 fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/05/2023 20:27:14 fill_aircompany_table WARNING:  aircompany table in DB was NOT created successfully
+04/05/2023 20:27:15 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 20:27:23 main INFO: this takes: 0:03:04.535226 sec 
+04/05/2023 21:58:18 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 21:58:18 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 0})
+04/05/2023 21:58:18 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 21:58:18 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:01:06 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:01:06 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 0})
+04/05/2023 22:01:06 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:01:06 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:02:59 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:02:59 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 0})
+04/05/2023 22:02:59 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:02:59 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:04:09 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:04:09 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 0})
+04/05/2023 22:04:09 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:04:09 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:06:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:06:12 g_capcha_solver INFO: Capcha found
+04/05/2023 22:06:14 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 22:06:38 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:06:38 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 0})
+04/05/2023 22:06:38 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:06:38 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:07:39 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:07:39 g_capcha_solver INFO: Capcha found
+04/05/2023 22:07:42 switch_to_audio INFO: Capcha switch to audio version
+04/05/2023 22:07:45 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:08:01 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 22:07:18.589698,None,None
+
+04/05/2023 22:08:01 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 22:08:01 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 22:08:01 fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/05/2023 22:08:01 fill_aircompany_table WARNING:  aircompany table in DB was NOT created successfully
+04/05/2023 22:08:01 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 22:08:01 main INFO: this takes: 0:01:23.632436 sec 
+04/05/2023 22:08:16 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:08:16 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 22:08:16 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:08:16 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:08:41 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:08:41 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 22:08:41 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:08:41 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:08:43 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 22:08:43 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 22:08:43 fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/05/2023 22:08:43 fill_aircompany_table WARNING:  aircompany table in DB was NOT created successfully
+04/05/2023 22:08:43 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 22:08:43 main INFO: this takes: 0:00:02.207337 sec 
+04/05/2023 22:09:05 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:09:05 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 22:09:05 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:09:05 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:09:07 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 22:09:07 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 22:09:07 fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/05/2023 22:09:07 fill_aircompany_table WARNING:  aircompany table in DB was NOT created successfully
+04/05/2023 22:09:08 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 22:09:16 main INFO: this takes: 0:00:11.427615 sec 
+04/05/2023 22:10:11 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:10:11 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 22:10:11 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:10:11 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:13:30 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:13:31 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:14:23 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 22:11:45.946899,None,None
+
+04/05/2023 22:14:32 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 22:14:33 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 22:14:33 fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/05/2023 22:14:33 fill_aircompany_table WARNING:  aircompany table in DB was NOT created successfully
+04/05/2023 22:14:33 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 22:14:43 main INFO: this takes: 0:04:29.936078 sec 
+04/05/2023 22:16:16 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:16:16 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 7, 7), 1, ['EVN'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 22:16:16 get_url_list INFO: finish get_url_list of 1 items
+04/05/2023 22:16:16 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:17:20 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:17:21 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:17:37 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 22:16:28.517237,None,None
+
+04/05/2023 22:17:37 coursor_execution INFO: does not work:
+ CREATE DATABASE avia_scraper; 
+04/05/2023 22:17:37 fill_city_table WARNING:  city table in DB was NOT created successfully
+04/05/2023 22:17:37 fill_airport_table WARNING:  airport table in DB was NOT created successfully
+04/05/2023 22:17:38 fill_aircompany_table WARNING:  aircompany table in DB was NOT created successfully
+04/05/2023 22:17:38 fill_ticket_table INFO:  airport table in DB was created successfully
+04/05/2023 22:17:38 main INFO: this takes: 0:01:21.247409 sec 
+04/05/2023 22:18:37 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:18:37 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 5, 'use_proxy': 1})
+04/05/2023 22:18:37 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 22:18:37 scrape_per_batch INFO:  send batch of urls size 5 
+04/05/2023 22:19:12 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:19:14 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:19:14 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:19:15 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:19:29 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 22:18:53.024952,None,None
+
+04/05/2023 22:19:31 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 22:18:53.025361,None,None
+
+04/05/2023 22:20:08 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:20:09 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:20:09 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:20:10 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:20:25 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 22:19:50.747467,None,None
+
+04/05/2023 22:20:26 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 22:19:50.747748,None,None
+
+04/05/2023 22:21:11 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:21:11 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito'], 'chome_args_1': [1, '--headless'], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 22:21:11 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 22:21:11 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 22:22:19 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:22:20 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:22:23 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 22:21:58.568148,None,None
+
+04/05/2023 22:23:17 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:23:18 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:23:31 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 22:22:30.852691,None,None
+
+04/05/2023 22:24:42 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:24:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:24:59 page_processing_slnm INFO: TLV,None,DOH,None,None,None,None,2023-04-05 22:24:23.068416,None,None
+
+04/05/2023 22:25:41 g_capcha_solver INFO: check if chapcha on place
+04/05/2023 22:25:43 g_capcha_solver INFO:  no capcha frame found
+04/05/2023 22:25:59 page_processing_slnm INFO: TLV,None,LHR,None,None,None,None,2023-04-05 22:25:09.669871,None,None
+
+04/05/2023 22:27:04 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Dubai,221,Sun Express,2023-09-01 11:05:00,2023-04-05 22:26:06.731093,Duration: 16h 50m,1
+
+04/05/2023 22:31:07 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:31:07 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 15, 'use_proxy': 1})
+04/05/2023 22:31:07 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 22:31:07 scrape_per_batch INFO:  send batch of urls size 15 
+04/05/2023 22:32:30 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,122,Tarom,2023-09-01 12:20:00,2023-04-05 22:32:11.465044,Duration: 9h 15m,1
+
+04/05/2023 22:32:31 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 22:32:11.493028,None,None
+
+04/05/2023 22:33:00 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 22:32:11.462473,None,None
+
+04/05/2023 22:34:34 page_processing_slnm INFO: TLV,None,MUC,None,None,None,None,2023-04-05 22:34:14.571762,None,None
+
+04/05/2023 22:34:34 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 22:34:14.595718,None,None
+
+04/05/2023 22:34:34 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 22:34:14.574463,None,None
+
+04/05/2023 22:34:35 page_processing_slnm INFO: TLV,None,CPH,None,None,None,None,2023-04-05 22:34:14.599541,None,None
+
+04/05/2023 22:34:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,IST,Istanbul,106,Pegasus Airlines,2023-09-01 11:15:00,2023-04-05 22:34:14.544008,Duration: 2h 05m,0
+
+04/05/2023 22:36:00 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 22:35:41.882953,None,None
+
+04/05/2023 22:36:01 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 22:35:41.911161,None,None
+
+04/05/2023 22:36:01 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 22:35:41.890657,None,None
+
+04/05/2023 22:36:02 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 22:35:41.891811,None,None
+
+04/05/2023 22:36:09 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,DXB,Sharjah,234,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 22:35:41.918084,Duration: 10h 40m,1
+
+04/05/2023 22:37:05 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 22:36:45.359893,None,None
+
+04/05/2023 22:37:06 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 22:36:45.290625,None,None
+
+04/05/2023 22:37:12 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 22:36:45.300767,None,None
+
+04/05/2023 22:37:19 page_processing_slnm INFO: TLV,None,LGW,None,None,None,None,2023-04-05 22:36:45.309408,None,None
+
+04/05/2023 22:38:25 page_processing_slnm INFO: TLV,None,AMS,None,None,None,None,2023-04-05 22:38:05.741203,None,None
+
+04/05/2023 22:40:09 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:40:09 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 15, 'use_proxy': 1})
+04/05/2023 22:40:09 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 22:40:09 scrape_per_batch INFO:  send batch of urls size 15 
+04/05/2023 22:41:00 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 22:40:40.069063,None,None
+
+04/05/2023 22:41:28 page_processing_slnm INFO: TLV,None,ALA,None,None,None,None,2023-04-05 22:40:38.989773,None,None
+
+04/05/2023 22:41:29 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 22:40:39.414940,None,None
+
+04/05/2023 22:41:33 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 22:40:39.295749,None,None
+
+04/05/2023 22:42:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CPH,Copenhagen,172,EasyJet,2023-09-01 14:10:00,2023-04-05 22:42:27.089832,Duration: 7h 40m,1
+
+04/05/2023 22:42:46 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 22:42:26.624855,None,None
+
+04/05/2023 22:42:46 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 22:42:27.925270,None,None
+
+04/05/2023 22:42:46 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 22:42:27.196824,None,None
+
+04/05/2023 22:42:46 page_processing_slnm INFO: TLV,None,TBS,None,None,None,None,2023-04-05 22:42:27.775339,None,None
+
+04/05/2023 22:45:28 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 22:42:27.845472,None,None
+
+04/05/2023 22:46:56 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:46:56 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 15, 'use_proxy': 1})
+04/05/2023 22:46:56 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 22:46:56 scrape_per_batch INFO:  send batch of urls size 15 
+04/05/2023 22:48:19 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,CDG,Paris,203,EasyJet,2023-09-01 18:55:00,2023-04-05 22:48:02.536657,Duration: 5h 05m,0
+
+04/05/2023 22:48:21 page_processing_slnm INFO: TLV,None,SIN,None,None,None,None,2023-04-05 22:48:03.166415,None,None
+
+04/05/2023 22:48:22 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 22:48:02.558719,None,None
+
+04/05/2023 22:48:23 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 22:48:03.476416,None,None
+
+04/05/2023 22:48:23 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 22:48:04.071932,None,None
+
+04/05/2023 22:48:33 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-01 20:40:00,2023-04-05 22:48:03.355475,Duration: 1d 5h 35m,1
+
+04/05/2023 22:50:36 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,138,Aegean Airlines,2023-09-02 13:50:00,2023-04-05 22:50:21.498827,Duration: 19h 50m,1
+
+04/05/2023 22:50:39 page_processing_slnm INFO: TLV,None,FCO,None,None,None,None,2023-04-05 22:50:21.182841,None,None
+
+04/05/2023 22:50:41 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 22:50:21.564897,None,None
+
+04/05/2023 22:51:49 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,MAD,Madrid,291,TAP Portugal,2023-09-02 05:40:00,2023-04-05 22:51:31.331319,Duration: 12h 25m,1
+
+04/05/2023 22:51:50 page_processing_slnm INFO: TLV,None,HND,None,None,None,None,2023-04-05 22:51:31.235466,None,None
+
+04/05/2023 22:51:50 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 22:51:30.935215,None,None
+
+04/05/2023 22:51:51 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 22:51:30.978843,None,None
+
+04/05/2023 22:51:51 page_processing_slnm INFO: TLV,None,ICN,None,None,None,None,2023-04-05 22:51:32.258583,None,None
+
+04/05/2023 22:52:08 urlopen WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x12193fb50>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/f4fad7dcb9c694a5d2c9653d38259583/elements
+04/05/2023 22:52:08 urlopen WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10ee34b10>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/f4fad7dcb9c694a5d2c9653d38259583/elements
+04/05/2023 22:52:08 urlopen WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10ee35110>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/f4fad7dcb9c694a5d2c9653d38259583/elements
+04/05/2023 22:52:08 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 22:51:30.928535,None,None
+
+04/05/2023 22:52:29 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:52:29 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 100, 'use_proxy': 1})
+04/05/2023 22:52:29 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 22:52:29 scrape_per_batch INFO:  send batch of urls size 100 
+04/05/2023 22:56:56 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 22:56:56 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 50, 'use_proxy': 1})
+04/05/2023 22:56:56 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 22:56:56 scrape_per_batch INFO:  send batch of urls size 50 
+04/05/2023 23:00:36 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 23:00:36 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 50, 'use_proxy': 1})
+04/05/2023 23:00:36 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 23:00:36 scrape_per_batch INFO:  send batch of urls size 50 
+04/05/2023 23:01:09 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 23:01:09 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 3, 'use_proxy': 1})
+04/05/2023 23:01:09 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 23:01:09 scrape_per_batch INFO:  send batch of urls size 3 
+04/05/2023 23:03:35 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 23:03:35 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 3, 'use_proxy': 1})
+04/05/2023 23:03:35 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 23:03:35 scrape_per_batch INFO:  send batch of urls size 3 
+04/05/2023 23:04:19 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 23:04:01.914285,None,None
+
+04/05/2023 23:04:49 page_processing_slnm INFO: TLV,None,BEG,None,None,None,None,2023-04-05 23:04:02.230853,None,None
+
+04/05/2023 23:05:52 page_processing_slnm INFO: TLV,None,JFK,None,None,None,None,2023-04-05 23:05:04.563369,None,None
+
+04/05/2023 23:07:32 page_processing_slnm INFO: TLV,None,ATL,None,None,None,None,2023-04-05 23:06:45.807609,None,None
+
+04/05/2023 23:08:50 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,TAS,Tashkent,317,Cheapest,2023-09-02 23:35:00,2023-04-05 23:08:39.049283,Duration: 2d 3h 35m,1
+
+04/05/2023 23:12:21 page_processing_slnm INFO: TLV,None,IST,None,None,None,None,2023-04-05 23:12:03.081634,None,None
+
+04/05/2023 23:12:26 page_processing_slnm INFO: TLV,None,NRT,None,None,None,None,2023-04-05 23:12:02.013095,None,None
+
+04/05/2023 23:14:46 page_processing_slnm INFO: TLV,None,DXB,None,None,None,None,2023-04-05 23:13:56.145091,None,None
+
+04/05/2023 23:16:11 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 23:16:11 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 23:16:11 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 23:16:11 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 23:17:19 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,EVN,Yerevan,153,Cyprus Airways,None,2023-04-05 23:16:28.630671,None,None
+
+04/05/2023 23:19:02 page_processing_slnm INFO: TLV,None,GYD,None,None,None,None,2023-04-05 23:17:40.168370,None,None
+
+04/05/2023 23:22:16 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 23:22:16 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 1})
+04/05/2023 23:22:16 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 23:22:16 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 23:23:02 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 23:22:43.879100,None,None
+
+04/05/2023 23:23:58 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 23:23:58 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 0})
+04/05/2023 23:23:58 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 23:23:58 scrape_per_batch INFO:  send batch of urls size 1 
+04/05/2023 23:25:03 page_processing_slnm INFO: TLV,None,SVO,None,None,None,None,2023-04-05 23:24:12.428693,None,None
+
+04/05/2023 23:25:51 page_processing_slnm INFO: TLV,None,EVN,None,None,None,None,2023-04-05 23:25:25.816113,None,None
+
+04/05/2023 23:26:08 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-01 20:40:00,2023-04-05 23:25:52.628406,Duration: 1d 5h 35m,1
+
+04/05/2023 23:26:22 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,BEG,Belgrade,124,Tarom,2023-09-01 12:20:00,2023-04-05 23:26:11.096084,Duration: 9h 15m,1
+
+04/05/2023 23:26:42 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,GYD,Baku,199,Israir Airlines,2023-09-01 05:50:00,2023-04-05 23:26:30.744819,Duration: 3h 10m,0
+
+04/05/2023 23:27:17 page_processing_slnm INFO: TLV,None,TAS,None,None,None,None,2023-04-05 23:26:51.334675,None,None
+
+04/05/2023 23:28:00 page_processing_slnm INFO: TLV,None,PEK,None,None,None,None,2023-04-05 23:27:24.328871,None,None
+
+04/05/2023 23:28:26 page_processing_slnm INFO: TLV,Tel Aviv-Yafo,JFK,New York,548,Royal Jordanian,2023-09-01 08:25:00,2023-04-05 23:28:09.217008,Duration: 15h 40m,1
+
+04/05/2023 23:28:40 load_scraper_config INFO: Config file conf.json opened successfully
+04/05/2023 23:28:40 get_url_list INFO: start get_url_list with: ('TLV', datetime.date(2022, 9, 1), 30, ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS', 'FCO', 'LGW', 'CPH'], {'browsers': ['edge', 'chrome'], 'link_constructor': 'https://www.aviasales.com/search/', 'result_file': 'tickets.csv', 'airports': 'airports.csv', 'depth_of_parenting_ticket_widget': 15, 'chome_args': ['--incognito', '--headless'], 'chome_args_1': [1], 'db_name': 'avia_scraper', 'batch_size': 1, 'use_proxy': 0})
+04/05/2023 23:28:40 get_url_list INFO: finish get_url_list of 750 items
+04/05/2023 23:28:40 scrape_per_batch INFO:  send batch of urls size 1 

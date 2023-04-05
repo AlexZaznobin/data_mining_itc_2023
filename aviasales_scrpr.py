@@ -17,7 +17,8 @@ from capcha_speech_recognition import g_capcha_solver
 from interface import get_scraping_parameters_list
 from mysql_scraper import save_results_in_database
 from interface import set_up_parser
-
+import  requests
+BREAK_PROXY_RANDOMIZER_INDEX=100
 CONFIG_NAME = 'conf.json'
 
 
@@ -99,6 +100,7 @@ def get_airport_codes (file_name) :
 
 def extract_data_page (driver, current_ticket, config) :
     currency, currency_position = currency_check(driver)
+    return_price = None
     try :
         time.sleep(random.random())
         # Wait up to 20 seconds for the element to be present on the page
@@ -115,7 +117,7 @@ def extract_data_page (driver, current_ticket, config) :
                 extract_layover(ticket_web_element, current_ticket, config)
                 break
     except :
-        return_price = None
+        pass
 
     return return_price
 
@@ -199,7 +201,7 @@ def extract_city (driver, current_ticket) :
     current_ticket.dest_airport.city = city_elements[1].text
 
 
-def page_processing_slnm (url, config) :
+def page_processing_slnm (url, config, proxy=None, good_proxy=None) :
     """
     get price from page
     Args:
@@ -208,6 +210,7 @@ def page_processing_slnm (url, config) :
     Returns:
         price for the cheapest ticket
     """
+    time.sleep(random.random()*2)
     parameters = re.search('.*request', url).group(0)[-18 :-7]
     start_airport = Airport(code=parameters[:3])
     dest_airport = Airport(code=parameters[-4 :-1])
@@ -218,12 +221,15 @@ def page_processing_slnm (url, config) :
     chrome_options = Options()
     for chome_arg in config['chome_args'] :
         chrome_options.add_argument(chome_arg)
+        if config['use_proxy'] == 1 :
+            chrome_options.add_argument(f"--proxy-server={proxy}")
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.get(url)
-
-    if extract_data_page(driver, page_ticket, config) == None :
-        g_capcha_solver(driver, logging)
-        extract_data_page(driver, page_ticket, config)
+    extract_data_page(driver, page_ticket, config)
+    if page_ticket.price!=None:
+        good_proxy.append(proxy)
+    else:
+        good_proxy.clear()
 
     with open(config['result_file'], 'a') as result_file :
         result_file.write(str(page_ticket) + '\n')
@@ -231,6 +237,51 @@ def page_processing_slnm (url, config) :
     logging.info(str(page_ticket) + '\n')
     return page_ticket
 
+
+def check_proxy(proxy_str):
+    """
+    Check if proxies are good
+    Args:
+        proxy_str: adres of proxy
+    Returns:
+        status: True or false
+    """
+    test_url = 'http://httpbin.org/ip'
+    status=False
+    proxy = {
+        'http' : 'http://'+proxy_str,
+        'https' : 'https://'+proxy_str
+    }
+    try:
+        response = requests.get(test_url, proxies=proxy, timeout=1)
+        if response.status_code == 200 :
+            status=True
+    except:
+        pass
+    return status
+
+
+def create_proxy_list(number_of_proxy):
+    """
+    Create proxy list of given length
+    Args:
+        number_of_proxy: number of needed proxies
+    Returns:
+        list of good proxies of  given length  or list of 0 of  given length
+    """
+    proxy_list = []
+    with open("proxy_list.txt", 'r') as result_file :
+        proxy_list = result_file.readlines()
+    good_proxy_list=[]
+    break_index=0
+    while (len(good_proxy_list)!=number_of_proxy)and(break_index!=BREAK_PROXY_RANDOMIZER_INDEX):
+        break_index=break_index+1
+        random_element = random.choice(proxy_list)
+        if  check_proxy(random_element[:-1]):
+            good_proxy_list.append(random_element[:-1])
+    if break_index==BREAK_PROXY_RANDOMIZER_INDEX:
+        good_proxy_list = [0 for i in range(number_of_proxy)]
+    return good_proxy_list
 
 def m_thread_batch_scraping (list_of_urls, config) :
     """
@@ -240,9 +291,15 @@ def m_thread_batch_scraping (list_of_urls, config) :
     Use selenium
     Returns:
     """
+    random_proxy_list=create_proxy_list(len(list_of_urls))
+    url_proxys=zip(list_of_urls,random_proxy_list)
     threads = []
-    for index, url in enumerate(list_of_urls) :
-        t = threading.Thread(target=page_processing_slnm, args=(url, config))
+    good_proxy= []
+
+    for index, url_proxy in enumerate(url_proxys) :
+        if len(good_proxy)!=0:
+            url_proxy[1]=good_proxy[0]
+        t = threading.Thread(target=page_processing_slnm, args=(url_proxy[0], config, url_proxy[1],good_proxy))
         threads.append(t)
     for t in threads :
         t.start()

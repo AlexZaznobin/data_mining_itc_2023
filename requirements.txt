@@ -35,3 +35,4 @@ word2number==1.1
 wsproto==1.2.0
 zope.event==4.6
 zope.interface==5.5.2
+cryptography

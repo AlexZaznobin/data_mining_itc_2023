@@ -240,3 +240,503 @@ TLV,None,SVO,None,None,None,None,2023-04-04 21:41:50.773109,None,None
 TLV,None,ALA,None,None,None,None,2023-04-04 21:41:50.775524,None,None
 TLV,None,SVO,None,None,None,None,2023-04-04 21:43:10.537295,None,None
 TLV,None,TBS,None,None,None,None,2023-04-04 21:43:25.725957,None,None
+TLV,None,SVO,None,865,None,None,2023-04-05 18:15:04.181030,None,None
+TLV,Tel Aviv-Yafo,EVN,Yerevan,168,Only 2 tickets remaining for this price,2023-09-01 17:30:00,2023-04-05 18:15:04.181440,Duration: 2h 40m,0
+TLV,Tel Aviv-Yafo,TBS,Tbilisi,150,El Al Israel Airlines,2023-09-01 06:00:00,2023-04-05 18:15:04.181287,Duration: 2h 35m,0
+TLV,None,ALA,None,None,None,None,2023-04-05 18:15:04.181882,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 18:15:04.182083,None,None
+TLV,Tel Aviv-Yafo,GYD,Baku,198,Israir Airlines,2023-09-01 05:50:00,2023-04-05 18:15:54.779475,Duration: 3h 10m,0
+TLV,Tel Aviv-Yafo,TAS,Tashkent,322,Wizz Air,2023-09-01 13:15:00,2023-04-05 18:15:54.779710,Duration: 18h 35m,1
+TLV,Tel Aviv-Yafo,PEK,Beijing,806,Turkish Airlines,2023-09-01 22:00:00,2023-04-05 18:15:54.780192,Duration: 12h 35m,1
+TLV,Tel Aviv-Yafo,SIN,Singapore,548,IndiGo,2023-09-01 10:40:00,2023-04-05 18:15:54.783675,Duration: 1d 4h 20m,1
+TLV,None,HND,None,694,None,None,2023-04-05 18:16:24.794829,None,None
+TLV,Tel Aviv-Yafo,DOH,Doha,256,Pegasus Airlines,2023-09-01 20:40:00,2023-04-05 18:16:24.795501,Duration: 1d 4h 05m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,203,EasyJet,2023-09-01 18:55:00,2023-04-05 18:16:24.800184,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,NRT,Tokyo,468,LOT Polish Airlines,2023-09-01 11:55:00,2023-04-05 18:16:24.801474,Duration: 24h 35m,1
+TLV,None,ICN,None,None,None,None,2023-04-05 18:16:24.794994,None,None
+TLV,Tel Aviv-Yafo,DXB,Dubai,221,Sun Express,2023-09-01 11:05:00,2023-04-05 18:17:13.750724,Duration: 16h 50m,1
+TLV,Tel Aviv-Yafo,IST,Istanbul,106,Pegasus Airlines,2023-09-01 11:15:00,2023-04-05 18:17:13.750578,Duration: 2h 05m,0
+TLV,Tel Aviv-Yafo,MAD,Madrid,109,Iberia,2023-09-01 18:25:00,2023-04-05 18:17:13.750927,Duration: 5h 25m,0
+TLV,Tel Aviv-Yafo,LHR,London,235,Virgin Atlantic,2023-09-01 17:25:00,2023-04-05 18:17:13.750484,Duration: 5h 40m,0
+TLV,Tel Aviv-Yafo,MUC,Munich,221,Cheapest,2023-09-01 14:10:00,2023-04-05 18:17:13.751015,Duration: 7h 50m,1
+TLV,Tel Aviv-Yafo,CPH,Copenhagen,156,EasyJet,2023-09-01 14:10:00,2023-04-05 18:17:37.623965,Duration: 7h 40m,1
+TLV,None,ATL,None,None,None,None,2023-04-05 18:17:37.613882,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 18:17:37.614427,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 18:17:37.614126,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 18:17:37.614941,None,None
+TLV,None,SVO,None,869,None,None,2023-04-05 18:18:27.910704,None,None
+TLV,Tel Aviv-Yafo,TBS,Tbilisi,201,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:18:27.910906,Duration: 10h 05m,0
+TLV,Tel Aviv-Yafo,ALA,Almaty,269,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:18:27.913730,Duration: 10h,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,117,Wizz Air,2023-09-02 22:25:00,2023-04-05 18:18:27.919137,Duration: 12h 35m,1
+TLV,Tel Aviv-Yafo,EVN,Yerevan,178,Aegean Airlines,2023-09-02 13:50:00,2023-04-05 18:18:27.911469,Duration: 12h 30m,1
+TLV,Tel Aviv-Yafo,SIN,Singapore,495,IndiGo,2023-09-02 14:20:00,2023-04-05 18:18:51.154113,Duration: 24h 40m,1
+TLV,Tel Aviv-Yafo,GYD,Baku,237,AnadoluJet,2023-09-02 05:35:00,2023-04-05 18:18:51.150508,Duration: 21h 20m,1
+TLV,Tel Aviv-Yafo,JFK,New York,496,Icelandair,2023-09-02 11:10:00,2023-04-05 18:18:51.151005,Duration: 1d 7h 40m,1
+TLV,None,PEK,None,None,None,None,2023-04-05 18:18:51.150784,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 18:18:51.150642,None,None
+TLV,None,HND,None,699,None,None,2023-04-05 18:19:44.080266,None,None
+TLV,Tel Aviv-Yafo,CDG,Paris,248,EasyJet,2023-09-02 19:15:00,2023-04-05 18:19:44.081075,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:19:44.080701,Duration: 8h 30m,1
+TLV,Tel Aviv-Yafo,ICN,Seoul,535,LOT Polish Airlines,2023-09-02 20:00:00,2023-04-05 18:19:44.080480,Duration: 2d 7h 30m,1
+TLV,None,NRT,None,None,None,None,2023-04-05 18:19:44.081250,None,None
+TLV,Tel Aviv-Yafo,DXB,Sharjah,234,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:20:33.456943,Duration: 10h 40m,1
+TLV,Tel Aviv-Yafo,IST,Istanbul,107,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 18:20:33.456575,Duration: 2h 05m,0
+TLV,Tel Aviv-Yafo,MUC,Memmingen,115,Ryanair,None,2023-04-05 18:20:33.457589,None,None
+TLV,Tel Aviv-Yafo,LHR,London,235,British Airways,2023-09-02 07:10:00,2023-04-05 18:20:33.456332,Duration: 5h 20m,0
+TLV,Tel Aviv-Yafo,MAD,Madrid,93,Ryanair,2023-09-02 16:15:00,2023-04-05 18:20:33.457121,Duration: 8h 55m,1
+TLV,Tel Aviv-Yafo,ATL,Atlanta,771,Royal Jordanian,2023-09-02 12:40:00,2023-04-05 18:20:58.236832,Duration: 1d 3h 58m,1
+TLV,Tel Aviv-Yafo,AMS,Amsterdam,107,Cheapest,2023-09-02 21:55:00,2023-04-05 18:20:58.237034,Duration: 11h 10m,1
+TLV,None,LGW,None,None,None,None,2023-04-05 18:20:58.237520,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 18:20:58.237172,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 18:20:58.241621,None,None
+TLV,Tel Aviv-Yafo,SVO,Moscow,543,Air Serbia,2023-09-03 06:00:00,2023-04-05 18:21:50.041326,Duration: 18h 40m,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,164,Wizz Air,2023-09-03 22:50:00,2023-04-05 18:21:50.048462,Duration: 12h 05m,1
+TLV,Tel Aviv-Yafo,TBS,Tbilisi,146,Arkia,2023-09-03 18:25:00,2023-04-05 18:21:50.041527,Duration: 2h 35m,0
+TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-03 20:40:00,2023-04-05 18:21:50.042157,Duration: 1d 5h 35m,1
+TLV,Tel Aviv-Yafo,EVN,Yerevan,161,Cheapest,2023-09-03 22:50:00,2023-04-05 18:21:50.041730,Duration: 12h 35m,1
+TLV,Tel Aviv-Yafo,TAS,Tashkent,367,Uzbekistan Airways,2023-09-03 10:10:00,2023-04-05 18:22:18.309244,Duration: 4h 50m,0
+TLV,Tel Aviv-Yafo,JFK,New York,548,Royal Jordanian,2023-09-03 08:25:00,2023-04-05 18:22:18.309680,Duration: 15h 40m,1
+TLV,Tel Aviv-Yafo,PEK,Beijing,1068,Hainan Airlines,2023-09-03 15:40:00,2023-04-05 18:22:18.309382,Duration: 9h 10m,0
+TLV,None,SIN,None,None,None,None,2023-04-05 18:22:18.318558,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 18:22:18.309071,None,None
+TLV,Tel Aviv-Yafo,NRT,Tokyo,618,LOT Polish Airlines,2023-09-03 11:55:00,2023-04-05 18:23:09.746352,Duration: 24h 35m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,151,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:23:09.746244,Duration: 24h 35m,1
+TLV,Tel Aviv-Yafo,DOH,Doha,247,Pegasus Airlines,2023-09-03 16:15:00,2023-04-05 18:23:09.746020,Duration: 8h 30m,1
+TLV,Tel Aviv-Yafo,HND,Tokyo,730,Cathay Pacific,2023-09-03 14:35:00,2023-04-05 18:23:09.745669,Duration: 17h 20m,1
+TLV,Tel Aviv-Yafo,ICN,Seoul,915,Turkish Airlines,2023-09-03 22:00:00,2023-04-05 18:23:09.745843,Duration: 13h 40m,1
+TLV,Tel Aviv-Yafo,IST,Istanbul,90,AnadoluJet,2023-09-03 22:00:00,2023-04-05 18:23:43.346042,Duration: 10h 20m,1
+TLV,Tel Aviv-Yafo,MUC,Munich,154,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:23:43.346630,Duration: 9h,1
+TLV,Tel Aviv-Yafo,LHR,London,256,Virgin Atlantic,2023-09-03 17:25:00,2023-04-05 18:23:43.345868,Duration: 5h 40m,0
+TLV,None,DXB,None,None,None,None,2023-04-05 18:23:43.346211,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 18:23:43.346505,None,None
+TLV,Tel Aviv-Yafo,FCO,Rome,94,Wizz Air,2023-09-03 22:50:00,2023-04-05 18:24:36.408499,Duration: 3h 55m,0
+TLV,Tel Aviv-Yafo,LGW,London,138,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:24:36.408710,Duration: 21h 35m,1
+TLV,Tel Aviv-Yafo,AMS,Amsterdam,160,Air Serbia,2023-09-03 06:00:00,2023-04-05 18:24:36.408364,Duration: 1d 4h 10m,1
+TLV,Tel Aviv-Yafo,CPH,Copenhagen,129,Norwegian Air International,2023-09-03 13:05:00,2023-04-05 18:24:36.408913,Duration: 20h 05m,1
+TLV,None,ATL,None,None,None,None,2023-04-05 18:24:36.408184,None,None
+TLV,Tel Aviv-Yafo,SVO,Moscow,484,Air Serbia,2023-09-04 07:20:00,2023-04-05 18:25:27.632583,Duration: 20h 20m,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,136,Arkia,2023-09-04 05:55:00,2023-04-05 18:25:27.633630,Duration: 3h 15m,0
+TLV,Tel Aviv-Yafo,EVN,Yerevan,228,Aegean Airlines,2023-09-04 13:50:00,2023-04-05 18:25:27.633202,Duration: 12h 30m,1
+TLV,None,ALA,None,None,None,None,2023-04-05 18:25:27.633410,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 18:25:27.632857,None,None
+TLV,Tel Aviv-Yafo,PEK,Beijing,1079,Lufthansa,2023-09-04 08:00:00,2023-04-05 18:26:18.197857,Duration: 19h 30m,1
+TLV,Tel Aviv-Yafo,JFK,New York,496,Icelandair,2023-09-04 11:10:00,2023-04-05 18:26:18.198039,Duration: 15h,1
+TLV,Tel Aviv-Yafo,GYD,Baku,198,Israir Airlines,2023-09-04 09:00:00,2023-04-05 18:26:18.197584,Duration: 3h 10m,0
+TLV,Tel Aviv-Yafo,TAS,Tashkent,178,Wizz Air,2023-09-04 11:40:00,2023-04-05 18:26:18.197736,Duration: 8h,1
+TLV,Tel Aviv-Yafo,SIN,Singapore,489,IndiGo,2023-09-04 10:40:00,2023-04-05 18:26:18.198371,Duration: 1d 4h 20m,1
+TLV,Tel Aviv-Yafo,NRT,Tokyo,468,LOT Polish Airlines,2023-09-04 11:55:00,2023-04-05 18:26:42.868350,Duration: 24h 35m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,159,Arkia,2023-09-04 15:00:00,2023-04-05 18:26:42.867961,Duration: 4h 55m,0
+TLV,Tel Aviv-Yafo,ICN,Seoul,539,LOT Polish Airlines,2023-09-04 05:05:00,2023-04-05 18:26:42.867707,Duration: 22h 25m,1
+TLV,Tel Aviv-Yafo,HND,Tokyo,806,Cheapest with a convenient layover,2023-09-04 22:35:00,2023-04-05 18:26:42.867606,Duration: 16h 35m,1
+TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-04 11:15:00,2023-04-05 18:26:42.867834,Duration: 15h 40m,1
+TLV,Tel Aviv-Yafo,MUC,Memmingen,124,Ryanair,None,2023-04-05 18:27:10.114120,None,None
+TLV,Tel Aviv-Yafo,IST,Istanbul,105,El Al Israel Airlines,2023-09-04 07:00:00,2023-04-05 18:27:10.107464,Duration: 2h 20m,0
+TLV,Tel Aviv-Yafo,MAD,Madrid,109,Iberia,2023-09-04 18:25:00,2023-04-05 18:27:10.113377,Duration: 5h 25m,0
+TLV,None,LHR,None,None,None,None,2023-04-05 18:27:10.107309,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 18:27:10.111714,None,None
+TLV,Tel Aviv-Yafo,FCO,Rome,53,Wizz Air,2023-09-04 22:10:00,2023-04-05 18:27:57.633081,Duration: 3h 55m,0
+TLV,Tel Aviv-Yafo,LGW,London,167,Wizz Air,2023-09-04 21:55:00,2023-04-05 18:27:57.633239,Duration: 5h 35m,0
+TLV,Tel Aviv-Yafo,CPH,Copenhagen,105,Cheapest,2023-09-04 22:10:00,2023-04-05 18:27:57.633502,Duration: 11h 45m,1
+TLV,Tel Aviv-Yafo,ATL,Atlanta,1325,United Airlines,2023-09-04 23:25:00,2023-04-05 18:27:57.632615,Duration: 15h 54m,1
+TLV,None,AMS,None,None,None,None,2023-04-05 18:27:57.632884,None,None
+TLV,Tel Aviv-Yafo,TBS,Tbilisi,126,Arkia,2023-09-05 15:35:00,2023-04-05 18:28:48.557285,Duration: 2h 35m,0
+TLV,Tel Aviv-Yafo,BEG,Belgrade,123,Aegean Airlines,2023-09-05 10:00:00,2023-04-05 18:28:48.560407,Duration: 10h 10m,1
+TLV,Tel Aviv-Yafo,SVO,Moscow,434,Air Serbia,2023-09-05 19:00:00,2023-04-05 18:28:48.557058,Duration: 15h 10m,1
+TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-05 20:40:00,2023-04-05 18:28:48.557891,Duration: 1d 5h 35m,1
+TLV,None,EVN,None,None,None,None,2023-04-05 18:28:48.557554,None,None
+TLV,Tel Aviv-Yafo,GYD,Baku,222,Cheapest,2023-09-05 21:00:00,2023-04-05 18:29:45.892295,Duration: 11h 35m,1
+TLV,Tel Aviv-Yafo,PEK,Beijing,675,EgyptAir,2023-09-05 19:50:00,2023-04-05 18:29:45.892692,Duration: 14h 30m,1
+TLV,Tel Aviv-Yafo,JFK,New York,870,El Al Israel Airlines,2023-09-05 10:30:00,2023-04-05 18:29:45.897552,Duration: 11h 50m,0
+TLV,Tel Aviv-Yafo,SIN,Singapore,489,IndiGo,2023-09-05 14:20:00,2023-04-05 18:29:45.902529,Duration: 24h 40m,1
+TLV,None,TAS,None,None,None,None,2023-04-05 18:29:45.892502,None,None
+TLV,Tel Aviv-Yafo,NRT,Tokyo,654,Singapore Airlines,2023-09-05 06:40:00,2023-04-05 18:30:37.642151,Duration: 1d 4h 50m,1
+TLV,Tel Aviv-Yafo,HND,Tokyo,1213,Turkish Airlines,2023-09-05 22:00:00,2023-04-05 18:30:37.640966,Duration: 15h 25m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,158,Arkia,2023-09-05 15:00:00,2023-04-05 18:30:37.641935,Duration: 4h 55m,0
+TLV,None,DOH,None,None,None,None,2023-04-05 18:30:37.641665,None,None
+TLV,Tel Aviv-Yafo,DXB,Dubai,115,Arkia,2023-09-05 05:35:00,2023-04-05 18:31:26.115510,Duration: 3h 25m,0
+TLV,Tel Aviv-Yafo,IST,Istanbul,90,Pegasus Airlines,2023-09-05 11:15:00,2023-04-05 18:31:26.115359,Duration: 2h 05m,0
+TLV,Tel Aviv-Yafo,MUC,Munich,158,LOT Polish Airlines,2023-09-05 20:30:00,2023-04-05 18:31:26.115973,Duration: 11h 50m,1
+TLV,Tel Aviv-Yafo,MAD,Madrid,87,Cheapest,2023-09-05 21:55:00,2023-04-05 18:31:26.115692,Duration: 12h 55m,1
+TLV,Tel Aviv-Yafo,LHR,London,231,El Al Israel Airlines,2023-09-05 17:20:00,2023-04-05 18:31:26.115204,Duration: 5h 25m,0
+TLV,Tel Aviv-Yafo,LGW,London,118,Wizz Air,2023-09-05 21:55:00,2023-04-05 18:31:50.506866,Duration: 12h 15m,1
+TLV,Tel Aviv-Yafo,AMS,Amsterdam,101,EasyJet,2023-09-05 14:15:00,2023-04-05 18:31:50.506347,Duration: 5h,0
+TLV,Tel Aviv-Yafo,CPH,Copenhagen,88,Cheapest,2023-09-05 21:55:00,2023-04-05 18:31:50.512713,Duration: 12h 10m,1
+TLV,Tel Aviv-Yafo,FCO,Rome,75,Wizz Air,2023-09-05 22:25:00,2023-04-05 18:31:50.506614,Duration: 3h 55m,0
+TLV,Tel Aviv-Yafo,ATL,Atlanta,722,Cheapest,2023-09-05 08:25:00,2023-04-05 18:31:50.506195,Duration: 19h 52m,1
+TLV,None,SVO,None,861,None,None,2023-04-05 18:32:18.229725,None,None
+TLV,Tel Aviv-Yafo,EVN,Yerevan,244,Aegean Airlines,2023-09-06 05:10:00,2023-04-05 18:32:18.230093,Duration: 21h 10m,0
+TLV,Tel Aviv-Yafo,TBS,Tbilisi,132,El Al Israel Airlines,2023-09-06 21:00:00,2023-04-05 18:32:18.229893,Duration: 2h 35m,0
+TLV,Tel Aviv-Yafo,BEG,Belgrade,145,Aegean Airlines,2023-09-06 05:10:00,2023-04-05 18:32:18.230714,Duration: 15h,1
+TLV,Tel Aviv-Yafo,ALA,Almaty,269,Pegasus Airlines,2023-09-06 16:15:00,2023-04-05 18:32:18.230529,Duration: 10h,1
+TLV,Tel Aviv-Yafo,TAS,Tashkent,154,Wizz Air,2023-09-06 10:00:00,2023-04-05 18:32:40.959890,Duration: 9h 40m,1
+TLV,Tel Aviv-Yafo,PEK,Beijing,1068,Hainan Airlines,2023-09-06 14:40:00,2023-04-05 18:32:40.959999,Duration: 9h 20m,0
+TLV,Tel Aviv-Yafo,GYD,Baku,233,Azerbaijan Airlines,2023-09-06 14:10:00,2023-04-05 18:32:40.959753,Duration: 3h 05m,0
+TLV,Tel Aviv-Yafo,JFK,New York,547,Royal Jordanian,2023-09-06 08:25:00,2023-04-05 18:32:40.960418,Duration: 15h 40m,1
+TLV,None,SIN,None,None,None,None,2023-04-05 18:32:40.960583,None,None
+TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-06 16:15:00,2023-04-05 18:33:29.141177,Duration: 8h 30m,1
+TLV,None,HND,None,563,None,None,2023-04-05 18:33:29.140876,None,None
+TLV,Tel Aviv-Yafo,CDG,Paris,152,EasyJet,2023-09-06 19:15:00,2023-04-05 18:33:29.141299,Duration: 5h 05m,0
+TLV,Tel Aviv-Yafo,NRT,Tokyo,468,LOT Polish Airlines,2023-09-06 11:55:00,2023-04-05 18:33:29.141418,Duration: 24h 35m,1
+TLV,Tel Aviv-Yafo,ICN,Seoul,535,LOT Polish Airlines,2023-09-06 19:50:00,2023-04-05 18:33:29.140988,Duration: 1d 7h 40m,1
+TLV,Tel Aviv-Yafo,LHR,London,209,Air Malta,2023-09-06 05:50:00,2023-04-05 18:33:55.598490,Duration: 1d 5h 55m,1
+TLV,Tel Aviv-Yafo,DXB,Dubai,159,Israir Airlines,2023-09-06 09:00:00,2023-04-05 18:33:55.598782,Duration: 3h 35m,0
+TLV,Tel Aviv-Yafo,IST,Istanbul,90,AnadoluJet,2023-09-06 01:00:00,2023-04-05 18:33:55.598687,Duration: 6h 30m,1
+TLV,Tel Aviv-Yafo,MUC,Munich,162,Air Malta,2023-09-06 05:50:00,2023-04-05 18:33:55.599009,Duration: 6h 20m,1
+TLV,Tel Aviv-Yafo,MAD,Madrid,77,Cheapest,2023-09-06 22:55:00,2023-04-05 18:33:55.598912,Duration: 10h 35m,1
+TLV,Tel Aviv-Yafo,LGW,London,136,Wizz Air,2023-09-06 21:55:00,2023-04-05 18:34:19.645588,Duration: 5h 35m,0
+TLV,Tel Aviv-Yafo,AMS,Amsterdam,99,EasyJet,2023-09-06 22:55:00,2023-04-05 18:34:19.636693,Duration: 10h 10m,1
+TLV,Tel Aviv-Yafo,ATL,Atlanta,649,Only 7 tickets remaining for this price,2023-09-06 05:05:00,2023-04-05 18:34:19.636376,Duration: 1d 13h,1
+TLV,Tel Aviv-Yafo,FCO,Rome,139,Wizz Air,2023-09-06 22:10:00,2023-04-05 18:34:19.636894,Duration: 3h 55m,0
+TLV,None,CPH,None,None,None,None,2023-04-05 18:34:19.646407,None,None
+TLV,Tel Aviv-Yafo,EVN,Yerevan,305,Cheapest with a convenient layover,2023-09-07 15:40:00,2023-04-05 18:35:06.999659,Duration: 6h 50m,1
+TLV,Tel Aviv-Yafo,TBS,Tbilisi,126,Arkia,2023-09-07 18:25:00,2023-04-05 18:35:06.999512,Duration: 2h 35m,0
+TLV,Tel Aviv-Yafo,ALA,Almaty,251,Pegasus Airlines,2023-09-07 15:50:00,2023-04-05 18:35:06.999974,Duration: 8h 25m,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,147,Air Serbia,2023-09-07 19:00:00,2023-04-05 18:35:07.000173,Duration: 3h,0
+TLV,None,SVO,None,None,None,None,2023-04-05 18:35:06.999364,None,None
+TLV,Tel Aviv-Yafo,SIN,Singapore,521,IndiGo,2023-09-07 14:20:00,2023-04-05 18:35:56.755185,Duration: 24h 40m,1
+TLV,Tel Aviv-Yafo,JFK,New York,484,TAP Portugal,2023-09-07 05:05:00,2023-04-05 18:35:56.748804,Duration: 22h,1
+TLV,Tel Aviv-Yafo,TAS,Tashkent,365,Azerbaijan Airlines,2023-09-07 23:45:00,2023-04-05 18:35:56.748356,Duration: 21h 05m,1
+TLV,Tel Aviv-Yafo,GYD,Baku,233,Azerbaijan Airlines,2023-09-07 23:45:00,2023-04-05 18:35:56.748208,Duration: 3h 05m,0
+TLV,Tel Aviv-Yafo,PEK,Beijing,806,Turkish Airlines,2023-09-07 22:00:00,2023-04-05 18:35:56.748482,Duration: 12h 35m,1
+TLV,Tel Aviv-Yafo,NRT,Tokyo,730,Cathay Pacific,2023-09-07 14:35:00,2023-04-05 18:36:22.406347,Duration: 17h 05m,1
+TLV,Tel Aviv-Yafo,CDG,Paris,158,Arkia,2023-09-07 18:45:00,2023-04-05 18:36:22.404192,Duration: 5h,0
+TLV,Tel Aviv-Yafo,DOH,Doha,225,Pegasus Airlines,2023-09-07 16:15:00,2023-04-05 18:36:22.403766,Duration: 8h 30m,1
+TLV,None,ICN,None,None,None,None,2023-04-05 18:36:22.403616,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 18:36:22.403439,None,None
+TLV,Tel Aviv-Yafo,MAD,Madrid,110,Iberia,2023-09-07 19:30:00,2023-04-05 18:37:10.909648,Duration: 5h 25m,0
+TLV,Tel Aviv-Yafo,LHR,London,216,Air Serbia,2023-09-07 19:00:00,2023-04-05 18:37:10.909261,Duration: 19h 30m,1
+TLV,Tel Aviv-Yafo,DXB,Dubai,188,El Al Israel Airlines,2023-09-07 13:40:00,2023-04-05 18:37:10.909433,Duration: 3h 15m,0
+TLV,Tel Aviv-Yafo,MUC,Munich,209,El Al Israel Airlines,2023-09-07 15:45:00,2023-04-05 18:37:10.909733,Duration: 4h 05m,0
+TLV,None,IST,None,None,None,None,2023-04-05 18:37:10.909356,None,None
+TLV,Tel Aviv-Yafo,FCO,Rome,119,Air Serbia,2023-09-07 19:00:00,2023-04-05 18:37:59.281479,Duration: 1d 1h 40m,1
+TLV,Tel Aviv-Yafo,ATL,Atlanta,649,Only 2 tickets remaining for this price,2023-09-07 05:05:00,2023-04-05 18:37:59.281147,Duration: 1d 13h,1
+TLV,None,CPH,None,None,None,None,2023-04-05 18:37:59.282014,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 18:37:59.281742,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 18:37:59.281268,None,None
+TLV,Tel Aviv-Yafo,SVO,Moscow,890,Royal Jordanian,2023-09-08 08:25:00,2023-04-05 18:38:52.332603,Duration: 12h 15m,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,137,Arkia,2023-09-08 05:55:00,2023-04-05 18:38:52.333480,Duration: 3h 15m,0
+TLV,Tel Aviv-Yafo,ALA,Almaty,367,Cheapest,2023-09-08 11:15:00,2023-04-05 18:38:52.333226,Duration: 1d 17h 50m,1
+TLV,None,TBS,None,None,None,None,2023-04-05 18:38:52.332702,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 18:38:52.332911,None,None
+TLV,Tel Aviv-Yafo,TAS,Tashkent,493,Turkish Airlines,2023-09-08 17:00:00,2023-04-05 18:39:41.724923,Duration: 12h 20m,1
+TLV,Tel Aviv-Yafo,SIN,Singapore,495,IndiGo,2023-09-08 14:20:00,2023-04-05 18:39:41.725293,Duration: 24h 40m,0
+TLV,Tel Aviv-Yafo,GYD,Baku,198,Israir Airlines,2023-09-08 05:50:00,2023-04-05 18:39:41.724810,Duration: 3h 10m,0
+TLV,None,JFK,None,None,None,None,2023-04-05 18:39:41.725197,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 18:39:41.725028,None,None
+TLV,None,HND,None,704,None,None,2023-04-05 18:40:31.849958,None,None
+TLV,Tel Aviv-Yafo,NRT,Tokyo,472,LOT Polish Airlines,2023-09-08 11:55:00,2023-04-05 18:40:31.852958,Duration: 24h 35m,1
+TLV,Tel Aviv-Yafo,ICN,Seoul,526,Ethiopian Airlines,2023-09-08 10:00:00,2023-04-05 18:40:31.850102,Duration: 24h 15m,1
+TLV,None,CDG,None,None,None,None,2023-04-05 18:40:31.850551,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 18:40:31.850306,None,None
+TLV,Tel Aviv-Yafo,IST,Istanbul,91,Pegasus Airlines,2023-09-08 05:10:00,2023-04-05 18:41:20.887984,Duration: 2h 05m,0
+TLV,Tel Aviv-Yafo,DXB,Dubai,211,Royal Jordanian,2023-09-08 17:50:00,2023-04-05 18:41:20.888342,Duration: 8h 45m,1
+TLV,None,LHR,None,None,None,None,2023-04-05 18:41:20.887817,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 18:41:20.891906,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 18:41:20.888654,None,None
+TLV,Tel Aviv-Yafo,CPH,Copenhagen,128,EasyJet,2023-09-08 14:30:00,2023-04-05 18:42:11.410955,Duration: 7h 40m,1
+TLV,Tel Aviv-Yafo,FCO,Rome,147,Cheapest,2023-09-08 14:30:00,2023-04-05 18:42:11.410389,Duration: 18h 40m,1
+TLV,Tel Aviv-Yafo,LGW,London,155,EasyJet,2023-09-08 14:30:00,2023-04-05 18:42:11.410703,Duration: 10h 35m,1
+TLV,Tel Aviv-Yafo,AMS,Amsterdam,138,EasyJet,2023-09-08 14:20:00,2023-04-05 18:42:11.410261,Duration: 5h,0
+TLV,Tel Aviv-Yafo,ATL,Atlanta,722,Cheapest,2023-09-08 08:25:00,2023-04-05 18:42:11.410112,Duration: 19h 52m,1
+TLV,None,SVO,None,870,None,None,2023-04-05 18:42:39.744624,None,None
+TLV,Tel Aviv-Yafo,BEG,Belgrade,149,Aegean Airlines,2023-09-09 10:00:00,2023-04-05 18:42:39.752785,Duration: 23h 40m,1
+TLV,Tel Aviv-Yafo,EVN,Yerevan,159,Cheapest,None,2023-04-05 18:42:39.745289,None,None
+TLV,Tel Aviv-Yafo,ALA,Almaty,269,Pegasus Airlines,2023-09-09 16:15:00,2023-04-05 18:42:39.745444,Duration: 10h,1
+TLV,None,TBS,None,None,None,None,2023-04-05 18:42:39.745122,None,None
+TLV,Tel Aviv-Yafo,PEK,Beijing,1157,Turkish Airlines,2023-09-09 20:35:00,2023-04-05 18:43:29.796844,Duration: 14h,1
+TLV,Tel Aviv-Yafo,TAS,Tashkent,331,Cheapest,2023-09-09 23:35:00,2023-04-05 18:43:29.796752,Duration: 2d 3h 35m,1
+TLV,Tel Aviv-Yafo,SIN,Singapore,495,IndiGo,2023-09-09 14:20:00,2023-04-05 18:43:29.797174,Duration: 24h 40m,1
+TLV,Tel Aviv-Yafo,JFK,New York,422,Cheapest,2023-09-09 04:45:00,2023-04-05 18:43:29.796982,Duration: 24h 30m,1
+TLV,None,GYD,None,None,None,None,2023-04-05 18:43:29.796628,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 18:44:18.846211,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 18:44:18.846406,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 18:44:18.846327,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 18:44:18.846792,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 18:44:18.846638,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 18:45:10.295895,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 18:45:10.302764,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 18:45:10.303464,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 18:45:10.295743,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 18:45:10.298676,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 18:46:00.134202,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 18:46:00.133983,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 18:46:00.134410,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 18:46:00.133767,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 18:46:00.134616,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 18:46:52.234781,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 18:46:52.234352,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 18:46:52.234543,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 18:46:52.235132,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 18:46:52.235495,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 18:47:43.390620,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 18:47:43.389845,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 18:47:43.400282,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 18:47:43.401407,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 18:47:43.389668,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 18:48:35.616537,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 18:48:35.616287,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 18:48:35.616402,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 18:48:35.615937,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 18:48:35.616092,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 18:49:26.914245,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 18:49:26.913694,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 18:49:26.910398,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 18:49:26.914535,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 18:49:26.910669,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 18:50:20.033603,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 18:50:20.033899,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 18:50:20.033524,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 18:50:20.032879,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 18:50:20.033420,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 18:51:10.378146,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 18:51:10.378037,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 18:51:10.377856,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 18:51:10.377720,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 18:51:10.378294,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 18:52:01.582832,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 18:52:01.583048,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 18:52:01.591232,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 18:52:01.588901,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 18:52:01.585822,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 18:52:54.980039,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 18:52:54.979844,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 18:52:54.979671,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 18:52:54.980698,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 18:52:54.980432,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 18:53:45.297194,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 18:53:45.302646,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 18:53:45.303013,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 18:53:45.296851,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 18:53:45.302022,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 18:54:36.928622,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 18:54:36.920521,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 18:54:36.923753,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 18:54:36.919869,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 18:54:36.920737,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 18:55:27.125010,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 18:55:27.124815,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 18:55:27.125292,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 18:55:27.124584,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 18:55:27.124400,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 18:56:18.284165,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 18:56:18.275949,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 18:56:18.283593,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 18:56:18.275653,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 18:56:18.284615,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 18:57:08.001587,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 18:57:08.001478,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 18:57:08.001294,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 18:57:59.704864,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 18:57:59.698210,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 18:57:59.704026,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 18:57:59.697995,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 18:57:59.700601,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 18:58:49.456463,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 18:58:49.456084,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 18:58:49.456184,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 18:58:49.456299,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 18:58:49.455958,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 18:59:39.187774,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 18:59:39.187681,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 18:59:39.188191,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 18:59:39.187855,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 18:59:39.187923,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 19:00:27.314535,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 19:00:27.313915,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 19:00:27.315073,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 19:00:27.314156,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 19:00:27.314036,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 19:01:16.300066,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 19:01:16.300161,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 19:01:16.300550,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 19:01:16.300280,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 19:01:16.300766,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 19:02:06.382119,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 19:02:06.382521,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 19:02:06.382330,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 19:02:06.382775,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 19:02:06.381829,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 19:02:56.728342,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 19:02:56.721558,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 19:02:56.727853,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 19:02:56.720910,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 19:02:56.721114,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 19:03:44.518592,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 19:03:44.517330,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 19:03:44.509236,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 19:03:44.517799,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 19:03:44.508956,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 19:04:32.816724,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 19:04:32.817032,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 19:04:32.816252,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 19:04:32.817257,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 19:04:32.816497,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 19:05:19.717467,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 19:05:19.718331,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 19:05:19.718104,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 19:05:19.717818,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 19:05:19.717236,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 19:06:07.772274,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 19:06:07.773405,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 19:06:07.772457,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 19:06:07.772969,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 19:06:07.772646,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 19:06:55.073646,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 19:06:55.074789,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 19:06:55.074082,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 19:06:55.074575,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 19:06:55.073405,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 19:07:41.956498,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 19:07:41.963708,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 19:07:41.956931,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 19:07:41.967369,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 19:07:41.956252,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 19:08:28.414618,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 19:08:28.415054,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 19:08:28.411809,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 19:08:28.415323,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 19:08:28.412197,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 19:09:14.787477,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 19:09:14.790454,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 19:09:14.794595,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 19:09:14.796703,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 19:09:14.787823,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 19:10:02.432916,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 19:10:02.427166,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 19:10:02.432011,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 19:10:02.427622,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 19:10:02.426938,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 19:10:49.063721,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 19:10:49.060901,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 19:10:49.064028,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 19:10:49.065211,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 19:10:49.063298,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 19:11:37.653497,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 19:11:37.650417,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 19:11:37.650721,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 19:11:37.663241,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 19:11:37.650222,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 19:12:25.250085,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 19:12:25.249270,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 19:12:25.239357,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 19:12:25.239176,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 19:12:25.239659,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 19:13:11.857771,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 19:13:11.861654,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 19:13:11.851723,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 19:13:11.851895,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 19:13:11.852419,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 19:13:59.261148,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 19:13:59.260606,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 19:13:59.260387,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 19:13:59.260833,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 19:13:59.261589,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 19:14:46.923892,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 19:14:46.923428,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 19:14:46.924120,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 19:14:46.923651,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 19:14:46.923239,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 19:15:35.513189,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 19:15:35.516223,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 19:15:35.516735,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 19:15:35.512952,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 19:15:35.515474,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 19:16:23.180735,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 19:16:23.184373,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 19:16:23.180541,None,None
+TLV,None,SIN,None,None,None,None,2023-04-05 19:16:23.193405,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 19:16:23.181140,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 19:17:11.446918,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 19:17:11.445800,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 19:17:11.446312,None,None
+TLV,None,CDG,None,None,None,None,2023-04-05 19:17:11.446412,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 19:17:11.446035,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 19:18:00.062026,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 19:18:00.061846,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 19:18:00.062185,None,None
+TLV,None,MAD,None,None,None,None,2023-04-05 19:18:00.062638,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 19:18:00.062887,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 19:18:49.168534,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 19:18:49.169266,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 19:18:49.168765,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 19:18:49.168912,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 19:18:49.169524,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 19:24:24.515647,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 19:39:56.705897,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 19:43:25.475703,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 19:58:47.407381,None,None
+TLV,Tel Aviv-Yafo,EVN,Yerevan,176,FlyOne,2023-07-07 17:30:00,2023-04-05 20:24:18.751685,Duration: 2h 40m,0
+TLV,None,EVN,None,None,None,None,2023-04-05 22:07:18.589698,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 22:11:45.946899,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 22:16:28.517237,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 22:18:53.024952,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 22:18:53.025361,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 22:19:50.747467,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 22:19:50.747748,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 22:21:58.568148,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 22:22:30.852691,None,None
+TLV,None,DOH,None,None,None,None,2023-04-05 22:24:23.068416,None,None
+TLV,None,LHR,None,None,None,None,2023-04-05 22:25:09.669871,None,None
+TLV,Tel Aviv-Yafo,DXB,Dubai,221,Sun Express,2023-09-01 11:05:00,2023-04-05 22:26:06.731093,Duration: 16h 50m,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,122,Tarom,2023-09-01 12:20:00,2023-04-05 22:32:11.465044,Duration: 9h 15m,1
+TLV,None,TAS,None,None,None,None,2023-04-05 22:32:11.493028,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 22:32:11.462473,None,None
+TLV,None,MUC,None,None,None,None,2023-04-05 22:34:14.571762,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 22:34:14.595718,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 22:34:14.574463,None,None
+TLV,None,CPH,None,None,None,None,2023-04-05 22:34:14.599541,None,None
+TLV,Tel Aviv-Yafo,IST,Istanbul,106,Pegasus Airlines,2023-09-01 11:15:00,2023-04-05 22:34:14.544008,Duration: 2h 05m,0
+TLV,None,SIN,None,None,None,None,2023-04-05 22:35:41.882953,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 22:35:41.911161,None,None
+TLV,None,HND,None,None,None,None,2023-04-05 22:35:41.890657,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 22:35:41.891811,None,None
+TLV,Tel Aviv-Yafo,DXB,Sharjah,234,Pegasus Airlines,2023-09-02 16:15:00,2023-04-05 22:35:41.918084,Duration: 10h 40m,1
+TLV,None,BEG,None,None,None,None,2023-04-05 22:36:45.359893,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 22:36:45.290625,None,None
+TLV,None,FCO,None,None,None,None,2023-04-05 22:36:45.300767,None,None
+TLV,None,LGW,None,None,None,None,2023-04-05 22:36:45.309408,None,None
+TLV,None,AMS,None,None,None,None,2023-04-05 22:38:05.741203,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 22:40:40.069063,None,None
+TLV,None,ALA,None,None,None,None,2023-04-05 22:40:38.989773,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 22:40:39.414940,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 22:40:39.295749,None,None
+TLV,Tel Aviv-Yafo,CPH,Copenhagen,172,EasyJet,2023-09-01 14:10:00,2023-04-05 22:42:27.089832,Duration: 7h 40m,1
+TLV,None,SVO,None,None,None,None,2023-04-05 22:42:26.624855,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 22:42:27.925270,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 22:42:27.196824,None,None
+TLV,None,TBS,None,None,None,None,2023-04-05 22:42:27.775339,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 22:42:27.845472,None,None
+TLV,Tel Aviv-Yafo,CDG,Paris,203,EasyJet,2023-09-01 18:55:00,2023-04-05 22:48:02.536657,Duration: 5h 05m,0
+TLV,None,SIN,None,None,None,None,2023-04-05 22:48:03.166415,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 22:48:02.558719,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 22:48:03.476416,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 22:48:04.071932,None,None
+TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-01 20:40:00,2023-04-05 22:48:03.355475,Duration: 1d 5h 35m,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,138,Aegean Airlines,2023-09-02 13:50:00,2023-04-05 22:50:21.498827,Duration: 19h 50m,1
+TLV,None,FCO,None,None,None,None,2023-04-05 22:50:21.182841,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 22:50:21.564897,None,None
+TLV,Tel Aviv-Yafo,MAD,Madrid,291,TAP Portugal,2023-09-02 05:40:00,2023-04-05 22:51:31.331319,Duration: 12h 25m,1
+TLV,None,HND,None,None,None,None,2023-04-05 22:51:31.235466,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 22:51:30.935215,None,None
+TLV,None,IST,None,None,None,None,2023-04-05 22:51:30.978843,None,None
+TLV,None,ICN,None,None,None,None,2023-04-05 22:51:32.258583,None,None
+TLV,None,TAS,None,None,None,None,2023-04-05 22:51:30.928535,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 23:04:01.914285,None,None
+TLV,None,BEG,None,None,None,None,2023-04-05 23:04:02.230853,None,None
+TLV,None,JFK,None,None,None,None,2023-04-05 23:05:04.563369,None,None
+TLV,None,ATL,None,None,None,None,2023-04-05 23:06:45.807609,None,None
+TLV,Tel Aviv-Yafo,TAS,Tashkent,317,Cheapest,2023-09-02 23:35:00,2023-04-05 23:08:39.049283,Duration: 2d 3h 35m,1
+TLV,None,IST,None,None,None,None,2023-04-05 23:12:03.081634,None,None
+TLV,None,NRT,None,None,None,None,2023-04-05 23:12:02.013095,None,None
+TLV,None,DXB,None,None,None,None,2023-04-05 23:13:56.145091,None,None
+TLV,Tel Aviv-Yafo,EVN,Yerevan,153,Cyprus Airways,None,2023-04-05 23:16:28.630671,None,None
+TLV,None,GYD,None,None,None,None,2023-04-05 23:17:40.168370,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 23:22:43.879100,None,None
+TLV,None,SVO,None,None,None,None,2023-04-05 23:24:12.428693,None,None
+TLV,None,EVN,None,None,None,None,2023-04-05 23:25:25.816113,None,None
+TLV,Tel Aviv-Yafo,ALA,Almaty,302,Pegasus Airlines,2023-09-01 20:40:00,2023-04-05 23:25:52.628406,Duration: 1d 5h 35m,1
+TLV,Tel Aviv-Yafo,BEG,Belgrade,124,Tarom,2023-09-01 12:20:00,2023-04-05 23:26:11.096084,Duration: 9h 15m,1
+TLV,Tel Aviv-Yafo,GYD,Baku,199,Israir Airlines,2023-09-01 05:50:00,2023-04-05 23:26:30.744819,Duration: 3h 10m,0
+TLV,None,TAS,None,None,None,None,2023-04-05 23:26:51.334675,None,None
+TLV,None,PEK,None,None,None,None,2023-04-05 23:27:24.328871,None,None
+TLV,Tel Aviv-Yafo,JFK,New York,548,Royal Jordanian,2023-09-01 08:25:00,2023-04-05 23:28:09.217008,Duration: 15h 40m,1
