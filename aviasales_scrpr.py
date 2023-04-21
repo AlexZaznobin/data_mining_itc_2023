@@ -11,7 +11,6 @@ import re
 import os
 import threading
 from capcha_speech_recognition import g_capcha_solver
-from interface import get_scraping_parameters_list
 from mysql_scraper import save_results_in_database
 from interface import set_up_parser
 from proxies import save_file_api_proxy_list

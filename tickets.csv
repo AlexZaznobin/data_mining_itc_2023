@@ -1014,3 +1014,367 @@ TLV,None,TAS,None,None,None,None,2023-04-21 21:27:11.909210,None,None
 TLV,None,TAS,None,None,None,None,2023-04-21 21:27:11.908510,None,None
 TLV,Tel Aviv-Yafo,TAS,Tashkent,143,Cheapest,2023-06-13 11:40:00,2023-04-21 21:27:10.435956,Duration: 1d 2h 55m,1
 TLV,None,TAS,None,None,None,None,2023-04-21 21:27:10.658518,None,None
+TLV,Tel Aviv-Yafo,TAS,Tashkent,283,Cheapest,2023-06-10 23:35:00,2023-04-21 21:36:21.442124,Duration: 2d 3h 35m,1
+TLV,Tel Aviv-Yafo,TAS,Tashkent,283,Cheapest,2023-06-10 23:35:00,2023-04-21 21:47:05.737431,Duration: 2d 3h 35m,1
+SVO,Moscow,TBS,Tbilisi,538,Belavia,2023-06-11 20:20:00,2023-04-21 22:15:53.409858,Duration: 6h 35m,1
+SVO,None,LHR,None,None,None,None,2023-04-21 22:15:52.861358,None,None
+SVO,Moscow,EVN,Yerevan,155,FlyArna,2023-06-11 23:05:00,2023-04-21 22:15:52.602153,Duration: 4h,0
+SVO,Moscow,HND,Tokyo,821,Air China,2023-06-11 18:45:00,2023-04-21 22:15:52.955107,Duration: 11h 45m,1
+SVO,Moscow,IST,Istanbul,308,Mahan Airlines,2023-06-11 11:00:00,2023-04-21 22:15:52.258966,Duration: 10h 55m,1
+SVO,Moscow,NRT,Tokyo,528,Cheapest,2023-06-11 11:40:00,2023-04-21 22:15:53.984892,Duration: 1d 16h 30m,1
+SVO,Moscow,DOH,Doha,562,Qatar Airways,2023-06-11 17:25:00,2023-04-21 22:15:54.085735,Duration: 5h 40m,0
+SVO,Moscow,ALA,Almaty,181,SCAT,2023-06-11 11:10:00,2023-04-21 22:15:52.674743,Duration: 4h 10m,0
+SVO,Moscow,JFK,New York,1219,Qatar Airways,2023-06-11 12:50:00,2023-04-21 22:15:53.350151,Duration: 21h 30m,1
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-11 11:40:00,2023-04-21 22:15:52.460080,Duration: 20h 15m,1
+SVO,Moscow,ICN,Seoul,642,Air China,2023-06-11 18:45:00,2023-04-21 22:15:53.042379,Duration: 10h 50m,1
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-11 04:30:00,2023-04-21 22:15:52.594063,Duration: 3h 05m,0
+SVO,Moscow,PEK,Beijing,383,Hainan Airlines,2023-06-11 19:55:00,2023-04-21 22:15:53.893080,Duration: 7h 55m,0
+SVO,None,SVO,None,None,None,None,2023-04-21 22:15:52.497391,None,None
+SVO,Moscow,SIN,Singapore,407,China Eastern Airlines,2023-06-11 19:05:00,2023-04-21 22:15:54.185383,Duration: 1d 5h 20m,1
+SVO,Moscow,DXB,Dubai,280,Mahan Airlines,2023-06-11 11:00:00,2023-04-21 22:15:52.788783,Duration: 7h 35m,1
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-11 02:10:00,2023-04-21 22:15:53.576850,Duration: 8h,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-11 19:45:00,2023-04-21 22:15:54.198489,Duration: 4h,0
+SVO,Moscow,MAD,Madrid,606,Etihad Airways,2023-06-11 11:40:00,2023-04-21 22:15:52.875523,Duration: 21h 25m,1
+SVO,Moscow,GYD,Baku,454,Aeroflot,2023-06-11 14:25:00,2023-04-21 22:15:53.412285,Duration: 3h 40m,0
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-12 19:45:00,2023-04-21 22:23:04.332405,Duration: 4h,0
+SVO,Moscow,TBS,Tbilisi,538,Belavia,2023-06-12 20:20:00,2023-04-21 22:23:05.406987,Duration: 6h 35m,1
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-12 11:10:00,2023-04-21 22:23:05.382373,Duration: 4h 10m,0
+SVO,Moscow,FCO,Rome,354,Multiple,2023-06-11 23:05:00,2023-04-21 22:23:03.527919,Duration: 17h 15m,1
+SVO,Moscow,ATL,Atlanta,1133,Qatar Airways,2023-06-11 12:50:00,2023-04-21 22:23:03.935676,Duration: 22h 05m,1
+SVO,Moscow,DOH,Doha,410,Oman Air,2023-06-12 22:55:00,2023-04-21 22:23:03.929929,Duration: 1d 6h 15m,1
+SVO,Moscow,PEK,Beijing,344,Hainan Airlines,2023-06-12 19:55:00,2023-04-21 22:23:05.165642,Duration: 7h 55m,0
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-11 02:10:00,2023-04-21 22:23:04.764426,Duration: 18h 25m,1
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-12 22:00:00,2023-04-21 22:23:03.680982,Duration: 3h 05m,0
+SVO,Moscow,HND,Tokyo,583,Multiple,2023-06-12 19:10:00,2023-04-21 22:23:04.878874,Duration: 17h 40m,1
+SVO,Moscow,ICN,Seoul,677,Air China,2023-06-12 18:45:00,2023-04-21 22:23:05.402024,Duration: 10h 50m,1
+SVO,Moscow,LGW,London,1497,Qatar Airways,2023-06-11 17:25:00,2023-04-21 22:23:03.946523,Duration: 15h 20m,1
+SVO,Moscow,JFK,New York,1095,Qatar Airways,2023-06-12 12:50:00,2023-04-21 22:23:04.632328,Duration: 21h 30m,1
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-12 21:05:00,2023-04-21 22:23:03.919881,Duration: 3h 45m,0
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-12 02:10:00,2023-04-21 22:23:04.232899,Duration: 8h 05m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 22:23:04.641507,None,None
+SVO,None,AMS,None,None,None,None,2023-04-21 22:23:05.140261,None,None
+SVO,None,EVN,None,None,None,None,2023-04-21 22:23:03.489110,None,None
+SVO,Moscow,SIN,Singapore,383,China Eastern Airlines,2023-06-12 19:10:00,2023-04-21 22:23:04.993874,Duration: 1d 5h 15m,1
+SVO,Moscow,NRT,Tokyo,525,Cheapest,2023-06-12 19:10:00,2023-04-21 22:23:03.563198,Duration: 21h 05m,1
+SVO,Moscow,LGW,London,1497,Qatar Airways,2023-06-12 17:25:00,2023-04-21 22:27:38.563837,Duration: 15h 20m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 22:27:38.175800,None,None
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-12 02:10:00,2023-04-21 22:27:39.328903,Duration: 19h 05m,1
+SVO,None,PEK,None,None,None,None,2023-04-21 22:27:39.176479,None,None
+SVO,Moscow,FCO,Rome,636,Only 7 tickets remaining for this price,2023-06-12 02:10:00,2023-04-21 22:27:37.777147,Duration: 7h 10m,1
+SVO,None,LHR,None,None,None,None,2023-04-21 22:27:38.801765,None,None
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-13 11:10:00,2023-04-21 22:27:38.697805,Duration: 4h 10m,0
+SVO,Moscow,ALA,Almaty,181,SCAT,2023-06-14 11:10:00,2023-04-21 22:28:47.804254,Duration: 4h 10m,0
+SVO,Moscow,DXB,Dubai,296,Oman Air,2023-06-13 23:20:00,2023-04-21 22:28:49.288427,Duration: 21h 05m,1
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-14 02:10:00,2023-04-21 22:28:47.674686,Duration: 3h 05m,0
+SVO,None,SVO,None,None,None,None,2023-04-21 22:28:48.199313,None,None
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-13 11:40:00,2023-04-21 22:28:47.968300,Duration: 20h 15m,1
+SVO,None,CDG,None,None,None,None,2023-04-21 22:28:47.760801,None,None
+SVO,Moscow,IST,Istanbul,296,Aeroflot,2023-06-13 05:20:00,2023-04-21 22:28:47.964130,Duration: 14h 50m,1
+SVO,Moscow,TBS,Tbilisi,538,Belavia,2023-06-14 20:20:00,2023-04-21 22:28:48.748357,Duration: 6h 35m,1
+SVO,Moscow,LGW,London,610,Multiple,2023-06-13 11:10:00,2023-04-21 22:28:48.070755,Duration: 1d 1h 10m,1
+SVO,Moscow,CPH,Copenhagen,377,Cheapest,2023-06-13 11:10:00,2023-04-21 22:28:48.219339,Duration: 1d 9h 10m,1
+SVO,Moscow,HND,Tokyo,559,Cheapest,2023-06-13 19:25:00,2023-04-21 22:28:48.012001,Duration: 23h 55m,1
+SVO,None,LHR,None,None,None,None,2023-04-21 22:28:48.104021,None,None
+SVO,Moscow,ICN,Seoul,432,China Eastern Airlines,2023-06-13 17:15:00,2023-04-21 22:28:49.450758,Duration: 16h 40m,1
+SVO,Moscow,ATL,Atlanta,1094,Qatar Airways,2023-06-13 12:50:00,2023-04-21 22:28:48.735799,Duration: 22h 05m,1
+SVO,Moscow,MAD,Madrid,407,Cheapest,2023-06-13 11:10:00,2023-04-21 22:28:49.364171,Duration: 1d 1h 25m,1
+SVO,Moscow,AMS,Amsterdam,408,Cheapest,2023-06-13 11:10:00,2023-04-21 22:28:48.486375,Duration: 1d 1h,1
+SVO,Moscow,NRT,Tokyo,709,Etihad Airways,2023-06-13 11:40:00,2023-04-21 22:28:47.792938,Duration: 19h 25m,1
+SVO,Moscow,EVN,Yerevan,173,Shirak Avia,2023-06-14 12:45:00,2023-04-21 22:28:48.177571,Duration: 3h 15m,0
+SVO,None,FCO,None,None,None,None,2023-04-21 22:28:48.064945,None,None
+SVO,Moscow,DOH,Doha,410,Oman Air,2023-06-14 23:20:00,2023-04-21 22:38:12.334926,Duration: 1d 6h 05m,1
+SVO,Moscow,AMS,Amsterdam,670,Only 4 tickets remaining for this price,2023-06-14 02:10:00,2023-04-21 22:38:14.013756,Duration: 7h 10m,1
+SVO,Moscow,ICN,Seoul,642,Air China,2023-06-14 18:45:00,2023-04-21 22:38:14.043656,Duration: 10h 50m,1
+SVO,Moscow,PEK,Beijing,323,China Eastern Airlines,2023-06-14 19:05:00,2023-04-21 22:38:13.158475,Duration: 18h 10m,1
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-14 02:10:00,2023-04-21 22:38:12.252698,Duration: 7h 10m,1
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-14 02:10:00,2023-04-21 22:38:12.375481,Duration: 8h 05m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-14 19:45:00,2023-04-21 22:38:13.735771,Duration: 4h,0
+SVO,Moscow,DXB,Dubai,280,Mahan Airlines,2023-06-14 11:00:00,2023-04-21 22:38:12.360778,Duration: 7h 35m,1
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-14 14:25:00,2023-04-21 22:38:12.431771,Duration: 3h 40m,0
+SVO,Moscow,ATL,Atlanta,1094,Qatar Airways,2023-06-14 12:50:00,2023-04-21 22:38:12.576968,Duration: 22h 05m,1
+SVO,Moscow,IST,Istanbul,240,Mahan Airlines,2023-06-14 11:00:00,2023-04-21 22:38:13.348431,Duration: 10h 55m,1
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-14 02:10:00,2023-04-21 22:38:12.166178,Duration: 12h 20m,1
+SVO,Moscow,FCO,Rome,707,Air Algerie,2023-06-14 04:10:00,2023-04-21 22:38:13.848348,Duration: 10h 20m,1
+SVO,Moscow,MAD,Madrid,606,Etihad Airways,2023-06-14 11:40:00,2023-04-21 22:38:12.151690,Duration: 21h 25m,1
+SVO,Moscow,SIN,Singapore,508,Qatar Airways,2023-06-14 12:50:00,2023-04-21 22:38:14.079822,Duration: 15h 35m,1
+SVO,None,LGW,None,None,None,None,2023-04-21 22:38:13.899579,None,None
+SVO,Moscow,JFK,New York,1501,Air Serbia,2023-06-14 02:10:00,2023-04-21 22:38:12.428121,Duration: 16h 40m,1
+SVO,None,HND,None,None,None,None,2023-04-21 22:38:12.513722,None,None
+SVO,None,NRT,None,None,None,None,2023-04-21 22:38:12.508457,None,None
+SVO,None,MUC,None,None,None,None,2023-04-21 22:38:12.663740,None,None
+SVO,Moscow,PEK,Beijing,344,Hainan Airlines,2023-06-15 19:55:00,2023-04-21 22:42:33.181801,Duration: 7h 55m,0
+SVO,None,SVO,None,None,None,None,2023-04-21 22:42:34.668943,None,None
+SVO,Moscow,IST,Istanbul,357,Aeroflot,2023-06-15 17:00:00,2023-04-21 22:42:34.448186,Duration: 8h 55m,1
+SVO,Moscow,DXB,Dubai,296,Oman Air,2023-06-15 23:20:00,2023-04-21 22:42:34.931590,Duration: 1d 2h 50m,1
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-15 11:10:00,2023-04-21 22:42:34.215026,Duration: 4h 10m,0
+SVO,Moscow,TBS,Tbilisi,844,Belavia,2023-06-15 20:20:00,2023-04-21 22:42:34.384333,Duration: 6h 35m,1
+SVO,None,MUC,None,None,None,None,2023-04-21 22:42:34.774026,None,None
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-15 10:15:00,2023-04-21 22:42:33.739142,Duration: 3h 35m,0
+SVO,Moscow,MAD,Madrid,385,Cheapest,2023-06-15 20:55:00,2023-04-21 22:42:33.669834,Duration: 18h 40m,1
+SVO,None,ICN,None,None,None,None,2023-04-21 22:42:34.888388,None,None
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-15 03:10:00,2023-04-21 22:42:34.082600,Duration: 7h 10m,1
+SVO,None,TAS,None,None,None,None,2023-04-21 22:42:34.267468,None,None
+SVO,Moscow,JFK,New York,847,Cheapest,2023-06-15 20:55:00,2023-04-21 22:42:34.231680,Duration: 1d 4h 45m,1
+SVO,None,HND,None,None,None,None,2023-04-21 22:42:33.157582,None,None
+SVO,None,DOH,None,None,None,None,2023-04-21 22:42:33.724106,None,None
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-15 03:10:00,2023-04-21 22:42:33.805360,Duration: 11h 20m,1
+SVO,Moscow,NRT,Tokyo,537,China Eastern Airlines,2023-06-15 19:25:00,2023-04-21 22:42:34.235585,Duration: 13h,1
+SVO,Moscow,EVN,Yerevan,155,FlyArna,2023-06-15 20:55:00,2023-04-21 22:42:33.927352,Duration: 4h,0
+SVO,Moscow,SIN,Singapore,438,Etihad Airways,2023-06-15 11:40:00,2023-04-21 22:42:34.048855,Duration: 17h 15m,1
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-15 03:10:00,2023-04-21 22:42:34.640939,Duration: 3h 05m,0
+SVO,Moscow,EVN,Yerevan,155,FlyArna,2023-06-16 11:10:00,2023-04-21 22:46:18.935419,Duration: 4h,0
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-16 10:15:00,2023-04-21 22:46:19.601000,Duration: 3h 35m,0
+SVO,Moscow,JFK,New York,1095,Qatar Airways,2023-06-16 17:25:00,2023-04-21 22:46:20.596464,Duration: 1d 4h 55m,1
+SVO,Moscow,NRT,Tokyo,537,China Eastern Airlines,2023-06-16 19:05:00,2023-04-21 22:46:19.075277,Duration: 13h 20m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-16 19:45:00,2023-04-21 22:46:19.363287,Duration: 4h,0
+SVO,None,SVO,None,None,None,None,2023-04-21 22:46:19.712810,None,None
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-16 11:10:00,2023-04-21 22:46:20.359796,Duration: 4h 10m,0
+SVO,Moscow,HND,Tokyo,695,Multiple,2023-06-16 17:40:00,2023-04-21 22:46:20.616881,Duration: 23h 10m,1
+SVO,Moscow,CPH,Copenhagen,407,Cheapest,2023-06-15 20:55:00,2023-04-21 22:46:19.998281,Duration: 1d 2h 15m,1
+SVO,None,PEK,None,None,None,None,2023-04-21 22:46:19.107798,None,None
+SVO,Moscow,ATL,Atlanta,1094,Qatar Airways,2023-06-15 12:50:00,2023-04-21 22:46:19.399782,Duration: 22h 05m,1
+SVO,Moscow,FCO,Rome,636,Only 7 tickets remaining for this price,2023-06-15 03:10:00,2023-04-21 22:46:19.219562,Duration: 6h 10m,1
+SVO,Moscow,AMS,Amsterdam,637,Only 7 tickets remaining for this price,2023-06-15 03:10:00,2023-04-21 22:46:19.500517,Duration: 7h,1
+SVO,Moscow,SIN,Singapore,539,Qatar Airways,2023-06-16 12:50:00,2023-04-21 22:46:20.674520,Duration: 15h 35m,1
+SVO,Moscow,DOH,Doha,427,Oman Air,2023-06-16 23:20:00,2023-04-21 22:46:20.364489,Duration: 24h 10m,1
+SVO,None,CDG,None,None,None,None,2023-04-21 22:46:20.534818,None,None
+SVO,None,ICN,None,None,None,None,2023-04-21 22:46:20.759185,None,None
+SVO,None,TBS,None,None,None,None,2023-04-21 22:46:20.460324,None,None
+SVO,Moscow,TBS,Tbilisi,612,Multiple,2023-06-17 20:20:00,2023-04-21 22:49:46.183981,Duration: 21h 50m,1
+SVO,Moscow,LGW,London,489,Multiple,2023-06-16 11:10:00,2023-04-21 22:49:45.099832,Duration: 1d 1h,1
+SVO,None,PEK,None,None,None,None,2023-04-21 22:49:46.649525,None,None
+SVO,None,DXB,None,None,None,None,2023-04-21 22:49:45.945311,None,None
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-17 11:10:00,2023-04-21 22:49:45.717668,Duration: 4h 10m,0
+SVO,Moscow,JFK,New York,1500,Air Serbia,2023-06-17 20:35:00,2023-04-21 22:49:46.717928,Duration: 1d 3h 40m,1
+SVO,Moscow,GYD,Baku,454,Aeroflot,2023-06-17 14:25:00,2023-04-21 22:49:45.550135,Duration: 3h 40m,0
+SVO,Moscow,ATL,Atlanta,1094,Qatar Airways,2023-06-16 12:50:00,2023-04-21 22:49:46.267700,Duration: 22h 05m,1
+SVO,Moscow,BEG,Belgrade,371,Cheapest,2023-06-17 20:30:00,2023-04-21 22:49:46.046599,Duration: 13h 10m,1
+SVO,Moscow,IST,Istanbul,357,Aeroflot,2023-06-16 05:55:00,2023-04-21 22:49:46.679797,Duration: 14h 15m,1
+SVO,Moscow,FCO,Rome,319,Cheapest,2023-06-16 11:10:00,2023-04-21 22:49:45.905898,Duration: 14h 35m,1
+SVO,Moscow,EVN,Yerevan,155,FlyArna,2023-06-17 20:30:00,2023-04-21 22:49:45.473696,Duration: 4h,0
+SVO,Moscow,LHR,London,448,Cheapest,2023-06-16 11:10:00,2023-04-21 22:49:45.696751,Duration: 1d 8h 10m,1
+SVO,Moscow,MAD,Madrid,361,Cheapest,2023-06-16 11:10:00,2023-04-21 22:49:46.577502,Duration: 1d 4h 25m,1
+SVO,Moscow,AMS,Amsterdam,486,Cheapest,2023-06-16 11:10:00,2023-04-21 22:49:45.725488,Duration: 1d 2h 30m,1
+SVO,Moscow,MUC,Munich,726,Etihad Airways,2023-06-16 11:40:00,2023-04-21 22:49:46.367705,Duration: 20h 15m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 22:49:45.019532,None,None
+SVO,Moscow,CPH,Copenhagen,408,Cheapest,2023-06-16 11:10:00,2023-04-21 22:49:46.046471,Duration: 23h 55m,1
+SVO,None,SIN,None,None,None,None,2023-04-21 22:49:46.046787,None,None
+SVO,None,TAS,None,None,None,None,2023-04-21 22:49:46.534258,None,None
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-18 04:30:00,2023-04-21 23:08:18.192732,Duration: 3h 05m,0
+SVO,Moscow,CPH,Copenhagen,377,Cheapest,2023-06-17 20:30:00,2023-04-21 23:08:18.647875,Duration: 1d 12h 05m,1
+SVO,Moscow,LGW,London,398,Cheapest,2023-06-17 20:30:00,2023-04-21 23:08:18.393849,Duration: 1d 13h 40m,1
+SVO,None,ICN,None,None,None,None,2023-04-21 23:08:18.398812,None,None
+SVO,Moscow,MAD,Madrid,429,Multiple,2023-06-17 20:30:00,2023-04-21 23:08:18.177228,Duration: 20h 50m,1
+SVO,Moscow,LHR,London,426,Multiple,2023-06-17 20:30:00,2023-04-21 23:08:18.151849,Duration: 21h,1
+SVO,Moscow,EVN,Yerevan,156,FlyArna,2023-06-18 23:05:00,2023-04-21 23:08:17.431420,Duration: 4h,0
+SVO,Moscow,AMS,Amsterdam,409,Cheapest,2023-06-17 20:30:00,2023-04-21 23:08:17.532225,Duration: 15h 40m,1
+SVO,Moscow,FCO,Rome,257,Cheapest,2023-06-17 20:30:00,2023-04-21 23:08:17.466156,Duration: 1d 5h 15m,1
+SVO,Moscow,IST,Istanbul,357,Aeroflot,2023-06-17 19:25:00,2023-04-21 23:08:17.676847,Duration: 11h,1
+SVO,Moscow,ATL,Atlanta,1743,Qatar Airways,2023-06-17 12:50:00,2023-04-21 23:08:18.460497,Duration: 22h 05m,1
+SVO,Moscow,CDG,Paris,387,Cheapest,2023-06-17 20:30:00,2023-04-21 23:08:17.442981,Duration: 1d 15h 40m,1
+SVO,Moscow,DXB,Dubai,312,Oman Air,2023-06-17 23:20:00,2023-04-21 23:08:17.351049,Duration: 1d 2h 50m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 23:08:18.098008,None,None
+SVO,Moscow,HND,Tokyo,725,Multiple,2023-06-17 12:50:00,2023-04-21 23:08:17.915206,Duration: 22h 05m,1
+SVO,Moscow,NRT,Tokyo,537,China Eastern Airlines,2023-06-17 19:25:00,2023-04-21 23:08:17.362398,Duration: 13h,1
+SVO,Moscow,TBS,Tbilisi,538,Belavia,2023-06-18 20:20:00,2023-04-21 23:08:18.350115,Duration: 6h 35m,1
+SVO,Moscow,ALA,Almaty,178,SCAT,2023-06-18 11:10:00,2023-04-21 23:08:18.604681,Duration: 4h 10m,0
+SVO,None,MUC,None,None,None,None,2023-04-21 23:08:17.867982,None,None
+SVO,Moscow,DOH,Doha,585,Qatar Airways,2023-06-17 12:50:00,2023-04-21 23:08:17.308503,Duration: 5h 30m,0
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-18 02:10:00,2023-04-21 23:13:17.704091,Duration: 18h 25m,1
+SVO,Moscow,ICN,Seoul,677,Air China,2023-06-18 18:45:00,2023-04-21 23:13:18.173516,Duration: 10h 50m,1
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-18 11:40:00,2023-04-21 23:13:17.231876,Duration: 20h 15m,1
+SVO,Moscow,PEK,Beijing,341,China Eastern Airlines,2023-06-18 19:05:00,2023-04-21 23:13:16.972001,Duration: 1d 10h 10m,1
+SVO,Moscow,AMS,Amsterdam,637,Only 7 tickets remaining for this price,2023-06-18 02:10:00,2023-04-21 23:13:18.055247,Duration: 8h,1
+SVO,Moscow,FCO,Rome,269,Cheapest,2023-06-18 23:05:00,2023-04-21 23:13:18.495526,Duration: 17h 15m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-18 19:45:00,2023-04-21 23:13:18.320196,Duration: 4h,0
+SVO,Moscow,DOH,Doha,428,Oman Air,2023-06-18 23:20:00,2023-04-21 23:13:18.206552,Duration: 18h,1
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-18 02:10:00,2023-04-21 23:13:17.167519,Duration: 18h,1
+SVO,Moscow,JFK,New York,1095,Qatar Airways,2023-06-18 17:25:00,2023-04-21 23:13:16.780228,Duration: 1d 4h 55m,1
+SVO,Moscow,GYD,Baku,409,Belavia,2023-06-18 20:20:00,2023-04-21 23:13:18.594957,Duration: 6h 25m,1
+SVO,Moscow,MAD,Madrid,606,Etihad Airways,2023-06-18 11:40:00,2023-04-21 23:13:18.114366,Duration: 21h 25m,1
+SVO,None,CDG,None,None,None,None,2023-04-21 23:13:16.814231,None,None
+SVO,None,ATL,None,None,None,None,2023-04-21 23:13:17.802861,None,None
+SVO,Moscow,HND,Tokyo,821,Air China,2023-06-18 18:45:00,2023-04-21 23:13:17.787477,Duration: 11h 45m,1
+SVO,Moscow,IST,Istanbul,231,Mahan Airlines,2023-06-18 11:00:00,2023-04-21 23:13:17.681822,Duration: 10h 55m,1
+SVO,Moscow,SIN,Singapore,450,China Eastern Airlines,2023-06-18 19:05:00,2023-04-21 23:13:16.964750,Duration: 1d 5h 20m,1
+SVO,Moscow,NRT,Tokyo,457,Cheapest,2023-06-18 17:40:00,2023-04-21 23:13:17.054814,Duration: 1d 9h 45m,1
+SVO,Moscow,LGW,London,1497,Qatar Airways,2023-06-18 17:25:00,2023-04-21 23:13:18.420345,Duration: 22h 10m,1
+SVO,Moscow,DXB,Dubai,280,Mahan Airlines,2023-06-18 11:00:00,2023-04-21 23:13:18.552854,Duration: 7h 35m,1
+SVO,Moscow,DXB,Dubai,337,Oman Air,2023-06-19 22:55:00,2023-04-21 23:18:09.434783,Duration: 15h 45m,1
+SVO,Moscow,ALA,Almaty,181,SCAT,2023-06-19 11:10:00,2023-04-21 23:18:10.190894,Duration: 4h 10m,0
+SVO,Moscow,DOH,Doha,428,Oman Air,2023-06-19 22:55:00,2023-04-21 23:18:11.054171,Duration: 18h 25m,1
+SVO,Moscow,JFK,New York,1095,Qatar Airways,2023-06-19 17:25:00,2023-04-21 23:18:09.979274,Duration: 1d 4h 55m,1
+SVO,Moscow,SIN,Singapore,508,Qatar Airways,2023-06-19 12:50:00,2023-04-21 23:18:09.424899,Duration: 15h 35m,1
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-19 11:40:00,2023-04-21 23:18:10.859657,Duration: 20h 15m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-19 19:45:00,2023-04-21 23:18:10.887830,Duration: 4h,0
+SVO,Moscow,ICN,Seoul,642,Air China,2023-06-19 18:45:00,2023-04-21 23:18:10.222194,Duration: 10h 50m,1
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-19 22:00:00,2023-04-21 23:18:11.188612,Duration: 24h 05m,1
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-19 22:00:00,2023-04-21 23:18:10.869990,Duration: 16h 30m,1
+SVO,Moscow,PEK,Beijing,323,China Eastern Airlines,2023-06-19 19:10:00,2023-04-21 23:18:11.016588,Duration: 18h 05m,1
+SVO,Moscow,TBS,Tbilisi,538,Belavia,2023-06-19 20:20:00,2023-04-21 23:18:10.817499,Duration: 6h 35m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 23:18:11.370392,None,None
+SVO,Moscow,MAD,Madrid,606,Etihad Airways,2023-06-19 11:40:00,2023-04-21 23:18:10.115987,Duration: 21h 25m,1
+SVO,Moscow,EVN,Yerevan,173,Shirak Avia,2023-06-19 12:45:00,2023-04-21 23:18:11.306780,Duration: 3h 30m,0
+SVO,Moscow,NRT,Tokyo,605,Cheapest,2023-06-19 12:50:00,2023-04-21 23:18:10.285687,Duration: 1d 11h 35m,1
+SVO,None,GYD,None,None,None,None,2023-04-21 23:18:10.463242,None,None
+SVO,Moscow,HND,Tokyo,652,Multiple,2023-06-19 17:25:00,2023-04-21 23:18:09.597884,Duration: 1d 14h 30m,1
+SVO,None,IST,None,None,None,None,2023-04-21 23:18:09.991169,None,None
+SVO,None,BEG,None,None,None,None,2023-04-21 23:18:10.345327,None,None
+SVO,Moscow,AMS,Amsterdam,637,Only 7 tickets remaining for this price,2023-06-19 22:00:00,2023-04-21 23:23:49.606545,Duration: 12h 10m,1
+SVO,Moscow,BEG,Belgrade,407,Cheapest,2023-06-20 11:10:00,2023-04-21 23:23:50.833712,Duration: 1d 9h,1
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-20 10:15:00,2023-04-21 23:23:50.820756,Duration: 3h 35m,0
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-19 22:00:00,2023-04-21 23:23:50.386922,Duration: 11h 50m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-20 19:45:00,2023-04-21 23:23:50.245092,Duration: 4h,0
+SVO,Moscow,ATL,Atlanta,1094,Qatar Airways,2023-06-19 12:50:00,2023-04-21 23:23:50.173155,Duration: 22h 05m,1
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-20 11:10:00,2023-04-21 23:23:50.143219,Duration: 4h 10m,0
+SVO,Moscow,HND,Tokyo,821,Air China,2023-06-20 18:45:00,2023-04-21 23:23:50.132426,Duration: 11h 45m,1
+SVO,Moscow,FCO,Rome,606,Etihad Airways,2023-06-19 11:40:00,2023-04-21 23:23:49.679810,Duration: 20h 25m,1
+SVO,Moscow,DOH,Doha,345,Cheapest,2023-06-20 11:40:00,2023-04-21 23:23:49.163100,Duration: 1d 2h 35m,1
+SVO,Moscow,ICN,Seoul,426,China Eastern Airlines,2023-06-20 17:15:00,2023-04-21 23:23:50.390266,Duration: 16h 40m,1
+SVO,Moscow,JFK,New York,848,Cheapest,2023-06-20 11:10:00,2023-04-21 23:23:49.813360,Duration: 1d 14h 30m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 23:23:50.032556,None,None
+SVO,Moscow,NRT,Tokyo,557,Cheapest,2023-06-20 11:40:00,2023-04-21 23:23:50.093949,Duration: 1d 16h 30m,1
+SVO,None,CDG,None,None,None,None,2023-04-21 23:23:49.169017,None,None
+SVO,Moscow,SIN,Singapore,450,China Eastern Airlines,2023-06-20 19:25:00,2023-04-21 23:23:49.253895,Duration: 1d 5h,1
+SVO,None,TBS,None,None,None,None,2023-04-21 23:23:49.185767,None,None
+SVO,None,LGW,None,None,None,None,2023-04-21 23:23:49.040579,None,None
+SVO,None,PEK,None,None,None,None,2023-04-21 23:23:49.922125,None,None
+SVO,None,EVN,None,None,None,None,2023-04-21 23:23:49.619950,None,None
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-21 21:05:00,2023-04-21 23:27:38.757665,Duration: 3h 45m,0
+SVO,None,SVO,None,None,None,None,2023-04-21 23:27:38.673503,None,None
+SVO,Moscow,EVN,Yerevan,173,Shirak Avia,2023-06-21 12:45:00,2023-04-21 23:27:37.988279,Duration: 3h 15m,0
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-21 11:10:00,2023-04-21 23:27:38.187471,Duration: 4h 10m,0
+SVO,Moscow,DXB,Dubai,296,Oman Air,2023-06-20 23:20:00,2023-04-21 23:27:37.826839,Duration: 1d 2h 50m,1
+SVO,Moscow,AMS,Amsterdam,465,Cheapest,2023-06-20 11:10:00,2023-04-21 23:27:37.575460,Duration: 1d 2h 30m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-21 19:45:00,2023-04-21 23:27:38.864924,Duration: 4h,0
+SVO,Moscow,ATL,Atlanta,1094,Qatar Airways,2023-06-20 12:50:00,2023-04-21 23:27:38.433236,Duration: 22h 05m,1
+SVO,Moscow,SIN,Singapore,565,Qatar Airways,2023-06-21 12:50:00,2023-04-21 23:27:38.477862,Duration: 15h 35m,1
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-20 11:40:00,2023-04-21 23:27:37.341425,Duration: 20h 15m,1
+SVO,Moscow,PEK,Beijing,341,China Eastern Airlines,2023-06-21 19:05:00,2023-04-21 23:27:37.650973,Duration: 1d 10h 10m,1
+SVO,Moscow,MAD,Madrid,341,Cheapest,2023-06-20 11:10:00,2023-04-21 23:27:37.843523,Duration: 1d 4h 25m,1
+SVO,Moscow,FCO,Rome,356,Multiple,2023-06-20 11:10:00,2023-04-21 23:27:38.016089,Duration: 14h 35m,1
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-20 04:30:00,2023-04-21 23:27:38.971129,Duration: 1d 4h 50m,1
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-21 10:55:00,2023-04-21 23:27:37.949947,Duration: 3h 05m,0
+SVO,Moscow,TBS,Tbilisi,1048,Multiple,2023-06-21 02:10:00,2023-04-21 23:27:37.231666,Duration: 13h 30m,1
+SVO,Moscow,LGW,London,1526,Qatar Airways,2023-06-20 12:50:00,2023-04-21 23:27:38.504732,Duration: 14h 30m,1
+SVO,None,IST,None,None,None,None,2023-04-21 23:27:39.027003,None,None
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-20 04:30:00,2023-04-21 23:27:38.373306,Duration: 10h,1
+SVO,None,JFK,None,None,None,None,2023-04-21 23:27:38.935038,None,None
+SVO,Moscow,EVN,Yerevan,156,FlyArna,2023-06-22 20:55:00,2023-04-21 23:33:19.324864,Duration: 4h,0
+SVO,Moscow,DOH,Doha,428,Oman Air,2023-06-21 23:20:00,2023-04-21 23:33:18.736785,Duration: 18h,1
+SVO,Moscow,LGW,London,1526,Qatar Airways,2023-06-21 12:50:00,2023-04-21 23:33:20.549715,Duration: 14h 35m,1
+SVO,Moscow,ICN,Seoul,642,Air China,2023-06-21 18:45:00,2023-04-21 23:33:19.663769,Duration: 10h 50m,1
+SVO,Moscow,FCO,Rome,636,Only 7 tickets remaining for this price,2023-06-21 10:55:00,2023-04-21 23:33:19.454739,Duration: 9h 45m,1
+SVO,Moscow,AMS,Amsterdam,670,Only 4 tickets remaining for this price,2023-06-21 02:10:00,2023-04-21 23:33:19.330152,Duration: 7h 10m,1
+SVO,Moscow,CDG,Paris,656,Air Serbia,2023-06-21 02:10:00,2023-04-21 23:33:19.988842,Duration: 8h 05m,1
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-21 02:10:00,2023-04-21 23:33:19.040596,Duration: 7h 10m,1
+SVO,Moscow,DXB,Dubai,280,Mahan Airlines,2023-06-21 11:00:00,2023-04-21 23:33:19.079696,Duration: 7h 35m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 23:33:20.051374,None,None
+SVO,Moscow,HND,Tokyo,662,Multiple,2023-06-21 19:05:00,2023-04-21 23:33:19.170872,Duration: 21h 45m,1
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-21 02:10:00,2023-04-21 23:33:20.352834,Duration: 12h 20m,1
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-21 11:40:00,2023-04-21 23:33:18.815548,Duration: 20h 15m,1
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-22 11:10:00,2023-04-21 23:33:20.418968,Duration: 4h 10m,0
+SVO,Moscow,ATL,Atlanta,1191,Qatar Airways,2023-06-21 12:50:00,2023-04-21 23:33:19.440981,Duration: 22h 05m,1
+SVO,Moscow,NRT,Tokyo,576,Air China,2023-06-21 18:45:00,2023-04-21 23:33:20.386445,Duration: 11h 35m,1
+SVO,Moscow,MAD,Madrid,641,Only 7 tickets remaining for this price,2023-06-21 10:55:00,2023-04-21 23:33:19.435627,Duration: 7h 40m,1
+SVO,Moscow,TBS,Tbilisi,1048,Multiple,2023-06-22 03:10:00,2023-04-21 23:33:18.915013,Duration: 12h 30m,1
+SVO,None,BEG,None,None,None,None,2023-04-21 23:33:19.429324,None,None
+SVO,Moscow,IST,Istanbul,231,Mahan Airlines,2023-06-21 11:00:00,2023-04-21 23:33:20.361591,Duration: 10h 55m,1
+SVO,Moscow,FCO,Rome,636,Only 7 tickets remaining for this price,2023-06-22 03:10:00,2023-04-21 23:36:59.981100,Duration: 6h 10m,1
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-22 11:40:00,2023-04-21 23:36:59.147981,Duration: 20h 15m,1
+SVO,Moscow,IST,Istanbul,296,Aeroflot,2023-06-22 04:30:00,2023-04-21 23:36:59.473880,Duration: 15h 40m,1
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-22 03:10:00,2023-04-21 23:36:58.795583,Duration: 7h 10m,1
+SVO,Moscow,MAD,Madrid,414,Cheapest,2023-06-22 20:55:00,2023-04-21 23:36:58.343781,Duration: 18h 40m,1
+SVO,Moscow,ATL,Atlanta,1150,Qatar Airways,2023-06-22 12:50:00,2023-04-21 23:36:58.532584,Duration: 22h 05m,1
+SVO,Moscow,DXB,Dubai,294,Oman Air,2023-06-22 23:20:00,2023-04-21 23:37:00.092291,Duration: 9h 30m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-22 19:45:00,2023-04-21 23:36:58.608621,Duration: 4h,0
+SVO,Moscow,LGW,London,1526,Qatar Airways,2023-06-22 12:50:00,2023-04-21 23:36:58.399765,Duration: 14h 35m,1
+SVO,Moscow,AMS,Amsterdam,465,Cheapest,2023-06-22 20:55:00,2023-04-21 23:36:59.727514,Duration: 16h 45m,1
+SVO,Moscow,ICN,Seoul,426,China Eastern Airlines,2023-06-22 17:15:00,2023-04-21 23:36:59.498207,Duration: 16h 40m,1
+SVO,Moscow,DOH,Doha,428,Oman Air,2023-06-22 23:20:00,2023-04-21 23:36:59.024312,Duration: 18h,1
+SVO,Moscow,SIN,Singapore,450,China Eastern Airlines,2023-06-22 19:25:00,2023-04-21 23:36:58.633932,Duration: 1d 5h,1
+SVO,Moscow,NRT,Tokyo,542,China Eastern Airlines,2023-06-22 19:25:00,2023-04-21 23:37:00.099712,Duration: 13h,1
+SVO,Moscow,CPH,Copenhagen,408,Cheapest,2023-06-22 20:55:00,2023-04-21 23:36:59.113548,Duration: 1d 2h 15m,1
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-22 21:05:00,2023-04-21 23:36:59.565477,Duration: 3h 45m,0
+SVO,Moscow,HND,Tokyo,821,Air China,2023-06-22 18:45:00,2023-04-21 23:36:59.207513,Duration: 11h 45m,1
+SVO,Moscow,JFK,New York,1095,Qatar Airways,2023-06-22 12:50:00,2023-04-21 23:37:00.247666,Duration: 21h 30m,1
+SVO,Moscow,PEK,Beijing,341,China Eastern Airlines,2023-06-22 19:25:00,2023-04-21 23:36:59.161626,Duration: 1d 10h 20m,1
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-22 03:10:00,2023-04-21 23:37:00.236029,Duration: 11h 20m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 23:39:39.927038,None,None
+SVO,Moscow,GYD,Baku,372,Aeroflot,2023-06-23 10:15:00,2023-04-21 23:39:38.977738,Duration: 3h 35m,0
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-23 02:55:00,2023-04-21 23:39:40.055741,Duration: 3h 05m,0
+SVO,Moscow,PEK,Beijing,446,Air China,2023-06-23 18:45:00,2023-04-21 23:39:39.157441,Duration: 7h 30m,0
+SVO,Moscow,NRT,Tokyo,542,China Eastern Airlines,2023-06-23 19:05:00,2023-04-21 23:39:39.172551,Duration: 13h 20m,1
+SVO,Moscow,ICN,Seoul,689,Air China,2023-06-23 18:45:00,2023-04-21 23:39:40.605497,Duration: 10h 50m,1
+SVO,Moscow,MAD,Madrid,449,Cheapest,2023-06-23 11:10:00,2023-04-21 23:39:40.649755,Duration: 1d 4h 25m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-23 19:45:00,2023-04-21 23:39:40.005988,Duration: 4h,0
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-23 02:55:00,2023-04-21 23:39:39.821070,Duration: 11h 35m,1
+SVO,Moscow,SIN,Singapore,539,Qatar Airways,2023-06-23 12:50:00,2023-04-21 23:39:39.263786,Duration: 15h 35m,1
+SVO,Moscow,DOH,Doha,427,Oman Air,2023-06-23 23:20:00,2023-04-21 23:39:40.664298,Duration: 24h 10m,1
+SVO,Moscow,EVN,Yerevan,156,FlyArna,2023-06-23 11:10:00,2023-04-21 23:39:40.069970,Duration: 4h,0
+SVO,Moscow,JFK,New York,1095,Qatar Airways,2023-06-23 17:25:00,2023-04-21 23:39:40.556904,Duration: 1d 4h 55m,1
+SVO,Moscow,DXB,Dubai,317,Oman Air,2023-06-23 23:20:00,2023-04-21 23:39:40.768519,Duration: 9h 30m,1
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-23 02:55:00,2023-04-21 23:39:39.257731,Duration: 7h 20m,1
+SVO,Moscow,TBS,Tbilisi,1048,Multiple,2023-06-23 02:55:00,2023-04-21 23:39:39.815507,Duration: 12h 45m,1
+SVO,Moscow,MUC,Munich,726,Etihad Airways,2023-06-23 11:40:00,2023-04-21 23:39:39.535303,Duration: 20h 15m,1
+SVO,Moscow,ALA,Almaty,164,SCAT,2023-06-23 11:10:00,2023-04-21 23:39:39.047052,Duration: 4h 10m,0
+SVO,None,IST,None,None,None,None,2023-04-21 23:39:39.030884,None,None
+SVO,Moscow,HND,Tokyo,670,Multiple,2023-06-23 17:40:00,2023-04-21 23:39:40.694910,Duration: 23h 10m,1
+SVO,Moscow,LGW,London,1554,Qatar Airways,2023-06-23 12:50:00,2023-04-21 23:45:08.137563,Duration: 14h 50m,1
+SVO,Moscow,EVN,Yerevan,156,FlyArna,2023-06-24 20:30:00,2023-04-21 23:45:07.064543,Duration: 4h,0
+SVO,None,SVO,None,None,None,None,2023-04-21 23:45:08.365258,None,None
+SVO,Moscow,TBS,Tbilisi,1048,Multiple,2023-06-24 20:35:00,2023-04-21 23:45:07.423062,Duration: 19h 05m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-24 19:45:00,2023-04-21 23:45:08.108258,Duration: 4h,0
+SVO,Moscow,JFK,New York,1219,Qatar Airways,2023-06-24 12:50:00,2023-04-21 23:45:07.831578,Duration: 21h 30m,1
+SVO,Moscow,CPH,Copenhagen,653,Air Serbia,2023-06-23 02:55:00,2023-04-21 23:45:08.302704,Duration: 6h 25m,1
+SVO,Moscow,PEK,Beijing,341,China Eastern Airlines,2023-06-24 19:25:00,2023-04-21 23:45:08.364994,Duration: 1d 9h 50m,1
+SVO,Moscow,ATL,Atlanta,1150,Qatar Airways,2023-06-23 12:50:00,2023-04-21 23:45:06.993038,Duration: 22h 05m,1
+SVO,Moscow,DOH,Doha,445,Oman Air,2023-06-24 23:20:00,2023-04-21 23:45:08.497131,Duration: 18h,1
+SVO,Moscow,ICN,Seoul,426,China Eastern Airlines,2023-06-24 17:15:00,2023-04-21 23:45:08.019357,Duration: 16h 40m,1
+SVO,Moscow,GYD,Baku,454,Aeroflot,2023-06-24 14:25:00,2023-04-21 23:45:08.525638,Duration: 3h 40m,0
+SVO,Moscow,CDG,Paris,418,Cheapest,2023-06-24 20:30:00,2023-04-21 23:45:06.760976,Duration: 22h 05m,1
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-24 20:35:00,2023-04-21 23:45:07.242470,Duration: 3h 05m,0
+SVO,None,AMS,None,None,None,None,2023-04-21 23:45:06.827831,None,None
+SVO,Moscow,NRT,Tokyo,460,Cheapest,2023-06-24 17:40:00,2023-04-21 23:45:07.728320,Duration: 1d 9h 45m,1
+SVO,None,FCO,None,None,None,None,2023-04-21 23:45:08.183071,None,None
+SVO,None,ALA,None,None,None,None,2023-04-21 23:45:06.674891,None,None
+SVO,None,HND,None,None,None,None,2023-04-21 23:45:06.795143,None,None
+SVO,None,SIN,None,None,None,None,2023-04-21 23:45:06.822991,None,None
+SVO,Moscow,BEG,Belgrade,634,Air Serbia,2023-06-25 02:10:00,2023-04-21 23:49:43.908652,Duration: 3h 05m,0
+SVO,None,SVO,None,None,None,None,2023-04-21 23:49:42.573641,None,None
+SVO,Moscow,LGW,London,1554,Qatar Airways,2023-06-24 12:50:00,2023-04-21 23:49:44.435259,Duration: 14h 50m,1
+SVO,Moscow,ATL,Atlanta,1392,Qatar Airways,2023-06-24 12:50:00,2023-04-21 23:49:43.889691,Duration: 22h 05m,1
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-24 20:35:00,2023-04-21 23:49:42.531173,Duration: 23h 35m,1
+SVO,Moscow,TBS,Tbilisi,1048,Multiple,2023-06-25 04:30:00,2023-04-21 23:49:43.339747,Duration: 11h 10m,1
+SVO,Moscow,FCO,Rome,319,Cheapest,2023-06-24 20:30:00,2023-04-21 23:49:43.585376,Duration: 1d 5h 15m,1
+SVO,Moscow,JFK,New York,848,Cheapest,2023-06-25 23:05:00,2023-04-21 23:49:43.200630,Duration: 1d 2h 35m,1
+SVO,Moscow,ALA,Almaty,176,SCAT,2023-06-25 11:10:00,2023-04-21 23:49:44.155825,Duration: 4h 10m,0
+SVO,Moscow,IST,Istanbul,356,Aeroflot,2023-06-24 08:40:00,2023-04-21 23:49:44.176074,Duration: 5h 05m,0
+SVO,Moscow,MAD,Madrid,430,Cheapest,2023-06-24 20:30:00,2023-04-21 23:49:43.375210,Duration: 20h 50m,1
+SVO,Moscow,TAS,Tashkent,212,Aeroflot,2023-06-25 19:45:00,2023-04-21 23:49:43.944297,Duration: 4h,0
+SVO,Moscow,CPH,Copenhagen,377,Cheapest,2023-06-24 20:30:00,2023-04-21 23:49:42.566678,Duration: 23h 50m,1
+SVO,Moscow,PEK,Beijing,383,Hainan Airlines,2023-06-25 19:55:00,2023-04-21 23:49:43.248465,Duration: 7h 55m,0
+SVO,None,GYD,None,None,None,None,2023-04-21 23:49:44.417271,None,None
+SVO,Moscow,EVN,Yerevan,156,FlyArna,2023-06-25 23:05:00,2023-04-21 23:49:43.107233,Duration: 4h,0
+SVO,None,MUC,None,None,None,None,2023-04-21 23:49:42.821689,None,None
+SVO,None,SIN,None,None,None,None,2023-04-21 23:49:42.854267,None,None
+SVO,None,AMS,None,None,None,None,2023-04-21 23:49:43.651036,None,None
+SVO,None,DXB,None,None,None,None,2023-04-21 23:49:44.376859,None,None
+SVO,Moscow,EVN,Yerevan,178,Shirak Avia,2023-06-26 12:45:00,2023-04-21 23:54:59.116499,Duration: 3h 30m,0
+SVO,Moscow,LGW,London,1536,Qatar Airways,2023-06-25 12:50:00,2023-04-21 23:54:58.139601,Duration: 14h 35m,1
+SVO,None,SVO,None,None,None,None,2023-04-21 23:54:59.336973,None,None
+SVO,Moscow,MUC,Munich,698,Etihad Airways,2023-06-25 11:40:00,2023-04-21 23:54:58.404466,Duration: 20h 15m,1
+SVO,Moscow,ICN,Seoul,642,Air China,2023-06-25 18:45:00,2023-04-21 23:54:58.341857,Duration: 10h 50m,1
+SVO,Moscow,AMS,Amsterdam,670,Only 4 tickets remaining for this price,2023-06-25 02:10:00,2023-04-21 23:54:59.693125,Duration: 7h 10m,1
+SVO,Moscow,NRT,Tokyo,542,China Eastern Airlines,2023-06-25 19:05:00,2023-04-21 23:55:00.031905,Duration: 13h 25m,1
+SVO,Moscow,TBS,Tbilisi,1048,Multiple,2023-06-26 22:00:00,2023-04-21 23:54:58.244735,Duration: 17h 40m,1
+SVO,Moscow,ATL,Atlanta,1393,Qatar Airways,2023-06-25 12:50:00,2023-04-21 23:54:58.217662,Duration: 22h 05m,1
+SVO,Moscow,FCO,Rome,356,Multiple,2023-06-25 23:05:00,2023-04-21 23:54:59.373937,Duration: 17h 15m,1
+SVO,Moscow,HND,Tokyo,751,Air China,2023-06-25 18:45:00,2023-04-21 23:55:00.026041,Duration: 11h 45m,1
+SVO,Moscow,CDG,Paris,640,Only 7 tickets remaining for this price,2023-06-25 02:10:00,2023-04-21 23:55:00.006830,Duration: 8h,1
+SVO,Moscow,IST,Istanbul,231,Mahan Airlines,2023-06-25 11:00:00,2023-04-21 23:54:59.557581,Duration: 10h 55m,1
+SVO,Moscow,MAD,Madrid,666,Etihad Airways,2023-06-25 11:40:00,2023-04-21 23:54:58.847348,Duration: 1d 2h 55m,1
+SVO,Moscow,DXB,Dubai,280,Mahan Airlines,2023-06-25 11:00:00,2023-04-21 23:54:58.119208,Duration: 7h 35m,1
+SVO,Moscow,LHR,London,666,Only 7 tickets remaining for this price,2023-06-25 04:30:00,2023-04-21 23:54:58.623991,Duration: 10h,1
+SVO,Moscow,DOH,Doha,410,Oman Air,2023-06-25 23:20:00,2023-04-21 23:54:58.347829,Duration: 1d 6h 05m,1
+SVO,None,ALA,None,None,None,None,2023-04-21 23:54:59.198065,None,None
