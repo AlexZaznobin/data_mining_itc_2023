@@ -5,20 +5,17 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import re
 import threading
-
-from selenium.webdriver.common.proxy import Proxy, ProxyType
-import time
 BREAK_PROXY_RANDOMIZER_INDEX = 100
 def get_api_proxy_link (config) :
     """
-    Creates a connection engine to the MySQL database using the provided config.
+     Retrieves the API link to obtain a list of proxies, if configured to use an API.
 
-    Args:
-        config (dict): A dictionary containing the necessary configuration settings.
+     Args:
+         config (dict): A dictionary containing the necessary configuration settings.
 
-    Returns:
-       link to proxy url api
-    """
+     Returns:
+         str or None: The API link to obtain a list of proxies, or None if not configured to use an API.
+     """
     if config['use_proxy_api']==1:
         proxy_api_link_file_name=config['proxy_api_link_file']
         with open(proxy_api_link_file_name, 'r') as file :
@@ -27,14 +24,14 @@ def get_api_proxy_link (config) :
 
 def save_file_api_proxy_list (config) :
     """
-    Creates a connection engine to the MySQL database using the provided config.
+    Retrieves a list of proxies from an API, and adds them to a file.
 
     Args:
         config (dict): A dictionary containing the necessary configuration settings.
 
     Returns:
-       link to proxy url api
-    # """
+        None
+    """
     api_url=get_api_proxy_link(config)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -55,39 +52,19 @@ def save_file_api_proxy_list (config) :
 
 
 
-def create_proxy_list (number_of_proxy,config) :
-    """
-    Create proxy list of given length
-    Args:
-        number_of_proxy: number of needed proxies
-    Returns:
-        list of good proxies of  given length  or list of 0 of  given length
-    """
-    save_file_api_proxy_list(config)
-    proxy_list = []
-    with open("proxy_list.txt", 'r') as result_file :
-        proxy_list = result_file.readlines()
-
-    good_proxy_list = []
-    break_index = 0
-    while (len(good_proxy_list) != number_of_proxy) and (break_index != BREAK_PROXY_RANDOMIZER_INDEX) :
-        break_index = break_index + 1
-        random_element = random.choice(proxy_list)
-        if check_proxy(random_element[:-1], 'http://httpbin.org/ip') :
-            good_proxy_list.append(random_element[:-1])
-    if break_index == BREAK_PROXY_RANDOMIZER_INDEX :
-        good_proxy_list = [0 for i in range(number_of_proxy)]
-    return good_proxy_list
-
 
 
 def check_request_proxy (proxy_str ,url, good_proxy_list) :
     """
-    Check if proxies are good
-    Args:
-        proxy_str: adres of proxy
-    Returns:
-        status: True or false
+       Checks if a proxy is responding to requests.
+
+       Args:
+           proxy_str (str): The address of the proxy to check.
+           url (str): The URL to request using the proxy.
+           good_proxy_list (list): A list to add the proxy to if it is responding.
+
+       Returns:
+           bool: True if the proxy is responding, False otherwise.
     """
     status = False
     proxy = {
@@ -96,7 +73,6 @@ def check_request_proxy (proxy_str ,url, good_proxy_list) :
     }
     try :
         response = requests.get(url, proxies=proxy, timeout=3)
-        print(proxy_str,response)
         if response.status_code == 200 :
             status = True
             good_proxy_list.append(proxy_str)
@@ -104,24 +80,18 @@ def check_request_proxy (proxy_str ,url, good_proxy_list) :
         pass
     return status
 
-def proxy(proxy_ip_port,url):
-
-    # change 'ip:port' with your proxy's ip and port
-    proxy = Proxy()
-    proxy.proxy_type = ProxyType.MANUAL
-    proxy.http_proxy = proxy_ip_port
-    proxy.ssl_proxy = proxy_ip_port
-
-    capabilities = webdriver.DesiredCapabilities.CHROME
-    proxy.add_to_capabilities(capabilities)
-
-    # replace 'your_absolute_path' with your chrome binary absolute path
-    driver = webdriver.Chrome( desired_capabilities=capabilities)
-    driver.get(url)
-    driver.quit()
-
 
 def check_proxy_responce(url, config):
+    """
+      Checks if a proxy can successfully connect to a URL, and saves it to a file if it can.
+
+      Args:
+          url (str): The URL to connect to using the proxy.
+          config (dict): A dictionary containing the necessary configuration settings.
+
+      Returns:
+          selenium.webdriver.Chrome: The Chrome driver used to connect to the URL.
+      """
     service = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
     sucess_connection=0
@@ -150,9 +120,16 @@ def check_proxy_responce(url, config):
 
 def m_thread_proxy_check (list_of_proxy,good_list_of_proxy,url,config):
     """
+    Checks if a list of proxies are responding, and adds the ones that are to a list.
+    Args:
+    list_of_proxy (list): A list of proxies to check.
+    good_list_of_proxy (list): A list to add the responsive proxies to.
+    url (str): The URL to use for checking the proxies.
+    config (dict): A dictionary containing the necessary configuration settings.
 
+    Returns:
+    None
     """
-
     threads = []
 
     for index, proxy in enumerate(list_of_proxy) :
