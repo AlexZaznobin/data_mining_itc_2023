@@ -161,7 +161,7 @@ def set_up_parser () :
 
     if len(sys.argv) == 1 :
         start_aero_code = 'TLV'
-        start_date, days_number = get_date_range('01093009')
+        start_date, days_number = get_date_range('28093009')
         end_point = ['SVO', 'TBS','EVN','ALA','BEG','GYD','TAS', 'PEK','JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
         'FCO', 'LGW', 'CPH']
         need_database = True

@@ -37,11 +37,12 @@ The script accepts the following command-line arguments to define the search par
 4. -db, --database: (Optional) A flag indicating if the database should be used. Include this flag if you want to use the database; otherwise, the database will not be used.
 
 Example Usage:
+1. To save results to database, you need to insert your mysql password to the conf.json file in the mysql_pwd parameter. 
 
-1. To use the script with default settings, simply run:
+2. To use the script with default settings, simply run:
    python script_name.py
 
-2. To search for flights from TLV to JFK between September 1st and September 9th, 2023, and use the database:
+3. To search for flights from TLV to JFK between September 1st and September 9th, 2023, and use the database:
    python aviasales_scrpr.py -sac TLV -eac JFK -dr 01090909 -db
 
 

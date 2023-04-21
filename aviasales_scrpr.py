@@ -1,7 +1,4 @@
 import random
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -17,8 +14,10 @@ from capcha_speech_recognition import g_capcha_solver
 from interface import get_scraping_parameters_list
 from mysql_scraper import save_results_in_database
 from interface import set_up_parser
-import  requests
-BREAK_PROXY_RANDOMIZER_INDEX=100
+from proxies import create_proxy_list
+from proxies import save_file_api_proxy_list
+from proxies import check_proxy_responce
+
 CONFIG_NAME = 'conf.json'
 
 
@@ -188,10 +187,13 @@ def currency_check (driver) :
 def extract_aicompany (driver, current_ticket) :
     wait = WebDriverWait(driver, 1)
     text_elements = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
-    for i, text_element in enumerate(text_elements) :
-        if (int(text_element.text.replace(",", "").replace("$", "").replace(" ", "")) == current_ticket.price) :
-            current_ticket.air_company = text_elements[i + 3].text
-            return True
+    if len(text_elements) < 4 :
+        current_ticket.air_company = "Multiple"
+    else :
+        for i, text_element in enumerate(text_elements) :
+            if (int(text_element.text.replace(",", "").replace("$", "").replace(" ", "")) == current_ticket.price) :
+                current_ticket.air_company = text_elements[i + 3].text
+                return True
 
 
 def extract_city (driver, current_ticket) :
@@ -201,7 +203,7 @@ def extract_city (driver, current_ticket) :
     current_ticket.dest_airport.city = city_elements[1].text
 
 
-def page_processing_slnm (url, config, proxy=None, good_proxy=None) :
+def page_processing_slnm (url, config) :
     """
     get price from page
     Args:
@@ -210,26 +212,18 @@ def page_processing_slnm (url, config, proxy=None, good_proxy=None) :
     Returns:
         price for the cheapest ticket
     """
-    time.sleep(random.random()*2)
+    time.sleep(random.random() * 2)
     parameters = re.search('.*request', url).group(0)[-18 :-7]
     start_airport = Airport(code=parameters[:3])
     dest_airport = Airport(code=parameters[-4 :-1])
     page_ticket = Ticket(start_airport=start_airport,
                          date=parameters[3 :-4],
                          dest_airport=dest_airport)
-    service = Service('/usr/local/bin/chromedriver')
-    chrome_options = Options()
-    for chome_arg in config['chome_args'] :
-        chrome_options.add_argument(chome_arg)
-        if config['use_proxy'] == 1 :
-            chrome_options.add_argument(f"--proxy-server={proxy}")
-    driver = webdriver.Chrome(service=service, options=chrome_options)
-    driver.get(url)
-    extract_data_page(driver, page_ticket, config)
-    if page_ticket.price!=None:
-        good_proxy.append(proxy)
-    else:
-        good_proxy.clear()
+
+    driver = check_proxy_responce(url, config)
+
+    if extract_data_page(driver, page_ticket, config) == None :
+        g_capcha_solver(driver, logging)
 
     with open(config['result_file'], 'a') as result_file :
         result_file.write(str(page_ticket) + '\n')
@@ -238,50 +232,6 @@ def page_processing_slnm (url, config, proxy=None, good_proxy=None) :
     return page_ticket
 
 
-def check_proxy(proxy_str):
-    """
-    Check if proxies are good
-    Args:
-        proxy_str: adres of proxy
-    Returns:
-        status: True or false
-    """
-    test_url = 'http://httpbin.org/ip'
-    status=False
-    proxy = {
-        'http' : 'http://'+proxy_str,
-        'https' : 'https://'+proxy_str
-    }
-    try:
-        response = requests.get(test_url, proxies=proxy, timeout=1)
-        if response.status_code == 200 :
-            status=True
-    except:
-        pass
-    return status
-
-
-def create_proxy_list(number_of_proxy):
-    """
-    Create proxy list of given length
-    Args:
-        number_of_proxy: number of needed proxies
-    Returns:
-        list of good proxies of  given length  or list of 0 of  given length
-    """
-    proxy_list = []
-    with open("proxy_list.txt", 'r') as result_file :
-        proxy_list = result_file.readlines()
-    good_proxy_list=[]
-    break_index=0
-    while (len(good_proxy_list)!=number_of_proxy)and(break_index!=BREAK_PROXY_RANDOMIZER_INDEX):
-        break_index=break_index+1
-        random_element = random.choice(proxy_list)
-        if  check_proxy(random_element[:-1]):
-            good_proxy_list.append(random_element[:-1])
-    if break_index==BREAK_PROXY_RANDOMIZER_INDEX:
-        good_proxy_list = [0 for i in range(number_of_proxy)]
-    return good_proxy_list
 
 def m_thread_batch_scraping (list_of_urls, config) :
     """
@@ -291,15 +241,11 @@ def m_thread_batch_scraping (list_of_urls, config) :
     Use selenium
     Returns:
     """
-    random_proxy_list=create_proxy_list(len(list_of_urls))
-    url_proxys=zip(list_of_urls,random_proxy_list)
-    threads = []
-    good_proxy= []
 
-    for index, url_proxy in enumerate(url_proxys) :
-        if len(good_proxy)!=0:
-            url_proxy[1]=good_proxy[0]
-        t = threading.Thread(target=page_processing_slnm, args=(url_proxy[0], config, url_proxy[1],good_proxy))
+    threads = []
+
+    for index, url in enumerate(list_of_urls) :
+        t = threading.Thread(target=page_processing_slnm, args=(url, config))
         threads.append(t)
     for t in threads :
         t.start()
@@ -384,7 +330,7 @@ def scrape_per_batch (url_list, config, logging) :
     for i in range(batch_number) :
         m_thread_batch_scraping(url_list[:config['batch_size']], config)
         url_list = url_list[config['batch_size'] :]
-        if len(url_list) > 0 and len(url_list) < config['batch_size'] :
+        if (len(url_list) > 0) and (len(url_list) < config['batch_size']) :
             m_thread_batch_scraping(url_list, config)
 
 
@@ -394,6 +340,7 @@ def main () :
     scr_pam_list, need_database = set_up_parser()
     intiniate_result_file(config)
     start = datetime.datetime.now()
+    save_file_api_proxy_list(config)
     url_list = get_url_list(start_code=scr_pam_list[0],
                             start_date=scr_pam_list[1],
                             days_number=scr_pam_list[2],

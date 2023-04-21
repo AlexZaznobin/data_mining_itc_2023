@@ -34,8 +34,11 @@ def get_engine (config) :
     Returns:
         sqlalchemy.engine.Engine: A connection engine to the MySQL database.
     """
-    with open('/Users/alexanderzaznobin/Desktop/python/pwdfld/mysql.txt', 'r') as file :
-        mysql_password = file.read()
+    if config['mysql_pwd']!="":
+        mysql_password=config['mysql_pwd']
+    else:
+        with open(config['mysql_pwd_file'], 'r') as file :
+            mysql_password = file.read()
     engine = create_engine(f"mysql+pymysql://root:{mysql_password}@localhost/{config['db_name']}")
     return engine
 
