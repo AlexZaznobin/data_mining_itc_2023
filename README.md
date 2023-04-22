@@ -10,14 +10,6 @@ This Python script is designed to scrape ticket prices from a website using a co
 * airports.csv - airports codes and names data 
 * requrements.txt - installed modules <i>.python3 -m pip freeze > requirements.txt<i>
 
-#### User parameters:
-- Airport to start
-- first day of range to search for tickets 
-- range size in days 
-- Destination Airport 
-#### Options:
-if Destination Airport is set to 'any', data is collected for all destinations.
-
 #### Data collected:
 ![aviasales scraper](https://user-images.githubusercontent.com/127748062/229361563-90ac371a-07fe-4161-9f31-4864221a1f79.png)
 
@@ -45,7 +37,6 @@ Example Usage:
 3. To search for flights from TLV to JFK between September 1st and September 9th, 2023, and use the database:
    python aviasales_scrpr.py -sac TLV -eac JFK -dr 01090909 -db
 
-
 Note: Make sure you have the required libraries installed and the necessary configuration set up before running the script.
 
 #### Deafult parameters: 
@@ -54,3 +45,19 @@ Note: Make sure you have the required libraries installed and the necessary conf
         'FCO', 'LGW', 'CPH']
 3. -dr 14091409
 4. -db False
+
+
+#### Proxy:
+The source site can try to block you scraping process by CAPCHA, if you are trying to get a more than some small amount of tickets per day.
+If you want - you can use a proxy to reach the data.
+To use proxy you have to: 
+1) set "use_proxy": 1 in config file
+2) fill the file proxy_list.txt with the actually working proxies from the source you would like.
+e.g https://free-proxy-list.net/ provide free list of proxy.
+
+#### Proxy API.
+Additionaly you can use API to get list of proxies if you have one.
+To do this you have to: 
+1) set ""use_proxy_api": 1 in config file
+2) Make a text file with you proxy API URL.
+3) set the path to your proxy API URL text file "proxy_api_link_file": "path/proxy_api.txt",in config file 

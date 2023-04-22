@@ -1,11 +1,14 @@
 import random
+import time
+
 import requests
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import re
 import threading
-BREAK_PROXY_RANDOMIZER_INDEX = 100
+
+
 def get_api_proxy_link (config) :
     """
      Retrieves the API link to obtain a list of proxies, if configured to use an API.
@@ -16,11 +19,12 @@ def get_api_proxy_link (config) :
      Returns:
          str or None: The API link to obtain a list of proxies, or None if not configured to use an API.
      """
-    if config['use_proxy_api']==1:
-        proxy_api_link_file_name=config['proxy_api_link_file']
-        with open(proxy_api_link_file_name, 'r') as file :
-            proxy_link = file.read()
+
+    proxy_api_link_file_name = config['proxy_api_link_file']
+    with open(proxy_api_link_file_name, 'r') as file :
+        proxy_link = file.read()
     return proxy_link
+
 
 def save_file_api_proxy_list (config) :
     """
@@ -32,7 +36,7 @@ def save_file_api_proxy_list (config) :
     Returns:
         None
     """
-    api_url=get_api_proxy_link(config)
+    api_url = get_api_proxy_link(config)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome = webdriver.Chrome(options=chrome_options)
@@ -40,21 +44,18 @@ def save_file_api_proxy_list (config) :
     body_text = chrome.page_source
     proxi_text = re.sub(r'<.*>', '', body_text)
 
-    with open("proxy_list.txt", 'r') as result_file :
+    with open(config['good_proxy'], 'r') as result_file :
         old_list_of_proxy = result_file.readlines()
-    list_of_proxy= proxi_text.split('\n')+old_list_of_proxy
-    list_of_proxy=list(set(list_of_proxy))
-    good_list_of_proxy=[]
-    m_thread_proxy_check(list_of_proxy, good_list_of_proxy,'http://checkip.amazonaws.com/' , config)
+    list_of_proxy = proxi_text.split('\n') + old_list_of_proxy
+    list_of_proxy = list(set(list_of_proxy))
+    good_list_of_proxy = []
+    m_thread_proxy_check(list_of_proxy, good_list_of_proxy, 'http://checkip.amazonaws.com/')
 
-    with open("proxy_list.txt", 'w') as result_file :
+    with open(config['good_proxy'], 'w') as result_file :
         result_file.write('\n'.join(good_list_of_proxy))
 
 
-
-
-
-def check_request_proxy (proxy_str ,url, good_proxy_list) :
+def check_request_proxy (proxy_str, url, good_proxy_list) :
     """
        Checks if a proxy is responding to requests.
 
@@ -81,7 +82,7 @@ def check_request_proxy (proxy_str ,url, good_proxy_list) :
     return status
 
 
-def check_proxy_responce(url, config):
+def check_proxy_response (url, config) :
     """
       Checks if a proxy can successfully connect to a URL, and saves it to a file if it can.
 
@@ -92,33 +93,62 @@ def check_proxy_responce(url, config):
       Returns:
           selenium.webdriver.Chrome: The Chrome driver used to connect to the URL.
       """
-    service = Service('/usr/local/bin/chromedriver')
-    chrome_options = Options()
-    sucess_connection=0
+    success_connection = 0
     break_index = 0
-    while sucess_connection==0 and break_index<100:
-        with open("proxy_list.txt", 'r') as result_file :
-            proxy_list = result_file.readlines()
-        random_proxy = random.choice(proxy_list)[:-1]
-        try:
-            for chome_arg in config['chome_args'] :
-                chrome_options.add_argument(chome_arg)
-                if config['use_proxy'] == 1 :
-                    chrome_options.add_argument(f"--proxy-server={random_proxy}")
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            driver.get(url)
-            if (driver.title[:1]=='$' or driver.title[:1]=='C'):
-                sucess_connection=1
-                with open("great_proxy_list.txt", 'a') as result_file :
-                    result_file.write(random_proxy+'\n')
-        except:
-            break_index=break_index+1
-            driver.close()
+    if config['use_proxy'] == 1 :
+        while success_connection == 0 and break_index < config['break_proxy_index'] :
+            with open(config['good_proxy'], 'r') as result_file :
 
+                proxy_list = list(set(result_file.readlines()))
+            random_proxy = random.choice(proxy_list)[:-1]
+            try :
+                driver = set_up_driver(config, random_proxy)
+                driver.get(url)
+                if (driver.title[:1] == '$' or driver.title[:1] == 'C') :
+                    success_connection = 1
+                    with open(config["great_proxy"], 'a') as result_file :
+                        result_file.write(random_proxy + '\n')
+            except :
+                break_index = break_index + 1
+                driver.close()
+    else :
+        driver = set_up_driver(config)
+        driver.get(url)
+        time.sleep(10)
     return driver
 
 
-def m_thread_proxy_check (list_of_proxy,good_list_of_proxy,url,config):
+def set_up_driver (config, proxy=None) :
+    """
+    Set up a Chrome WebDriver with the given configuration and proxy.
+
+    Args:
+        config (dict): A dictionary containing the configuration options for the Chrome WebDriver.
+             Contain a 'chrome_args' key with a list of Chrome arguments to use.
+             Contain a 'use_proxy' key with a value of 1 to enable proxying.
+        proxy (str): The proxy server address to use, in the form "host:port".
+
+    Returns:
+        A Chrome WebDriver instance configured with the specified options and proxy.
+
+    Raises:
+        FileNotFoundError: If the ChromeDriver binary is not found at the expected location.
+    """
+    service = Service('/usr/local/bin/chromedriver')
+    chrome_options = Options()
+    for chrome_arg in config['chrome_args'] :
+        chrome_options.add_argument(chrome_arg)
+        if config['use_proxy'] == 1 :
+            chrome_options.add_argument(f"--proxy-server={proxy}")
+            rand_limit = config['size_of_window'][2]
+            random_value = random.randint(1, rand_limit)
+            x = config['size_of_window'][0] + random_value
+            y = config['size_of_window'][1] + random_value
+            chrome_options.add_argument(f"--window-size={x},{y}")
+    return webdriver.Chrome(service=service, options=chrome_options)
+
+
+def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
     """
     Checks if a list of proxies are responding, and adds the ones that are to a list.
     Args:
@@ -133,7 +163,7 @@ def m_thread_proxy_check (list_of_proxy,good_list_of_proxy,url,config):
     threads = []
 
     for index, proxy in enumerate(list_of_proxy) :
-        t = threading.Thread(target=check_request_proxy, args=(proxy[:-1],url, good_list_of_proxy))
+        t = threading.Thread(target=check_request_proxy, args=(proxy[:-1], url, good_list_of_proxy))
         threads.append(t)
     for t in threads :
         t.start()

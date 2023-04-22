@@ -1,6 +1,7 @@
 import pymysql
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, inspect
+from sqlalchemy.sql import text
 
 
 def coursor_execution (cursor, query, logging) :
@@ -13,15 +14,15 @@ def coursor_execution (cursor, query, logging) :
         logging (logging.Logger): The logger for logging the execution result.
 
     Returns:
-        None
+        status (boolean)
     """
     try :
         cursor.execute(query)
         logging.info(f'executed:\n {query} ')
+        return  True
     except :
         logging.info(f'does not work:\n {query} ')
-        pass
-    return
+        return  False
 
 
 def get_engine (config) :
@@ -76,10 +77,8 @@ def create_db (cursor, database_name, logging) :
        Returns:
            None
        """
-    try :
-        query = f"CREATE DATABASE {database_name};"
-        coursor_execution(cursor, query, logging)
-    except :
+    query = f"CREATE DATABASE {database_name};"
+    if not coursor_execution(cursor, query, logging):
         query = F"USE {database_name};"
         coursor_execution(cursor, query, logging)
 
@@ -111,27 +110,40 @@ def fill_airport_table (logging, config, unique_cities, airport_cities_key) :
 
       Returns:
           pd.DataFrame: The populated 'airport' table as a DataFrame.
+          :param unique_cities:
+          :param airport_cities_key:
       """
     airport_df = pd.read_csv(config['airports'])
-    column_mapping = {'name' : 'fullname'}
-    airport_selected = airport_df.rename(columns=column_mapping).loc[:, ('code', 'fullname')]
     airport_cities_key.columns = ['city_name', 'airport_code']
-    airport_selected = pd.merge(airport_selected, airport_cities_key, left_on='code', right_on='airport_code')
-    airport_selected = airport_selected.loc[:, ['code', 'fullname', 'city_name']]
-    airport_selected = pd.merge(airport_selected, unique_cities, left_on='city_name', right_on='name')
-    airport_selected = airport_selected.loc[:, ['code', 'fullname', 'id']]
-    airport_selected.columns = ['code', 'fullname', 'city_id']
-
-    airport_selected.index.name = 'id'
+    airport_selected = pd.merge(airport_df, airport_cities_key, left_on='code', right_on='airport_code')
+    airport_selected = airport_selected.loc[:, ['code', 'name', 'city_name']]
     engine = get_engine(config)
+    airport_selected = add_id_from_sql(dataframe=airport_selected,
+                                       df_column='city_name',
+                                       db_column='name',
+                                       db_table_name='city',
+                                       engine=engine)
+    column_mapping = {'name_x' : 'name', 'id': 'city_id'}
+    airport_selected = airport_selected.rename(columns=column_mapping)
+    airport_selected= airport_selected.loc[:, ['code', 'name', 'city_id']]
+    add_dataframe_to_sqltable(dataframe=airport_selected,
+                              engine=engine,
+                              db_table_name='airport',
+                              table_column='name',
+                              logging=logging)
 
-    try :
-        airport_selected.to_sql('airport', con=engine, if_exists='replace', index=True)
-        logging.info(f" airport table in DB was created successfully")
-
-    except :
-        logging.warning(f" airport table in DB was NOT created successfully")
     return airport_selected
+
+def add_id_from_sql(dataframe, df_column, db_column,db_table_name,engine):
+    inspector = inspect(engine)
+    if inspector.has_table(db_table_name):
+        sql_query = f"SELECT {db_column}, id FROM {db_table_name}"
+        with engine.connect() as conn :
+            query = conn.execute(text(sql_query))
+        sql_df= pd.DataFrame(query.fetchall())
+        return dataframe.merge(sql_df, how='inner', left_on=df_column, right_on=db_column)
+
+
 
 
 def fill_aircompany_table (logging, config) :
@@ -145,18 +157,17 @@ def fill_aircompany_table (logging, config) :
      Returns:
          pd.DataFrame: The populated 'aircompany' table as a DataFrame.
      """
-    tickets_df = pd.read_csv(config['result_file'])
-
+    tickets_df = pd.read_csv(config['last_request_data'])
     aircompany = pd.Series(tickets_df['aircompany_name'].unique()).to_frame()
     aircompany.columns = ['name']
-    aircompany.index.name = 'id'
+    aircompany = aircompany[aircompany['name'] != 'None']
     engine = get_engine(config)
-    try :
-        aircompany.to_sql('aircompany', con=engine, if_exists='replace', index=True)
-        logging.info(f" aircompany table in DB was created successfully")
-    except :
-        logging.warning(f" aircompany table in DB was NOT created successfully")
-    pass
+    add_dataframe_to_sqltable(dataframe=aircompany,
+                              engine=engine,
+                              db_table_name='aircompany',
+                              table_column='name',
+                              logging=logging)
+
     return aircompany
 
 
@@ -175,7 +186,7 @@ def fill_city_table (logging, config) :
                - airport_cities_key (pd.DataFrame): A DataFrame with city names and their corresponding airport codes.
        """
 
-    tickets_df = pd.read_csv(config['result_file'])
+    tickets_df = pd.read_csv(config['last_request_data'])
     start_city = tickets_df.loc[:, ['start_city_name', 'start_airport_code']]
     start_city.columns = ['name', 'airport_code']
     end_city = tickets_df.loc[:, ['end_city_name', 'end_airport_code']]
@@ -187,18 +198,70 @@ def fill_city_table (logging, config) :
     all_cities = all_cities[all_cities['airport_code'] != 'None']
     unique_cities = all_cities.loc[:, ['name']].drop_duplicates()
     unique_cities = unique_cities.reset_index(drop=True)
-    unique_cities.index.name = 'id'
     airport_cities_key = all_cities.loc[:, ['name', 'airport_code']]
-
     engine = get_engine(config)
+    add_dataframe_to_sqltable(unique_cities,engine,'city','name',logging)
+    unique_cities = unique_cities.reset_index()
+    return unique_cities, airport_cities_key
+
+def add_dataframe_to_sqltable(dataframe, engine, db_table_name, table_column, logging):
+    """
+       Adds a Pandas DataFrame to a SQL database table and adds an ID column with AUTO_INCREMENT property.
+       Adds only those data that is not doubled in table_column and data frame column.
+
+       Args:
+           dataframe (pandas.DataFrame): The DataFrame containing the data to add to the table.
+           engine (sqlalchemy.engine.base.Engine): The database engine object to use for the connection.
+           db_table_name (str): The name of the database table to insert the data into.
+           table_column (str): The name of the column in the database table to compare with the DataFrame.
+           logging (logging.Logger): The logger object to use for logging.
+
+       Returns:
+           None
+
+       Raises:
+           None
+
+       """
+    if table_column!=False:
+        dataframe=get_newitems(dataframe, engine,db_table_name,table_column)
     try :
-        unique_cities.to_sql('city', con=engine, if_exists='replace', index=True, index_label='id')
-        logging.info(f" city table in DB was created successfully")
+        dataframe.to_sql(db_table_name, con=engine, if_exists='append', index=False)
+        with engine.connect() as conn :
+                conn.execute(text(f"ALTER TABLE {db_table_name} ADD id INT PRIMARY KEY AUTO_INCREMENT"))
+        logging.info(f" {db_table_name} table in DB was created successfully")
     except :
         logging.warning(f" city table in DB was NOT created successfully")
 
-    unique_cities = unique_cities.reset_index()
-    return unique_cities, airport_cities_key
+
+
+def get_newitems(dataframe, engine, db_table_name, table_column ):
+    """
+    Returns a Pandas Series containing the elements in `series` that are not present in the specified SQL table column.
+
+    Args:
+        series (pandas.Series): The Pandas Series to compare with the SQL table column.
+        engine (sqlalchemy.engine.base.Engine): The SQLAlchemy engine used to connect to the SQL database.
+        db_table_name (str): The name of the database table containing the column to compare with.
+        table_column (str): The name of the column in the database table to compare with.
+
+    Returns:
+        data frame with new items only
+    """
+
+    inspector = inspect(engine)
+    if inspector.has_table(db_table_name):
+
+        sql_query = f"SELECT {table_column} FROM {db_table_name}"
+        with engine.connect() as conn :
+            query = conn.execute(text(sql_query))
+        set_df = set(dataframe[table_column].unique())
+        set_sql = set(pd.DataFrame(query.fetchall()).squeeze().unique())
+        new_items= set_df.difference(set_sql)
+        dataframe=dataframe[dataframe[table_column].isin(new_items)]
+    return dataframe
+
+
 
 
 def fill_ticket_table (logging, config, airport_df, aircompany_df) :
@@ -214,77 +277,24 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
        Returns:
            pd.DataFrame: The populated 'ticket' table as a DataFrame.
        """
-    tickets_df = pd.read_csv(config['result_file'])
-    airport_df = airport_df.reset_index()
-    aircompany_df = aircompany_df.reset_index()
-    tickets_df = pd.merge(tickets_df, airport_df, left_on='start_airport_code', right_on='code')
-    tickets_df = tickets_df.loc[:,
-                 ['id',
-                  'price',
-                  'flight_date_time',
-                  'end_airport_code',
-                  'aircompany_name',
-                  'scraping_timestamp',
-                  'duration_time',
-                  'layovers']]
-    tickets_df.columns = ['start_airport_id',
-                          'price',
-                          'flight_date_time',
-                          'end_airport_code',
-                          'aircompany_name',
-                          'scraping_timestamp',
-                          'duration_time',
-                          'layovers']
-    tickets_df = pd.merge(tickets_df, airport_df, left_on='end_airport_code', right_on='code')
-    tickets_df = tickets_df.loc[:,
-                 ['start_airport_id',
-                  'id',
-                  'price',
-                  'flight_date_time',
-                  'aircompany_name',
-                  'scraping_timestamp',
-                  'duration_time',
-                  'layovers']]
-    tickets_df.columns = ['start_airport_id',
-                          'end_airport_id',
-                          'price',
-                          'flight_date_time',
-                          'aircompany_name',
-                          'scraping_timestamp',
-                          'duration_time',
-                          'layovers']
-
-    tickets_df = pd.merge(tickets_df, aircompany_df, left_on='aircompany_name', right_on='name')
-    tickets_df = tickets_df.loc[:,
-                 ['start_airport_id',
-                  'end_airport_id',
-                  'id',
-                  'price',
-                  'flight_date_time',
-                  'scraping_timestamp',
-                  'duration_time',
-                  'layovers']]
-    tickets_df.columns = ['start_airport_id',
-                          'end_airport_id',
-                          'aircompany_id',
-                          'price',
-                          'flight_date_time',
-                          'scraping_timestamp',
-                          'duration_time',
-                          'layovers']
-    tickets_df.index.name = 'id'
+    tickets_df = pd.read_csv(config['last_request_data'])
     engine = get_engine(config)
+    tickets_df = add_id_from_sql(dataframe=tickets_df, df_column='aircompany_name',
+                                 db_column='name',db_table_name='aircompany',engine=engine)
+    tickets_df = add_id_from_sql(dataframe=tickets_df, df_column='start_airport_code',
+                                 db_column='code', db_table_name='airport',engine=engine)
+    tickets_df = add_id_from_sql(dataframe=tickets_df, df_column='end_airport_code',
+                                 db_column='code',db_table_name='airport',engine=engine)
+    column_mapping = {'id_x': 'aircompany_id', 'id_y':'start_airport_id', 'id':'end_airport_id'}
+    tickets_df = tickets_df.rename(columns=column_mapping)
+    tickets_df =tickets_df.loc[:,['start_airport_id', 'end_airport_id', 'aircompany_id', 'price','flight_date_time',
+                                  'scraping_timestamp','duration_time','layovers']]
     tickets_df=tickets_df[tickets_df['flight_date_time']!='None']
     tickets_df['flight_date_time'] = pd.to_datetime(tickets_df['flight_date_time'])
     tickets_df['scraping_timestamp'] = pd.to_datetime(tickets_df['scraping_timestamp'])
     tickets_df['scraping_timestamp']=tickets_df['scraping_timestamp'].dt.round('S')
-
-    try :
-        tickets_df.to_sql('ticket', con=engine, if_exists='replace', index=True)
-        logging.info(f" airport table in DB was created successfully")
-
-    except :
-        logging.warning(f" airport table in DB was NOT created successfully")
+    tickets_df['price']=tickets_df['price'].astype('int')
+    add_dataframe_to_sqltable(tickets_df,engine,'ticket', False,logging)
 
     return tickets_df
 
@@ -313,6 +323,8 @@ def make_references_airport_city (logging, config) :
     query = F"USE {config['db_name']};"
     cursor.execute(query)
     try :
+        query = "ALTER TABLE airport MODIFY city_id INT;"
+        cursor.execute(query)
         query = "ALTER TABLE airport ADD CONSTRAINT fk_city_id FOREIGN KEY (city_id) REFERENCES city(id);"
         cursor.execute(query)
     except :
@@ -334,6 +346,14 @@ def make_references_ticket (logging, config) :
     cursor = get_mysql_cursor()
     query = F"USE {config['db_name']};"
     cursor.execute(query)
+
+    query = "ALTER TABLE ticket MODIFY start_airport_id INT;"
+    cursor.execute(query)
+    query = "ALTER TABLE ticket MODIFY end_airport_id INT;"
+    cursor.execute(query)
+    query = "ALTER TABLE ticket MODIFY aircompany_id INT;"
+    cursor.execute(query)
+
     query = "ALTER TABLE ticket ADD CONSTRAINT fk_start_airport_id FOREIGN KEY (start_airport_id) REFERENCES airport(id);"
     cursor.execute(query)
     query = "ALTER TABLE ticket ADD CONSTRAINT fk_end_airport_id FOREIGN KEY (end_airport_id) REFERENCES airport(id);"
@@ -351,7 +371,6 @@ def save_results_in_database (config, logging) :
          logging (logging.Logger): A Logger object to log messages during the function execution.
      """
     cursor = set_up_db(config["db_name"], logging)
-    drop_tables(config)
     unique_cities, airport_cities_key = fill_city_table(logging, config)
     airport_df = fill_airport_table(logging, config, unique_cities, airport_cities_key)
     aircompany_df = fill_aircompany_table(logging, config)
@@ -359,24 +378,3 @@ def save_results_in_database (config, logging) :
     make_references(logging, config)
 
 
-def drop_tables (config) :
-    """
-    Drops the airport, city, aircompany, and ticket tables from the database if they exist.
-
-    Args:
-        config (dict): A configuration dictionary containing settings and file paths.
-    """
-    cursor = get_mysql_cursor()
-    query = F"USE {config['db_name']};"
-    cursor.execute(query)
-    try :
-        drop_city = "DROP TABLES city"
-        drop_airport = "DROP TABLES airport"
-        drop_aircompany = "DROP TABLES aircompany"
-        drop_ticket = "DROP TABLES ticket"
-        cursor.execute(drop_airport)
-        cursor.execute(drop_city)
-        cursor.execute(drop_aircompany)
-        cursor.execute(drop_ticket)
-    except :
-        pass
