@@ -12,7 +12,7 @@ def get_date_range (input_ddmmddmm=None) :
         days_number: - number of days in suitable range
     """
     incorrect_date = True
-    if input_ddmmddmm == None :
+    if input_ddmmddmm is None :
         start_point = input("insert date range DDMMDDMM (for May 2023 - 01053005):")
     else :
         start_point = input_ddmmddmm
@@ -155,13 +155,13 @@ def set_up_parser () :
     parser.add_argument("-eac", "--end_ariport_code", type=str, required=False,
                         help="3 letters of arport code e.g TBS  to end your flight")
     parser.add_argument("-dr", "--daterange", type=str, required=False,
-                        help="date range DDMMDDMM (for September 2023 - 01093009")
+                        help="date range DDMMDDMM (for September 2023 - 01093009)")
     parser.add_argument("-db", "--database", action="store_true", help="do we need database (yes/no)")
     args = parser.parse_args()
 
     if len(sys.argv) == 1 :
-        start_aero_code = 'SVO'
-        start_date, days_number = get_date_range('11063006')
+        start_aero_code = 'TLV'
+        start_date, days_number = get_date_range('12061206')
         end_point = ['SVO', 'TBS','EVN','ALA','BEG','GYD','TAS', 'PEK','JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
         'FCO', 'LGW', 'CPH']
         need_database = True

@@ -14,7 +14,7 @@ from capcha_speech_recognition import g_capcha_solver
 from mysql_scraper import save_results_in_database
 from interface import set_up_parser
 from proxies import save_file_api_proxy_list
-from proxies import check_proxy_responce
+from proxies import check_proxy_response
 
 CONFIG_NAME = 'conf.json'
 
@@ -105,7 +105,7 @@ def extract_data_page (driver, current_ticket, config) :
         prices = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="price"]')))
         for price in prices :
             ticket_web_element = get_full_ticket_we(price, config)
-            if ticket_web_element != None :
+            if ticket_web_element is not None :
                 return_price = int(price.text.replace(",", "").replace("$", "").replace(" ", ""))
                 current_ticket.price = return_price
                 extract_aicompany(ticket_web_element, current_ticket)
@@ -155,7 +155,7 @@ def extract_layover (ticket_web_element, current_ticket, config) :
             ticket_containing_stop_element = get_full_ticket_we(stop_element, config)
             if ticket_containing_stop_element == ticket_web_element :
                 layover_count = +1
-            if (layover_count > 0) & (ticket_containing_stop_element == None) :
+            if (layover_count > 0) & (ticket_containing_stop_element is None) :
                 break
     current_ticket.layover_info = layover_count
 
@@ -209,6 +209,7 @@ def page_processing_slnm (url, config) :
     Use selenium
     Returns:
         price for the cheapest ticket
+        :param config:
     """
     time.sleep(random.random() * 2)
     parameters = re.search('.*request', url).group(0)[-18 :-7]
@@ -218,17 +219,20 @@ def page_processing_slnm (url, config) :
                          date=parameters[3 :-4],
                          dest_airport=dest_airport)
 
-    driver = check_proxy_responce(url, config)
+    driver = check_proxy_response(url, config)
 
-    if extract_data_page(driver, page_ticket, config) == None :
+    if extract_data_page(driver, page_ticket, config) is None :
         g_capcha_solver(driver, logging)
 
     with open(config['result_file'], 'a') as result_file :
         result_file.write(str(page_ticket) + '\n')
+
+    with open(config['last_request_data'], 'a') as result_file :
+        result_file.write(str(page_ticket) + '\n')
+
     print(str(page_ticket))
     logging.info(str(page_ticket) + '\n')
     return page_ticket
-
 
 
 def m_thread_batch_scraping (list_of_urls, config) :
@@ -238,6 +242,7 @@ def m_thread_batch_scraping (list_of_urls, config) :
         list_of_urls:  list of urls for combination of start point, date, and en point
     Use selenium
     Returns:
+    :param config:
     """
 
     threads = []
@@ -264,6 +269,7 @@ def get_url_list (start_code, start_date, days_number, end_list, config, pass_nu
 
     Returns:
         list_of_url to search
+        :param pass_num:
     """
     logging.info(f"start get_url_list with: {start_code, start_date, days_number, end_list, config,}")
     list_of_url = []
@@ -303,12 +309,15 @@ def load_scraper_config () :
         return
 
 
-def intiniate_result_file (config) :
-    with open(config['result_file'], "r") as result_file :
+def intiniate_result_file (filename) :
+    if not os.path.exists(filename) :
+        with open(filename, 'w') as file :
+            pass
+    with open(filename, "r") as result_file :
         lines = result_file.readlines()
         num_lines = len(lines)
     if num_lines == 0 :
-        with open(config['result_file'], 'w') as result_file :
+        with open(filename, 'w') as result_file :
             result_file.write("start_airport_code,"
                               "start_city_name,"
                               "end_airport_code,"
@@ -331,22 +340,25 @@ def scrape_per_batch (url_list, config, logging) :
         if (len(url_list) > 0) and (len(url_list) < config['batch_size']) :
             m_thread_batch_scraping(url_list, config)
 
-
 def main () :
     pd.set_option('display.max_columns', None)
     config = load_scraper_config()
     scr_pam_list, need_database = set_up_parser()
-    intiniate_result_file(config)
+    # intiniate_result_file(config['result_file'])
+    intiniate_result_file(config['last_request_data'])
     start = datetime.datetime.now()
-    save_file_api_proxy_list(config)
-    url_list = get_url_list(start_code=scr_pam_list[0],
-                            start_date=scr_pam_list[1],
-                            days_number=scr_pam_list[2],
-                            end_list=scr_pam_list[3],
-                            config=config)
-    scrape_per_batch(url_list, config, logging)
+    # if config['use_proxy_api'] == 1 :
+    #     save_file_api_proxy_list(config)
+    # url_list = get_url_list(start_code=scr_pam_list[0],
+    #                         start_date=scr_pam_list[1],
+    #                         days_number=scr_pam_list[2],
+    #                         end_list=scr_pam_list[3],
+    #                         config=config)
+    # scrape_per_batch(url_list, config, logging)
     if need_database :
         save_results_in_database(config, logging)
+    # if os.path.exists(config['last_request_data']) :
+    #     os.remove(config['last_request_data'])
     end = datetime.datetime.now()
     logging.info(f"this takes: {end - start} sec ")
 
