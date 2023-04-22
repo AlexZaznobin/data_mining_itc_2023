@@ -1,7 +1,4 @@
 import random
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -14,9 +11,10 @@ import re
 import os
 import threading
 from capcha_speech_recognition import g_capcha_solver
-from interface import get_scraping_parameters_list
 from mysql_scraper import save_results_in_database
 from interface import set_up_parser
+from proxies import save_file_api_proxy_list
+from proxies import check_proxy_responce
 
 CONFIG_NAME = 'conf.json'
 
@@ -99,6 +97,7 @@ def get_airport_codes (file_name) :
 
 def extract_data_page (driver, current_ticket, config) :
     currency, currency_position = currency_check(driver)
+    return_price = None
     try :
         time.sleep(random.random())
         # Wait up to 20 seconds for the element to be present on the page
@@ -115,7 +114,7 @@ def extract_data_page (driver, current_ticket, config) :
                 extract_layover(ticket_web_element, current_ticket, config)
                 break
     except :
-        return_price = None
+        pass
 
     return return_price
 
@@ -186,10 +185,13 @@ def currency_check (driver) :
 def extract_aicompany (driver, current_ticket) :
     wait = WebDriverWait(driver, 1)
     text_elements = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
-    for i, text_element in enumerate(text_elements) :
-        if (int(text_element.text.replace(",", "").replace("$", "").replace(" ", "")) == current_ticket.price) :
-            current_ticket.air_company = text_elements[i + 3].text
-            return True
+    if len(text_elements) < 4 :
+        current_ticket.air_company = "Multiple"
+    else :
+        for i, text_element in enumerate(text_elements) :
+            if (int(text_element.text.replace(",", "").replace("$", "").replace(" ", "")) == current_ticket.price) :
+                current_ticket.air_company = text_elements[i + 3].text
+                return True
 
 
 def extract_city (driver, current_ticket) :
@@ -208,28 +210,25 @@ def page_processing_slnm (url, config) :
     Returns:
         price for the cheapest ticket
     """
+    time.sleep(random.random() * 2)
     parameters = re.search('.*request', url).group(0)[-18 :-7]
     start_airport = Airport(code=parameters[:3])
     dest_airport = Airport(code=parameters[-4 :-1])
     page_ticket = Ticket(start_airport=start_airport,
                          date=parameters[3 :-4],
                          dest_airport=dest_airport)
-    service = Service('/usr/local/bin/chromedriver')
-    chrome_options = Options()
-    for chome_arg in config['chome_args'] :
-        chrome_options.add_argument(chome_arg)
-    driver = webdriver.Chrome(service=service, options=chrome_options)
-    driver.get(url)
+
+    driver = check_proxy_responce(url, config)
 
     if extract_data_page(driver, page_ticket, config) == None :
         g_capcha_solver(driver, logging)
-        extract_data_page(driver, page_ticket, config)
 
     with open(config['result_file'], 'a') as result_file :
         result_file.write(str(page_ticket) + '\n')
     print(str(page_ticket))
     logging.info(str(page_ticket) + '\n')
     return page_ticket
+
 
 
 def m_thread_batch_scraping (list_of_urls, config) :
@@ -240,7 +239,9 @@ def m_thread_batch_scraping (list_of_urls, config) :
     Use selenium
     Returns:
     """
+
     threads = []
+
     for index, url in enumerate(list_of_urls) :
         t = threading.Thread(target=page_processing_slnm, args=(url, config))
         threads.append(t)
@@ -327,7 +328,7 @@ def scrape_per_batch (url_list, config, logging) :
     for i in range(batch_number) :
         m_thread_batch_scraping(url_list[:config['batch_size']], config)
         url_list = url_list[config['batch_size'] :]
-        if len(url_list) > 0 and len(url_list) < config['batch_size'] :
+        if (len(url_list) > 0) and (len(url_list) < config['batch_size']) :
             m_thread_batch_scraping(url_list, config)
 
 
@@ -337,6 +338,7 @@ def main () :
     scr_pam_list, need_database = set_up_parser()
     intiniate_result_file(config)
     start = datetime.datetime.now()
+    save_file_api_proxy_list(config)
     url_list = get_url_list(start_code=scr_pam_list[0],
                             start_date=scr_pam_list[1],
                             days_number=scr_pam_list[2],
