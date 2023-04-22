@@ -1,5 +1,0 @@
-start_airport_code,start_city_name,end_airport_code,end_city_name,price,aircompany_name,flight_date_time,scraping_timestamp,duration_time,layovers
-TLV,Tel Aviv-Yafo,CDG,Paris,192,El Al Israel Airlines,2023-06-12 17:15:00,2023-04-22 19:23:15.276182,Duration: 4h 55m,0
-TLV,None,GYD,None,None,None,None,2023-04-22 19:23:14.287096,None,None
-TLV,None,ALA,None,None,None,None,2023-04-22 19:23:14.068914,None,None
-TLV,Tel Aviv-Yafo,PEK,Beijing,553,Cheapest,2023-06-12 11:40:00,2023-04-22 19:23:14.713073,Duration: 1d 8h 45m,1
