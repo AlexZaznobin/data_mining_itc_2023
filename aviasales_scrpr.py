@@ -360,6 +360,8 @@ def scrape_per_batch (url_list, config, logging) :
 
     if config['search_until_it_find'] == 1 :
         if len(unsuccessful_list) != 0 :
+            if config['use_proxy'] == 1 :
+                save_file_api_proxy_list(config)
             scrape_per_batch(unsuccessful_list, config, logging)
 
 
