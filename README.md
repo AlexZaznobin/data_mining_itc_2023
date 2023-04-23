@@ -20,13 +20,13 @@ This Python script is designed to scrape ticket prices from a website using a co
 -----------------
 The script accepts the following command-line arguments to define the search parameters:
 
-1. -sac, --start_ariport_code: (Optional) The 3-letter airport code of the starting airport (e.g., TLV). If not provided, the default value is 'TLV'.
+1. -sac, --start_ariport_code:  The 3-letter airport code of the starting airport (e.g., TLV). You can provide multiple airport codes separated by indent.
 
-2. -eac, --end_ariport_code: (Optional) The 3-letter airport code of the destination airport(s) (e.g., TBS). You can provide multiple airport codes separated by commas. If not provided, a default set of destination airports will be used.
+2. -eac, --end_ariport_code: The 3-letter airport code of the destination airport(s) (e.g., TBS). You can provide multiple airport codes separated by indent. 
 
-3. -dr, --daterange: (Optional) The date range for the search, provided as a single string in the format DDMMDDMM
+3. -dr, --daterange: The date range for the search, provided as a single string in the format DDMMDDMM
 
-4. -db, --database: (Optional) A flag indicating if the database should be used. Include this flag if you want to use the database; otherwise, the database will not be used.
+4. -db, --database: A flag indicating if the database should be used. Include this flag if you want to use the database; otherwise, the database will not be used.
 
 Example Usage:
 1. To save results to database, you need to insert your mysql password to the conf.json file in the mysql_pwd parameter. 
@@ -40,12 +40,12 @@ Example Usage:
 Note: Make sure you have the required libraries installed and the necessary configuration set up before running the script.
 
 #### Deafult parameters: 
-1. -sac TLV
-2. -eac ['SVO', 'TBS','EVN','ALA','BEG','GYD','TAS', 'PEK','JFK', 'SIN', 'HND', 'ICN', 'DOH', 'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
-        'FCO', 'LGW', 'CPH']
-3. -dr 14091409
-4. -db False
-
+  --start_ariport_code ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
+                           'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
+                           'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW', 'ISL']
+  --daterange: 13061506
+  --end_ariport_code:  ['TLV', 'HFA', 'ETM']
+  need_database = True
 
 #### Proxy:
 The source site can try to block you scraping process by CAPCHA, if you are trying to get a more than some small amount of tickets per day.
