@@ -36,13 +36,15 @@ def save_file_api_proxy_list (config) :
     Returns:
         None
     """
-    api_url = get_api_proxy_link(config)
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome = webdriver.Chrome(options=chrome_options)
-    chrome.get(api_url)
-    body_text = chrome.page_source
-    proxi_text = re.sub(r'<.*>', '', body_text)
+    proxi_text = ""
+    if config['use_proxy_api'] == 1 :
+        api_url = get_api_proxy_link(config)
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome = webdriver.Chrome(options=chrome_options)
+        chrome.get(api_url)
+        body_text = chrome.page_source
+        proxi_text = re.sub(r'<.*>', '', body_text)
 
     with open(config['good_proxy'], 'r') as result_file :
         old_list_of_proxy = result_file.readlines()
@@ -104,10 +106,15 @@ def check_proxy_response (url, config) :
             try :
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)
-                if (driver.title[:1] == '$' or driver.title[:1] == 'C') :
+                data_header = driver.title[2] == '.'
+                price_found = driver.title[:1] == '$'
+                cheap_header = driver.title.split()[0] == 'Cheap'
+                if (cheap_header or price_found or data_header) :
                     success_connection = 1
                     with open(config["great_proxy"], 'a') as result_file :
                         result_file.write(random_proxy + '\n')
+                else :
+                    driver.close()
             except :
                 break_index = break_index + 1
                 driver.close()

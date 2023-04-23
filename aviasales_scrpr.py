@@ -191,6 +191,7 @@ def extract_aicompany (driver, current_ticket) :
         for i, text_element in enumerate(text_elements) :
             if (int(text_element.text.replace(",", "").replace("$", "").replace(" ", "")) == current_ticket.price) :
                 current_ticket.air_company = text_elements[i + 3].text
+                current_ticket.air_company = current_ticket.air_company.replace(",", "")
                 return True
 
 
@@ -201,7 +202,7 @@ def extract_city (driver, current_ticket) :
     current_ticket.dest_airport.city = city_elements[1].text
 
 
-def page_processing_slnm (url, config) :
+def page_processing_slnm (url, config, unsuccessful_list) :
     """
     get price from page
     Args:
@@ -211,7 +212,7 @@ def page_processing_slnm (url, config) :
         price for the cheapest ticket
         :param config:
     """
-    time.sleep(random.random() * 2)
+    time.sleep(random.random() * 3)
     parameters = re.search('.*request', url).group(0)[-18 :-7]
     start_airport = Airport(code=parameters[:3])
     dest_airport = Airport(code=parameters[-4 :-1])
@@ -232,10 +233,13 @@ def page_processing_slnm (url, config) :
 
     print(str(page_ticket))
     logging.info(str(page_ticket) + '\n')
+    driver.close()
+    if page_ticket.price == None :
+        unsuccessful_list.append(url)
     return page_ticket
 
 
-def m_thread_batch_scraping (list_of_urls, config) :
+def m_thread_batch_scraping (list_of_urls, config, unsuccessful_list) :
     """
     print prices to log and output
     Args:
@@ -248,7 +252,7 @@ def m_thread_batch_scraping (list_of_urls, config) :
     threads = []
 
     for index, url in enumerate(list_of_urls) :
-        t = threading.Thread(target=page_processing_slnm, args=(url, config))
+        t = threading.Thread(target=page_processing_slnm, args=(url, config, unsuccessful_list))
         threads.append(t)
     for t in threads :
         t.start()
@@ -256,7 +260,7 @@ def m_thread_batch_scraping (list_of_urls, config) :
         t.join()
 
 
-def get_url_list (start_code, start_date, days_number, end_list, config, pass_num="1") :
+def get_url_list (start_list, start_date, days_number, end_list, config, pass_num="1") :
     """
     make a list of urls for request
     Args:
@@ -271,22 +275,28 @@ def get_url_list (start_code, start_date, days_number, end_list, config, pass_nu
         list_of_url to search
         :param pass_num:
     """
-    logging.info(f"start get_url_list with: {start_code, start_date, days_number, end_list, config,}")
+    if type(start_list) != list :
+        start_list = [start_list]
+    if type(end_list) != list :
+        end_list = [end_list]
+    logging.info(f"start get_url_list with: {start_list, start_date, days_number, end_list, config,}")
     list_of_url = []
     end_of_url = "request_source=search_form"
     if days_number == 0 :
         data_code = ((start_date).strftime('%d%m'))
-        for end_code in end_list :
-            new_link = config[
-                           "link_constructor"] + start_code + data_code + end_code + pass_num + end_of_url
+        for start_code in start_list :
+            for end_code in end_list :
+                new_link = config["link_constructor"] + start_code + data_code + end_code + pass_num + end_of_url
+                list_of_url.append(new_link)
 
     for day in range(days_number) :
         delta = datetime.timedelta(days=day)
         data_code = ((start_date + delta).strftime('%d%m'))
-        for end_code in end_list :
-            new_link = config["link_constructor"] + start_code + data_code + end_code + pass_num + end_of_url
-            list_of_url.append(new_link)
-    print('get_url_list', len(list_of_url))
+        for start_code in start_list :
+            for end_code in end_list :
+                new_link = config["link_constructor"] + start_code + data_code + end_code + pass_num + end_of_url
+                list_of_url.append(new_link)
+
     logging.info(f"finish get_url_list of {len(list_of_url)} items")
     return list_of_url
 
@@ -330,15 +340,28 @@ def intiniate_result_file (filename) :
 
 
 def scrape_per_batch (url_list, config, logging) :
+    """
+      Scrapes a list of URLs in batches using multiple threads.
+
+      :param url_list: A list of URLs to scrape.
+      :param config: A dictionary of configuration options for the scraper.
+      :param logging: A logging object to record the progress and results of the scraping.
+      """
+    unsuccessful_list = []
     logging.info(f" send batch of urls size {len(url_list[:config['batch_size']])} ")
     batch_number = int(len(url_list) / config['batch_size'])
     if batch_number < 1 :
         batch_number = 1
     for i in range(batch_number) :
-        m_thread_batch_scraping(url_list[:config['batch_size']], config)
+        m_thread_batch_scraping(url_list[:config['batch_size']], config, unsuccessful_list)
         url_list = url_list[config['batch_size'] :]
         if (len(url_list) > 0) and (len(url_list) < config['batch_size']) :
-            m_thread_batch_scraping(url_list, config)
+            m_thread_batch_scraping(url_list, config, unsuccessful_list)
+
+    if config['search_until_it_find'] == 1 :
+        if len(unsuccessful_list) != 0 :
+            scrape_per_batch(unsuccessful_list, config, logging)
+
 
 def main () :
     pd.set_option('display.max_columns', None)
@@ -347,13 +370,14 @@ def main () :
     intiniate_result_file(config['result_file'])
     intiniate_result_file(config['last_request_data'])
     start = datetime.datetime.now()
-    if config['use_proxy_api'] == 1 :
+    if config['use_proxy'] == 1 :
         save_file_api_proxy_list(config)
-    url_list = get_url_list(start_code=scr_pam_list[0],
+    url_list = get_url_list(start_list=scr_pam_list[0],
                             start_date=scr_pam_list[1],
                             days_number=scr_pam_list[2],
                             end_list=scr_pam_list[3],
                             config=config)
+
     scrape_per_batch(url_list, config, logging)
     if need_database :
         save_results_in_database(config, logging)
