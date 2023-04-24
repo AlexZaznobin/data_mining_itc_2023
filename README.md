@@ -7,17 +7,24 @@ This Python script is designed to scrape ticket prices from a website using a co
 ### What is inside directory: 
 
 * conf.json - configuration
-* aviasales_scrpr.py -  executable file 
-* airports.csv - airports codes and names data 
 * requrements.txt - installed modules <i>.python3 -m pip freeze > requirements.txt<i>
+* airports.csv - airports codes and names data 
+* aviasales_scrpr.py -  executable file 
+* interface.py - interface module
+* mysql_scraper.py - mysql module
 * proxies.py - usage of proxies functional 
 * capcha_speech_recognition.py - capcha recognition functional 
 * api_module.py - api module
 
 #### Data collected:
-![aviasales scraper](https://user-images.githubusercontent.com/127748062/229361563-90ac371a-07fe-4161-9f31-4864221a1f79.png)
+![aviasales scraper (1)](https://user-images.githubusercontent.com/127748062/234117187-9f581b40-225b-4c8e-b143-35db9d8ac0da.png)
 
 #### The code creates tickets.log as output. 
+
+### Used API: 
+https://traveltables.com/compare/russia/moscow/vs/israel/tel-aviv-yafo/cost-of-living#estimate
+I collect average taxi Start, Normal Tariff for cities in table city of mysql DB.
+The free API is limited to 15 request, so taxi tariff table can be shorter than start cities and end cities of tickets list.
 
 
 #### Interface: 
@@ -47,8 +54,8 @@ Note: Make sure you have the required libraries installed and the necessary conf
   --start_ariport_code ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
                            'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
                            'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW', 'ISL']
-  --daterange: 13061506
-  --end_ariport_code:  ['TLV', 'HFA', 'ETM']
+  --daterange: 13061306
+  --end_ariport_code:  ['TLV']
   need_database = True
 
 #### Proxy:
