@@ -367,24 +367,24 @@ def main () :
     pd.set_option('display.max_columns', None)
     config = load_scraper_config()
     scr_pam_list, need_database = set_up_parser()
-    # intiniate_result_file(config['result_file'])
-    # intiniate_result_file(config['last_request_data'])
-    # start = datetime.datetime.now()
-    # if config['use_proxy'] == 1 :
-    #     save_file_api_proxy_list(config)
-    # url_list = get_url_list(start_list=scr_pam_list[0],
-    #                         start_date=scr_pam_list[1],
-    #                         days_number=scr_pam_list[2],
-    #                         end_list=scr_pam_list[3],
-    #                         config=config)
-    #
-    # scrape_per_batch(url_list, config, logging)
-    # if need_database :
-    #     save_results_in_database(config, logging)
-    # if os.path.exists(config['last_request_data']) :
-    #     os.remove(config['last_request_data'])
-    # end = datetime.datetime.now()
-    # logging.info(f"this takes: {end - start} sec ")
+    intiniate_result_file(config['result_file'])
+    intiniate_result_file(config['last_request_data'])
+    start = datetime.datetime.now()
+    if config['use_proxy'] == 1 :
+        save_file_api_proxy_list(config)
+    url_list = get_url_list(start_list=scr_pam_list[0],
+                            start_date=scr_pam_list[1],
+                            days_number=scr_pam_list[2],
+                            end_list=scr_pam_list[3],
+                            config=config)
+
+    scrape_per_batch(url_list, config, logging)
+    if need_database :
+        save_results_in_database(config, logging)
+    if os.path.exists(config['last_request_data']) :
+        os.remove(config['last_request_data'])
+    end = datetime.datetime.now()
+    logging.info(f"this takes: {end - start} sec ")
 
     make_api_price_request(config, logging)
 
