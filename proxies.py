@@ -1,6 +1,5 @@
 import random
 import time
-
 import requests
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
@@ -36,7 +35,7 @@ def save_file_api_proxy_list (config) :
     Returns:
         None
     """
-    proxi_text = ""
+    proxi_text=""
     if config['use_proxy_api'] == 1 :
         api_url = get_api_proxy_link(config)
         chrome_options = Options()
@@ -106,14 +105,14 @@ def check_proxy_response (url, config) :
             try :
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)
-                data_header = driver.title[2] == '.'
+                data_header = driver.title[2] =='.'
                 price_found = driver.title[:1] == '$'
-                cheap_header = driver.title.split()[0] == 'Cheap'
+                cheap_header = driver.title.split()[0]== 'Cheap'
                 if (cheap_header or price_found or data_header) :
                     success_connection = 1
                     with open(config["great_proxy"], 'a') as result_file :
                         result_file.write(random_proxy + '\n')
-                else :
+                else:
                     driver.close()
             except :
                 break_index = break_index + 1

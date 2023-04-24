@@ -136,6 +136,18 @@ def fill_airport_table (logging, config, unique_cities, airport_cities_key) :
 
 
 def add_id_from_sql (dataframe, df_column, db_column, db_table_name, engine) :
+    """
+      Args:
+      dataframe (pandas.DataFrame): The DataFrame to which the ID column will be added.
+      df_column (str): The name of the column in the DataFrame that contains the values to be mapped to IDs.
+      db_column (str): The name of the column in the SQL table that contains the values to be mapped to IDs.
+      db_table_name (str): The name of the SQL table that contains the mapping between values and IDs.
+      engine (sqlalchemy.engine.Engine): The SQLAlchemy engine object that connects to the database.
+
+      Returns:
+      pandas.DataFrame
+
+      """
     inspector = inspect(engine)
     if inspector.has_table(db_table_name) :
         sql_query = f"SELECT {db_column}, id FROM {db_table_name}"
@@ -225,13 +237,13 @@ def add_dataframe_to_sqltable (dataframe, engine, db_table_name, table_column, l
        """
     if table_column != False :
         dataframe = get_newitems(dataframe, engine, db_table_name, table_column)
+    dataframe.to_sql(db_table_name, con=engine, if_exists='append', index=False)
     try :
-        dataframe.to_sql(db_table_name, con=engine, if_exists='append', index=False)
         with engine.connect() as conn :
             conn.execute(text(f"ALTER TABLE {db_table_name} ADD id INT PRIMARY KEY AUTO_INCREMENT"))
         logging.info(f" {db_table_name} table in DB was created successfully")
     except :
-        logging.warning(f" city table in DB was NOT created successfully")
+        logging.info(f" {db_table_name} table in DB was not created")
 
 
 def get_newitems (dataframe, engine, db_table_name, table_column) :
@@ -260,7 +272,7 @@ def get_newitems (dataframe, engine, db_table_name, table_column) :
     return dataframe
 
 
-def fill_ticket_table (logging, config, airport_df, aircompany_df) :
+def fill_ticket_table (logging, config) :
     """
        Creates and fills the 'ticket' table in the MySQL database using the provided config and DataFrames.
 
@@ -290,12 +302,22 @@ def fill_ticket_table (logging, config, airport_df, aircompany_df) :
     tickets_df['scraping_timestamp'] = pd.to_datetime(tickets_df['scraping_timestamp'])
     tickets_df['scraping_timestamp'] = tickets_df['scraping_timestamp'].dt.round('S')
     tickets_df['price'] = tickets_df['price'].astype('int')
-    add_dataframe_to_sqltable(tickets_df, engine, 'ticket', False, logging)
+    tickets_df = tickets_df.drop_duplicates(subset=tickets_df.columns[tickets_df.columns != 'scraping_timestamp'],
+                                            keep='last')
 
+    tickets_df_sql = get_table_to_df(config, 'ticket')
+    try:
+        new_tickets = pd.merge(tickets_df.loc[:, tickets_df.columns[tickets_df.columns != 'scraping_timestamp']],
+                               tickets_df_sql.loc[:, tickets_df.columns[tickets_df.columns != 'scraping_timestamp']],
+                               how='left', indicator=True)
+        new_tickets = new_tickets[new_tickets['_merge'] == "left_only"].drop(['_merge'], axis=1)
+    except:
+        new_tickets = tickets_df
+    add_dataframe_to_sqltable(new_tickets, engine, 'ticket', False, logging)
     return tickets_df
 
 
-def make_references (logging, config) :
+def make_references (config) :
     """
     Calls functions to create foreign key references in the database tables.
 
@@ -303,11 +325,11 @@ def make_references (logging, config) :
         logging (logging.Logger): A Logger object to log messages during the function execution.
         config (dict): A configuration dictionary containing settings and file paths.
     """
-    make_references_airport_city(logging, config)
-    make_references_ticket(logging, config)
+    make_references_airport_city(config)
+    make_references_ticket(config)
 
 
-def make_references_airport_city (logging, config) :
+def make_references_airport_city (config) :
     """
     Creates a foreign key reference between the airport and city tables in the database.
 
@@ -321,7 +343,7 @@ def make_references_airport_city (logging, config) :
     make_reference(cursor, "airport", "city_id", "city", "id")
 
 
-def make_references_ticket (logging, config) :
+def make_references_ticket (config) :
     """
        Creates foreign key references in the ticket table in the database.
 
@@ -336,6 +358,19 @@ def make_references_ticket (logging, config) :
     make_reference(cursor, "ticket", "start_airport_id", "airport", "id")
     make_reference(cursor, "ticket", "end_airport_id", "airport", "id")
     make_reference(cursor, "ticket", "aircompany_id", "aircompany", "id")
+
+
+def get_table_to_df (config, db_table_name) :
+    engine = get_engine(config)
+    inspector = inspect(engine)
+    if inspector.has_table(db_table_name) :
+        sql_query = f"SELECT * FROM {db_table_name}"
+        with engine.connect() as conn :
+            query = conn.execute(text(sql_query))
+        dataframe = pd.DataFrame(query.fetchall())
+        return dataframe
+    else :
+        return None
 
 
 def make_reference (cursor, table_fk, column_fk, table_pk, column_pk) :
@@ -363,7 +398,7 @@ def save_results_in_database (config, logging) :
      """
     cursor = set_up_db(config["db_name"], logging)
     unique_cities, airport_cities_key = fill_city_table(logging, config)
-    airport_df = fill_airport_table(logging, config, unique_cities, airport_cities_key)
-    aircompany_df = fill_aircompany_table(logging, config)
-    ticket_df = fill_ticket_table(logging, config, airport_df, aircompany_df)
-    make_references(logging, config)
+    fill_airport_table(logging, config, unique_cities, airport_cities_key)
+    fill_aircompany_table(logging, config)
+    fill_ticket_table(logging, config)
+    make_references(config)

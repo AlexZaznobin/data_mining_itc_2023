@@ -184,4 +184,4 @@ def set_demo_parameters():
         ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
                    'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
                    'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW', 'ISL'] ,
-        start_date, days_number, ['TLV', 'HFA', 'ETM']], True
+        start_date, days_number, ['TLV']], True
