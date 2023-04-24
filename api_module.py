@@ -99,9 +99,9 @@ def make_api_price_request (config, logging) :
     city_db = get_table_to_df(config, 'city')
     api_city_df = pd.read_csv('api_city_df.csv')
     city_wide_data = pd.merge(city_db, api_city_df, how='inner', left_on='name', right_on='city_name')
-    city_wide_data['Taxi_price_per_km'] = city_wide_data.apply(get_taxi_price, axis=1)
-    df_to_load = city_wide_data.loc[:, ['id', 'Taxi_price_per_km']]
-    df_to_load = df_to_load.loc[df_to_load['Taxi_price_per_km'] != 'no_data_from_api', :]
+    city_wide_data['taxi_price_per_km'] = city_wide_data.apply(get_taxi_price, axis=1)
+    df_to_load = city_wide_data.loc[:, ['id', 'taxi_price_per_km']]
+    df_to_load = df_to_load.loc[df_to_load['taxi_price_per_km'] != 'no_data_from_api', :]
     df_to_load = df_to_load.rename(columns={'id' : 'city_id'})
     engine = get_engine(config)
     add_dataframe_to_sqltable(df_to_load, engine, 'taxi', False, logging)
