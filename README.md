@@ -39,6 +39,12 @@ The script accepts the following command-line arguments to define the search par
 
 4. -db, --database: A flag indicating if the database should be used. Include this flag if you want to use the database; otherwise, the database will not be used.
 
+5. Instead of using some specified code for the airport e.g. 'TLV' 
+value of start_ariport_code and end_ariport_code can 'any' can be set to 'any'. 
+Script with this parameter check all availibe arports 9766 airports. 
+This request will take a lot of time/proxy servers to scrape.
+Take in account that scraping speed is about 100 tickets per hour. 
+
 Example Usage:
 1. To save results to database, you need to insert your mysql password to the conf.json file in the mysql_pwd parameter. 
 

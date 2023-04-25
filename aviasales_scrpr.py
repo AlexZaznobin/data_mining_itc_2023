@@ -15,7 +15,7 @@ from mysql_scraper import save_results_in_database
 from interface import set_up_parser
 from proxies import save_file_api_proxy_list
 from proxies import check_proxy_response
-
+from api_module import make_api_price_request
 CONFIG_NAME = 'conf.json'
 
 
@@ -96,17 +96,16 @@ def get_airport_codes (file_name) :
 
 
 def extract_data_page (driver, current_ticket, config) :
-    currency, currency_position = currency_check(driver)
     return_price = None
     try :
+        currency, currency_position = currency_check(driver)
         time.sleep(random.random())
-        # Wait up to 20 seconds for the element to be present on the page
         wait = WebDriverWait(driver, 15)
         prices = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="price"]')))
         for price in prices :
             ticket_web_element = get_full_ticket_we(price, config)
             if ticket_web_element is not None :
-                return_price = int(price.text.replace(",", "").replace("$", "").replace(" ", ""))
+                return_price = int(price.text.replace(",", "").replace(currency, "").replace(" ", ""))
                 current_ticket.price = return_price
                 extract_aicompany(ticket_web_element, current_ticket)
                 extract_city(ticket_web_element, current_ticket)
@@ -115,7 +114,6 @@ def extract_data_page (driver, current_ticket, config) :
                 break
     except :
         pass
-
     return return_price
 
 
@@ -233,11 +231,26 @@ def page_processing_slnm (url, config, unsuccessful_list) :
 
     print(str(page_ticket))
     logging.info(str(page_ticket) + '\n')
-    driver.close()
+    safe_close_chrome_window(driver)
     if page_ticket.price == None :
         unsuccessful_list.append(url)
     return page_ticket
 
+
+def safe_close_chrome_window(driver):
+    """
+    Safely closes a Chrome window using a Selenium WebDriver object.
+
+    Parameters:
+    driver (selenium.webdriver.Chrome): The WebDriver object representing the Chrome window to be closed.
+
+    Returns:
+    None
+    """
+    try:
+        driver.close()
+    except:
+        pass
 
 def m_thread_batch_scraping (list_of_urls, config, unsuccessful_list) :
     """
@@ -368,7 +381,7 @@ def scrape_per_batch (url_list, config, logging) :
 def main () :
     pd.set_option('display.max_columns', None)
     config = load_scraper_config()
-    scr_pam_list, need_database = set_up_parser()
+    scr_pam_list, need_database = set_up_parser(config)
     intiniate_result_file(config['result_file'])
     intiniate_result_file(config['last_request_data'])
     start = datetime.datetime.now()
@@ -387,7 +400,8 @@ def main () :
         os.remove(config['last_request_data'])
     end = datetime.datetime.now()
     logging.info(f"this takes: {end - start} sec ")
-
+    if need_database :
+        make_api_price_request(config, logging)
 
 if __name__ == "__main__" :
     main()
