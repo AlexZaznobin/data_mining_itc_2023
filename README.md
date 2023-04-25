@@ -17,7 +17,8 @@ This Python script is designed to scrape ticket prices from a website using a co
 * api_module.py - api module
 
 #### Data collected:
-![aviasales scraper (1)](https://user-images.githubusercontent.com/127748062/234117187-9f581b40-225b-4c8e-b143-35db9d8ac0da.png)
+![aviasales scraper](https://user-images.githubusercontent.com/127748062/234353828-f3e7d37f-d221-4c95-83d2-5097aa0a81a3.png)
+
 
 #### The code creates tickets.log as output. 
 
