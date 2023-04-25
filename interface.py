@@ -1,6 +1,7 @@
 import datetime
 import argparse
 import sys
+import pandas as pd
 
 
 def get_date_range (input_ddmmddmm=None) :
@@ -137,14 +138,13 @@ def get_scraping_parameters_list (airport_df) :
     return [start_aero_code, start_date, days_number, end_point]
 
 
-def set_up_parser () :
+def set_up_parser (config) :
     """
     Sets up an argument parser to handle command-line arguments for the script.
 
     Returns:
         tuple: A tuple containing a list with the following items: start airport code, start date, number of days, and a list of endpoint airport codes; and a boolean indicating if a database is needed.
     """
-
     parser = argparse.ArgumentParser(description="""You can run scrip with the following parameters:
                                              -sac --start_ariport_code 
                                              -eac --end_ariport_code 
@@ -158,18 +158,19 @@ def set_up_parser () :
                         help="date range DDMMDDMM (for September 2023 - 01093009)")
     parser.add_argument("-db", "--database", action="store_true", help="do we need database (yes/no)")
     args = parser.parse_args()
-
     if len(sys.argv) == 1 :
         [start_aero_code, start_date, days_number, end_point], need_database =set_demo_parameters()
     else :
         start_aero_code = args.start_ariport_code
         if (start_aero_code) == None :  start_aero_code = ['TLV']
+        if (start_aero_code) == ['all'] : start_aero_code=get_all(config)
+        end_point = args.end_ariport_code
+        if (end_point) == None :  end_point = ['TLV']
+        if (end_point) == ['all'] : end_point=get_all(config)
+        if type(end_point) == str : end_point = [end_point]
         datarange = args.daterange
         if (datarange) == None :  datarange = '07070707'
         start_date, days_number = get_date_range(datarange)
-        end_point = args.end_ariport_code
-        if (end_point) == None :  end_point = ['TLV']
-        if type(end_point) == str : end_point = [end_point]
         need_database = args.database
         print(need_database)
     return [start_aero_code, start_date, days_number, end_point], need_database
@@ -178,10 +179,16 @@ def set_demo_parameters():
     """
     set demo parameters
     """
-    start_date = get_date_range('13061306')[0]
-    days_number = get_date_range('13061306')[1]
+    ddmmddmm='13062006'
+    start_date = get_date_range(ddmmddmm)[0]
+    days_number = get_date_range(ddmmddmm)[1]
     return [
         ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
                    'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
                    'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW', 'ISL'] ,
         start_date, days_number, ['TLV']], True
+
+
+def get_all(config):
+    airport_df = pd.read_csv(config['airports'])
+    return airport_df['code'].unique().values

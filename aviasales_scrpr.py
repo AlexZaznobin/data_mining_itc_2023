@@ -231,11 +231,26 @@ def page_processing_slnm (url, config, unsuccessful_list) :
 
     print(str(page_ticket))
     logging.info(str(page_ticket) + '\n')
-    driver.close()
+    safe_close_chrome_window(driver)
     if page_ticket.price == None :
         unsuccessful_list.append(url)
     return page_ticket
 
+
+def safe_close_chrome_window(driver):
+    """
+    Safely closes a Chrome window using a Selenium WebDriver object.
+
+    Parameters:
+    driver (selenium.webdriver.Chrome): The WebDriver object representing the Chrome window to be closed.
+
+    Returns:
+    None
+    """
+    try:
+        driver.close()
+    except:
+        pass
 
 def m_thread_batch_scraping (list_of_urls, config, unsuccessful_list) :
     """
@@ -366,7 +381,7 @@ def scrape_per_batch (url_list, config, logging) :
 def main () :
     pd.set_option('display.max_columns', None)
     config = load_scraper_config()
-    scr_pam_list, need_database = set_up_parser()
+    scr_pam_list, need_database = set_up_parser(config)
     intiniate_result_file(config['result_file'])
     intiniate_result_file(config['last_request_data'])
     start = datetime.datetime.now()
@@ -385,8 +400,8 @@ def main () :
         os.remove(config['last_request_data'])
     end = datetime.datetime.now()
     logging.info(f"this takes: {end - start} sec ")
-
-    make_api_price_request(config, logging)
+    if need_database :
+        make_api_price_request(config, logging)
 
 if __name__ == "__main__" :
     main()

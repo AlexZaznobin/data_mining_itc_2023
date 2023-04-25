@@ -19,5 +19,5 @@
   "great_proxy": "great_proxy_list.txt",
   "good_proxy": "proxy_list.txt",
   "page_load_timeout": 5,
-  "search_until_it_find": 1
+  "search_until_it_find": 0
 }

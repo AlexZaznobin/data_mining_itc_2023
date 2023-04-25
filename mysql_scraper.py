@@ -259,9 +259,8 @@ def get_newitems (dataframe, engine, db_table_name, table_column) :
     Returns:
         data frame with new items only
     """
-
     inspector = inspect(engine)
-    if inspector.has_table(db_table_name) :
+    if inspector.has_table(db_table_name) and dataframe.shape[0]!=0 :
         sql_query = f"SELECT {table_column} FROM {db_table_name}"
         with engine.connect() as conn :
             query = conn.execute(text(sql_query))
@@ -337,10 +336,7 @@ def make_references_airport_city (config) :
         logging (logging.Logger): A Logger object to log messages during the function execution.
         config (dict): A configuration dictionary containing settings and file paths.
     """
-    cursor = get_mysql_cursor()
-    query = F"USE {config['db_name']};"
-    cursor.execute(query)
-    make_reference(cursor, "airport", "city_id", "city", "id")
+    make_reference(config, "airport", "city_id", "city", "id")
 
 
 def make_references_ticket (config) :
@@ -352,12 +348,10 @@ def make_references_ticket (config) :
            config (dict): A configuration dictionary containing settings and file paths.
        """
 
-    cursor = get_mysql_cursor()
-    query = F"USE {config['db_name']};"
-    cursor.execute(query)
-    make_reference(cursor, "ticket", "start_airport_id", "airport", "id")
-    make_reference(cursor, "ticket", "end_airport_id", "airport", "id")
-    make_reference(cursor, "ticket", "aircompany_id", "aircompany", "id")
+
+    make_reference(config, "ticket", "start_airport_id", "airport", "id")
+    make_reference(config, "ticket", "end_airport_id", "airport", "id")
+    make_reference(config, "ticket", "aircompany_id", "aircompany", "id")
 
 
 def get_table_to_df (config, db_table_name) :
@@ -373,8 +367,28 @@ def get_table_to_df (config, db_table_name) :
         return None
 
 
-def make_reference (cursor, table_fk, column_fk, table_pk, column_pk) :
-    query_reference = f"ALTER TABLE {table_fk} ADD CONSTRAINT fk_{column_fk} FOREIGN KEY ({column_fk}) REFERENCES {table_pk}({column_pk});"
+def make_reference (config, table_fk, column_fk, table_pk, column_pk) :
+    """
+      Creates a foreign key constraint between a foreign key column in a table and a primary key column in another table.
+
+      Parameters:
+      config (dict): A dictionary containing configuration parameters, including the name of the database.
+      table_fk (str): The name of the table containing the foreign key column.
+      column_fk (str): The name of the foreign key column.
+      table_pk (str): The name of the table containing the primary key column.
+      column_pk (str): The name of the primary key column.
+
+      Returns:
+      None.
+      """
+
+    cursor = get_mysql_cursor()
+    query = F"USE {config['db_name']};"
+    cursor.execute(query)
+    query_reference = f"ALTER TABLE {table_fk} " \
+                      f"ADD CONSTRAINT fk_{table_fk}_{column_fk} " \
+                      f"FOREIGN KEY ({column_fk}) " \
+                      f"REFERENCES {table_pk}({column_pk});"
     query_set_type = f"ALTER TABLE {table_fk} MODIFY {column_fk} INT;"
 
     try :
@@ -382,7 +396,7 @@ def make_reference (cursor, table_fk, column_fk, table_pk, column_pk) :
         cursor.execute(query_reference)
     except :
         drop_query_airport = f"ALTER TABLE {table_fk} " \
-                             f"DROP FOREIGN KEY fk_{column_fk};"
+                             f"DROP FOREIGN KEY fk_{table_fk}_{column_fk};"
         cursor.execute(drop_query_airport)
         cursor.execute(query_set_type)
         cursor.execute(query_reference)
