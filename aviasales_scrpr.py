@@ -352,17 +352,18 @@ def intiniate_result_file (filename) :
                               "layovers\n")
 
 
-def scrape_per_batch (url_list, config, logging) :
+def scrape_per_batch (url_list, config, logging,tolerance) :
     """
       Scrapes a list of URLs in batches using multiple threads.
 
       :param url_list: A list of URLs to scrape.
       :param config: A dictionary of configuration options for the scraper.
       :param logging: A logging object to record the progress and results of the scraping.
+      :param tolerance: amount of not fount tickets tolerance.
       """
     unsuccessful_list = []
     logging.info(f" send batch of urls size {len(url_list[:config['batch_size']])} ")
-    batch_number = int(len(url_list) / config['batch_size'])
+    batch_number = round(len(url_list) / config['batch_size']+0.5)
     if batch_number < 1 :
         batch_number = 1
     for i in range(batch_number) :
@@ -370,12 +371,11 @@ def scrape_per_batch (url_list, config, logging) :
         url_list = url_list[config['batch_size'] :]
         if (len(url_list) > 0) and (len(url_list) < config['batch_size']) :
             m_thread_batch_scraping(url_list, config, unsuccessful_list)
-
-    if config['search_until_it_find'] == 1 :
-        if len(unsuccessful_list) != 0 :
+    if config['search_tolerance_percent'] != -1 :
+        if len(unsuccessful_list) > tolerance:
             if config['use_proxy'] == 1 :
                 save_file_api_proxy_list(config)
-            scrape_per_batch(unsuccessful_list, config, logging)
+            scrape_per_batch(unsuccessful_list, config, logging,tolerance)
 
 
 def main () :
@@ -384,6 +384,7 @@ def main () :
     scr_pam_list, need_database = set_up_parser(config)
     intiniate_result_file(config['result_file'])
     intiniate_result_file(config['last_request_data'])
+
     start = datetime.datetime.now()
     if config['use_proxy'] == 1 :
         save_file_api_proxy_list(config)
@@ -392,16 +393,16 @@ def main () :
                             days_number=scr_pam_list[2],
                             end_list=scr_pam_list[3],
                             config=config)
-
-    scrape_per_batch(url_list, config, logging)
+    tolerance = config['search_tolerance_percent']/100*len(url_list)
+    scrape_per_batch(url_list, config, logging,tolerance )
     if need_database :
         save_results_in_database(config, logging)
+    if need_database :
+        make_api_price_request(config, logging)
     if os.path.exists(config['last_request_data']) :
         os.remove(config['last_request_data'])
     end = datetime.datetime.now()
     logging.info(f"this takes: {end - start} sec ")
-    if need_database :
-        make_api_price_request(config, logging)
 
 if __name__ == "__main__" :
     main()

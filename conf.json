@@ -8,7 +8,7 @@
   "chrome_args" : ["--incognito","--headless"],
   "chrome_args_1" : [1,"--headless"],
   "db_name": "avia_scraper",
-  "batch_size": 100,
+  "batch_size":10,
   "use_proxy": 1,
   "use_proxy_api": 0,
   "proxy_api_link_file": "/Users/alexanderzaznobin/Desktop/python/aviasales/proxy_api.txt",
@@ -19,5 +19,5 @@
   "great_proxy": "great_proxy_list.txt",
   "good_proxy": "proxy_list.txt",
   "page_load_timeout": 5,
-  "search_until_it_find": 1
+  "search_tolerance_percent": 10
 }

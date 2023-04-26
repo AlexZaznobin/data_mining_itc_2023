@@ -179,13 +179,13 @@ def set_demo_parameters():
     """
     set demo parameters
     """
-    ddmmddmm='13062006'
+    ddmmddmm='14091409'
     start_date = get_date_range(ddmmddmm)[0]
     days_number = get_date_range(ddmmddmm)[1]
     return [
         ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
                    'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
-                   'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW', 'ISL'] ,
+                   'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW'] ,
         start_date, days_number, ['TLV']], True
 
 

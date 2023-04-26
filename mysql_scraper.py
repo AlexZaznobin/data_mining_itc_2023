@@ -35,24 +35,55 @@ def get_engine (config) :
     Returns:
         sqlalchemy.engine.Engine: A connection engine to the MySQL database.
     """
+    mysql_password = get_mysql_pwd(config)
+    engine = create_engine(f"mysql+pymysql://root:{mysql_password}@localhost/{config['db_name']}")
+    return engine
+
+
+def get_mysql_pwd (config) :
+    """
+      Retrieve the MySQL password from the given configuration.
+
+      This function first checks if the 'mysql_pwd' key in the config dictionary
+      contains a non-empty string. If it does, the function returns that string.
+      Otherwise, it reads the password from the file specified by the 'mysql_pwd_file' key
+      in the config dictionary. If the password is still empty, a message is printed
+      instructing the user to enter the password in the configuration file.
+
+      Args:
+          config (dict): A dictionary containing the configuration information, including
+              the 'mysql_pwd' and 'mysql_pwd_file' keys.
+
+      Returns:
+          str: The MySQL password.
+
+      Example:
+          config = {
+              'mysql_pwd': '',
+              'mysql_pwd_file': 'path/to/mysql_password.txt'
+          }
+          password = get_mysql_pwd(config)
+
+      """
+    mysql_password = ""
     if config['mysql_pwd'] != "" :
         mysql_password = config['mysql_pwd']
     else :
         with open(config['mysql_pwd_file'], 'r') as file :
             mysql_password = file.read()
-    engine = create_engine(f"mysql+pymysql://root:{mysql_password}@localhost/{config['db_name']}")
-    return engine
+    if mysql_password == "" :
+        print('please enter password in conf.json file to variable mysql_pwd')
+    return mysql_password
 
 
-def get_mysql_cursor () :
+def get_mysql_cursor (config) :
     """
       Creates a MySQL connection and returns a cursor to interact with the database.
 
       Returns:
           pymysql.cursors.DictCursor: A cursor for the MySQL connection.
       """
-    with open('/Users/alexanderzaznobin/Desktop/python/pwdfld/mysql.txt', 'r') as file :
-        mysql_password = file.read()
+    mysql_password = get_mysql_pwd(config)
 
     connection = pymysql.connect(
         host='localhost',
@@ -83,7 +114,7 @@ def create_db (cursor, database_name, logging) :
         coursor_execution(cursor, query, logging)
 
 
-def set_up_db (db_name, logging) :
+def set_up_db (config, logging) :
     """
       Sets up a new MySQL database with the given name or uses the existing one.
 
@@ -95,8 +126,8 @@ def set_up_db (db_name, logging) :
           pymysql.cursors.DictCursor: A cursor for the MySQL connection.
       """
 
-    cursor = get_mysql_cursor()
-    create_db(cursor, db_name, logging)
+    cursor = get_mysql_cursor(config)
+    create_db(cursor, config['db_name'], logging)
     return cursor
 
 
@@ -127,7 +158,7 @@ def fill_airport_table (logging, config, unique_cities, airport_cities_key) :
     airport_selected = airport_selected.rename(columns=column_mapping)
     airport_selected = airport_selected.loc[:, ['code', 'name', 'city_id']]
     add_dataframe_to_sqltable(dataframe=airport_selected,
-                              engine=engine,
+                              config=config,
                               db_table_name='airport',
                               table_column='name',
                               logging=logging)
@@ -174,7 +205,7 @@ def fill_aircompany_table (logging, config) :
     aircompany = aircompany[aircompany['name'] != 'None']
     engine = get_engine(config)
     add_dataframe_to_sqltable(dataframe=aircompany,
-                              engine=engine,
+                              config=config,
                               db_table_name='aircompany',
                               table_column='name',
                               logging=logging)
@@ -210,13 +241,12 @@ def fill_city_table (logging, config) :
     unique_cities = all_cities.loc[:, ['name']].drop_duplicates()
     unique_cities = unique_cities.reset_index(drop=True)
     airport_cities_key = all_cities.loc[:, ['name', 'airport_code']]
-    engine = get_engine(config)
-    add_dataframe_to_sqltable(unique_cities, engine, 'city', 'name', logging)
+    add_dataframe_to_sqltable(unique_cities, config, 'city', 'name', logging)
     unique_cities = unique_cities.reset_index()
     return unique_cities, airport_cities_key
 
 
-def add_dataframe_to_sqltable (dataframe, engine, db_table_name, table_column, logging) :
+def add_dataframe_to_sqltable (dataframe, config, db_table_name, table_column, logging) :
     """
        Adds a Pandas DataFrame to a SQL database table and adds an ID column with AUTO_INCREMENT property.
        Adds only those data that is not doubled in table_column and data frame column.
@@ -235,8 +265,10 @@ def add_dataframe_to_sqltable (dataframe, engine, db_table_name, table_column, l
            None
 
        """
+    engine = get_engine(config)
     if table_column != False :
-        dataframe = get_newitems(dataframe, engine, db_table_name, table_column)
+        dataframe = get_newitems(dataframe, config, db_table_name, table_column)
+
     dataframe.to_sql(db_table_name, con=engine, if_exists='append', index=False)
     try :
         with engine.connect() as conn :
@@ -246,7 +278,7 @@ def add_dataframe_to_sqltable (dataframe, engine, db_table_name, table_column, l
         logging.info(f" {db_table_name} table in DB was not created")
 
 
-def get_newitems (dataframe, engine, db_table_name, table_column) :
+def get_newitems (dataframe, config, db_table_name, table_column, df_column_name=None) :
     """
     Returns a Pandas Series containing the elements in `series` that are not present in the specified SQL table column.
 
@@ -259,15 +291,22 @@ def get_newitems (dataframe, engine, db_table_name, table_column) :
     Returns:
         data frame with new items only
     """
+    if df_column_name == None :  df_column_name = table_column
+    engine = get_engine(config)
     inspector = inspect(engine)
-    if inspector.has_table(db_table_name) and dataframe.shape[0]!=0 :
+    if inspector.has_table(db_table_name) and dataframe.shape[0] != 0 :
+        set_df = set(dataframe[df_column_name].unique())
         sql_query = f"SELECT {table_column} FROM {db_table_name}"
         with engine.connect() as conn :
             query = conn.execute(text(sql_query))
-        set_df = set(dataframe[table_column].unique())
-        set_sql = set(pd.DataFrame(query.fetchall()).squeeze().unique())
+
+        df_sql = pd.DataFrame(query.fetchall())
+        if df_sql.shape[0] > 1 : set_sql = set(df_sql.squeeze())
+
+        if df_sql.shape[0] == 1 : set_sql = set(df_sql.loc[0, :])
+
         new_items = set_df.difference(set_sql)
-        dataframe = dataframe[dataframe[table_column].isin(new_items)]
+        dataframe = dataframe[dataframe[df_column_name].isin(new_items)]
     return dataframe
 
 
@@ -301,20 +340,51 @@ def fill_ticket_table (logging, config) :
     tickets_df['scraping_timestamp'] = pd.to_datetime(tickets_df['scraping_timestamp'])
     tickets_df['scraping_timestamp'] = tickets_df['scraping_timestamp'].dt.round('S')
     tickets_df['price'] = tickets_df['price'].astype('int')
-    tickets_df = tickets_df.drop_duplicates(subset=tickets_df.columns[tickets_df.columns != 'scraping_timestamp'],
-                                            keep='last')
-
+    tickets_df['layovers'] = tickets_df['layovers'].astype('int64')
+    tickets_df = tickets_df.drop_duplicates(
+        subset=tickets_df.columns[tickets_df.columns != 'scraping_timestamp'],
+        keep='last')
     tickets_df_sql = get_table_to_df(config, 'ticket')
-    try:
-        new_tickets = pd.merge(tickets_df.loc[:, tickets_df.columns[tickets_df.columns != 'scraping_timestamp']],
-                               tickets_df_sql.loc[:, tickets_df.columns[tickets_df.columns != 'scraping_timestamp']],
-                               how='left', indicator=True)
-        new_tickets = new_tickets[new_tickets['_merge'] == "left_only"].drop(['_merge'], axis=1)
-    except:
-        new_tickets = tickets_df
-    add_dataframe_to_sqltable(new_tickets, engine, 'ticket', False, logging)
+
+    if type(tickets_df_sql)!=str:
+        tickets_df_sql['layovers'] = tickets_df_sql['layovers'].astype('int64')
+        new_tickets= get_new_items_multiple(tickets_df, tickets_df_sql, 'scraping_timestamp')
+    else:
+        new_tickets=tickets_df
+    add_dataframe_to_sqltable(new_tickets, config, 'ticket', False, logging)
     return tickets_df
 
+def get_new_items_multiple(last_req_df,sql_df,column_to_exclude):
+    """
+            Get new items in a DataFrame by comparing it with another DataFrame based on specified columns.
+
+            This function performs a left merge on the specified columns (excluding the column_to_exclude) and
+            returns a new DataFrame containing the rows that exist only in the left DataFrame (last_req_df).
+
+            Args:
+                last_req_df (pd.DataFrame): The DataFrame to find new items in.
+                sql_df (pd.DataFrame): The DataFrame to compare with.
+                column_to_exclude (str): The column to exclude from the merge.
+
+            Returns:
+                pd.DataFrame: A new DataFrame containing the new items found in last_req_df.
+
+            Raises:
+                None: If an error occurs, the original DataFrame (last_req_df) is returned.
+            """
+    try:
+        merge_columns = list(
+            last_req_df.loc[:, last_req_df.columns[last_req_df.columns != column_to_exclude]].columns.values)
+        new_df= pd.merge(last_req_df,sql_df,
+                                   on = merge_columns,
+                                   how='left', indicator=True)
+        new_df = new_df[new_df['_merge'] == "left_only"].drop(['_merge'], axis=1)
+        column_mapping = {'scraping_timestamp_x' : 'scraping_timestamp'}
+        new_df = new_df.rename(columns=column_mapping)
+        new_df=new_df.loc[:,new_df.columns.isin(last_req_df.columns.values)]
+    except :
+        new_df = last_req_df
+    return new_df
 
 def make_references (config) :
     """
@@ -348,7 +418,6 @@ def make_references_ticket (config) :
            config (dict): A configuration dictionary containing settings and file paths.
        """
 
-
     make_reference(config, "ticket", "start_airport_id", "airport", "id")
     make_reference(config, "ticket", "end_airport_id", "airport", "id")
     make_reference(config, "ticket", "aircompany_id", "aircompany", "id")
@@ -364,7 +433,7 @@ def get_table_to_df (config, db_table_name) :
         dataframe = pd.DataFrame(query.fetchall())
         return dataframe
     else :
-        return None
+        return 'no table exist'
 
 
 def make_reference (config, table_fk, column_fk, table_pk, column_pk) :
@@ -382,7 +451,7 @@ def make_reference (config, table_fk, column_fk, table_pk, column_pk) :
       None.
       """
 
-    cursor = get_mysql_cursor()
+    cursor = get_mysql_cursor(config)
     query = F"USE {config['db_name']};"
     cursor.execute(query)
     query_reference = f"ALTER TABLE {table_fk} " \
@@ -410,7 +479,7 @@ def save_results_in_database (config, logging) :
          config (dict): A configuration dictionary containing settings and file paths.
          logging (logging.Logger): A Logger object to log messages during the function execution.
      """
-    cursor = set_up_db(config["db_name"], logging)
+    set_up_db(config, logging)
     unique_cities, airport_cities_key = fill_city_table(logging, config)
     fill_airport_table(logging, config, unique_cities, airport_cities_key)
     fill_aircompany_table(logging, config)
