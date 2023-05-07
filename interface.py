@@ -2,7 +2,7 @@ import datetime
 import argparse
 import sys
 import pandas as pd
-
+from mysql_scraper import get_table_to_df
 
 def get_date_range (input_ddmmddmm=None) :
     """
@@ -179,16 +179,19 @@ def set_demo_parameters():
     """
     set demo parameters
     """
-    ddmmddmm='13062006'
+    ddmmddmm='14091409'
     start_date = get_date_range(ddmmddmm)[0]
     days_number = get_date_range(ddmmddmm)[1]
     return [
         ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
                    'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
-                   'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW', 'ISL'] ,
+                   'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW'] ,
         start_date, days_number, ['TLV']], True
 
 
 def get_all(config):
     airport_df = pd.read_csv(config['airports'])
-    return airport_df['code'].unique().values
+    return list(set(airport_df['code']))
+
+
+

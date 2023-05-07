@@ -99,7 +99,6 @@ def check_proxy_response (url, config) :
     if config['use_proxy'] == 1 :
         while success_connection == 0 and break_index < config['break_proxy_index'] :
             with open(config['good_proxy'], 'r') as result_file :
-
                 proxy_list = list(set(result_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
             try :
@@ -110,6 +109,10 @@ def check_proxy_response (url, config) :
                 cheap_header = driver.title.split()[0]== 'Cheap'
                 if (cheap_header or price_found or data_header) :
                     success_connection = 1
+                    with open(config['great_proxy'], 'r') as result_file :
+                        proxy_list = list(set(result_file.readlines()))
+                    with open(config["great_proxy"], 'w') as result_file :
+                        result_file.writelines("%s" % item for item in proxy_list)
                     with open(config["great_proxy"], 'a') as result_file :
                         result_file.write(random_proxy + '\n')
                 else:
@@ -120,7 +123,7 @@ def check_proxy_response (url, config) :
     else :
         driver = set_up_driver(config)
         driver.get(url)
-        time.sleep(10)
+        time.sleep(config['page_load_timeout'])
     return driver
 
 

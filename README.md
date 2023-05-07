@@ -41,7 +41,7 @@ The script accepts the following command-line arguments to define the search par
 4. -db, --database: A flag indicating if the database should be used. Include this flag if you want to use the database; otherwise, the database will not be used.
 
 5. Instead of using some specified code for the airport e.g. 'TLV' 
-value of start_ariport_code and end_ariport_code can 'any' can be set to 'any'. 
+value of start_ariport_code and end_ariport_code can be set to 'all'. 
 Script with this parameter check all availibe arports 9766 airports. 
 This request will take a lot of time/proxy servers to scrape.
 Take in account that scraping speed is about 100 tickets per hour. 
@@ -57,13 +57,15 @@ Example Usage:
 
 Note: Make sure you have the required libraries installed and the necessary configuration set up before running the script.
 
-#### if no arguments are proceed demotsration parameters are used: 
-  --start_ariport_code ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
-                           'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
-                           'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW', 'ISL']
-  --daterange: 13061306
-  --end_ariport_code:  ['TLV']
-  need_database = True
+
+#### Deafult parameters: 
+1. -sac TLV
+2. -eac ['SVO', 'TBS', 'EVN', 'ALA', 'BEG', 'GYD', 'TAS', 'PEK', 'JFK', 'SIN', 'HND', 'ICN', 'DOH',
+                   'CDG', 'NRT', 'LHR', 'IST', 'DXB', 'MAD', 'MUC', 'ATL', 'AMS',
+                   'FCO', 'LGW', 'CPH', 'VNO', 'DME', 'VKO', 'ZIA', 'SAW'] 
+3. -dr 14091409
+4. -db False
+
 
 #### Proxy:
 The source site can try to block you scraping process by CAPCHA, if you are trying to get a more than some small amount of tickets per day.

@@ -2,10 +2,8 @@ from mysql_scraper import get_table_to_df
 from mysql_scraper import add_dataframe_to_sqltable
 from mysql_scraper import get_engine
 from mysql_scraper import make_reference
-from mysql_scraper import get_mysql_cursor
+from mysql_scraper import get_newitems
 import requests
-import json
-import ast
 import pandas as pd
 
 
@@ -108,17 +106,21 @@ def make_api_price_request (config, logging) :
     """
 
     city_db = get_table_to_df(config, 'city')
+    city_db = get_newitems(dataframe=city_db, df_column_name='id',
+                           db_table_name='taxi', table_column='city_id',
+                           config=config)
+
     api_city_df=pd.read_csv('api_city_df.csv')
     if type(api_city_df)!= str:
         city_wide_data = pd.merge(city_db, api_city_df, how='inner', left_on='name', right_on='city_name')
-        city_wide_data = check_duplicated_cities(config, city_wide_data)[:2]
-        city_wide_data['taxi_price_per_km'] = city_wide_data.apply(get_taxi_price, axis=1)
+        city_wide_data = check_duplicated_cities(config, city_wide_data)
+        city_wide_data['taxi_start_normal_tariff'] = city_wide_data.apply(get_taxi_price, axis=1)
         df_to_load = city_wide_data.loc[:, ['id', 'taxi_start_normal_tariff']]
         df_to_load = df_to_load.loc[df_to_load['taxi_start_normal_tariff'] != 'no_data_from_api', :]
         df_to_load = df_to_load.rename(columns={'id' : 'city_id'})
         engine = get_engine(config)
         add_dataframe_to_sqltable(dataframe=df_to_load,
-                                  engine=engine,
+                                  config=config,
                                   db_table_name='taxi',
                                   table_column='city_id',
                                   logging=logging)
