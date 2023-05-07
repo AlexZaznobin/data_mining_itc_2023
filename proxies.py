@@ -76,7 +76,6 @@ def check_request_proxy (proxy_str, url, good_proxy_list) :
     try :
         response = requests.get(url, proxies=proxy, timeout=3)
         if response.status_code == 200 :
-            print(response)
             status = True
             good_proxy_list.append(proxy_str)
     except :
