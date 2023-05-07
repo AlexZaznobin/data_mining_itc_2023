@@ -350,8 +350,6 @@ def get_newitems (dataframe, config, db_table_name, table_column, df_column_name
         if df_sql.shape[0] > 1 : set_sql = set(df_sql.squeeze())
 
         if df_sql.shape[0] == 1 : set_sql = set(df_sql.loc[0, :])
-        print('set_df',set_df)
-        print('set_sql', set_sql)
         new_items = set_df.difference(set_sql)
         dataframe = dataframe[dataframe[df_column_name].isin(new_items)]
     return dataframe
@@ -396,6 +394,7 @@ def fill_ticket_table (logging, config) :
     tickets_df_sql = get_table_to_df(config, 'ticket')
 
     if type(tickets_df_sql) != str :
+        print('tickets_df_sql',tickets_df_sql)
         tickets_df_sql['layovers'] = tickets_df_sql['layovers'].astype('int64')
         new_tickets = get_new_items_multiple(tickets_df, tickets_df_sql, 'scraping_timestamp')
     else :
