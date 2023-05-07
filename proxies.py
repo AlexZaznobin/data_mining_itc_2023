@@ -145,8 +145,8 @@ def set_up_driver (config, proxy=None) :
         FileNotFoundError: If the ChromeDriver binary is not found at the expected location.
     """
 
-    service = Service('/usr/local/bin/chromedriver')
-    print('service', service)
+    service_chromedriver = Service('/usr/local/bin/chromedriver')
+    print('service', service_chromedriver)
     chrome_options = Options()
     for chrome_arg in config['chrome_args'] :
         chrome_options.add_argument(chrome_arg)
@@ -157,7 +157,7 @@ def set_up_driver (config, proxy=None) :
             x = config['size_of_window'][0] + random_value
             y = config['size_of_window'][1] + random_value
             chrome_options.add_argument(f"--window-size={x},{y}")
-    return webdriver.Chrome(service=service, options=chrome_options)
+    return webdriver.Chrome(service=service_chromedriver, options=chrome_options)
 
 
 def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
