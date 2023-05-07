@@ -338,7 +338,8 @@ def get_newitems (dataframe, config, db_table_name, table_column, df_column_name
         if df_sql.shape[0] > 1 : set_sql = set(df_sql.squeeze())
 
         if df_sql.shape[0] == 1 : set_sql = set(df_sql.loc[0, :])
-
+        print('set_df',set_df)
+        print('set_sql', set_sql)
         new_items = set_df.difference(set_sql)
         dataframe = dataframe[dataframe[df_column_name].isin(new_items)]
     return dataframe
