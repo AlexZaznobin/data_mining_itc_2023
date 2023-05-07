@@ -222,7 +222,7 @@ def add_id_from_sql (dataframe, df_column, db_column, db_table_name, engine) :
         try:
             result=dataframe.merge(sql_df, how='inner', left_on=df_column, right_on=db_column)
         except:
-            result= pd.DataFrame(columns=dataframe.columns)
+            result=dataframe
         return result
 
 
