@@ -222,7 +222,8 @@ def add_id_from_sql (dataframe, df_column, db_column, db_table_name, engine) :
         with engine.connect() as conn :
             query = conn.execute(text(sql_query))
         sql_df = pd.DataFrame(query.fetchall())
-        print('add_id_from_sql query.fetchall()',sql_df)
+        sql_df.columns = query.keys()
+        print('add_id_from_sql query.fetchall() \n',sql_df)
         print('dataframe',dataframe)
         print('df_column',df_column,'db_column', db_column)
         try:
