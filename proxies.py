@@ -119,10 +119,8 @@ def check_proxy_response (url, config) :
                     driver.close()
             except :
                 break_index = break_index + 1
-            try:
                 driver.close()
-            except:
-                pass
+
     else :
         driver = set_up_driver(config)
         driver.get(url)
@@ -146,7 +144,9 @@ def set_up_driver (config, proxy=None) :
     Raises:
         FileNotFoundError: If the ChromeDriver binary is not found at the expected location.
     """
+
     service = Service('/usr/local/bin/chromedriver')
+    print('service', service)
     chrome_options = Options()
     for chrome_arg in config['chrome_args'] :
         chrome_options.add_argument(chrome_arg)
