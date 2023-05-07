@@ -119,7 +119,10 @@ def check_proxy_response (url, config) :
                     driver.close()
             except :
                 break_index = break_index + 1
+            try:
                 driver.close()
+            except:
+                pass
     else :
         driver = set_up_driver(config)
         driver.get(url)
