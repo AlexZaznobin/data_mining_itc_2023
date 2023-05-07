@@ -335,6 +335,7 @@ def get_newitems (dataframe, config, db_table_name, table_column, df_column_name
             query = conn.execute(text(sql_query))
 
         df_sql = pd.DataFrame(query.fetchall())
+        set_sql=[]
         if df_sql.shape[0] > 1 : set_sql = set(df_sql.squeeze())
 
         if df_sql.shape[0] == 1 : set_sql = set(df_sql.loc[0, :])
