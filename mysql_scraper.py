@@ -481,7 +481,7 @@ def get_table_to_df (config, db_table_name) :
         with engine.connect() as conn :
             query = conn.execute(text(sql_query))
         dataframe = pd.DataFrame(query.fetchall())
-        dataframe.columns = dataframe.keys()
+        dataframe.columns = query.keys()
         return dataframe
     else :
         return 'no table exist'
