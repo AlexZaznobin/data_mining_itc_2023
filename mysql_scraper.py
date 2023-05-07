@@ -223,6 +223,8 @@ def add_id_from_sql (dataframe, df_column, db_column, db_table_name, engine) :
             query = conn.execute(text(sql_query))
         sql_df = pd.DataFrame(query.fetchall())
         print('add_id_from_sql query.fetchall()',sql_df)
+        print('dataframe',dataframe)
+        print('df_column',df_column,'db_column', db_column)
         try:
             result=dataframe.merge(sql_df, how='inner', left_on=df_column, right_on=db_column)
         except:
