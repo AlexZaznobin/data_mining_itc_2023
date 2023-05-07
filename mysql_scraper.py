@@ -219,7 +219,11 @@ def add_id_from_sql (dataframe, df_column, db_column, db_table_name, engine) :
         with engine.connect() as conn :
             query = conn.execute(text(sql_query))
         sql_df = pd.DataFrame(query.fetchall())
-        return dataframe.merge(sql_df, how='inner', left_on=df_column, right_on=db_column)
+        try:
+            result=dataframe.merge(sql_df, how='inner', left_on=df_column, right_on=db_column)
+        except:
+            result= pd.DataFrame(columns=dataframe.columns)
+        return result
 
 
 def fill_aircompany_table (logging, config) :
