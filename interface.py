@@ -2,7 +2,7 @@ import datetime
 import argparse
 import sys
 import pandas as pd
-
+from mysql_scraper import get_table_to_df
 
 def get_date_range (input_ddmmddmm=None) :
     """
@@ -191,4 +191,7 @@ def set_demo_parameters():
 
 def get_all(config):
     airport_df = pd.read_csv(config['airports'])
-    return airport_df['code'].unique().values
+    return list(set(airport_df['code']))
+
+
+

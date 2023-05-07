@@ -123,7 +123,7 @@ def check_proxy_response (url, config) :
     else :
         driver = set_up_driver(config)
         driver.get(url)
-        time.sleep(10)
+        time.sleep(config['page_load_timeout'])
     return driver
 
 

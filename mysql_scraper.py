@@ -36,8 +36,41 @@ def get_engine (config) :
         sqlalchemy.engine.Engine: A connection engine to the MySQL database.
     """
     mysql_password = get_mysql_pwd(config)
-    engine = create_engine(f"mysql+pymysql://root:{mysql_password}@localhost/{config['db_name']}")
+    host = get_host(config)
+    user = get_user(config)
+    db_name= get_dbname (config)
+    engine = create_engine(f"mysql+pymysql://{user}:{mysql_password}@{host}/{db_name}")
     return engine
+
+
+def get_dbname (config) :
+    """
+    Retrieve the host  from the given configuration.
+    """
+    db_name = "avia_scraper"
+    if config['db_name'] != "" :
+        db_name = config['db_name']
+    return db_name
+
+
+def get_host (config) :
+    """
+    Retrieve the host  from the given configuration.
+    """
+    host = "localhost"
+    if config['mysql_host'] != "" :
+        host = config['mysql_host']
+    return host
+
+
+def get_user (config) :
+    """
+    Retrieve the user  from the given configuration.
+    """
+    user = "root"
+    if config['mysql_user'] != "" :
+        user = config['mysql_user']
+    return user
 
 
 def get_mysql_pwd (config) :
@@ -84,10 +117,11 @@ def get_mysql_cursor (config) :
           pymysql.cursors.DictCursor: A cursor for the MySQL connection.
       """
     mysql_password = get_mysql_pwd(config)
-
+    host = get_host(config)
+    user = get_user(config)
     connection = pymysql.connect(
-        host='localhost',
-        user='root',
+        host=host,
+        user=user,
         password=mysql_password,
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
@@ -336,6 +370,8 @@ def fill_ticket_table (logging, config) :
     tickets_df = tickets_df.loc[:, ['start_airport_id', 'end_airport_id', 'aircompany_id', 'price', 'flight_date_time',
                                     'scraping_timestamp', 'duration_time', 'layovers']]
     tickets_df = tickets_df[tickets_df['flight_date_time'] != 'None']
+    tickets_df = tickets_df[tickets_df['price'] != 'None']
+    tickets_df = tickets_df[tickets_df['layovers'] != 'None']
     tickets_df['flight_date_time'] = pd.to_datetime(tickets_df['flight_date_time'])
     tickets_df['scraping_timestamp'] = pd.to_datetime(tickets_df['scraping_timestamp'])
     tickets_df['scraping_timestamp'] = tickets_df['scraping_timestamp'].dt.round('S')
@@ -346,15 +382,16 @@ def fill_ticket_table (logging, config) :
         keep='last')
     tickets_df_sql = get_table_to_df(config, 'ticket')
 
-    if type(tickets_df_sql)!=str:
+    if type(tickets_df_sql) != str :
         tickets_df_sql['layovers'] = tickets_df_sql['layovers'].astype('int64')
-        new_tickets= get_new_items_multiple(tickets_df, tickets_df_sql, 'scraping_timestamp')
-    else:
-        new_tickets=tickets_df
+        new_tickets = get_new_items_multiple(tickets_df, tickets_df_sql, 'scraping_timestamp')
+    else :
+        new_tickets = tickets_df
     add_dataframe_to_sqltable(new_tickets, config, 'ticket', False, logging)
     return tickets_df
 
-def get_new_items_multiple(last_req_df,sql_df,column_to_exclude):
+
+def get_new_items_multiple (last_req_df, sql_df, column_to_exclude) :
     """
             Get new items in a DataFrame by comparing it with another DataFrame based on specified columns.
 
@@ -372,19 +409,20 @@ def get_new_items_multiple(last_req_df,sql_df,column_to_exclude):
             Raises:
                 None: If an error occurs, the original DataFrame (last_req_df) is returned.
             """
-    try:
+    try :
         merge_columns = list(
             last_req_df.loc[:, last_req_df.columns[last_req_df.columns != column_to_exclude]].columns.values)
-        new_df= pd.merge(last_req_df,sql_df,
-                                   on = merge_columns,
-                                   how='left', indicator=True)
+        new_df = pd.merge(last_req_df, sql_df,
+                          on=merge_columns,
+                          how='left', indicator=True)
         new_df = new_df[new_df['_merge'] == "left_only"].drop(['_merge'], axis=1)
         column_mapping = {'scraping_timestamp_x' : 'scraping_timestamp'}
         new_df = new_df.rename(columns=column_mapping)
-        new_df=new_df.loc[:,new_df.columns.isin(last_req_df.columns.values)]
+        new_df = new_df.loc[:, new_df.columns.isin(last_req_df.columns.values)]
     except :
         new_df = last_req_df
     return new_df
+
 
 def make_references (config) :
     """

@@ -16,6 +16,7 @@ from interface import set_up_parser
 from proxies import save_file_api_proxy_list
 from proxies import check_proxy_response
 from api_module import make_api_price_request
+
 CONFIG_NAME = 'conf.json'
 
 
@@ -96,6 +97,17 @@ def get_airport_codes (file_name) :
 
 
 def extract_data_page (driver, current_ticket, config) :
+    """
+    Extracts relevant data from a webpage containing flight ticket information using a given driver.
+
+    Args:
+        driver: A web driver object for automating browser actions.
+        current_ticket: An object representing the current flight ticket being processed.
+        config: A dictionary containing configuration settings for the web scraping process.
+
+    Returns:
+        The price of the flight ticket as an integer. Returns None if the data extraction process fails.
+    """
     return_price = None
     try :
         currency, currency_position = currency_check(driver)
@@ -118,6 +130,16 @@ def extract_data_page (driver, current_ticket, config) :
 
 
 def extract_time (ticket_web_element, current_ticket) :
+    """
+       Extracts the start time and duration of a flight ticket from a given web element and stores it in the current_ticket object.
+
+       Args:
+           ticket_web_element: A web element representing a full flight ticket.
+           current_ticket: An object representing the current flight ticket being processed.
+
+       Returns:
+           None.
+       """
     ticket_info = ticket_web_element.text.split('\n')
     start = 0
     for item in ticket_info :
@@ -132,13 +154,7 @@ def extract_time (ticket_web_element, current_ticket) :
                 hours = int(time_info_list[0])
             month = int(current_ticket.date[2 :])
             day = int(current_ticket.date[:2])
-            current_ticket.start_time = datetime.datetime(
-                2023,
-                month,
-                day,
-                hours,
-                minutes,
-                0)
+            current_ticket.start_time = datetime.datetime(2023, month, day, hours, minutes, 0)
 
         if (item.find("Duration:", start) != -1) :
             current_ticket.duration = item
@@ -146,6 +162,17 @@ def extract_time (ticket_web_element, current_ticket) :
 
 
 def extract_layover (ticket_web_element, current_ticket, config) :
+    """
+     Extracts the number of layovers in a flight ticket from a given web element and stores it in the current_ticket object.
+
+     Args:
+         ticket_web_element: A web element representing a full flight ticket.
+         current_ticket: An object representing the current flight ticket being processed.
+         config: A dictionary containing configuration settings for the web scraping process.
+
+     Returns:
+         None.
+     """
     stop_elements = ticket_web_element.find_elements(By.XPATH, "//div[contains(@class, 'segment-route__stop')]")
     layover_count = 0
     if len(stop_elements) > 0 :
@@ -159,6 +186,16 @@ def extract_layover (ticket_web_element, current_ticket, config) :
 
 
 def get_full_ticket_we (webelement, config) :
+    """
+    Finds the full ticket element web element from a given web element and a configuration dictionary.
+
+    Args:
+        webelement: A web element representing a part of the ticket element.
+        config: A dictionary containing configuration settings for the web scraping process.
+
+    Returns:
+        The full ticket element web element if found. Returns None if the full ticket element cannot be found.
+    """
     child_element = webelement
     ticket_element = None
     for i in range(config['depth_of_parenting_ticket_widget']) :
@@ -173,6 +210,16 @@ def get_full_ticket_we (webelement, config) :
 
 
 def currency_check (driver) :
+    """
+     Checks the currency type of a webpage using a given driver.
+
+     Args:
+         driver: A web driver object for automating browser actions.
+
+     Returns:
+         A tuple containing the currency symbol and the conversion rate to USD if the webpage is recognized.
+         If the webpage is not recognized, returns None.
+     """
     current_url = driver.current_url
     if "https://www.aviasales.ru/" in current_url :
         return ('₽', -1)
@@ -181,6 +228,17 @@ def currency_check (driver) :
 
 
 def extract_aicompany (driver, current_ticket) :
+    """
+     Extracts the airline company name from a list of text elements on a webpage using a given driver.
+
+     Args:
+         driver: A web driver object for automating browser actions.
+         current_ticket: An object representing the current flight ticket being processed.
+
+     Returns:
+         True if the airline company name was successfully extracted and stored in the current_ticket object.
+         False otherwise.
+     """
     wait = WebDriverWait(driver, 1)
     text_elements = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="text"]')))
     if len(text_elements) < 4 :
@@ -194,11 +252,24 @@ def extract_aicompany (driver, current_ticket) :
 
 
 def extract_city (driver, current_ticket) :
+    """
+    This function extracts the city names for the start and destination airports from the given web page.
+
+    Args:
+    driver (webdriver): The Selenium webdriver instance used for web scraping.
+    current_ticket (object): An instance of a custom ticket object with 'start_airport' and 'dest_airport' attributes, both having a 'city' attribute.
+
+    Function behavior:
+
+    Creates a WebDriverWait instance with a timeout of 1 second.
+    Waits for the presence of all elements with the 'data-test-id' attribute set to 'city'.
+    Assigns the text of the first city element to the 'city' attribute of the 'start_airport' object.
+    Assigns the text of the second city element to the 'city' attribute of the 'dest_airport' object.
+    """
     wait = WebDriverWait(driver, 1)
     city_elements = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-test-id="city"]')))
-    current_ticket.start_airport.city = city_elements[0].text
-    current_ticket.dest_airport.city = city_elements[1].text
-
+    current_ticket.start_airport.city = city_elements[0].text.replace(",", "")
+    current_ticket.dest_airport.city = city_elements[1].text.replace(",", "")
 
 def page_processing_slnm (url, config, unsuccessful_list) :
     """
@@ -237,7 +308,7 @@ def page_processing_slnm (url, config, unsuccessful_list) :
     return page_ticket
 
 
-def safe_close_chrome_window(driver):
+def safe_close_chrome_window (driver) :
     """
     Safely closes a Chrome window using a Selenium WebDriver object.
 
@@ -247,10 +318,11 @@ def safe_close_chrome_window(driver):
     Returns:
     None
     """
-    try:
+    try :
         driver.close()
-    except:
+    except :
         pass
+
 
 def m_thread_batch_scraping (list_of_urls, config, unsuccessful_list) :
     """
@@ -315,6 +387,22 @@ def get_url_list (start_list, start_date, days_number, end_list, config, pass_nu
 
 
 def load_scraper_config () :
+    """
+    This function loads the scraper configuration and sets up the logging for the scraper script.
+
+    Function behavior:
+
+    Configures the logging settings, including format, date format, log file name, file mode, and logging level.
+    Attempts to load the configuration from a file with a predefined name (CONFIG_NAME).
+    Logs the success or failure of loading the configuration file.
+    Returns:
+    config (dict): The loaded configuration as a dictionary, if successful. None otherwise.
+
+    Raises:
+    FileNotFoundError: If the config file is not found.
+    json.decoder.JSONDecodeError: If there is an error in decoding the JSON content of the config file.
+    """
+
     logging.basicConfig(format='%(asctime)s %(funcName)s %(levelname)s: %(message)s',
                         datefmt='%m/%d/%Y %H:%M:%S',
                         filename='scraper_script.log',
@@ -333,6 +421,31 @@ def load_scraper_config () :
 
 
 def intiniate_result_file (filename) :
+    """
+    This function creates or updates a result file with a specific structure for storing scraped flight data.
+
+    Args:
+    filename (str): The name of the file to create or update.
+
+    Function behavior:
+
+    Checks if the specified file already exists. If not, it creates an empty file with the given name.
+    Opens the file and reads its content to count the number of lines.
+    If the file is empty (i.e., has zero lines), it writes the header line with column names
+    for storing flight information.
+    The header line has the following columns:
+
+    start_airport_code
+    start_city_name
+    end_airport_code
+    end_city_name
+    price
+    aircompany_name
+    flight_date_time
+    scraping_timestamp
+    duration_time
+    layovers
+    """
     if not os.path.exists(filename) :
         with open(filename, 'w') as file :
             pass
@@ -352,7 +465,7 @@ def intiniate_result_file (filename) :
                               "layovers\n")
 
 
-def scrape_per_batch (url_list, config, logging,tolerance) :
+def scrape_per_batch (url_list, config, logging, tolerance) :
     """
       Scrapes a list of URLs in batches using multiple threads.
 
@@ -363,7 +476,7 @@ def scrape_per_batch (url_list, config, logging,tolerance) :
       """
     unsuccessful_list = []
     logging.info(f" send batch of urls size {len(url_list[:config['batch_size']])} ")
-    batch_number = round(len(url_list) / config['batch_size']+0.5)
+    batch_number = round(len(url_list) / config['batch_size'] + 0.5)
     if batch_number < 1 :
         batch_number = 1
     for i in range(batch_number) :
@@ -372,10 +485,10 @@ def scrape_per_batch (url_list, config, logging,tolerance) :
         if (len(url_list) > 0) and (len(url_list) < config['batch_size']) :
             m_thread_batch_scraping(url_list, config, unsuccessful_list)
     if config['search_tolerance_percent'] != -1 :
-        if len(unsuccessful_list) > tolerance:
+        if len(unsuccessful_list) > tolerance :
             if config['use_proxy'] == 1 :
                 save_file_api_proxy_list(config)
-            scrape_per_batch(unsuccessful_list, config, logging,tolerance)
+            scrape_per_batch(unsuccessful_list, config, logging, tolerance)
 
 
 def main () :
@@ -384,7 +497,6 @@ def main () :
     scr_pam_list, need_database = set_up_parser(config)
     intiniate_result_file(config['result_file'])
     intiniate_result_file(config['last_request_data'])
-
     start = datetime.datetime.now()
     if config['use_proxy'] == 1 :
         save_file_api_proxy_list(config)
@@ -393,8 +505,12 @@ def main () :
                             days_number=scr_pam_list[2],
                             end_list=scr_pam_list[3],
                             config=config)
-    tolerance = config['search_tolerance_percent']/100*len(url_list)
-    scrape_per_batch(url_list, config, logging,tolerance )
+    if config['search_tolerance_percent'] != -1 :
+        tolerance = config['search_tolerance_percent'] / 100 * len(url_list)
+    else :
+        tolerance = -1
+
+    scrape_per_batch(url_list, config, logging, tolerance)
     if need_database :
         save_results_in_database(config, logging)
     if need_database :
@@ -403,6 +519,7 @@ def main () :
         os.remove(config['last_request_data'])
     end = datetime.datetime.now()
     logging.info(f"this takes: {end - start} sec ")
+
 
 if __name__ == "__main__" :
     main()
