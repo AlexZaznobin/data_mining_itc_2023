@@ -73,6 +73,7 @@ def check_request_proxy (proxy_str, url, good_proxy_list) :
         'http' : 'http://' + proxy_str,
         'https' : 'https://' + proxy_str
     }
+
     try :
         response = requests.get(url, proxies=proxy, timeout=3)
         if response.status_code == 200 :
