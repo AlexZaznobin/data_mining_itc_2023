@@ -183,12 +183,15 @@ def fill_airport_table (logging, config, unique_cities, airport_cities_key) :
     airport_selected = pd.merge(airport_df, airport_cities_key, left_on='code', right_on='airport_code')
     airport_selected = airport_selected.loc[:, ['code', 'name', 'city_name']]
     engine = get_engine(config)
+    print('airport_selected 1',airport_selected)
     airport_selected = add_id_from_sql(dataframe=airport_selected,
                                        df_column='city_name',
                                        db_column='name',
                                        db_table_name='city',
                                        engine=engine)
     column_mapping = {'name_x' : 'name', 'id' : 'city_id'}
+
+    print('airport_selected 2',airport_selected)
     airport_selected = airport_selected.rename(columns=column_mapping)
     airport_selected = airport_selected.loc[:, ['code', 'name', 'city_id']]
     add_dataframe_to_sqltable(dataframe=airport_selected,
