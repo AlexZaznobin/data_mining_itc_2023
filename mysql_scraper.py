@@ -394,7 +394,7 @@ def fill_ticket_table (logging, config) :
     tickets_df_sql = get_table_to_df(config, 'ticket')
 
     if type(tickets_df_sql) != str :
-        print('tickets_df_sql',tickets_df_sql)
+        # print('tickets_df_sql',tickets_df_sql)
         tickets_df_sql['layovers'] = tickets_df_sql['layovers'].astype('int64')
         new_tickets = get_new_items_multiple(tickets_df, tickets_df_sql, 'scraping_timestamp')
     else :
