@@ -5,28 +5,40 @@ This Python script is designed to scrape ticket prices from a website using a co
 
 **Aviasales**:[https://www.aviasales.com/]
 ### What is inside directory: 
-* aviasales_scrpr.py -  executable file 
+
 * conf.json - configuration
-* airports.csv - airports codes and names data 
 * requrements.txt - installed modules <i>.python3 -m pip freeze > requirements.txt<i>
+* airports.csv - airports codes and names data 
+* aviasales_scrpr.py -  executable file 
+* interface.py - interface module
+* mysql_scraper.py - mysql module
+* proxies.py - usage of proxies functional 
+* capcha_speech_recognition.py - capcha recognition functional 
+* api_module.py - api module
 
 #### Data collected:
-![aviasales scraper](https://user-images.githubusercontent.com/127748062/229361563-90ac371a-07fe-4161-9f31-4864221a1f79.png)
+![aviasales scraper](https://user-images.githubusercontent.com/127748062/234353828-f3e7d37f-d221-4c95-83d2-5097aa0a81a3.png)
+
 
 #### The code creates tickets.log as output. 
+
+### Used API: 
+https://traveltables.com/compare/russia/moscow/vs/israel/tel-aviv-yafo/cost-of-living#estimate
+I collect average taxi Start, Normal Tariff for cities in table city of mysql DB.
+The free API is limited to 15 request, so taxi tariff table can be shorter than start cities and end cities of tickets list.
 
 
 #### Interface: 
 -----------------
 The script accepts the following command-line arguments to define the search parameters:
 
-1. -sac, --start_ariport_code: (Optional) The 3-letter airport code of the starting airport (e.g., TLV). If not provided, the default value is 'TLV'.
+1. -sac, --start_ariport_code:  The 3-letter airport code of the starting airport (default value-  TLV). You can provide multiple airport codes separated by indent.
 
-2. -eac, --end_ariport_code: (Optional) The 3-letter airport code of the destination airport(s) (e.g., TBS). You can provide multiple airport codes separated by commas. If not provided, a default set of destination airports will be used.
+2. -eac, --end_ariport_code: The 3-letter airport code of the destination airport(s) (default value-  TLV). You can provide multiple airport codes separated by indent. 
 
-3. -dr, --daterange: (Optional) The date range for the search, provided as a single string in the format DDMMDDMM
+3. -dr, --daterange: The date range for the search, provided as a single string in the format DDMMDDMM (default value-  07070707)
 
-4. -db, --database: (Optional) A flag indicating if the database should be used. Include this flag if you want to use the database; otherwise, the database will not be used.
+4. -db, --database: A flag indicating if the database should be used. Include this flag if you want to use the database; otherwise, the database will not be used.
 
 5. Instead of using some specified code for the airport e.g. 'TLV' 
 value of start_ariport_code and end_ariport_code can be set to 'all'. 
@@ -44,6 +56,7 @@ Example Usage:
    python aviasales_scrpr.py -sac TLV -eac JFK -dr 01090909 -db
 
 Note: Make sure you have the required libraries installed and the necessary configuration set up before running the script.
+
 
 #### Deafult parameters: 
 1. -sac TLV
