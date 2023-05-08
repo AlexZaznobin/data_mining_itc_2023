@@ -110,13 +110,13 @@ def make_api_price_request (config, logging) :
     city_db = get_newitems(dataframe=city_db, df_column_name='id',
                            db_table_name='taxi', table_column='city_id',
                            config=config)
-    print(' make_api_price_request city_db\n',city_db)
+    # print(' make_api_price_request city_db\n',city_db)
 
     api_city_df=pd.read_csv('api_city_df.csv')
-    print(' make_api_price_request api_city_df\n', api_city_df)
+    # print(' make_api_price_request api_city_df\n', api_city_df)
     if type(api_city_df)!= str:
         city_wide_data = pd.merge(city_db, api_city_df, how='inner', left_on='name', right_on='city_name')
-        print(' make_api_price_request city_wide_data\n', city_wide_data)
+        # print(' make_api_price_request city_wide_data\n', city_wide_data)
         city_wide_data = check_duplicated_cities(config, city_wide_data)
         city_wide_data['taxi_start_normal_tariff'] = city_wide_data.apply(get_taxi_price, axis=1)
         df_to_load = city_wide_data.loc[:, ['id', 'taxi_start_normal_tariff']]
@@ -149,8 +149,10 @@ def check_duplicated_cities(config,city_wide_data):
 
     airport_sql = get_table_to_df(config, 'airport')
     print('check_duplicated_cities airport_sql',airport_sql)
-    print('check_duplicated_cities check_duplicated_cities',city_wide_data)
+    print('check_duplicated_cities city_wide_data',city_wide_data)
     city_wide_data_airports = pd.merge(city_wide_data, airport_sql, how='inner', left_on='id', right_on='city_id')
+
+    print('check_duplicated_cities city_wide_data_airports',city_wide_data_airports)
     airport_df = pd.read_csv(config['airports'])
     airport_df_extract= airport_df.loc[:,['code', 'location']]
     airport_df_extract['airport_lng']=airport_df_extract['location'].apply(lambda x: float(x.split()[1][1:]))
@@ -160,10 +162,13 @@ def check_duplicated_cities(config,city_wide_data):
                                                  how='inner',
                                                  left_on='code',
                                                  right_on='code')
+
+    print('check_duplicated_cities city_wide_data_airports_locations',city_wide_data_airports_locations)
     city_wide_data_airports_locations = city_wide_data_airports_locations.rename(columns={'lat' : 'city_lat',
                                                                                           'lng' : 'city_lng',
                                                                                           'id_x' : 'id'})
-    print('city_wide_data_airports_locations',city_wide_data_airports_locations)
+
+    print(' check_duplicated_cities city_wide_data_airports_locations',city_wide_data_airports_locations)
     city_wide_data_airports_locations["min_square_dist"]=city_wide_data_airports_locations.apply(get_dist, axis=1)
 
     city_data=city_wide_data_airports_locations.loc[:,['id','city_name','country_name','min_square_dist']]
