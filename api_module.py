@@ -116,7 +116,7 @@ def make_api_price_request (config, logging) :
     # print(' make_api_price_request api_city_df\n', api_city_df)
     if type(api_city_df)!= str:
         city_wide_data = pd.merge(city_db, api_city_df, how='inner', left_on='name', right_on='city_name')
-        # print(' make_api_price_request city_wide_data\n', city_wide_data)
+        print(' make_api_price_request city_wide_data\n', city_wide_data)
         city_wide_data = check_duplicated_cities(config, city_wide_data)
         city_wide_data['taxi_start_normal_tariff'] = city_wide_data.apply(get_taxi_price, axis=1)
         df_to_load = city_wide_data.loc[:, ['id', 'taxi_start_normal_tariff']]
