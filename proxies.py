@@ -112,12 +112,6 @@ def check_proxy_response (url, config) :
                 price_found = driver.title[:1] == '$'
                 cheap_header = driver.title.split()[0] == 'Cheap'
 
-                print(f"{driver.title}"
-                      f"cheap_header={cheap_header} "
-                      f"or price_found{price_found} "
-                      f"or data_header{data_header}, "
-                      f"(cheap_header or price_found or data_header) "
-                      f"{ (cheap_header or price_found or data_header) } " )
                 safe_get_title(driver)
                 if (cheap_header or price_found or data_header):
                     success_connection = 1
@@ -159,12 +153,6 @@ def set_up_driver (config, proxy=None) :
         FileNotFoundError: If the ChromeDriver binary is not found at the expected location.
     """
     path = '/usr/local/bin/chromedriver'
-
-    if os.path.exists(path) and os.path.isfile(path) :
-        print("ChromeDriver is in the correct location.")
-    else :
-        print("ChromeDriver not found at the specified location.")
-
 
     service_chromedriver = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
@@ -215,7 +203,9 @@ def urllib3_test (proxy_url, target_url) :
 
 def safe_get_title (driver) :
     try :
-        print(f"extract_data_page driver.title = {driver.title}")
+        pass
+        # print(f"extract_data_page driver.title = {driver.title}")
     except :
-        print(f"cannot extract_data_page driver.title ")
+        pass
+        # print(f"cannot extract_data_page driver.title ")
 
