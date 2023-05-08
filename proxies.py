@@ -8,7 +8,6 @@ import re
 import threading
 import os
 import urllib3
-from aviasales_scrpr import  safe_get_title
 
 
 def get_api_proxy_link (config) :
@@ -212,4 +211,10 @@ def urllib3_test (proxy_url, target_url) :
     print('urllib3_test http', http)
     response = http.request('GET', target_url)
     print('urllib3_test response.status', response.status)
+
+def safe_get_title (driver) :
+    try :
+        print(f"extract_data_page driver.title = {driver.title}")
+    except :
+        print(f"cannot extract_data_page driver.title ")
 

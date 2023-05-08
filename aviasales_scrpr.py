@@ -15,6 +15,7 @@ from mysql_scraper import save_results_in_database
 from interface import set_up_parser
 from proxies import save_file_api_proxy_list
 from proxies import check_proxy_response
+from proxies import safe_get_title
 from api_module import make_api_price_request
 
 CONFIG_NAME = 'conf.json'
@@ -108,7 +109,7 @@ def extract_data_page (driver, current_ticket, config) :
     Returns:
         The price of the flight ticket as an integer. Returns None if the data extraction process fails.
     """
-    safe_get_title(driver )
+    safe_get_title(driver)
     return_price = None
     try :
 
@@ -130,11 +131,7 @@ def extract_data_page (driver, current_ticket, config) :
         pass
     return return_price
 
-def safe_get_title(driver ):
-    try:
-        print(f"extract_data_page driver.title = {driver.title}")
-    except:
-        print(f"cannot extract_data_page driver.title ")
+
 
 
 def extract_time (ticket_web_element, current_ticket) :
