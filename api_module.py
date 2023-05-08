@@ -144,8 +144,8 @@ def check_duplicated_cities(config,city_wide_data):
       """
 
     airport_sql = get_table_to_df(config, 'airport')
-    print('airport_sql',airport_sql)
-    print('airport_sql',city_wide_data)
+    print('check_duplicated_cities airport_sql',airport_sql)
+    print('check_duplicated_cities airport_sql',city_wide_data)
     city_wide_data_airports = pd.merge(city_wide_data, airport_sql, how='inner', left_on='id', right_on='city_id')
     airport_df = pd.read_csv(config['airports'])
     airport_df_extract= airport_df.loc[:,['code', 'location']]

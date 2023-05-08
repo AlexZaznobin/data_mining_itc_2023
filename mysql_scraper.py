@@ -183,7 +183,7 @@ def fill_airport_table (logging, config, unique_cities, airport_cities_key) :
     airport_selected = pd.merge(airport_df, airport_cities_key, left_on='code', right_on='airport_code')
     airport_selected = airport_selected.loc[:, ['code', 'name', 'city_name']]
     engine = get_engine(config)
-    print('airport_selected 1',airport_selected)
+    # print('airport_selected 1',airport_selected)
     airport_selected = add_id_from_sql(dataframe=airport_selected,
                                        df_column='city_name',
                                        db_column='name',
@@ -191,7 +191,7 @@ def fill_airport_table (logging, config, unique_cities, airport_cities_key) :
                                        engine=engine)
     column_mapping = {'name_x' : 'name', 'id' : 'city_id'}
 
-    print('airport_selected 2',airport_selected)
+    # print('airport_selected 2',airport_selected)
     airport_selected = airport_selected.rename(columns=column_mapping)
     airport_selected = airport_selected.loc[:, ['code', 'name', 'city_id']]
     add_dataframe_to_sqltable(dataframe=airport_selected,
@@ -223,9 +223,9 @@ def add_id_from_sql (dataframe, df_column, db_column, db_table_name, engine) :
             query = conn.execute(text(sql_query))
         sql_df = pd.DataFrame(query.fetchall())
         sql_df.columns = query.keys()
-        print('add_id_from_sql query.fetchall() \n',sql_df)
-        print('dataframe',dataframe)
-        print('df_column',df_column,'db_column', db_column)
+        # print('add_id_from_sql query.fetchall() \n',sql_df)
+        # print('dataframe',dataframe)
+        # print('df_column',df_column,'db_column', db_column)
         try:
             result=dataframe.merge(sql_df, how='inner', left_on=df_column, right_on=db_column)
         except:
@@ -274,7 +274,7 @@ def fill_city_table (logging, config) :
        """
 
     tickets_df = pd.read_csv(config['last_request_data'])
-    print()
+    # print()
     start_city = tickets_df.loc[:, ['start_city_name', 'start_airport_code']]
     start_city.columns = ['name', 'airport_code']
     end_city = tickets_df.loc[:, ['end_city_name', 'end_airport_code']]
