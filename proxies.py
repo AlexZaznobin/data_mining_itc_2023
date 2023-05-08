@@ -184,9 +184,10 @@ def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
         t.join()
 
 def urllib3_test(proxy_url,target_url ):
-    http = urllib3.ProxyManager(proxy_url)
+    proxy_str='https://' + proxy_url
+    http = urllib3.ProxyManager(proxy_str)
     response = http.request('GET', target_url)
-    print('urllib3_test proxy_url',proxy_url)
+    print('urllib3_test proxy_url',proxy_str)
     print('urllib3_test target_url',target_url)
     print('urllib3_test http',http)
     print('urllib3_test response.status',response.status)
