@@ -9,6 +9,7 @@ import threading
 
 import urllib3
 
+
 def get_api_proxy_link (config) :
     """
      Retrieves the API link to obtain a list of proxies, if configured to use an API.
@@ -36,7 +37,7 @@ def save_file_api_proxy_list (config) :
     Returns:
         None
     """
-    proxi_text=""
+    proxi_text = ""
     if config['use_proxy_api'] == 1 :
         api_url = get_api_proxy_link(config)
         chrome_options = Options()
@@ -107,9 +108,9 @@ def check_proxy_response (url, config) :
             try :
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)
-                data_header = driver.title[2] =='.'
+                data_header = driver.title[2] == '.'
                 price_found = driver.title[:1] == '$'
-                cheap_header = driver.title.split()[0]== 'Cheap'
+                cheap_header = driver.title.split()[0] == 'Cheap'
                 if (cheap_header or price_found or data_header) :
                     success_connection = 1
                     with open(config['great_proxy'], 'r') as result_file :
@@ -118,7 +119,7 @@ def check_proxy_response (url, config) :
                         result_file.writelines("%s" % item for item in proxy_list)
                     with open(config["great_proxy"], 'a') as result_file :
                         result_file.write(random_proxy + '\n')
-                else:
+                else :
                     driver.close()
             except :
                 break_index = break_index + 1
@@ -147,7 +148,7 @@ def set_up_driver (config, proxy=None) :
     Raises:
         FileNotFoundError: If the ChromeDriver binary is not found at the expected location.
     """
-    path='/usr/local/bin/chromedriver'
+    path = '/usr/local/bin/chromedriver'
     service_chromedriver = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
     for chrome_arg in config['chrome_args'] :
@@ -159,7 +160,8 @@ def set_up_driver (config, proxy=None) :
             x = config['size_of_window'][0] + random_value
             y = config['size_of_window'][1] + random_value
             chrome_options.add_argument(f"--window-size={x},{y}")
-    return webdriver.Chrome( executable_path =path, options=chrome_options)
+    return webdriver.Chrome(executable_path=path, options=chrome_options)
+
 
 def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
     """
@@ -183,12 +185,13 @@ def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
     for t in threads :
         t.join()
 
-def urllib3_test(proxy_url,target_url ):
-    proxy_str='https://' + proxy_url
+
+def urllib3_test (proxy_url, target_url) :
+    print('urllib3_test target_url', target_url)
+    proxy_str = 'http://' + proxy_url
+    print('urllib3_test proxy_url', proxy_str)
     http = urllib3.ProxyManager(proxy_str)
+    print('urllib3_test http', http)
     response = http.request('GET', target_url)
-    print('urllib3_test proxy_url',proxy_str)
-    print('urllib3_test target_url',target_url)
-    print('urllib3_test http',http)
-    print('urllib3_test response.status',response.status)
-    print('urllib3_test response.data',response.data)
+    print('urllib3_test response.status', response.status)
+    print('urllib3_test response.data', response.data)
