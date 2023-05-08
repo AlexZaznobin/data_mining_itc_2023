@@ -8,6 +8,7 @@ import re
 import threading
 import os
 import urllib3
+from aviasales_scrpr import def safe_get_title
 
 
 def get_api_proxy_link (config) :
@@ -136,6 +137,8 @@ def check_proxy_response (url, config) :
         driver = set_up_driver(config)
         driver.get(url)
         time.sleep(config['page_load_timeout'])
+
+    safe_get_title(driver)
     return driver
 
 
