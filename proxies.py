@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import re
 import threading
-
+import os
 import urllib3
 
 
@@ -104,7 +104,7 @@ def check_proxy_response (url, config) :
             with open(config['good_proxy'], 'r') as result_file :
                 proxy_list = list(set(result_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
-            # urllib3_test(random_proxy, url)
+            urllib3_test(random_proxy, url)
             try :
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)
@@ -149,18 +149,25 @@ def set_up_driver (config, proxy=None) :
         FileNotFoundError: If the ChromeDriver binary is not found at the expected location.
     """
     path = '/usr/local/bin/chromedriver'
+
+    if os.path.exists(path) and os.path.isfile(path) :
+        print("ChromeDriver is in the correct location.")
+    else :
+        print("ChromeDriver not found at the specified location.")
+
+
     service_chromedriver = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
     for chrome_arg in config['chrome_args'] :
         chrome_options.add_argument(chrome_arg)
         if config['use_proxy'] == 1 :
-            print('set_up_driver proxy',proxy )
             chrome_options.add_argument(f"--proxy-server={proxy}")
             rand_limit = config['size_of_window'][2]
             random_value = random.randint(1, rand_limit)
             x = config['size_of_window'][0] + random_value
             y = config['size_of_window'][1] + random_value
             chrome_options.add_argument(f"--window-size={x},{y}")
+
     return webdriver.Chrome(executable_path=path, options=chrome_options)
 
 
@@ -196,3 +203,4 @@ def urllib3_test (proxy_url, target_url) :
     response = http.request('GET', target_url)
     print('urllib3_test response.status', response.status)
     print('urllib3_test response.data', response.data)
+
