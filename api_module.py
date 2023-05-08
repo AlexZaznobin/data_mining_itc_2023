@@ -106,11 +106,14 @@ def make_api_price_request (config, logging) :
     """
 
     city_db = get_table_to_df(config, 'city')
+    print('make_api_price_request city_db',city_db)
     city_db = get_newitems(dataframe=city_db, df_column_name='id',
                            db_table_name='taxi', table_column='city_id',
                            config=config)
+    print(' make_api_price_request city_db',city_db)
 
     api_city_df=pd.read_csv('api_city_df.csv')
+    print(' make_api_price_request api_city_df', api_city_df)
     if type(api_city_df)!= str:
         city_wide_data = pd.merge(city_db, api_city_df, how='inner', left_on='name', right_on='city_name')
         city_wide_data = check_duplicated_cities(config, city_wide_data)
@@ -145,7 +148,7 @@ def check_duplicated_cities(config,city_wide_data):
 
     airport_sql = get_table_to_df(config, 'airport')
     print('check_duplicated_cities airport_sql',airport_sql)
-    print('check_duplicated_cities airport_sql',city_wide_data)
+    print('check_duplicated_cities check_duplicated_cities',city_wide_data)
     city_wide_data_airports = pd.merge(city_wide_data, airport_sql, how='inner', left_on='id', right_on='city_id')
     airport_df = pd.read_csv(config['airports'])
     airport_df_extract= airport_df.loc[:,['code', 'location']]
