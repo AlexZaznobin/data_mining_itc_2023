@@ -105,9 +105,11 @@ def check_proxy_response (url, config) :
                 proxy_list = list(set(result_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
             urllib3_test(random_proxy, url)
+            driver = set_up_driver(config, random_proxy)
+            print('check_proxy_response',driver)
+            driver.get(url)
             try :
-                driver = set_up_driver(config, random_proxy)
-                driver.get(url)
+
                 data_header = driver.title[2] == '.'
                 price_found = driver.title[:1] == '$'
                 cheap_header = driver.title.split()[0] == 'Cheap'
@@ -202,5 +204,4 @@ def urllib3_test (proxy_url, target_url) :
     print('urllib3_test http', http)
     response = http.request('GET', target_url)
     print('urllib3_test response.status', response.status)
-    print('urllib3_test response.data', response.data)
 
