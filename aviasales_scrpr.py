@@ -133,7 +133,7 @@ def extract_data_page (driver, current_ticket, config) :
 def safe_get_title(driver ):
     try:
         print(f"extract_data_page driver.title = {driver.title}")
-    else:
+    except:
         print(f"cannot extract_data_page driver.title ")
 
 
