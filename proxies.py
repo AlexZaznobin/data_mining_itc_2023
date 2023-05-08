@@ -8,7 +8,7 @@ import re
 import threading
 import os
 import urllib3
-from aviasales_scrpr import def safe_get_title
+from aviasales_scrpr import  safe_get_title
 
 
 def get_api_proxy_link (config) :
