@@ -274,6 +274,7 @@ def fill_city_table (logging, config) :
        """
 
     tickets_df = pd.read_csv(config['last_request_data'])
+    print()
     start_city = tickets_df.loc[:, ['start_city_name', 'start_airport_code']]
     start_city.columns = ['name', 'airport_code']
     end_city = tickets_df.loc[:, ['end_city_name', 'end_airport_code']]
