@@ -112,13 +112,13 @@ def check_proxy_response (url, config) :
                 price_found = driver.title[:1] == '$'
                 cheap_header = driver.title.split()[0] == 'Cheap'
 
-                print(f"cheap_header={cheap_header} "
+                print(f"{driver.title}"
+                      f"cheap_header={cheap_header} "
                       f"or price_found{price_found} "
                       f"or data_header{data_header}, "
                       f"(cheap_header or price_found or data_header) "
                       f"{ (cheap_header or price_found or data_header) } " )
                 if (cheap_header or price_found or data_header):
-                    print('success_connection',success_connection)
                     success_connection = 1
                     with open(config['great_proxy'], 'r') as result_file :
                         proxy_list = list(set(result_file.readlines()))
