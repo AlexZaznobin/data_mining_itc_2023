@@ -108,6 +108,7 @@ def extract_data_page (driver, current_ticket, config) :
     Returns:
         The price of the flight ticket as an integer. Returns None if the data extraction process fails.
     """
+    print(f"extract_data_page driver= {driver}")
     return_price = None
     try :
 
