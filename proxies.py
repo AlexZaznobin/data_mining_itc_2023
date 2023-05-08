@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.service import Service
 import re
 import threading
 
+import urllib3
 
 def get_api_proxy_link (config) :
     """
@@ -104,6 +105,7 @@ def check_proxy_response (url, config) :
             random_proxy = random.choice(proxy_list)[:-1]
             try :
                 driver = set_up_driver(config, random_proxy)
+                urllib3_test(random_proxy, url)
                 driver.get(url)
                 data_header = driver.title[2] =='.'
                 price_found = driver.title[:1] == '$'
@@ -180,3 +182,12 @@ def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
         t.start()
     for t in threads :
         t.join()
+
+def urllib3_test(proxy_url,target_url ):
+    http = urllib3.ProxyManager(proxy_url)
+    response = http.request('GET', target_url)
+    print('urllib3_test proxy_url',proxy_url)
+    print('urllib3_test target_url',target_url)
+    print('urllib3_test http',http)
+    print('urllib3_test response.status',response.status)
+    print('urllib3_test response.data',response.data)
