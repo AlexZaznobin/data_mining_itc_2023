@@ -126,6 +126,7 @@ def get_mysql_cursor (config) :
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
     )
+    print()
     cursor = connection.cursor()
     return cursor
 
