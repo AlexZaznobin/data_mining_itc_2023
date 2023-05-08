@@ -109,8 +109,9 @@ def extract_data_page (driver, current_ticket, config) :
         The price of the flight ticket as an integer. Returns None if the data extraction process fails.
     """
     return_price = None
-    print(f"extract_data_page driver.title = {driver.title}")
     try :
+
+        print(f"extract_data_page driver.title = {driver.title}")
         currency, currency_position = currency_check(driver)
         time.sleep(random.random())
         wait = WebDriverWait(driver, 15)
