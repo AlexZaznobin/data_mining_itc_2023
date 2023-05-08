@@ -5,7 +5,7 @@
   "last_request_data": "last_request.csv",
   "airports": "airports.csv",
   "depth_of_parenting_ticket_widget": 15,
-  "chrome_args" : ["--incognito","--headless"],
+  "chrome_args" : ["--incognito","--headless", "--disable-gpu"],
   "chrome_args_1" : [1,"--headless"],
   "db_name": "alexander",
   "batch_size":1,
