@@ -103,9 +103,9 @@ def check_proxy_response (url, config) :
             with open(config['good_proxy'], 'r') as result_file :
                 proxy_list = list(set(result_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
+            urllib3_test(random_proxy, url)
             try :
                 driver = set_up_driver(config, random_proxy)
-                urllib3_test(random_proxy, url)
                 driver.get(url)
                 data_header = driver.title[2] =='.'
                 price_found = driver.title[:1] == '$'
