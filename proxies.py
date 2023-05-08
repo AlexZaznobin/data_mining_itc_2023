@@ -107,9 +107,12 @@ def check_proxy_response (url, config) :
             try :
 
                 driver = set_up_driver(config, random_proxy)
-                print('check_proxy_response random_proxy, driver ', random_proxy , driver)
                 driver.get(url)
                 print('check_proxy_response driver title', driver.title)
+                print('check_proxy_response  driver.title[2]',  driver.title[2])
+                print('check_proxy_response  driver.title[2]',  driver.title[:1])
+                print('check_proxy_response  driver.title.split()[0]', driver.title.split()[0])
+
                 data_header = driver.title[2] == '.'
                 price_found = driver.title[:1] == '$'
                 cheap_header = driver.title.split()[0] == 'Cheap'
