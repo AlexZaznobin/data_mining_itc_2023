@@ -104,7 +104,7 @@ def check_proxy_response (url, config) :
             with open(config['good_proxy'], 'r') as result_file :
                 proxy_list = list(set(result_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
-            urllib3_test(random_proxy, url)
+            # urllib3_test(random_proxy, url)
             try :
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)
@@ -154,6 +154,7 @@ def set_up_driver (config, proxy=None) :
     for chrome_arg in config['chrome_args'] :
         chrome_options.add_argument(chrome_arg)
         if config['use_proxy'] == 1 :
+            print('set_up_driver proxy',proxy )
             chrome_options.add_argument(f"--proxy-server={proxy}")
             rand_limit = config['size_of_window'][2]
             random_value = random.randint(1, rand_limit)
