@@ -118,6 +118,7 @@ def check_proxy_response (url, config) :
                       f"or data_header{data_header}, "
                       f"(cheap_header or price_found or data_header) "
                       f"{ (cheap_header or price_found or data_header) } " )
+                safe_get_title(driver)
                 if (cheap_header or price_found or data_header):
                     success_connection = 1
                     with open(config['great_proxy'], 'r') as result_file :
