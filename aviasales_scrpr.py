@@ -471,7 +471,7 @@ def intiniate_result_file (filename) :
         with open(filename, 'w') as result_file :
             result_file.write(header)
     if lines and lines[0] != header:
-        lines.insert(0, header + '\n')
+        lines.insert(0, header )
         with  open(filename,"w") as result_file :
             result_file.writelines(lines)
 
