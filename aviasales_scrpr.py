@@ -460,7 +460,7 @@ def intiniate_result_file (filename) :
      "flight_date_time,"
      "scraping_timestamp,"
      "duration_time,"
-     "layovers\n")
+     "layovers")
     if not os.path.exists(filename) :
         with open(filename, 'w') as file :
             pass
@@ -469,7 +469,7 @@ def intiniate_result_file (filename) :
         num_lines = len(lines)
     if num_lines == 0 :
         with open(filename, 'w') as result_file :
-            result_file.write(header)
+            result_file.write(f"{header}\n")
     if lines and lines[0] != header:
         lines.insert(0, header )
         with  open(filename,"w") as result_file :

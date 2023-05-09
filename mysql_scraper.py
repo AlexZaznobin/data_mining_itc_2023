@@ -282,7 +282,6 @@ def fill_city_table (logging, config) :
     end_city.columns = ['name', 'airport_code']
     print('fill_city_table end_city',end_city)
     print('fill_city_table start_city',start_city)
-
     all_cities = start_city.append(end_city)
     all_cities = all_cities.drop_duplicates()
     all_cities = all_cities.dropna(how='any')
