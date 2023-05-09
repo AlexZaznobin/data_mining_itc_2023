@@ -470,7 +470,7 @@ def intiniate_result_file (filename) :
     if num_lines == 0 :
         with open(filename, 'w') as result_file :
             result_file.write(header)
-    if lines and lines[0].rstrip() != header:
+    if lines and lines[0] != header:
         lines.insert(0, header + '\n')
         with  open(filename,"w") as result_file :
             result_file.writelines(lines)
