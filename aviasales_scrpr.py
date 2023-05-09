@@ -461,6 +461,7 @@ def intiniate_result_file (filename) :
      "scraping_timestamp,"
      "duration_time,"
      "layovers")
+    lines=[]
     if not os.path.exists(filename) :
         with open(filename, 'w') as file :
             pass
@@ -470,10 +471,10 @@ def intiniate_result_file (filename) :
     if num_lines == 0 :
         with open(filename, 'w') as result_file :
             result_file.write(f"{header}\n")
-    # if lines and lines[0] != header:
-    #     lines.insert(0, f"{header}\n")
-    #     with  open(filename,"w") as result_file :
-    #         result_file.writelines(lines)
+    elif lines[0] != header:
+        lines.insert(0, f"{header}\n")
+        with  open(filename,"w") as result_file :
+            result_file.writelines(lines)
 
 def scrape_per_batch (url_list, config, logging, tolerance) :
     """

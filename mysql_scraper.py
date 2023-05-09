@@ -387,7 +387,11 @@ def fill_ticket_table (logging, config) :
                                     'scraping_timestamp', 'duration_time', 'layovers']]
     tickets_df = tickets_df[tickets_df['flight_date_time'] != 'None']
     tickets_df = tickets_df[tickets_df['price'] != 'None']
+    tickets_df = tickets_df[tickets_df['price'] != 'NaN']
+    tickets_df = tickets_df[~tickets_df['price'].isna()]
     tickets_df = tickets_df[tickets_df['layovers'] != 'None']
+    tickets_df = tickets_df[tickets_df['layovers'] != 'NaN']
+    tickets_df = tickets_df[~tickets_df['layovers'].isna()]
     tickets_df['flight_date_time'] = pd.to_datetime(tickets_df['flight_date_time'])
     tickets_df['scraping_timestamp'] = pd.to_datetime(tickets_df['scraping_timestamp'])
     tickets_df['scraping_timestamp'] = tickets_df['scraping_timestamp'].dt.round('S')
