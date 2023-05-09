@@ -451,6 +451,16 @@ def intiniate_result_file (filename) :
     duration_time
     layovers
     """
+
+    header=("start_airport_code,"
+     "start_city_name,"
+     "end_airport_code,"
+     "end_city_name,"
+     "price,aircompany_name,"
+     "flight_date_time,"
+     "scraping_timestamp,"
+     "duration_time,"
+     "layovers\n")
     if not os.path.exists(filename) :
         with open(filename, 'w') as file :
             pass
@@ -459,16 +469,11 @@ def intiniate_result_file (filename) :
         num_lines = len(lines)
     if num_lines == 0 :
         with open(filename, 'w') as result_file :
-            result_file.write("start_airport_code,"
-                              "start_city_name,"
-                              "end_airport_code,"
-                              "end_city_name,"
-                              "price,aircompany_name,"
-                              "flight_date_time,"
-                              "scraping_timestamp,"
-                              "duration_time,"
-                              "layovers\n")
-
+            result_file.write(header)
+    if lines and lines[0].rstrip() != header:
+        lines.insert(0, header + '\n')
+        with  open(filename,"w") as result_file :
+            result_file.writelines(lines)
 
 def scrape_per_batch (url_list, config, logging, tolerance) :
     """
