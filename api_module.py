@@ -5,6 +5,9 @@ from mysql_scraper import make_reference
 from mysql_scraper import get_newitems
 import requests
 import pandas as pd
+from fuzzywuzzy import fuzz, process
+from geopy.distance import geodesic
+
 
 
 
@@ -128,21 +131,30 @@ def make_api_price_request (config, logging) :
                                       logging=logging)
             make_reference(config, "taxi", "city_id", "city", "id")
 
-
 def check_duplicated_cities(config,city_wide_data):
+    """"
+    Checks for duplicated cities in the city_wide_data DataFrame,
+    removes duplicates based on the squared Euclidean distance
+    between the city and its airport,
+    and returns a new DataFrame with the city name, country name.
     """
-      Checks for duplicated cities in the city_wide_data DataFrame,
-      removes duplicates based on the squared Euclidean distance
-      between the city and its airport,
-      and returns a new DataFrame with the city name, country name.
+    city_wide_data_airports_locations= merge_city_airport(config,city_wide_data)
 
+    city_data=city_wide_data_airports_locations.loc[:,['id','city_name','country_name','square_dist']]
+    city_data=city_data.sort_values('square_dist')
+    city_data = city_data.drop_duplicates( subset=['city_name'])
+    city_data = city_data.loc[:,['id','city_name','country_name']]
+    return city_data
+
+def merge_city_airport(config,city_wide_data):
+    """
       Parameters:
       config (dict): A dictionary containing configuration parameters, including the path to the airports CSV file.
       city_wide_data (pandas.DataFrame):A Pandas DataFrame containing information about cities,
       including a unique city ID and a city code that corresponds to an airport code.
 
       Returns:
-      pandas.DataFrame: A new DataFrame with the following columns: city_name, country_name, min_square_dist.
+      pandas.DataFrame: dataframe merged cities vs airports with the distance
       """
 
     airport_sql = get_table_to_df(config, 'airport')
@@ -167,16 +179,54 @@ def check_duplicated_cities(config,city_wide_data):
                                                                                           'id_x' : 'id'})
 
     # print(' check_duplicated_cities city_wide_data_airports_locations',city_wide_data_airports_locations)
-    city_wide_data_airports_locations["min_square_dist"]=city_wide_data_airports_locations.apply(get_dist, axis=1)
+    city_wide_data_airports_locations["square_dist"]=city_wide_data_airports_locations.apply(get_dist, axis=1)
+    return city_wide_data_airports_locations
 
-    city_data=city_wide_data_airports_locations.loc[:,['id','city_name','country_name','min_square_dist']]
+def choose_closet_airports(config,city_name):
+    """"
+    Checks for duplicated cities in the city_wide_data DataFrame,
+    removes duplicates based on the squared Euclidean distance
+    between the city and its airport,
+    and returns a new DataFrame with the city name, country name.
+    """
+    api_city_df = pd.read_csv('api_city_df.csv')
+    matches = process.extract(city_name, api_city_df['city_name'], scorer=fuzz.ratio, limit=1)
+    city_wide_data=api_city_df[api_city_df['city_name'].isin(matches[0])]
+    city_to_country = {
+        'Moscow' : 'Russia',
+        'London' : 'United Kingdom',
+        'Paris' : 'France',
+    }
 
-    city_data=city_data.sort_values('min_square_dist')
-    city_data = city_data.drop_duplicates( subset=['city_name'])
-    city_data = city_data.loc[:,['id','city_name','country_name']]
-    return city_data
+    for city, country in city_to_country.items() :
+        if city in city_wide_data['city_name'].values :
+            city_wide_data = city_wide_data[city_wide_data['country_name'] == country]
 
+    airport_df = pd.read_csv(config['airports'])
+    airport_df_extract = airport_df.loc[:, ['code', 'location']]
+    airport_df_extract['airport_lng'] = airport_df_extract['location'].apply(lambda x : float(x.split()[1][1 :]))
+    airport_df_extract['airport_lat'] = airport_df_extract['location'].apply(lambda x : float(x.split()[2][:-1]))
+    airport_df_extract['key'] = 1
+    city_wide_data['key'] = 1
 
+    # print('city_wide_data\n',city_wide_data.head(), '\nairport_df_extract\n',airport_df_extract.head())
+
+    city_wide_data_airports_locations = pd.merge(city_wide_data,
+                                                 airport_df_extract,
+                                                 on='key').drop('key', axis=1)
+
+    city_wide_data_airports_locations = city_wide_data_airports_locations.rename(columns={'lat' : 'city_lat',
+                                                                                          'lng' : 'city_lng',
+                                                                                          'id_x' : 'id'})
+    # print('city_wide_data_airports_locations\n', city_wide_data_airports_locations.head())
+    city_wide_data_airports_locations["km_dist"]=city_wide_data_airports_locations.apply(distance_km, axis=1)
+    city_wide_data_airports_locations=city_wide_data_airports_locations.sort_values(by="km_dist")
+
+    # print(city_wide_data_airports_locations.head())
+    closest_codes= city_wide_data_airports_locations.head(7)['code']
+    # print(closest_codes.head())
+
+    return closest_codes
 
 
 def get_dist(row):
@@ -196,3 +246,12 @@ def get_dist(row):
     return (x1-x2)**2+(y1-y2)**2
 
 
+def distance_km(row):
+    """
+     Calculates the distance between an airport and a city using the coordinates of their longitudes and latitudes.
+     """
+    coords_1 = (row['airport_lat'], row['airport_lng'])
+    coords_2 = (row['city_lat'], row['city_lng'])
+
+
+    return geodesic(coords_1, coords_2).kilometers
