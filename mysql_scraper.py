@@ -39,6 +39,8 @@ def get_engine (config) :
     host = get_host(config)
     user = get_user(config)
     db_name= get_dbname (config)
+
+    print('mysql_password',mysql_password,'host',host,'user',user,'db_name',db_name)
     engine = create_engine(f"mysql+pymysql://{user}:{mysql_password}@{host}/{db_name}")
     return engine
 
