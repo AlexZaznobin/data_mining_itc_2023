@@ -289,8 +289,8 @@ def fill_city_table (logging, config) :
     start_city.columns = ['name', 'airport_code']
     end_city = tickets_df.loc[:, ['end_city_name', 'end_airport_code']]
     end_city.columns = ['name', 'airport_code']
-    print('fill_city_table end_city\n',end_city)
-    print('fill_city_table start_city\n',start_city)
+    # print('fill_city_table end_city\n',end_city)
+    # print('fill_city_table start_city\n',start_city)
     # all_cities = start_city.append(end_city)
     all_cities = pd.concat([start_city, end_city], axis=0, ignore_index=True)
     all_cities = all_cities.drop_duplicates()
