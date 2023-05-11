@@ -1,3 +1,5 @@
+import logging
+
 import pymysql
 import pandas as pd
 from sqlalchemy import create_engine, inspect
@@ -39,6 +41,8 @@ def get_engine (config) :
     host = get_host(config)
     user = get_user(config)
     db_name= get_dbname (config)
+
+    # print('mysql_password',mysql_password,'host',host,'user',user,'db_name',db_name)
     engine = create_engine(f"mysql+pymysql://{user}:{mysql_password}@{host}/{db_name}")
     return engine
 
@@ -102,8 +106,12 @@ def get_mysql_pwd (config) :
     if config['mysql_pwd'] != "" :
         mysql_password = config['mysql_pwd']
     else :
+        logging.info(f'no password in config')
         with open(config['mysql_pwd_file'], 'r') as file :
-            mysql_password = file.read()
+            mysql_password = file.readline().strip()
+            logging.info(f"read file:{config['mysql_pwd_file']}")
+            # print(f"pwd read: {mysql_password}")
+
     if mysql_password == "" :
         print('please enter password in conf.json file to variable mysql_pwd')
     return mysql_password
@@ -119,6 +127,7 @@ def get_mysql_cursor (config) :
     mysql_password = get_mysql_pwd(config)
     host = get_host(config)
     user = get_user(config)
+
     connection = pymysql.connect(
         host=host,
         user=user,
@@ -126,6 +135,7 @@ def get_mysql_cursor (config) :
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
     )
+    # print()
     cursor = connection.cursor()
     return cursor
 
@@ -279,7 +289,10 @@ def fill_city_table (logging, config) :
     start_city.columns = ['name', 'airport_code']
     end_city = tickets_df.loc[:, ['end_city_name', 'end_airport_code']]
     end_city.columns = ['name', 'airport_code']
-    all_cities = start_city.append(end_city)
+    # print('fill_city_table end_city\n',end_city)
+    # print('fill_city_table start_city\n',start_city)
+    # all_cities = start_city.append(end_city)
+    all_cities = pd.concat([start_city, end_city], axis=0, ignore_index=True)
     all_cities = all_cities.drop_duplicates()
     all_cities = all_cities.dropna(how='any')
     all_cities = all_cities[all_cities['name'] != 'None']
@@ -383,7 +396,11 @@ def fill_ticket_table (logging, config) :
                                     'scraping_timestamp', 'duration_time', 'layovers']]
     tickets_df = tickets_df[tickets_df['flight_date_time'] != 'None']
     tickets_df = tickets_df[tickets_df['price'] != 'None']
+    tickets_df = tickets_df[tickets_df['price'] != 'NaN']
+    tickets_df = tickets_df[~tickets_df['price'].isna()]
     tickets_df = tickets_df[tickets_df['layovers'] != 'None']
+    tickets_df = tickets_df[tickets_df['layovers'] != 'NaN']
+    tickets_df = tickets_df[~tickets_df['layovers'].isna()]
     tickets_df['flight_date_time'] = pd.to_datetime(tickets_df['flight_date_time'])
     tickets_df['scraping_timestamp'] = pd.to_datetime(tickets_df['scraping_timestamp'])
     tickets_df['scraping_timestamp'] = tickets_df['scraping_timestamp'].dt.round('S')

@@ -15,6 +15,7 @@ from mysql_scraper import save_results_in_database
 from interface import set_up_parser
 from proxies import save_file_api_proxy_list
 from proxies import check_proxy_response
+from proxies import safe_get_title
 from api_module import make_api_price_request
 
 CONFIG_NAME = 'conf.json'
@@ -108,8 +109,10 @@ def extract_data_page (driver, current_ticket, config) :
     Returns:
         The price of the flight ticket as an integer. Returns None if the data extraction process fails.
     """
+    safe_get_title(driver)
     return_price = None
     try :
+
         currency, currency_position = currency_check(driver)
         time.sleep(random.random())
         wait = WebDriverWait(driver, 15)
@@ -127,6 +130,8 @@ def extract_data_page (driver, current_ticket, config) :
     except :
         pass
     return return_price
+
+
 
 
 def extract_time (ticket_web_element, current_ticket) :
@@ -446,6 +451,17 @@ def intiniate_result_file (filename) :
     duration_time
     layovers
     """
+
+    header=("start_airport_code,"
+     "start_city_name,"
+     "end_airport_code,"
+     "end_city_name,"
+     "price,aircompany_name,"
+     "flight_date_time,"
+     "scraping_timestamp,"
+     "duration_time,"
+     "layovers")
+    lines=[]
     if not os.path.exists(filename) :
         with open(filename, 'w') as file :
             pass
@@ -454,16 +470,11 @@ def intiniate_result_file (filename) :
         num_lines = len(lines)
     if num_lines == 0 :
         with open(filename, 'w') as result_file :
-            result_file.write("start_airport_code,"
-                              "start_city_name,"
-                              "end_airport_code,"
-                              "end_city_name,"
-                              "price,aircompany_name,"
-                              "flight_date_time,"
-                              "scraping_timestamp,"
-                              "duration_time,"
-                              "layovers\n")
-
+            result_file.write(f"{header}\n")
+    elif lines[0] != header:
+        lines.insert(0, f"{header}\n")
+        with  open(filename,"w") as result_file :
+            result_file.writelines(lines)
 
 def scrape_per_batch (url_list, config, logging, tolerance) :
     """

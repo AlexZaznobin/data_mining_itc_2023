@@ -179,7 +179,7 @@ def set_demo_parameters():
     """
     set demo parameters
     """
-    ddmmddmm='14091409'
+    ddmmddmm='09090909'
     start_date = get_date_range(ddmmddmm)[0]
     days_number = get_date_range(ddmmddmm)[1]
     return [

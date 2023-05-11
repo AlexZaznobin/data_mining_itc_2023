@@ -6,6 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import re
 import threading
+import os
+import urllib3
 
 
 def get_api_proxy_link (config) :
@@ -35,7 +37,7 @@ def save_file_api_proxy_list (config) :
     Returns:
         None
     """
-    proxi_text=""
+    proxi_text = ""
     if config['use_proxy_api'] == 1 :
         api_url = get_api_proxy_link(config)
         chrome_options = Options()
@@ -103,12 +105,15 @@ def check_proxy_response (url, config) :
                 proxy_list = list(set(result_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
             try :
+
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)
-                data_header = driver.title[2] =='.'
+                data_header = driver.title[2] == '.'
                 price_found = driver.title[:1] == '$'
-                cheap_header = driver.title.split()[0]== 'Cheap'
-                if (cheap_header or price_found or data_header) :
+                cheap_header = driver.title.split()[0] == 'Cheap'
+
+                safe_get_title(driver)
+                if (cheap_header or price_found or data_header):
                     success_connection = 1
                     with open(config['great_proxy'], 'r') as result_file :
                         proxy_list = list(set(result_file.readlines()))
@@ -116,7 +121,7 @@ def check_proxy_response (url, config) :
                         result_file.writelines("%s" % item for item in proxy_list)
                     with open(config["great_proxy"], 'a') as result_file :
                         result_file.write(random_proxy + '\n')
-                else:
+                else :
                     driver.close()
             except :
                 break_index = break_index + 1
@@ -126,6 +131,8 @@ def check_proxy_response (url, config) :
         driver = set_up_driver(config)
         driver.get(url)
         time.sleep(config['page_load_timeout'])
+
+    safe_get_title(driver)
     return driver
 
 
@@ -145,7 +152,8 @@ def set_up_driver (config, proxy=None) :
     Raises:
         FileNotFoundError: If the ChromeDriver binary is not found at the expected location.
     """
-    path='/usr/local/bin/chromedriver'
+    path = '/usr/local/bin/chromedriver'
+
     service_chromedriver = Service('/usr/local/bin/chromedriver')
     chrome_options = Options()
     for chrome_arg in config['chrome_args'] :
@@ -157,7 +165,9 @@ def set_up_driver (config, proxy=None) :
             x = config['size_of_window'][0] + random_value
             y = config['size_of_window'][1] + random_value
             chrome_options.add_argument(f"--window-size={x},{y}")
-    return webdriver.Chrome( executable_path =path, options=chrome_options)
+
+    return webdriver.Chrome(executable_path=path, options=chrome_options)
+
 
 def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
     """
@@ -180,3 +190,22 @@ def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
         t.start()
     for t in threads :
         t.join()
+
+
+def urllib3_test (proxy_url, target_url) :
+    print('urllib3_test target_url', target_url)
+    proxy_str = 'http://' + proxy_url
+    print('urllib3_test proxy_url', proxy_str)
+    http = urllib3.ProxyManager(proxy_str)
+    print('urllib3_test http', http)
+    response = http.request('GET', target_url)
+    print('urllib3_test response.status', response.status)
+
+def safe_get_title (driver) :
+    try :
+        pass
+        # print(f"extract_data_page driver.title = {driver.title}")
+    except :
+        pass
+        # print(f"cannot extract_data_page driver.title ")
+
