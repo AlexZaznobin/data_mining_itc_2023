@@ -108,7 +108,7 @@ def get_mysql_pwd (config) :
     else :
         logging.info(f'no password in config')
         with open(config['mysql_pwd_file'], 'r') as file :
-            mysql_password = file.readline()
+            mysql_password = file.readline().strip()
             logging.info(f"read file:{config['mysql_pwd_file']}")
             print(f"pwd read: {mysql_password}")
 
@@ -127,7 +127,10 @@ def get_mysql_cursor (config) :
     mysql_password = get_mysql_pwd(config)
     host = get_host(config)
     user = get_user(config)
-    print('get_mysql_cursor: mysql_password',mysql_password,'host',host,'user',user)
+    print('get_mysql_cursor: mysql_password',mysql_password=='shurik0707',
+          'host',host=='aviascraper.cpfkhtsxylsi.us-east-1.rds.amazonaws.com',
+          'user',user=='admin')
+
     connection = pymysql.connect(
         host=host,
         user=user,
