@@ -1,3 +1,5 @@
+import logging
+
 import pymysql
 import pandas as pd
 from sqlalchemy import create_engine, inspect
@@ -104,8 +106,12 @@ def get_mysql_pwd (config) :
     if config['mysql_pwd'] != "" :
         mysql_password = config['mysql_pwd']
     else :
+        logging.info(f'no password in config')
         with open(config['mysql_pwd_file'], 'r') as file :
-            mysql_password = file.read()
+            mysql_password = file.readline()
+            logging.info(f"read file:{config['mysql_pwd_file']}")
+            print(f"pwd read: {mysql_password}")
+
     if mysql_password == "" :
         print('please enter password in conf.json file to variable mysql_pwd')
     return mysql_password
@@ -121,12 +127,9 @@ def get_mysql_cursor (config) :
     mysql_password = get_mysql_pwd(config)
     host = get_host(config)
     user = get_user(config)
-
     print('get_mysql_cursor: mysql_password',mysql_password,'host',host,'user',user)
-
     connection = pymysql.connect(
         host=host,
-        port=3306,
         user=user,
         password=mysql_password,
         charset='utf8mb4',
