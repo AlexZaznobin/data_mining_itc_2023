@@ -121,8 +121,12 @@ def get_mysql_cursor (config) :
     mysql_password = get_mysql_pwd(config)
     host = get_host(config)
     user = get_user(config)
+
+    print('get_mysql_cursor: mysql_password',mysql_password,'host',host,'user',user)
+
     connection = pymysql.connect(
         host=host,
+        port=3306,
         user=user,
         password=mysql_password,
         charset='utf8mb4',
