@@ -42,7 +42,7 @@ def get_engine (config) :
     user = get_user(config)
     db_name= get_dbname (config)
 
-    print('mysql_password',mysql_password,'host',host,'user',user,'db_name',db_name)
+    # print('mysql_password',mysql_password,'host',host,'user',user,'db_name',db_name)
     engine = create_engine(f"mysql+pymysql://{user}:{mysql_password}@{host}/{db_name}")
     return engine
 
@@ -110,7 +110,7 @@ def get_mysql_pwd (config) :
         with open(config['mysql_pwd_file'], 'r') as file :
             mysql_password = file.readline().strip()
             logging.info(f"read file:{config['mysql_pwd_file']}")
-            print(f"pwd read: {mysql_password}")
+            # print(f"pwd read: {mysql_password}")
 
     if mysql_password == "" :
         print('please enter password in conf.json file to variable mysql_pwd')
@@ -127,9 +127,6 @@ def get_mysql_cursor (config) :
     mysql_password = get_mysql_pwd(config)
     host = get_host(config)
     user = get_user(config)
-    print('get_mysql_cursor: mysql_password',mysql_password=='shurik0707',
-          'host',host=='aviascraper.cpfkhtsxylsi.us-east-1.rds.amazonaws.com',
-          'user',user=='admin')
 
     connection = pymysql.connect(
         host=host,
@@ -138,7 +135,7 @@ def get_mysql_cursor (config) :
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
     )
-    print()
+    # print()
     cursor = connection.cursor()
     return cursor
 
