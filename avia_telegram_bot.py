@@ -85,16 +85,19 @@ async def process_date_range(message: types.Message, state: FSMContext):
 
         pd.set_option('display.max_columns', None)
         config = load_scraper_config()
-        need_database=True
+        need_database=False
         intiniate_result_file(config['result_file'])
         intiniate_result_file(config['last_request_data'])
         start = datetime.datetime.now()
         if config['use_proxy'] == 1 :
             save_file_api_proxy_list(config)
-        url_list = get_url_list(start_list=get_relevant_airport_codes(data['start_point']).values,
+
+        start_list=list(get_relevant_airport_codes(data['start_point']).values)
+        end_list=list(get_relevant_airport_codes(data['end_point']).values)
+        url_list= get_url_list(start_list=start_list,
                                 start_date=get_date_range(data['date_range'])[0],
                                 days_number=get_date_range(data['date_range'])[1],
-                                end_list=get_relevant_airport_codes(data['end_point']).values,
+                                end_list=end_list,
                                 config=config)
         if config['search_tolerance_percent'] != -1 :
             tolerance = config['search_tolerance_percent'] / 100 * len(url_list)
@@ -110,7 +113,7 @@ async def process_date_range(message: types.Message, state: FSMContext):
             last_request_df=pd.read_csv(config['last_request_data'])
             analytics_file='avia-analytics.xls'
             save_df_to_excel(last_request_df, analytics_file)
-    
+
             with open(analytics_file, 'rb') as file:
                 await bot.send_document(message.chat.id, types.InputFile(file), caption=analytics_file)
 
