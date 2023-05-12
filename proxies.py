@@ -104,7 +104,7 @@ def check_proxy_response (url, config) :
         while success_connection == 0 and break_index < config['break_proxy_index'] :
             with open(config['good_proxy'], 'r') as result_file :
                 proxy_list = list(set(result_file.readlines()))
-            if len(proxy_list)==0:
+            if len(proxy_list)<20:
                 with open(config['great_proxy'], 'r') as reserve_file :
                     proxy_list = list(set(reserve_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
