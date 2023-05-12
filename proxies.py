@@ -1,8 +1,9 @@
 import random
 import time
 import requests
-from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import re
 import threading
@@ -160,7 +161,8 @@ def set_up_driver (config, proxy=None) :
     """
     path = '/usr/local/bin/chromedriver'
 
-    service_chromedriver = Service('/usr/local/bin/chromedriver')
+    service_chromedriver = Service(path)
+
     chrome_options = Options()
     for chrome_arg in config['chrome_args'] :
         chrome_options.add_argument(chrome_arg)
@@ -172,7 +174,9 @@ def set_up_driver (config, proxy=None) :
             y = config['size_of_window'][1] + random_value
             chrome_options.add_argument(f"--window-size={x},{y}")
 
-    return webdriver.Chrome(executable_path=path, options=chrome_options)
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()),
+                                            executable_path=path,
+                                            options=chrome_options)
 
 
 def m_thread_proxy_check (list_of_proxy, good_list_of_proxy, url) :
