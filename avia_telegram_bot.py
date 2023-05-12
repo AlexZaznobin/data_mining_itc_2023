@@ -150,10 +150,7 @@ def get_relevant_airport_codes (city_name) :
 
 
 def save_df_to_excel (df, filename) :
-    writer = pd.ExcelWriter(filename, engine='openpyxl')
-    df.to_excel(writer, index=False)
-    writer.save()
-
+    df.to_excel(filename, index=False, engine='openpyxl')
 
 if __name__ == '__main__' :
     executor.start_polling(dp, skip_updates=True)
