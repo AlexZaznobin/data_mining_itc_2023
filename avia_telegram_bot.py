@@ -84,7 +84,7 @@ async def process_date_range (message: types.Message, state: FSMContext) :
 
         pd.set_option('display.max_columns', None)
         config = load_scraper_config()
-        need_database = False
+
         intiniate_result_file(config['result_file'])
         intiniate_result_file(config['last_request_data'])
         start = datetime.datetime.now()
@@ -104,9 +104,9 @@ async def process_date_range (message: types.Message, state: FSMContext) :
             tolerance = -1
 
         scrape_per_batch(url_list, config, logging, tolerance)
-        if need_database :
+        if config['use_mysql'] ==1:
             save_results_in_database(config, logging)
-        if need_database :
+        if config['use_mysql'] ==1:
             make_api_price_request(config, logging)
         if os.path.exists(config['last_request_data']) :
             last_request_df = pd.read_csv(config['last_request_data'])

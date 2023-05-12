@@ -10,7 +10,7 @@
   "db_name": "aviascraper",
   "batch_size":15,
   "use_proxy": 1,
-  "use_proxy_api": 0,
+  "use_proxy_api": 1,
   "proxy_api_link_file": "proxy_api.txt",
   "mysql_pwd_file":"mysql.txt",
   "mysql_user": "admin",
@@ -23,5 +23,6 @@
   "page_load_timeout": 5,
   "search_tolerance_percent": -1,
   "closest_airport_city_number": 1,
-  "distance_airport_city": 50
+  "distance_airport_city": 50,
+  "use_mysql": 1
 }
