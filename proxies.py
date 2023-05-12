@@ -108,6 +108,7 @@ def check_proxy_response (url, config) :
                 with open(config['great_proxy'], 'r') as reserve_file :
                     proxy_list = list(set(reserve_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
+            print("random_proxy",random_proxy)
             try :
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)

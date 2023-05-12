@@ -522,9 +522,9 @@ def main () :
         tolerance = -1
 
     scrape_per_batch(url_list, config, logging, tolerance)
-    if need_database :
+    if config['use_mysql'] ==1 and need_database:
         save_results_in_database(config, logging)
-    if need_database :
+    if config['use_mysql'] ==1 and need_database:
         make_api_price_request(config, logging)
     if os.path.exists(config['last_request_data']) :
         os.remove(config['last_request_data'])
