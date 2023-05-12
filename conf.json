@@ -21,5 +21,7 @@
   "great_proxy": "great_proxy_list.txt",
   "good_proxy": "proxy_list.txt",
   "page_load_timeout": 5,
-  "search_tolerance_percent": -1
+  "search_tolerance_percent": -1,
+  "closest_airport_city_number": 1,
+  "distance_airport_city": 50
 }

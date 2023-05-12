@@ -100,12 +100,15 @@ def check_proxy_response (url, config) :
     success_connection = 0
     break_index = 0
     if config['use_proxy'] == 1 :
+        proxy_list=[]
         while success_connection == 0 and break_index < config['break_proxy_index'] :
             with open(config['good_proxy'], 'r') as result_file :
                 proxy_list = list(set(result_file.readlines()))
+            if len(proxy_list)==0:
+                with open(config['great_proxy'], 'r') as reserve_file :
+                    proxy_list = list(set(reserve_file.readlines()))
             random_proxy = random.choice(proxy_list)[:-1]
             try :
-
                 driver = set_up_driver(config, random_proxy)
                 driver.get(url)
                 data_header = driver.title[2] == '.'

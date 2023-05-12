@@ -223,10 +223,11 @@ def choose_closet_airports(config,city_name):
     city_wide_data_airports_locations=city_wide_data_airports_locations.sort_values(by="km_dist")
 
     # print(city_wide_data_airports_locations.head())
-    closest_codes= city_wide_data_airports_locations[city_wide_data_airports_locations['km_dist']<50].head(2)['code']
+    closest_codes= city_wide_data_airports_locations[city_wide_data_airports_locations['km_dist']<config["distance_airport_city"]]
+
     # print(closest_codes.head())
 
-    return closest_codes
+    return closest_codes.head(config["closest_airport_city_number"])['code']
 
 
 def get_dist(row):

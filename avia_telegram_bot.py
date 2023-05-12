@@ -84,7 +84,7 @@ async def process_date_range (message: types.Message, state: FSMContext) :
 
         pd.set_option('display.max_columns', None)
         config = load_scraper_config()
-        need_database = True
+        need_database = False
         intiniate_result_file(config['result_file'])
         intiniate_result_file(config['last_request_data'])
         start = datetime.datetime.now()
@@ -114,26 +114,25 @@ async def process_date_range (message: types.Message, state: FSMContext) :
             last_request_df = last_request_df[last_request_df['price'] != 'None']
             last_request_df = last_request_df[last_request_df['price'] != 'NaN']
             last_request_df = last_request_df[~last_request_df['price'].isna()]
+            last_request_df['url']=last_request_df.apply(url_back, axis=1)
             analytics_file = 'avia-analytics.xls'
             save_df_to_excel(last_request_df, analytics_file)
-
             with open(analytics_file, 'rb') as file :
                 await bot.send_document(message.chat.id, types.InputFile(file), caption=analytics_file)
-
             os.remove(analytics_file)
+            os.remove(config['last_request_data'])
 
     await bot.send_message(
         message.chat.id,
         md.text(
-            "Lets find some tickets, my friend",
+            "please, see analytics we prepared for you, my friend",
             md.text('start_point,', md.code(data['start_point'])),
             md.text('end_point:', md.code(data['end_point'])),
             md.text('data_range:', md.code(data['date_range'])),
-            url_list[:10],
+            last_request_df[last_request_df['price']==last_request_df['price'].min()]['url'].values,
             sep='\n',
         ),
-        # reply_markup=markup,
-        # parse_mode=ParseMode.MARKDOWN,
+
     )
     #
     # # Finish conversation
@@ -148,6 +147,19 @@ def get_relevant_airport_codes (city_name) :
     print(type(airport_codes))
     return airport_codes
 
+def url_back(row):
+    datetime_obj = datetime.datetime.strptime(row['flight_date_time'],  '%Y-%m-%d %H:%M:%S')
+    data_code =datetime_obj.strftime('%d%m')
+    config = load_scraper_config()
+    passanger="1"
+    end_of_url = "request_source=search_form"
+    new_link = config["link_constructor"] +\
+               row['start_airport_code'] +\
+               data_code + \
+               row['end_airport_code'] + \
+               passanger+\
+               end_of_url
+    return new_link
 
 def save_df_to_excel (df, filename) :
     df.to_excel(filename, index=False, engine='openpyxl')
