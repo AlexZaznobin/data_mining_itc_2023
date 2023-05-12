@@ -392,6 +392,7 @@ def fill_ticket_table (logging, config) :
                                  db_column='code', db_table_name='airport', engine=engine)
     column_mapping = {'id_x' : 'aircompany_id', 'id_y' : 'start_airport_id', 'id' : 'end_airport_id'}
     tickets_df = tickets_df.rename(columns=column_mapping)
+    print('tickets_df',tickets_df)
     tickets_df = tickets_df.loc[:, ['start_airport_id', 'end_airport_id', 'aircompany_id', 'price', 'flight_date_time',
                                     'scraping_timestamp', 'duration_time', 'layovers']]
     tickets_df = tickets_df[tickets_df['flight_date_time'] != 'None']
