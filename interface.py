@@ -172,7 +172,9 @@ def set_up_parser (config) :
         if (datarange) == None :  datarange = '07070707'
         start_date, days_number = get_date_range(datarange)
         need_database = args.database
-        print(need_database)
+        print('need_database',need_database)
+        print('start_aero_code',start_aero_code)
+        print('end_point',end_point)
     return [start_aero_code, start_date, days_number, end_point], need_database
 
 def set_demo_parameters():
